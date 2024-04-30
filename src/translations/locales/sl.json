@@ -1,4 +1,33 @@
 {
+  "welcome": {
+    "page1": {
+      "title": "Dobrodošli v Ice",
+      "description": "[[:ice]] je digitalna valuta, ki jo lahko zaslužite s svojim telefonom. Ice je v lasti in upravljanju vsakdanjih uporabnikov, kot ste vi."
+    },
+    "page2": {
+      "title": "Planetu prijazen",
+      "description": "[[:ice]] je sam po sebi energijsko učinkovitejši od BTC, saj uporablja mehanizem soglasja »Dokaz o vložku«. Z dokazilom o vložku (DOV) lastniki kriptovalut potrdijo blokovne transakcije glede na število kovancev, ki jih vloži validator."
+    },
+    "page3": {
+      "title": "Ljudski kovanec",
+      "description_part1": "Moč je v vaših rokah.",
+      "description_part2": "Vse, kar razvijamo [[:ice]], bo odprtokodno in pod nadzorom decentralizirane avtonomne organizacije (DAO)."
+    },
+    "page4": {
+      "title": "Ostanite povezani",
+      "description": "Tapnite [[:iceLogo]] za dnevno prijavo z našo brezplačno mobilno aplikacijo, ki je energijsko varčna. Vaše vsakodnevno dotikanje zagotavlja, da se Ice znajde v rokah resničnih ljudi in ne botov."
+    },
+    "page5": {
+      "title": "Priporočite in zaslužite",
+      "description": "Povabite svoje prijatelje in zaslužite (oba) do 25 % bonusa na vašo osnovno stopnjo zaslužka za vsakega prijatelja, ki se pridruži vaši ekipi."
+    },
+    "page6": {
+      "title": "Obvestila",
+      "description_part1": "[[:ice]] prijave trajajo samo 24 ur. Ali želite prejeti obvestilo, ko se vaša trenutna seja zaključi?",
+      "description_part2": "Ne skrbite, ne bomo vam pošiljali vsiljene pošte!",
+      "not_now": "Ne zdaj"
+    }
+  },
   "button": {
     "yes_btn": "Da, prosim",
     "next_btn": "Naprej",
@@ -46,6 +75,81 @@
     "start": "Začni",
     "faq": "Pogosta vprašanja",
     "knowledge_base": "Osnovno znanje"
+  },
+  "team": {
+    "contacts_tab": "Kontakti",
+    "tierOne_tab": "Stopnja 1",
+    "tierTwo_tab": "Stopnja 2",
+    "empty": {
+      "contacts": "Trenutno nimaš nobenih stikov v imeniku.",
+      "button_title": "Povabi prijatelje",
+      "t1": "Trenutno nimate nobenih napotitev T1!",
+      "t2": "Trenutno nimate nobenih napotitev T2!",
+      "team": "Trenutno nimate nobenih članov ekipe!"
+    },
+    "contacts": {
+      "empty_title": "[[:ice]] bolje je s prijatelji",
+      "empty_button_title": "Dovoli dostop do stikov",
+      "empty_description": "Sinhroniziraj svoje stike in si oglej, kdo je že na [[:ice]]. V prihodnosti boste lahko pošiljali Ice vsem svojim stikom."
+    },
+    "header": {
+      "search_placeholder": "Iskanje uporabnikov",
+      "referrals": "Priporočila",
+      "earnings": "Zaslužki"
+    },
+    "confirm_code": {
+      "title": "Potrdi kodo",
+      "description": "Vnesite potrditveno kodo, ki ste jo prejeli na telefon.",
+      "placeholder": "Vnesi kodo",
+      "button": "Potrdite svojo kodo zdaj"
+    },
+    "confirm_phone": {
+      "title": "Potrdi telefon",
+      "description": "Potrdite kodo države in vnesite svojo telefonsko številko."
+    },
+    "contacts_list": {
+      "ice_header": {
+        "friends": "prijatelji"
+      },
+      "all_contacts": "Vsi stiki",
+      "invite": "povabi",
+      "invitation_text": "Živijo{{name}}, rad/a bi te povabil/a na Ice."
+    },
+    "tier_one": {
+      "header_list": {
+        "title_earnings": "Stopnja 1 Zaslužki"
+      }
+    },
+    "tier_two": {
+      "header_list": {
+        "title_earnings": "Stopnja 2 Zaslužki"
+      }
+    }
+  },
+  "signIn": {
+    "logInSignUp": "Prijavi se / Registriraj se",
+    "phone": "Telefon",
+    "or": "ali",
+    "reset_password": "Ponastavi geslo",
+    "welcome": "Dobrodošli v Ice",
+    "email": "E-naslov",
+    "slogan": "Decentralizirana prihodnost",
+    "privacy": "Z nadaljevanjem se strinjate z našimi [[:link]]Pogoji storitve[[/:link]] in [[:link]]Pravilnikom o zasebnosti[[/:link]]"
+  },
+  "claimUsername": {
+    "title": "Zahtevajte vzdevek",
+    "description": "Vaši prijatelji bodo morali uporabiti ta vzdevek, da se bodo pridružili vaši ekipi.",
+    "inputPlaceholder": "Vnesite svoj vzdevek",
+    "note_part1": "Pri ustvarjanju vzdevka uporabljajte samo črke, številke in pike.",
+    "note_part2": "Primer:",
+    "note_example": "your.name01"
+  },
+  "whoInvitedYou": {
+    "title": "Kdo vas je povabil?",
+    "description": "Vnesite vzdevek osebe, ki vas je povabila.",
+    "inputPlaceholder": "Vnesite vzdevek",
+    "dontHaveInvitationCode": "Ko dokončate ta korak, bosta vi in vaš prijatelj prejela 25 % bonusa na osnovno stopnjo zaslužka, ko se oba prijavljata hkrati.",
+    "dontHaveCodeTip": "Če nimate kode za povabilo, bomo za vašo priporočilo izbrali naključnega člana!"
   },
   "errors": {
     "nicknameSize": "Velikost vzdevka: 4-20 znakov.",
@@ -99,6 +203,45 @@
     "same_phone_error": "Ne morete uporabiti iste številke.",
     "unable_to_validate_bsc_addr_eoa": "Ni mogoče potrditi naslova EOA"
   },
+  "profile": {
+    "my_roles": {
+      "title": "Moja vloga"
+    },
+    "mining_calculator": "kalkulator zaslužka",
+    "invite_friends": "Povabi prijatelje",
+    "invite_friends_engage": "Razširite novico in povabite prijatelje. Več kot je priporočil, več boste zaslužili!",
+    "global_rank": "globalna uvrstitev",
+    "view_all_roles": "ogled vseh vlog",
+    "data_is_hidden": "podatki so skriti",
+    "progress_text": "{{value}} od {{total}}",
+    "not_found": {
+      "title": "Uporabnik ni najden.",
+      "description": "Ups, tega uporabnika nismo mogli najti."
+    },
+    "my_badges": {
+      "title": "Moje značke"
+    },
+    "badges": {
+      "title": "Značke"
+    },
+    "roles": {
+      "title": "Vloge"
+    },
+    "badge_types": {
+      "coin": {
+        "title": "Kovanci",
+        "description": "kovanci"
+      },
+      "social": {
+        "title": "Družbeno",
+        "description": "prijatelji"
+      },
+      "level": {
+        "title": "Stopnja",
+        "description": "Stopnja"
+      }
+    }
+  },
   "global": {
     "level": "stopnja",
     "referrals": "priporočila",
@@ -117,6 +260,320 @@
       "today": "Danes"
     }
   },
+  "mining_calculator": {
+    "result_label": "Zaslužili boste",
+    "active_inviter": "Aktiven vabitelj",
+    "tier_1_ref": "Priporočila stopnje 1 ",
+    "tier_2_ref": "Priporočila stopnje 2",
+    "active_miners": "Aktivna priporočila",
+    "team_members": "Člani ekipe",
+    "active_team_members": "Aktivni člani ekipe"
+  },
+  "home": {
+    "wallet": {
+      "title": "DENARNICA",
+      "rate": "STOPNJA ZASLUŽKA",
+      "balance": "TRENUTNO STANJE"
+    },
+    "pioneer": {
+      "rank": "GLOBALNA UVRSTITEV",
+      "referrals": "PRIPOROČILA",
+      "description": "Priporočite več uporabnikov in zaslužite več [[:ice]]."
+    },
+    "referrals": {
+      "title": "PRIPOROČILA",
+      "description": "Statistika priporočil za zadnjih 5 dni.",
+      "no_referrals_description": "Trenutno nimaš nobenih priporočil!",
+      "users_tier_1": "Uporabniška stopnja 1",
+      "users_tier_2": "Uporabniška stopnja 2",
+      "title_team": "Ekipa",
+      "description_team": "Statistika ekipe za zadnjih 5 dni",
+      "no_referrals_description_team": "Trenutno nimate nobenih članov ekipe.",
+      "users": "Uporabniki"
+    },
+    "adoption": {
+      "title": "PREVZEM",
+      "level": "stopnja",
+      "users": "uporabniki"
+    },
+    "tasks": {
+      "achievements": "DOSEŽKI",
+      "title": "Vaš napredek",
+      "description": "Izpolnite spodnje naloge in stopite na višji nivo!",
+      "completed": {
+        "title": "Čestitke",
+        "description": "Vsak dan se prijavljajte in si prislužite dodatne nagrade!"
+      },
+      "popup": {
+        "title": "Pridružite se našemu kanalu Telegram",
+        "description": "Določite svoj vzdevek, ki se uporablja v Telegramu.",
+        "placeholder": "Vzdevek"
+      },
+      "claim_username": {
+        "title": "Zahtevajte vzdevek",
+        "description": "Nastavite in delite s prijatelji."
+      },
+      "start_mining": {
+        "title": "Začnite služiti",
+        "description": "Vaša prva prijava."
+      },
+      "upload_profile_picture": {
+        "title": "Profilna slika",
+        "description": "Naložite svojo profilno sliko."
+      },
+      "join_telegram": {
+        "title": "Pridružite se Telegramu",
+        "description": "Bodite del naše skupnosti in se pridružite zdaj."
+      },
+      "follow_us_on_twitter": {
+        "title": "Sledite nam na Twitterju",
+        "description": "Ostanimo v stiku, sledite nam na Twitterju."
+      },
+      "invite_friends": {
+        "title": "Povabi 5 prijateljev",
+        "description": "Povečajte svojo ekipo in povečajte svoj zaslužek."
+      }
+    },
+    "overview": {
+      "title": "Pregled"
+    },
+    "menu": {
+      "notifications": "Obvestila",
+      "staking": "Zastavljanje",
+      "stats": "Statistika",
+      "help": "Pomoč",
+      "tips": "Nasveti"
+    },
+    "team": {
+      "title": "Ekipa",
+      "view_team": "poglej ekipo"
+    },
+    "mining_rate": {
+      "title": "STOPNJA ZASLUŽKA",
+      "base": "Osnova"
+    },
+    "engagement": {
+      "title": "VKLJUČENOST",
+      "description_part1": "Niz se nanaša na to, koliko zaporednih dni ste se prijavili.",
+      "description_part2": "Za vsakih 6 zaporednih dni prejmete en prost dan.",
+      "streak": "NIZ",
+      "days_off": "PROSTIH DNI"
+    },
+    "roadmap": {
+      "title": "NAŠA VIZIJA",
+      "button_title": "Bela knjiga",
+      "button_subtitle": "Več o naši viziji na Ice."
+    },
+    "join_mainnet": {
+      "title": "Pridružite se decentralizirani prihodnosti",
+      "subtitle": "Oglejte si predogled naše prihajajoče aplikacije Mainnet in njenih edinstvenih funkcij."
+    },
+    "bsc_address": {
+      "title": "Naslov BNB Smart Chain",
+      "subtitle": "Prosimo, vnesite svoj naslov BSC tukaj."
+    },
+    "verified_tooltip": {
+      "title": "KYC Preverjeno"
+    }
+  },
+  "settings": {
+    "title": "Nastavitve",
+    "profile": "Profil",
+    "legal": "Pravno",
+    "support": "Podpora",
+    "personal_information_title": "Osebne informacije",
+    "personal_information_description": "Upravljajte podrobnosti svojega profila.",
+    "notifications_title": "Obvestila",
+    "notifications_description": "Upravljajte svoja obvestila tukaj.",
+    "push_notifications_title": "Potisna obvestila",
+    "push_notifications_description": "Prilagodite nastavitve potisnih obvestil.",
+    "email_notifications_title": "E-poštna obvestila",
+    "email_notifications_description": "Prilagodite nastavitve e-poštnih obvestil.",
+    "terms_title": "Pogoji storitve",
+    "terms_description": "Preglejte naše pogoje storitve.",
+    "privacy_title": "Pravilnik o zasebnosti",
+    "privacy_description": "Preberite več o naši politiki zasebnosti.",
+    "feedback_title": "Pošlji povratno informacijo",
+    "feedback_description": "Delite svoje misli z nami.",
+    "invite_title": "Povabi prijatelja",
+    "invite_description": "Zaslužite dodatno v Ice s povabilom svojih prijateljev.",
+    "delete_title": "Izbriši račun",
+    "delete_description": "Izbrišite svoj račun",
+    "delete_confirmation_title": "Ali ste prepričani, da želite odstraniti račun?",
+    "delete_confirmation_yes": "Da, izbriši",
+    "logout_title": "Odjava",
+    "logout_description": "Odjavite se in si vzemite odmor.",
+    "logout_confirmation_title": "Ste prepričani, da se želite odjaviti?",
+    "logout_confirmation_yes": "Da, odjavi se",
+    "confirm_phone": {
+      "title": "Potrdite nov telefon",
+      "description": "Potrdite kodo države in vnesite svojo telefonsko številko.",
+      "button": "Potrdite novo telefonsko številko"
+    },
+    "notifications": {
+      "enable_prompt": "Obvestila niso dovoljena. Ali jih želite omogočiti?",
+      "channel_achievements": "Dosežki",
+      "channel_news": "Novice",
+      "channel_reminders": "Opomniki",
+      "channel_team": "Ekipa",
+      "type_push": "POTISNA",
+      "type_email": "E-POŠTA",
+      "disable_notifications": "Želite onemogočiti obvestila?",
+      "disable_notifications_description": "Če onemogočite obvestila, ne boste mogli prejemati posodobitev, ko se lahko začnete prijavljati, novic ali informacij o ekipi.",
+      "domain": {
+        "disable_all": {
+          "title": "",
+          "description": ""
+        },
+        "weekly_stats": {
+          "title": "Tedenska statistika",
+          "description": "Prejemajte obvestila o svoji dejavnosti."
+        },
+        "weekly_report": {
+          "title": "Tedensko poročilo",
+          "description": "Prejemajte obvestila o svoji dejavnosti."
+        },
+        "achievements": {
+          "title": "Dosežki",
+          "description": "Prejemajte obvestila o svojem napredku."
+        },
+        "promotions": {
+          "title": "Promocije",
+          "description": "Prejemajte obvestila o tem, kako povečati svojo ekipo in zaslužiti več."
+        },
+        "news": {
+          "title": "Novice",
+          "description": "Prejemajte obvestila naše ekipe."
+        },
+        "micro_community": {
+          "title": "Mikro skupnost",
+          "description": "Prejemajte obvestila o svoji ekipi."
+        },
+        "daily_bonus": {
+          "title": "Dnevni bonus",
+          "description": "Prejemajte obvestila za prevzem dnevnega bonusa."
+        },
+        "mining": {
+          "title": "Stanje seje",
+          "description": "Prejemajte obvestila o svoji dejavnosti prijavljanja."
+        },
+        "system": {
+          "title": "Sistem",
+          "description": "Prejemajte pomembna obvestila o aplikaciji Ice."
+        }
+      }
+    },
+    "language_settings": "Jezikovne nastavitve",
+    "change_lang_confirm": {
+      "title": "Spremeni jezik",
+      "prompt": "Če uporabite to nastavitev, boste znova zagnali aplikacijo."
+    },
+    "profile_image": "Slika profila",
+    "inapp_privacy_title": "Zasebnost",
+    "inapp_privacy_description": "Upravljajte svoje podatke tukaj.",
+    "developer": "Razvijalec",
+    "user_id": "ID uporabnika",
+    "user_token": "Žeton uporabnika",
+    "profile_photo": {
+      "delete": "Izbriši fotografijo",
+      "edit": "Uredi profilno sliko",
+      "photo_gallery": "Galerija fotografij",
+      "camera": "Fotoaparat"
+    },
+    "confirm_email_confirmation_title": "Potrdi e-pošto?",
+    "update_email_confirmation_title": "Posodobi e-pošto?",
+    "update_email_confirmation_subtitle": "Če spremenite svoj e-poštni naslov, se boste morali znova prijaviti. Ste prepričani, da želite nadaljevati?",
+    "unlink_logins_title": "Prekini povezavo prijav",
+    "unlink_logins_description": "Tukaj lahko prekinete povezavo svojih prijav."
+  },
+  "invite_share": {
+    "title": "Povabi prijatelja",
+    "telegram": "Telegram",
+    "twitter": "Twitter",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email": "E-pošta",
+    "fb": "Vir novic",
+    "sms": "SMS",
+    "copy_link": "Kopiraj povezavo",
+    "more": "Več",
+    "copied": "KOPIRANO",
+    "share_message": "Živijo ☃️ Snežak! Pridružite se moji ekipi v aplikaciji Ice in prejmite 10 kovancev Ice, ko se prijavite z mojo priporočilno kodo:",
+    "share_subject": "Pridružite se moji ekipi v aplikaciji Ice",
+    "description": "Razširite novico in povabite svoje prijatelje. Zaslužiš za [[:ice]] vsako novo priporočilo, ki ga prineseš.",
+    "share": "Deli"
+  },
+  "users": {
+    "ping": "PING",
+    "active": "Aktiven",
+    "inactive": "Neaktiven",
+    "referralType": {
+      "T1": "Stopnja 1",
+      "T2": "Stopnja 2",
+      "team": "Člani ekipe"
+    },
+    "team": "Ekipa"
+  },
+  "personal_information": {
+    "first_name": "Ime",
+    "last_name": "Priimek",
+    "country": "Dražava",
+    "city": "Mesto",
+    "title": "Osebne informacije",
+    "phone": "Telefon",
+    "email": "E-pošta",
+    "username": "Vzdevek"
+  },
+  "username": {
+    "error": {
+      "already_taken": "Vzdevek je že zaseden.",
+      "length": "Velikost vzdevka: 4-20 znakov.",
+      "invalid_characters": "Odstranite neveljavne znake.",
+      "not_found": "Vzdevek ni najden.",
+      "some_error": "Prišlo je do napake.",
+      "refer_yourself": "Ne morete se priporočiti sami."
+    }
+  },
+  "staking": {
+    "time_left": "Preostali čas",
+    "mining_rate": "Stopnja zaslužka",
+    "appeal": "Povečajte svojo stopnjo zaslužka",
+    "benefits_description": "Vnaprej zastavite svoje ledene nagrade za do 5 let in povečajte svojo stopnjo zaslužka do 250 %.",
+    "bonus_label": "Bonus za vnaprejšnje zastavljanje",
+    "period_label": "Obdobje vložka",
+    "title": "Vnaprejšnje zastavljanje",
+    "current_rate": "Trenutna stopnja",
+    "allocation": "Dodelitev",
+    "description": "Zastavljanje je postopek, ki vključuje dodelitev vaših kripto sredstev za podporo omrežju blockchain in potrjevanje transakcij.",
+    "terms_agree": "Strinjam se s [[:ice]] [[:link]]Pogoji zastavljanja[[/:link]]. Vaše zaloge Ice bodo za izbrano obdobje zaklenjene.",
+    "stake_now": "Vnaprej zastavite zdaj!",
+    "balance_label": "Zastavljeno stanje",
+    "confirm_title": "Potrdite vnaprejšnje zastavljanje",
+    "confirm_subtitle": "Ali ste prepričani, da želite vnaprej zastaviti svoje kovance? Ko potrdite, tega ni mogoče razveljaviti.",
+    "remove_pre_staking": "Odstrani predstavljanje stavkov"
+  },
+  "stats": {
+    "header_title": "Statistika",
+    "active": "Aktivnih uporabnikov",
+    "total": "Vseh uporabnikov",
+    "user_growth": "Rast uporabnikov",
+    "top_miners": "Najboljši uporabniki",
+    "top_countries": "Najboljše države",
+    "online_miners": "Spletni uporabniki",
+    "detailed_information": "Podrobne informacije",
+    "total_coins": "Skupno kovancev",
+    "filter": {
+      "total": "Skupaj",
+      "on_app": "Na voljo v aplikaciji",
+      "pre_staked": "Pred stavko",
+      "on_blockchain": "Na verigi blokov"
+    }
+  },
+  "update_required": {
+    "title": "Prosimo, posodobite",
+    "description": "Uporabljate staro različico aplikacije in jo morate posodobiti, če jo želite uporabljati naprej.",
+    "button_title": "Posodobi zdaj"
+  },
   "general": {
     "good_morning": "Dobro jutro",
     "good_afternoon": "Dober dan",
@@ -126,25 +583,350 @@
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "ura",
-    "days_short": "dan",
-    "hour": {
-      "zero": "ur",
-      "one": "uro",
-      "two": "uri",
-      "few": "ure",
-      "many": "ur",
-      "other": "ur"
+    "days_short": "dan"
+  },
+  "news": {
+    "news_feed": "Vir novic",
+    "read_more": "Preberite več",
+    "no_more_news": "to je zadnji vnos v viru novic.",
+    "views": "{{viewsCount}} ogledi"
+  },
+  "search": {
+    "empty": "Poiščite stike, Ice prijatelje in člane svoje mikro skupnosti.",
+    "nothing_is_found": "Za vašo poizvedbo ni bilo najdenega ničesar.",
+    "search_by_country": "Iskanje po državah",
+    "search_for_users": "Iskanje uporabnikov",
+    "loading": "Iskanje ..."
+  },
+  "tabbar": {
+    "mining_inactive_tooltip": "Tapnite tukaj, da začnete svojo prvo prijavo.",
+    "mining_reset_tooltip": "Pritisnite za 1 sekundo za podaljšanje seje prijave.",
+    "mining_holiday_reset_tooltip": "Izkoriščate prosti dan! Pritisnite za 1 sekundo za podaljšanje seje prijave.",
+    "mining_holiday_active": "Izkoriščate prosti dan!"
+  },
+  "invite_friend": {
+    "invite_button": "Povabi prijatelja",
+    "button_title": "Povabi prijatelja",
+    "description": "Vaš prijatelj še ni vključen [[:ice]]. Pošljite mu vabilo!"
+  },
+  "balance_history": {
+    "title": "Zgodovina stanja",
+    "wallet": "Denarnica",
+    "blockchain": "Blockchain",
+    "wallet_update_interval": "posodobljeno vsako uro",
+    "blockchain_update_interval": "posodobi se vsakih 28 dni",
+    "list_end_label": "to je zadnji vnos v zgodovino stanja.",
+    "no_data": "Za navedeno obdobje ni podatkov za prikaz.",
+    "you": "vi",
+    "contribution": "prispevek"
+  },
+  "pop_up": {
+    "update_now": "Posodobi zdaj",
+    "please_update": "Prosimo posodobite",
+    "update_now_text": "Uporabljate staro različico aplikacije in jo morate posodobiti, če jo želite uporabljati naprej.",
+    "you_are_up_to_date": "Ste na tekočem!",
+    "up_to_date_text": "Zdaj uporabljate najnovejšo različico. Spodaj preverite vse spremembe.",
+    "resurrection": "Obuditev",
+    "resurrection_message": "Imate enkratno priložnost, da obudite in prejmete [[:amount]] kovance, ki ste jih izgubili v preteklosti [[:period]].",
+    "resurrection_warning": "Obudite jih lahko le enkrat!",
+    "please_confirm": "Prosimo, potrdite",
+    "resurrection_no_confirm_message": "Za vedno boste izgubili svoje [[:amount]] kovance. Ste prepričani, da želite nadaljevati?",
+    "resurrection_yes_confirm_message": "Obudite jih lahko le enkrat! Ste prepričani, da želite nadaljevati? [[:amount]] Kovanci se bodo vrnili na vaše stanje v naslednji uri.",
+    "delete_account_confirmation_title": "Potrdite izbris",
+    "delete_account_confirmation_text": "Če izbrišete svoj račun, boste trajno izbrisali vse svoje podatke, vključno z vašim stanjem kovancev Ice. Želite nadaljevati?",
+    "registration_update_title": "Posodobitev registracije",
+    "registration_update_text": "Začasno smo ustavili ustvarjanje novih računov s pomočjo telefonske številke. Za nadaljevanje boste morali izbrati ali e-poštni naslov ali se prijaviti prek družbenih omrežij.",
+    "link_email_title": "Povežite svoj e-poštni naslov",
+    "link_email_text": "Začasno smo ustavili prijavo s pomočjo telefonske številke. Prosimo, povežite svoj e-poštni naslov in ga potrdite, da se lahko prijavite.",
+    "account_error_title": "Napaka računa",
+    "account_error_text": "Začasno smo ustavili prijavo s pomočjo telefonske številke. Vaš račun žal ni uspešno opravil postopka KYC in ni upravičen do obnovitve.",
+    "login_via_email_title": "Prosimo, prijavite se prek e-pošte",
+    "login_via_email_text": "Začasno smo ustavili prijavo s pomočjo telefonske številke. Prosimo, uporabite e-poštni naslov, povezan z vašim računom, za prijavo.",
+    "email_in_use_title": "E-poštni naslov je že v uporabi",
+    "email_in_use_text_part1": "E-poštni naslov, ki ga poskušate povezati, je že v uporabi.",
+    "email_in_use_text_part2": "Če je to vaš e-poštni naslov, se najprej prijavite z njim, zaključite postopek registracije in izbrišite ta račun, da sprostite e-poštni naslov, nato pa se vrnite k prijavi prek telefonske številke, da dokončate postopek povezave.",
+    "successfully_linked_title": "Uspešno povezano!",
+    "successfully_linked_text": "E-poštni naslov je uspešno povezan z vašim računom."
+  },
+  "periods": {
+    "3_days": "3 dni",
+    "7_days": "7 dni",
+    "30_days": "30 dni",
+    "1_day": "1 dan",
+    "1_week": "1 teden",
+    "1_month": "1 mesec",
+    "90_days": "90 dni",
+    "14_days": "14 dni"
+  },
+  "notifications": {
+    "joined": " se je pridružil vaši ekipi.",
+    "multiply": " in {{count}}drugi so se pridružili vaši ekipi.",
+    "ping": " te je pingal, zbudi se!",
+    "delete": "Izbriši",
+    "add_notifications": "Dodaj poskusna obvestila",
+    "no_notifications": "Ni obvestil za prikaz.",
+    "add_announcements": "Dodaj poskusne napovedi",
+    "add_both": "Dodaj poskusna sporočila in napovedi skupaj",
+    "clear_title": "Počisti vsa obvestila?",
+    "title": "Obvestila"
+  },
+  "notification_feed_screen": {
+    "yesterday": "Včeraj",
+    "last_week": "Prejšnji teden",
+    "this_month": "Ta mesec",
+    "last_month": "Prejšnji mesec",
+    "this_week": "Ta teden"
+  },
+  "profile_privacy_edit": {
+    "step1": {
+      "title": "1. Statistika vašega profila",
+      "description": "Tapnite na bloke, ki jih želite skriti pred očmi javnosti."
     },
-    "day": {
-      "zero": "dni",
-      "one": "dan",
-      "two": "dni",
-      "few": "dni",
-      "many": "dni",
-      "other": "dni"
+    "step2": {
+      "description": "Tapnite ta blok, da ga skrijete pred očmi javnosti.",
+      "title": "2. Vaša trenutna vloga"
     },
-    "minutes_abbr": "min",
-    "seconds_abbr": "s"
+    "step3": {
+      "title": "3. Vaše prislužene značke",
+      "description": "Tapnite tukaj, da svoje značke skrijete pred očmi javnosti."
+    }
+  },
+  "confirm_email": {
+    "title": "Potrdite svojo e-pošto",
+    "description": "Vnesite svoj e-poštni naslov in poslali vam bomo kodo.",
+    "note": "Če e-pošte niste prejeli v 5 minutah, preverite mapo z vsiljeno pošto.",
+    "wrong_email": "Napačna e-pošta?",
+    "check_email": "Preverite svojo e-pošto",
+    "emailed_link_to": " Po e-pošti smo poslali čarobno povezavo ",
+    "emailed_steps_to": "Po e-pošti smo poslali korake",
+    "link_instruction": "Kliknite povezavo za prijavo ali registracijo.",
+    "reset_link_instruction": "Kliknite povezavo za ponastavitev gesla.",
+    "modify_title": "Potrdite novo e-pošto",
+    "modify_description": "Prosimo, vnesite svoj novi e-poštni naslov."
+  },
+  "invalid_link": {
+    "title": "Neveljavna povezava",
+    "description": "Žal je ta povezava neveljavna, ponovno vnesite svoj e-poštni naslov in poslali vam bomo novo povezavo."
+  },
+  "confirm_code": {
+    "title": "Potrdite kodo",
+    "description": "Vnesite kodo, poslano na",
+    "send_code_again": "Ponovno pošljite kodo",
+    "resend_time_label": "Nova koda na voljo čez ",
+    "enter_code": "Vnesite kodo",
+    "wrong_number": "Napačna številka?"
+  },
+  "ice_bonus": {
+    "title": "Nagrada dobrodošlice",
+    "description": "Čestitamo, prejeli ste svoje prve [[:value]] [[:ice]] kovance, kar dokazuje naše [[:bold]]zaupanje[[/:bold]] v [[:bold]]vas[[/:bold]].",
+    "balance_label": "Vaše trenutno stanje"
+  },
+  "country_select": {
+    "title": "Izberite državo"
+  },
+  "roles": {
+    "snowman": {
+      "title": "Snežak",
+      "subtitle": "Zgradite snežni imperij",
+      "description": "Zaslužite s prijavo vsakih 24 ur, da pokažete svojo predanost omrežju Ice in dokažete, da ste človek in ne robot."
+    },
+    "ambassador": {
+      "title": "Ambasador",
+      "subtitle": "Vladar snežnega imperija",
+      "description": "Ambasador postanete, ko se vaši ekipi pridruži vsaj 100 ljudi. Vsak ambasador bo dobil zgodnji dostop do novih funkcij."
+    }
+  },
+  "confirm_phone": {
+    "modify_title": "Potrdite telefon",
+    "modify_description": "Potrdite kodo države in vnesite svojo telefonsko številko.",
+    "button": "Potrdite državo in telefon"
+  },
+  "date_select": {
+    "title": "Izberite datum"
+  },
+  "walkthrough": {
+    "overrides": {
+      "home": {
+        "team": {
+          "description": "[[:ice]] je boljši s prijatelji. Na tej strani lahko vidite status članov svoje ekipe. Od tu jih lahko tudi obvestite."
+        },
+        "referralscard": {
+          "title": "Kartica ekipe",
+          "description": "Kliknite na to kartico, da si ogledate razvoj statistike članov svoje ekipe v zadnjih 5 dneh."
+        }
+      },
+      "team": {
+        "segmented_control_tier_one": {
+          "title": "Ekipa",
+          "description": "Tukaj lahko vidite seznam ljudi, ki ste jih povabili, da se pridružijo omrežju Ice. Lahko enostavno spremljate njihov status od tu in pošiljate obvestila neaktivnim."
+        },
+        "active_users": {
+          "description": "To je trenutni status aktivnosti članov vaše ekipe med prijavo. Veljajo za aktivne, ko imajo aktivno prijavo."
+        },
+        "ping": {
+          "description": "Obvestite člane svoje ekipe, naj začnejo svojo prijavo. Vsaki napotitvi lahko pošljete eno obvestilo vsakih 24 ur."
+        }
+      }
+    },
+    "profile": {
+      "hidden_data": {
+        "title": "Skriti podatki",
+        "description": "Dotaknite se ikone očesa, da vidite, kako drugi uporabniki vidijo vaš profil."
+      }
+    },
+    "news": {
+      "readmore": {
+        "title": "Preberite več",
+        "description": "Tukaj si lahko ogledate najnovejše novice naše ekipe. Tapnite na ta gumb, če želite prebrati celoten članek."
+      },
+      "releasednews": {
+        "title": "Objavljene novice",
+        "description": "Dotaknite se posameznega naslova novice in jo preberite v celoti. Bodite na tekočem z vsemi našimi novicami in anketami."
+      }
+    },
+    "team": {
+      "allow_contacts": {
+        "title": "Dovolite stike",
+        "description": "Sinhroniziraj svoje stike in si oglej, kdo je že na [[:ice]]. V prihodnosti boste lahko pošiljali Ice vsem svojim stikom. [[:ice]]"
+      },
+      "confirm_phone": {
+        "title": "Potrdite telefon",
+        "description": "Potrdite svojo identiteto in omogočite svojim stikom, da vedo, da ste tudi vi član omrežja Ice. Vaša telefonska številka ne bo posredovana tretjim osebam."
+      },
+      "contacts_list": {
+        "title": "Seznam stikov",
+        "description": "To je seznam z vsemi vašimi stiki, tisti, ki so se že pridružili [[:ice]] omrežju, so prikazani na vrhu seznama."
+      },
+      "referrals": {
+        "title": "Priporočila",
+        "description": "Tukaj boste videli, koliko priporočil imate v celoti. Več ljudi kot povabite, več boste zaslužili."
+      },
+      "earnings": {
+        "title": "Zaslužki",
+        "description": "Vaše trenutno stanje se posodobi vsako uro in je prikazano tukaj. Vključuje vaše neposredne in zastavljene zaslužke skupaj z zaslužki Stopnje 1 in Stopnje 2."
+      },
+      "segmented_control_tier_one": {
+        "title": "Stopnja 1",
+        "description": "Tukaj si lahko ogledate seznam svojih priporočil Stopnje 1. Za vsakega prijatelja, ki se prijavi hkrati z vami, boste prejeli dodatnih 25 % na svojo osnovno trenutno stopnjo zaslužka pri prevzemu. [[:link]]Preberite več[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "segmented_control_tier_two": {
+        "title": "Stopnja 2",
+        "description": "Tukaj si lahko ogledate seznam svojih priporočil Stopnje 2. Za vsakega prijatelja, ki se prijavi hkrati z vami, boste prejeli dodatnih 5 % na svojo osnovno trenutno stopnjo zaslužka pri prevzemu. [[:link]]Preberite več[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "active_users": {
+        "title": "Aktivnih uporabnikov",
+        "description": "To je trenutni status dejavnosti prijav vaših priporočil. Kot aktivni se štejejo, ko imajo aktivno sejo prijave."
+      },
+      "tier_one_earnings": {
+        "title": "Stopnja 1 Zaslužki",
+        "description": "Tukaj si lahko ogledate seznam svojih priporočil Stopnje 1. Za vsakega člana, ki se prijavi hkrati z vami, boste prejeli dodatnih 25 % na svojo osnovno trenutno stopnjo zaslužka pri prevzemu."
+      },
+      "ping": {
+        "title": "Gumb Ping",
+        "description": "Obvestite svoje priporočene, da začnejo svoje prijavne seje. Vsakemu priporočenemu lahko pošljete eno obvestilo vsakih 24 ur."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "Domov",
+        "description": "Dobrodošli v [[:ice]]. Na začetnem zaslonu lahko najdete vse statistične podatke o svojem stanju, trenutni stopnji zaslužka, vaši globalni uvrstitvi in vaši ekipi."
+      },
+      "invite": {
+        "title": "Povabi",
+        "description": "Za vsako osebo, ki jo povabite, bosta oba zaslužila do 25 % vaše osnovne stopnje zaslužka. Več ljudi kot povabite, več boste zaslužili."
+      },
+      "team": {
+        "title": "Ekipa",
+        "description": "[[:ice]] bolje je s prijatelji. Na tej strani si lahko ogledate status članov svoje ekipe na nivoju Tier 1 in Tier 2. Od tu jih lahko tudi pingate."
+      },
+      "news": {
+        "title": "Novice",
+        "description": "Bodite na tekočem z vsemi našimi novicami in anketami. Ker smo decentralizirana avtonomna organizacija, boste tukaj lahko glasovali za prihodnje funkcije."
+      },
+      "profile": {
+        "title": "Profil",
+        "description": "Prilagodite podrobnosti svojega profila in si oglejte vse dosežke in značke, ki ste jih pridobili. Tukaj uporabite kalkulator, da lahko ocenite svoj zaslužek."
+      },
+      "earningicestart": {
+        "title": "Zaslužek Ice",
+        "description": "[[:ice]] Sejo prijave lahko začnete vsakih 24 ur, tako da tapnete ta gumb. Ne pozabite se vrniti vsak dan in začnite služiti!"
+      },
+      "earningiceseemore": {
+        "title": "Zaslužek Ice",
+        "description": "Tapnite znova in si oglejte več podrobnosti o vaši trenutni seji prijave."
+      },
+      "stats": {
+        "title": "Statistika",
+        "description": "Na strani s statistiko si lahko ogledate skupno število in aktivne uporabnike, ki so se prijavili vsak dan, skupaj z najboljšimi državami in uporabniki."
+      },
+      "help": {
+        "title": "Pomoč",
+        "description": "Imate kakšno vprašanje? Oglejte si naš seznam pogostih vprašanj. Če ne najdete tistega, kar iščete, ne oklevajte in nas kontaktirajte na hi@ice.io."
+      },
+      "preStaking": {
+        "title": "Vnaprejšnje zastavljanje",
+        "description": "Povečajte svoje donose tako, da vnaprej zastavite zaslužene nagrade. Izberite svojo dodelitev in obdobje vložkov, da poleg svojega zaslužka prejmete še bonus."
+      },
+      "wallet": {
+        "title": "Kartica denarnice",
+        "description": "Tukaj lahko najdete svoje trenutno [[:ice]] stanje skupaj s stopnjo zaslužka. Več priporočil iz vaše ekipe je na spletu, višja je stopnja zaslužka."
+      },
+      "earning": {
+        "title": "Kartica zaslužka",
+        "description": "Bodite na tekočem s svojo stopnjo zaslužka in bonusi! Tukaj lahko preverite svojo trenutno stopnjo, našo osnovno stopnjo in stopnje bonusov za različne dejavnosti v aplikaciji."
+      },
+      "engagement": {
+        "title": "Kartica vključenosti",
+        "description": "Spremljajte svoj niz prijav in proste dni! Preverite ta razdelek za več podrobnosti o vaših zaporednih prijavah in koliko prostih dni imate na voljo."
+      },
+      "profilecard": {
+        "title": "Kartica profila",
+        "description": "S sledenjem tej kartici, lahko spremljate status svojega profila. Prikazuje vašo trenutno globalno uvrstitev, skupaj z vašo vlogo, stopnjo in skupnim številom priporočil."
+      },
+      "referralscard": {
+        "title": "Kartica priporočil",
+        "description": "Z dotikom te kartice si oglejte razvoj statistike svojih priporočil za preteklih 5 dni za priporočila Tier 1 in Tier 2."
+      },
+      "adoptioncard": {
+        "title": "Kartica prevzemov",
+        "description": "Na podlagi povprečja skupnega števila aktivnih Snežakov v zadnjem tednu si lahko ogledate trenutno [[:ice]] stopnjo zaslužka. Stopnja zaslužka se prepolovi, ko je dosežen naslednji prag."
+      },
+      "nickname": {
+        "title": "Vzdevek",
+        "description": "Vzdevek je tisto, kar vas dela edinstvene. Vaši prijatelji bodo morali uporabiti ta vzdevek, da se bodo lahko pridružili vaši ekipi. S to bližnjico lahko odprete tudi svoj profil."
+      },
+      "balancehistory": {
+        "title": "Zgodovina stanja",
+        "description": "Tukaj lahko najdete svoje trenutno [[:ice]] stanje v lokalni denarnici in blockchainu. Stanje lokalne denarnice se posodobi vsako uro, stanje blockchaina pa vsakih 24 ur."
+      },
+      "achievements": {
+        "title": "Dosežki",
+        "description": "Izpolnite spodnje naloge in se dvignite na višji nivo! Tapnite tukaj, da začnete svojo prvo prijavo."
+      }
+    }
+  },
+  "ActiveSessionsScreen": {
+    "title": "Prekini povezavo prijav",
+    "sessionName": "Prijava z {{providerName}}",
+    "buttons": {
+      "currentSession": "Trenutna seja",
+      "endSession": "Konec seje",
+      "loginUnlinked": "Prijava je nepovezana",
+      "sessionEnded": "Seja se je končala",
+      "unlink": "Prekini povezavo"
+    },
+    "dialogs": {
+      "unlinkLogin": {
+        "title": "Prekini povezavo prijav?",
+        "message": "Ali ste prepričani, da želite prekiniti povezavo prijave {{providerName}}s to napravo?"
+      },
+      "endSession": {
+        "title": "Zaključi sejo?",
+        "message": "Ali ste prepričani, da želite končati {{providerName}}sejo prijave s te naprave?"
+      }
+    }
   },
   "links": {
     "pre_staking": "https://ice.io/pre-staking/",
@@ -152,28 +934,464 @@
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
   },
-  "mainnet_landing": {
-    "header": "Rudarjenje Ice je končalo. Medtem ko se pripravljamo na zagon glavnega omrežja 7. oktobra 2024, ohranite nameščeno aplikacijo za ekskluzivne posodobitve in zgodnji dostop do aplikacije glavnega omrežja.",
-    "stats": {
-      "header": "Statistika Ice",
-      "circulating_supply": "Cirkulirajoča Dobava",
-      "total_supply": "Skupna Dobava",
-      "price": "Cena",
-      "market_cap": "Tržna Kapitalizacija",
-      "daily_trading_volume": "Dnevni Trgovalni Obseg",
-      "dilluted_market_cap": "Razredčena Tržna Kapitalizacija"
+  "extra_bonus": {
+    "claim_title": "Današnji bonus",
+    "claim_message": "Čas je za vaš današnji bonus. Tapnite na spodnji gumb [[:bold]]»Prevzemi bonus«[[/:bold]].",
+    "link": "Izvedite več",
+    "extra_message": "Prejeli ste dodatni dnevni bonus na vašo stopnjo zaslužka.",
+    "expired_title": "Bonus je potekel",
+    "expired_message": "Na žalost je današnji bonus potekel. Spremljajte nas do naslednjega obvestila!",
+    "result_title": "Čestitke"
+  },
+  "qr_code": {
+    "description": "Skeniraj QR kodo in se pridruži moji ekipi."
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "Pridružite se nam na TikToku",
+      "description": "Samo želeli smo vas obvestiti o naši razburljivi novi skupnosti na TikToku. Delimo zabavno in informativno vsebino o naši digitalni valuti, Ice, in veseli bomo, če se nam pridružite!"
     },
-    "countdown": {
-      "header": "Zagon Glavnega Omrežja Ice"
+    "youtube": {
+      "title": "Pridružite se nam na YouTubu",
+      "description": "Od nasvetov, kako zaslužiti Ice, do posodobitev novih funkcij in celo zabavne vsebine skupnosti, je naš kanal YouTube popoln kraj, da ostanete na tekočem."
     },
-    "roadmap": {
-      "header": "Naša Vizija",
-      "title": "Whitepaper",
-      "subtitle": "Več izvedite o naši viziji v Ice."
+    "linkedin": {
+      "title": "Pridružite se nam na LinkedInu",
+      "description": "Pridružitev skupnosti Ice na LinkedInu je odličen način, da ostanete obveščeni o najnovejših dogodkih in se povežete s podobno mislečimi posamezniki, ki so prav tako navdušeni nad prihodnostjo digitalnih valut kot vi."
     },
-    "join_mainnet": {
-      "title": "Pridružite se Decentralizirani Prihodnosti",
-      "subtitle": "Pridobite predogled naše prihajajoče aplikacije Mainnet in njenih edinstvenih funkcij."
+    "facebook": {
+      "title": "Pridružite se nam na Facebooku",
+      "description_part1": "Toplo priporočamo, da spremljate našo Facebook stran.",
+      "description_part2": "Ne samo, da vam bo pomagal ostati na tekočem z vsem, kar se dogaja s projektom Ice, je tudi odličen način, da se povežete z našo skupnostjo in postanete del pogovora."
+    },
+    "instagram": {
+      "title": "Pridružite se nam na Instagramu",
+      "description_part1": "Sledenje na Instagramu je odličen način, da ostanete na tekočem in se povežete z drugimi uporabniki, ki so prav tako navdušeni nad aplikacijo Ice",
+      "description_part2": "Poleg tega boste prvi izvedeli za vse nove funkcije ali promocije, ki jih uvajamo."
+    },
+    "reddit": {
+      "title": "Pridružite se nam na Redditu",
+      "description": "Odkrijte skupnost Ice na Redditu, kjer se posamezniki z enakimi mnenji združujejo, da delijo svoje misli.\n\nPridružite se pogovoru, postavite vprašanja in raziščite zanimive razprave o rudarjenju Ice, funkcijah in še več."
+    },
+    "discord": {
+      "title": "Pridružite se nam na Discordu",
+      "description": "Pridružite se naši živahni skupnosti na Discordu in se potopite v razprave in ekskluzivne vpoglede v Ice.\n\nSodelujte v živahnih pogovorih, bodite na tekočem z novicami o Ice in postanite del skupnosti, ki deli vašo strast."
+    },
+    "ice_founder_twitter": {
+      "title": "Sledite Zeusa na X",
+      "description": "Sledite Zeusa, našega vizionarja ustanovitelja, na X, kjer deli vpoglede, posodobitve in misli o naši misiji. Pridružite se pogovoru, postavite vprašanja in ostanite povezani z našim navdihujočim voditeljem, ko se skupaj podajamo na to vznemirljivo potovanje.",
+      "button": "Sledite Zeusa"
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Prosim počakajte, medtem ko pošiljamo ping vsem vašim prijateljem · {{count}}"
+  },
+  "creative_library": {
+    "title": "Ustvarjalna knjižnica Ice",
+    "share": "Ustvarite svojo sanjsko ekipo na omrežju Ice!",
+    "get_started": {
+      "header": "Ustvarite svojo sanjsko ekipo",
+      "subtitle": "Začnite na omrežju Ice in ustvarite uspešno mikro-skupnost",
+      "description": "Pridružite se hitro naraščajočemu številu uporabnikov Ice, ki gradijo lastne mikro-skupnosti in zaslužijo več nagrad. Naša promocijska orodja, vodniki in nasveti olajšajo širjenje informacij in gradnjo uspešne skupnosti.",
+      "get_started": "Začnite",
+      "carousel": {
+        "01": {
+          "title": "Pridružite se",
+          "description": "Prenesite našo aplikacijo, si pridobite vzdevek in začnite rudariti.\n\nPridružili se boste globalni skupnosti uporabnikov Ice, ki so strastni glede decentralizacije, avtonomije in moči ljudi."
+        },
+        "02": {
+          "title": "Povabite",
+          "description": "Povabite svojo ciljno občinstvo, da se pridruži Ice in skupaj delujejo za odklepanje dodatnih nagrad.\n\nPoleg tega boste pomagali širiti besedo o prednostih decentralizacije in prihodnosti financ."
+        },
+        "03": {
+          "title": "Zaslužite",
+          "description": "Povečajte svoje nagrade tako, da razširite svoje omrežje in spodbujate druge, da se pridružijo skupnosti Ice.\n\nPridružite se nam v našem poslanstvu, da revolucioniramo prihodnost financ skozi decentralizacijo in avtonomijo."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Videi",
+        "description": "Uporabite našo zbirko videoposnetkov za promocijo vaše povabilne kode, v ležečem ali pokončnem načinu, s podnapisi ali brez njih, imamo vas pokrite.",
+        "action": "Ogled videoposnetkov"
+      },
+      "02": {
+        "title": "Slike",
+        "description": "Slika pove več kot tisoč besed. Izberete lahko med našo zbirko pasic, sredstev za družbene medije, predlog in maket aplikacij.",
+        "action": "Ogled slik"
+      },
+      "03": {
+        "title": "Vdelan trak",
+        "description": "S pomočjo našega vdelanega traku lahko enostavno promovirate Ice svojim obiskovalcem spletnega mesta in jih povabite, da se pridružijo vaši mikro-skupnosti.",
+        "action": "Namestitev traku"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Delite svojo zgodbo",
+        "description": "Delite svoje potovanje z omrežjem Ice in njegovimi številnimi koristmi, tako da napišete članek v svojem jeziku.\n\nDelite jih na svojem blogu, Mediumu, Redditu, Quori, Bloggerju in drugih platformah.\n\nVse o Ice in njegovih edinstvenih značilnostih lahko najdete na naši [[/:link]]Bazi znanja[[/:link]], [[/:link]]Domači strani[[/:link]] in [[/:link]]Pogosto zastavljenih vprašanjih[[/:link]]."
+      },
+      "spread": {
+        "title": "Širjenje besede",
+        "description": "Pridružite se pogovoru in predstavite omrežje Ice svojim najljubšim forumom.\nZačnite nove niti in delite svoje misli o decentraliziranih financah, prihodnosti valute in moči gradnje mikro-skupnosti z Ice.\n\nBodite ☃️ Snežak in sprožite razpravo o potencialu te globalne valute."
+      },
+      "bring": {
+        "title": "Povabite svoje prijatelje na krov",
+        "description": "Uporabite našo enostavno funkcijo za povabilo in delite svojo osebno povabilno kodo s prijatelji na vaših najljubših platformah družbenih medijev."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Priključitev in predvajanje za lastnike spletnih mest",
+        "description": "Vdelajte omrežje Ice neposredno na svoje spletno mesto s pomočjo našega preprostega in prilagodljivega traku JS. Gre za hitro in enostavno namestitev, ki jo lahko prilagodite svoji spletni blagovni znamki. Preveden je v 50 jezikov in je združljiv s katero koli spletno platformo.\n\nKopirajte in prilepite kodo na svoje spletno mesto ter začnite promovirati omrežje Ice svojim obiskovalcem že danes.",
+        "action": "Namestitev traku"
+      },
+      "mobile": {
+        "title": "Knjižnica za mobilne aplikacije",
+        "description": "Vključite našo enostavno za uporabo knjižnico v svojo mobilno aplikacijo in povabite svoje uporabnike, da se pridružijo vaši mikro-skupnosti in začnejo rudariti.\n\nS podporo za prevode in prilagodljivimi možnostmi nastavitve lahko zagotovite, da bodo vsi vaši uporabniki imeli dostop do enake izkušnje z Ice, ne glede na to, kje so na svetu.",
+        "action1": "Knjižnica za Android",
+        "action2": "Knjižnica za React Native"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Dobre prakse",
+        "rules": {
+          "01": {
+            "title": "Bodite avtentični",
+            "description": "Pišite iz svojih osebnih izkušenj in perspektive. Delite svoje iskrene misli in občutke o omrežju Ice."
+          },
+          "02": {
+            "title": "Uporabite prijateljski ton",
+            "description": "Pišite, kot da se pogovarjate s prijateljem, in se izogibajte uporabi preveč tehničnega žargona ali jezika, ki bi lahko bil težak za razumevanje bralcev."
+          },
+          "03": {
+            "title": "Bodite ustvarjalni",
+            "description": "Ne bojte se eksperimentirati z različnimi vrstami vsebin, kot so blogi, videoposnetki ali posodobitve na družbenih medijih. Zabavajte se in bodite inovativni pri načinu, kako promovirate omrežje Ice svoji ciljni publiki."
+          }
+        }
+      },
+      "bad": {
+        "title": "Slabe prakse",
+        "rules": {
+          "01": {
+            "title": "Ne pošiljajte neželene pošte",
+            "description": "Izogibajte se pošiljanju neželenih sporočil ali ponavljajoči se objavi iste vsebine na različnih platformah. To lahko velja za vsiljivo in nadležno."
+          },
+          "02": {
+            "title": "Ne zavajajte ljudi",
+            "description": "Projekt Ice ne plačuje uporabnikom v gotovini, le nagrajuje z Ice kovanci. Izogibajte se objavi vsebine, kot so \"Pretvorite svoje Ice v gotovino\" ali \"Kako zaslužiti 100 dolarjev z Ice\" in podobno."
+          },
+          "03": {
+            "title": "Ne sodelujte v goljufijah",
+            "description": "Vrednotimo preglednost in poštenost v naši skupnosti. Kakršne koli goljufive dejavnosti, kot so ustvarjanje več računov ali poskusi manipulacije z omrežjem Ice, ne bodo tolerirane."
+          }
+        }
+      }
+    }
+  },
+  "face_auth": {
+    "header": "Prepoznavanje obraza",
+    "title": "KYC Korak #1",
+    "description": "Za nemoteno izkušnjo dodajamo prepoznavanje obraza. Ta korak deluje kot vaš [[:bold]]Prvi korak KYC[[/:bold]], ki vas pripravlja na poenostavljeno preverjanje v prihodnji glavni omrežji. \n\nDanes potrdite svojo identiteto, da zagotovite gladko pot naprej!",
+    "consent": "Strinjam se s [[:link]]Pogoji KYC Ice[[/:link]].",
+    "confirmation": "Potrjujem, da bo identiteta, ki jo uporabljam za to avtentikacijo, ista kot tista, ki je povezana s to računom, in tega izbora kasneje ne bo mogoče spremeniti.",
+    "auth_status": {
+      "loading": {
+        "description": "Prosim, počakajte, medtem ko vas avtentificiramo..."
+      },
+      "success": {
+        "title": "✅ Uspešna avtentikacija",
+        "description": "Hvala za potrditev vaše identitete. Vaša seja prijave se bo začela zdaj.",
+        "action": "Dokončano"
+      },
+      "failure": {
+        "title": "❌ Avtentikacija ni uspela",
+        "description": "Vaše identitete nismo mogli preveriti. Prosimo, poskrbite za dobro osvetlitev in da je vaš obraz popolnoma viden, nato poskusite znova.",
+        "action": "Poskusite znova"
+      },
+      "try_later": {
+        "title": "❌ Avtentikacija ni uspela",
+        "description": "Vaše identitete nismo mogli preveriti. Prosimo, poskrbite za dobro osvetlitev in da je vaš obraz popolnoma viden, nato pa poskusite znova čez 1 uro.",
+        "action": "Zapri"
+      },
+      "continue": {
+        "title": "😁 KYC Prepoznavanje čustev",
+        "description": "Odlično opravljeno! Prvi korak ste zaključili s selfijem. Sedaj nadaljujte tako, da sledite prikazanim čustvom, da nadaljujete postopek KYC.",
+        "action": "Nadaljuj"
+      },
+      "banned": {
+        "title": "❌ Onemogočena rudarjenja",
+        "description": "Ugotovili smo, da je vaša identiteta povezana z drugim računom. Če menite, da gre za napako, pošljite e-pošto na naslov [[:bold]]feedback@ice.io[[/:bold]] s svojim vzdevkom in selfijem visoke kakovosti.",
+        "action": "Zapri"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Začni",
+      "please_show_this": "Prosimo, pokažite to čustvo",
+      "emotions": {
+        "anger": "jeza",
+        "contempt": "prezir",
+        "disgust": "omraza",
+        "fear": "strah",
+        "happiness": "sreča",
+        "neutral": "nevtralno",
+        "sadness": "žalost",
+        "surprise": "presenečenje"
+      }
+    },
+    "device_angle_warning": {
+      "title": "Opozorilo",
+      "description": "Prosimo, ohranite telefon pokonci med gledanjem v kamero"
+    },
+    "camera_permission": {
+      "title": "Dovoljenje za kamero",
+      "description": "Za nadaljevanje dovolite dostop do kamere.",
+      "action": "Dovoli dostop"
+    },
+    "selfie_guidelines": {
+      "title": "Smernice za selfije",
+      "instruction": "Preden nadaljujete, upoštevajte te smernice za uspešno preverjanje identitete KYC s selfijem:",
+      "check_1": "✅ Poskrbite, da imate visokokakovostno fotografijo.",
+      "check_2": "✅ Zagotovite dobro osvetlitev.",
+      "check_3": "✅ Imejte čisto ozadje.",
+      "check_4": "✅ Brez temnih fotografij.",
+      "check_5": "✅ Brez zamegljenih ali meglenih fotografij.",
+      "check_6": "✅ Očistite objektiv kamere.",
+      "warning": "Če ne boste upoštevali navedenih smernic, lahko izgubite dostop do svojega računa.",
+      "confirmation": "Potrjujem, da bom upošteval(a) kriterije.",
+      "popup_title": "Potrditev",
+      "popup_body": "Ali potrjujete, da ste upoštevali vse smernice za selfije?"
+    }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Prosimo, preverite, ali ste vnesli pravilno vzdevek.",
+      "description": "Vnesite vzdevek prijatelja, ki vas je povabil."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Spremljajte svoj napredek in globalni status",
+        "referrals": "PRIJATELJI"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Razširite svojo ekipo in ustvarite skupnost"
+        }
+      },
+      "team": {
+        "title": "Prijatelji",
+        "view_team": "poglej prijatelje"
+      },
+      "roadmap": {
+        "button_subtitle": "Poiščite več informacij o naši viziji prihodnosti na Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Pridobite predogled naše prihajajoče aplikacije Mainnet in njenih edinstvenih funkcij, ki bodo izdane proti koncu leta 2024."
+      }
+    },
+    "settings": {
+      "invite_description": "Razširite svojo ekipo z novimi člani"
+    },
+    "profile": {
+      "invite_friends_engage": "Širite besedo in povabite svoje prijatelje, da se pridružijo skupnosti Ice Network!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Uporabite to funkcijo, da povabite svoje prijatelje, da se pridružijo skupnosti Ice. Razširite svoje omrežje, delite izkušnje in gradite trajne povezave skupaj."
+        },
+        "wallet": {
+          "description": "Tukaj lahko najdete svoje trenutno stanje Ice skupaj z stopnjo zaslužka."
+        },
+        "earning": {
+          "description": "Ostanite seznanjeni s svojo stopnjo zaslužka in bonusi! Tu lahko preverite svojo trenutno stopnjo, našo osnovno stopnjo in stopnje bonusov."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "V tem razdelku boste videli skupno število članov vaše ekipe, ki ste jih povabili, kar vam omogoča spremljanje rasti in razvoja vaše skupnosti."
+        },
+        "earnings": {
+          "description": "Vaše trenutno stanje se posodablja vsako uro in je tukaj prikazano. Vključuje vaše neposredne in blokirane zaslužke."
+        }
+      }
+    },
+    "claimUsername": {
+      "description": "Vaši prijatelji morajo pri prijavi na [[:ice]] uporabiti ta vzdevek."
+    },
+    "users": {
+      "team": "Prijatelji"
+    },
+    "team": {
+      "empty": {
+        "team": "Trenutno nimate prijateljev!"
+      },
+      "contacts": {
+        "empty_description": "Sinhronizirajte svoje stike in poglejte, kdo je že na [[:ice]]."
+      }
+    }
+  },
+  "bsc_address": {
+    "title": "Naslov BNB Smart Chain",
+    "enter_address_title": "Vnesite svoj\nnaslov BNB Smart Chain",
+    "enter_address_description": "Med Fazo Ena bodo žetoni ICE izdani na verigi BNB Smart Chain. Po zagonu Mainneta bodo lahko žetoni zamenjani iz BNB Smart Chain v verigo Ice Open Network (ION).",
+    "enter_address_confirmation": "Ste prepričani, da je vaš naslov BNB Smart Chain pravilen?",
+    "validators_warning_title": "Potrdite Naslov",
+    "validators_warning_text": "Opozorilo: Osebe, ki so dodale naslov BNB Smart Chain na svoj račun, niso upravičene postati eden od 300 glavnih validatojev, kot je navedeno v našem beli knjigi za zagon glavne mreže.",
+    "walletDescription": "Priporočamo uporabo samoupravljajoče denarnice, kot je [[:bold]]Metamask[[/:bold]] ali [[:bold]]Trust Wallet[[/:bold]].\n\nProsimo, preverite svoj naslov denarnice dvakrat, da se prepričate, da boste prejeli distribucijo."
+  },
+  "social_kyc": {
+    "header": "Preverjanje",
+    "verify_with_title": "Preveri s {{method}}",
+    "select_method_step": {
+      "title": "Korak KYC #2",
+      "description": "Preverite svoj račun enostavno z uporabo svojega obstoječega profila X."
+    },
+    "instructions_step": {
+      "show_example": "Pokaži primer",
+      "example_title": "Primer deljenja",
+      "x": {
+        "1": "Odpri X in poišči račun [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Najdi pripenjeno objavo, ki je prva objava na profilu.",
+        "3": "❤️ Všečkaj & 🔄 Ponovno deli s [[:bold]]Citatom[[/:bold]] in uporabi [[:bold]]TOČEN[[/:bold]] besedilo spodaj.",
+        "pop_up": {
+          "title": "Potrditev",
+          "description": "Ste všečkali pripenjeno objavo in jo ponovno delili s citatom, pri čemer ste uporabili točno besedilo, kot je navedeno v primeru?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Tapnite za kopiranje besedila",
+        "copied": "Kopirano"
+      }
+    },
+    "verification_step": {
+      "title": "Potrditev",
+      "description": "Za dokončanje preverjanja prilepite povezavo do objave, kjer ste izpolnili prejšnje korake. Preverite, ali je povezava pravilna.",
+      "placeholder": "Prilepite povezavo",
+      "instructions_step": {
+        "4": "Prilepite povezavo do svoje objave spodaj. 👇"
+      },
+      "action": {
+        "verify": "Preveri",
+        "wait": "Prosimo, počakajte",
+        "countdown": "Preostali čas: {{countdown}} sekund"
+      },
+      "pop_up": {
+        "title": "Neveljavna Povezava",
+        "description": "Prepričajte se, da ste kopirali pravilno povezavo.\n\n[[:bold]]Primer:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "Število preostalih poskusov: {{count}}",
+      "success": {
+        "title": "Preverjanje končano",
+        "description": "Čestitamo, uspešno ste zaključili Korak KYC #2. Sedaj ste preverjeni."
+      },
+      "error_try_again": {
+        "title": "Napaka preverjanja",
+        "description": "Preverite, ali ste pravilno ponovno delili objavo s uporabo navedenega besedila in ali je objava javno dostopna."
+      },
+      "error_try_later": {
+        "title": "Napaka preverjanja",
+        "description": "Preverjanja nismo mogli dokončati. Poskusite znova čez 7 dni."
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Distribucija BNB Smart Chain",
+      "description": "Prejmite svoje kovance ICE BNB Smart Chain tako, da preverite svoj račun enostavno s pomočjo obstoječega profila X."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Kliknite na povezavo [[:bold]]tukaj[[/:bold]] za neposredno odpiranje naše objave X.",
+        "pop_up": {
+          "description": "Sledite navodilom in poskrbite, da ste v prvem koraku kliknili na povezavo, da neposredno odprete našo objavo X.",
+          "description2": "Ste všečkali pravilno objavo in jo ponovno objavili s citatom, pri čemer ste uporabili točen besedilo, kot je prikazano v primeru?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Čestitamo, uspešno ste zaključili preverjanje. Sedaj ste upravičeni do distribucije BNB Smart Chain."
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "Potrditev računa",
+    "description": "Da preverite identiteto svojega računa in varno povežete svoj e-poštni naslov, se prepričajte, da uspešno opravite test čustev med postopkom avtentikacije.",
+    "description2": "Ta korak nam pomaga zagotoviti varnost in avtentičnost vašega računa. Hvala za sodelovanje!"
+  },
+  "quiz": {
+    "title": "Kviz",
+    "intro": {
+      "description": "V podjetju Ice verjamemo v spodbujanje skupnosti aktivnih in informiranih članov. Naša misija je zagotoviti distribucijo Ice kovancev tistim, ki so resnično vključeni in delijo našo vizijo.",
+      "community_engagement": {
+        "title": "🙌 Aktivno sodelovanje v skupnosti",
+        "description": "Vaše sodelovanje v ekosistemu Ice neposredno vpliva na vaše zmogljivosti rudarjenja:",
+        "point1": "Ostanite na tekočem: Vključite se v naše novice in videoposnetke.",
+        "point2": "Aktivno sodelujte: Pridružite se našemu programu osebnega razvoja in v živo na YouTube ali Twitter Space.",
+        "point3": "Družbene interakcije: Povečajte svojo prisotnost s všečkanjem, deljenjem, sledenjem ali objavljanjem o Ice.",
+        "bottom_description": "Bolj ko ste aktivni, višja je vaša pozitivna ocena interakcije, kar vam omogoča, da opravite postopek KYC."
+      },
+      "terms_privacy": "Razumem in se strinjam s [[:link]]Pogoji uporabe in politiko zasebnosti[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Preverjanje Znanja",
+        "point2": "Za uspešno opravljanje kviza morate pravilno odgovoriti na vsaj 18 vprašanj.",
+        "point3": "Neuspešen kviz kaže na potrebo po večjem vključevanju z našimi gradivi.",
+        "point4": "Za dokončanje kviza velja časovna omejitev. Število preostalih dni lahko vidite na svoji začetni strani v razdelku za kviz.",
+        "point5": "Pred datumom izteka veljavnosti imate na voljo 3 poskuse. Če kviza ne opravite 3-krat ali če preteče datum izteka veljavnosti, ne boste več mogli rudariti, in vaš račun bo kaznovan.",
+        "point6": "📚 Vse informacije o tem kvizu lahko preberete [[:link]]tukaj[[/:link]].",
+        "description": "Da bi zagotovili, da je naša skupnost dobro obveščena in se zavzema za našo vizijo:",
+        "point1": "Predstavili vam bomo 21 vprašanj, izpeljanih iz naših obsežnih virov."
+      },
+      "why_quiz": {
+        "title": "💡 Zakaj Kviz?",
+        "description": "Naše zavezništvo s znanjem in razumevanjem je na čelu naše skupnosti. Z našim kvizom si prizadevamo zagotoviti, da bo Ice prišel v prave roke, tistih, ki resnično razumejo in se strinjajo z vizijo našega projekta."
+      }
+    },
+    "quiz_failure": {
+      "title": "Kviz ni uspel",
+      "description": "Niste pravilno odgovorili na več kot 18 vprašanj ali je čas potekel, zato testa ne morete opraviti.",
+      "check_faq": "Da boste naslednjič pravilno odgovorili, vam priporočamo, da se seznanite z našim osnovnim znanjem in pogostimi vprašanji."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Vprašanje {{current}} od {{total}}",
+      "time_over": "⌛️ Čas je potekel",
+      "correct_answers": "Pravilni odgovori",
+      "wrong_answers": "Napačni odgovori"
+    },
+    "confirmation_popup": {
+      "title": "Potrditev",
+      "start_description": "Ste prepričani, da želite začeti kviz?",
+      "cancel_description": "S preskakovanjem kviza boste uporabili enega od 3 razpoložljivih poskusov. Ste prepričani, da želite kviz preskočiti zdaj?"
+    },
+    "quiz_success": {
+      "title": "Preverjanje je uspešno zaključeno",
+      "description": "Čestitamo, uspešno ste zaključili KYC. Vaši dosledni pravilni odgovori so dokazali vašo predanost in znanje. Sedaj ste preverjeni."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Onemogočeno Rudarjenje",
+      "description": "Vaš dostop do rudarjenja je bil onemogočen zaradi treh zaporednih neuspelih kvizov ali poteka časa, kot je zahtevano v našem postopku KYC."
+    },
+    "action": "Dokončajte kviz",
+    "reminder": "Opomba: da bi nadaljevali z rudarjenjem in se izognili zmanjšanju nagrade, morate končati kviz.",
+    "days_left": "Preostali dnevi: {{days}}",
+    "retries_left": "Preostali poskusi: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "Razdeljevanje BNB Smart Chain",
+      "description": "Ohranite svojo upravičenost za mesečno razdeljevanje kovancev ICE BNB Smart Chain z aktivno podporo najnovejših objav menjalnikov na X."
+    },
+    "results_step": {
+      "success": {
+        "description": "Čestitke, uspešno ste opravili svojo preverjanje. Zdaj ste upravičeni do vzdrževanja svojega mesečnega statusa razdeljevanja BNB Smart Chain."
+      }
+    }
+  },
+  "buttons": {
+    "skip": "Preskoči"
   }
 }

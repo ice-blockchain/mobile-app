@@ -296,8 +296,8 @@ jobs:
         run: |
           if [[ ${{ inputs.deployment == 'firebase' }} == true ]]
             then
-              echo "IOS_SIGN_TYPE=adhoc" >> $GITHUB_ENV
-              echo "DEPLOY_TARGET=firebase" >> $GITHUB_ENV
+              echo "IOS_SIGN_TYPE=appstore" >> $GITHUB_ENV
+              echo "DEPLOY_TARGET=testflight" >> $GITHUB_ENV
               echo "APP_VERSION=9.9.9" >> $GITHUB_ENV
               echo "RELEASE_NOTES=${{ github.ref_name }}" >> $GITHUB_ENV
             else

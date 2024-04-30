@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-const PLURALIZATION_KEYS = ['zero', 'one', 'two', 'few', 'many', 'other'];
+const PLURALIZATION_KEYS = ['zero', 'one', 'few', 'many', 'other'];
 
 export const isPluralizationNode = node => {
   if (typeof node !== 'object') {

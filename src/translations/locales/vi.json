@@ -1,4 +1,33 @@
 {
+  "welcome": {
+    "page1": {
+      "title": "Chào mừng đến với Ice",
+      "description": "[[:ice]] là một loại tiền kỹ thuật số mà bạn có thể kiếm được bằng điện thoại của mình. Ice được sở hữu và vận hành bởi những người dùng hàng ngày như bạn."
+    },
+    "page2": {
+      "title": "Hành tinh thân thiện",
+      "description": "[[:ice]] vốn đã tiết kiệm năng lượng hơn BTC vì nó sử dụng cơ chế đồng thuận “Proof of Stake” (Bằng chứng cổ phần). Với bằng chứng cổ phần (POS), chủ sở hữu tiền mã hóa xác thực các giao dịch khối dựa trên số lượng đồng tiền mà người xác thực giữ và khóa."
+    },
+    "page3": {
+      "title": "Đồng tiền của mọi người",
+      "description_part1": "Sức mạnh nằm trong tay bạn.",
+      "description_part2": "Mọi thứ chúng tôi phát triển tại [[:ice]] sẽ là mã nguồn mở và được kiểm soát bởi Tổ chức tự trị phi tập trung (DAO)."
+    },
+    "page4": {
+      "title": "Luôn kết nối",
+      "description": "Nhấn vào [[:iceLogo]] để điểm danh hàng ngày với ứng dụng di động miễn phí, tiết kiệm năng lượng của chúng tôi. Việc bạn điểm danh hàng này sẽ đảm bảo Ice luôn đến được với tay người dùng thực chứ không phải máy."
+    },
+    "page5": {
+      "title": "Giới thiệu & Kiếm tiền",
+      "description": "Mời bạn bè và (cả hai bạn) nhận thưởng lên đến 25% trên lãi suất cơ bản cho từng người bạn tham gia nhóm của bạn."
+    },
+    "page6": {
+      "title": "Thông báo",
+      "description_part1": "[[:ice]] có các phiên điểm danh chỉ kéo dài trong 24 giờ. Bạn có muốn nhận thông báo khi phiên hiện tại của bạn kết thúc không?",
+      "description_part2": "Đừng lo, chúng tôi sẽ không gửi thông báo rác cho bạn!",
+      "not_now": "Không phải bây giờ"
+    }
+  },
   "button": {
     "yes_btn": "Có, đồng ý",
     "next_btn": "Tiếp theo",
@@ -46,6 +75,81 @@
     "start": "Bắt đầu",
     "faq": "Câu hỏi thường gặp",
     "knowledge_base": "Cơ sở kiến thức"
+  },
+  "team": {
+    "contacts_tab": "Danh bạ",
+    "tierOne_tab": "Bậc 1",
+    "tierTwo_tab": "Bậc 2",
+    "empty": {
+      "contacts": "Hiện bạn không có bất kỳ địa chỉ liên hệ nào trong danh bạ.",
+      "button_title": "Mời bạn bè",
+      "t1": "Hiện tại bạn không có giới thiệu T1 nào!",
+      "t2": "Hiện tại bạn không có giới thiệu T2 nào!",
+      "team": "Hiện tại bạn không có thành viên trong nhóm nào!"
+    },
+    "contacts": {
+      "empty_title": "[[:ice]] sẽ tốt hơn khi có nhiều bạn bè",
+      "empty_button_title": "Cho phép truy cập danh bạ",
+      "empty_description": "Đồng bộ danh bạ của bạn và xem ai đã tham gia [[:ice]]. Trong tương lai, bạn sẽ có thể gửi Ice cho bất kỳ địa chỉ liên hệ nào của mình."
+    },
+    "header": {
+      "search_placeholder": "Tìm kiếm người dùng",
+      "referrals": "Lượt giới thiệu",
+      "earnings": "Thu nhập"
+    },
+    "confirm_code": {
+      "title": "Xác nhận mã",
+      "description": "Vui lòng nhập mã xác nhận mà bạn đã nhận được trên điện thoại.",
+      "placeholder": "Nhập mã",
+      "button": "Xác nhận mã của bạn ngay bây giờ"
+    },
+    "confirm_phone": {
+      "title": "Xác nhận số điện thoại",
+      "description": "Vui lòng xác nhận mã quốc gia của bạn và nhập số điện thoại của bạn."
+    },
+    "contacts_list": {
+      "ice_header": {
+        "friends": "bạn bè"
+      },
+      "all_contacts": "Tất cả danh bạ",
+      "invite": "mời",
+      "invitation_text": "Xin chào {{name}}, tôi muốn mời bạn tham gia Ice."
+    },
+    "tier_one": {
+      "header_list": {
+        "title_earnings": "Thu nhập Bậc 1"
+      }
+    },
+    "tier_two": {
+      "header_list": {
+        "title_earnings": "Thu nhập Bậc 2"
+      }
+    }
+  },
+  "signIn": {
+    "logInSignUp": "Đăng nhập / Đăng ký",
+    "phone": "Số điện thoại",
+    "or": "hoặc",
+    "reset_password": "Đặt lại mật khẩu",
+    "welcome": "Chào mừng đến với Ice",
+    "email": "Email",
+    "slogan": "Tương lai Phi tập trung",
+    "privacy": "Bằng cách tiếp tục, bạn đồng ý với [[:link]]Điều khoản dịch vụ[[/:link]] và [[:link]]Chính sách quyền riêng tư[[/:link]] của chúng tôi"
+  },
+  "claimUsername": {
+    "title": "Xác nhận biệt danh",
+    "description": "Bạn bè của bạn sẽ cần sử dụng biệt danh này để tham gia nhóm của bạn.",
+    "inputPlaceholder": "Nhập biệt danh của bạn",
+    "note_part1": "Khi tạo biệt danh, chỉ sử dụng chữ cái, số và dấu chấm.",
+    "note_part2": "Ví dụ:",
+    "note_example": "your.name01"
+  },
+  "whoInvitedYou": {
+    "title": "Ai đã mời bạn?",
+    "description": "Nhập biệt danh của người đã mời bạn.",
+    "inputPlaceholder": "Nhập biệt danh",
+    "dontHaveInvitationCode": "Bằng cách hoàn thành bước này, bạn và bạn bè của bạn sẽ nhận thưởng 25% trên lãi suất cơ bản khi cả hai bạn điểm danh cùng một lúc.",
+    "dontHaveCodeTip": "Nếu bạn không có mã giới thiệu, chúng tôi sẽ chọn một thành viên ngẫu nhiên làm người giới thiệu của bạn!"
   },
   "errors": {
     "nicknameSize": "Kích thước biệt danh: 4-20 ký tự.",
@@ -99,6 +203,45 @@
     "same_phone_error": "Bạn không thể sử dụng cùng một số điện thoại.",
     "unable_to_validate_bsc_addr_eoa": "Không thể xác minh địa chỉ EOA"
   },
+  "profile": {
+    "my_roles": {
+      "title": "Vai trò của tôi"
+    },
+    "mining_calculator": "máy tính thu nhập",
+    "invite_friends": "Mời bạn bè",
+    "invite_friends_engage": "Lan tỏa và mời bạn bè của bạn. Giới thiệu càng nhiều, thu nhập càng tăng!",
+    "global_rank": "xếp hạng toàn cầu",
+    "view_all_roles": "xem tất cả vai trò",
+    "data_is_hidden": "dữ liệu bị ẩn",
+    "progress_text": "{{value}} trên {{total}}",
+    "not_found": {
+      "title": "Không tìm thấy người dùng",
+      "description": "Rất tiếc, chúng tôi không thể tìm thấy người dùng này."
+    },
+    "my_badges": {
+      "title": "Huy hiệu của tôi"
+    },
+    "badges": {
+      "title": "Huy hiệu"
+    },
+    "roles": {
+      "title": "Vai trò"
+    },
+    "badge_types": {
+      "coin": {
+        "title": "Đồng",
+        "description": "đồng"
+      },
+      "social": {
+        "title": "Xã hội",
+        "description": "bạn bè"
+      },
+      "level": {
+        "title": "Cấp độ",
+        "description": "Cấp độ"
+      }
+    }
+  },
   "global": {
     "level": "cấp độ",
     "referrals": "lượt giới thiệu",
@@ -117,6 +260,320 @@
       "today": "Hôm nay"
     }
   },
+  "mining_calculator": {
+    "result_label": "Bạn sẽ kiếm được",
+    "active_inviter": "Người mời đang hoạt động",
+    "tier_1_ref": "Lượt giới thiệu bậc 1",
+    "tier_2_ref": "Lượt giới thiệu bậc 2",
+    "active_miners": "Lượt giới thiệu đang hoạt động",
+    "team_members": "Thành viên nhóm",
+    "active_team_members": "Thành viên nhóm hoạt động"
+  },
+  "home": {
+    "wallet": {
+      "title": "VÍ",
+      "rate": "LÃI SUẤT",
+      "balance": "SỐ DƯ HIỆN TẠI"
+    },
+    "pioneer": {
+      "rank": "XẾP HẠNG TOÀN CẦU",
+      "referrals": "LƯỢT GIỚI THIỆU",
+      "description": "Giới thiệu thêm người dùng và kiếm được nhiều [[:ice]] hơn."
+    },
+    "referrals": {
+      "title": "LƯỢT GIỚI THIỆU",
+      "description": "Thống kê lượt giới thiệu cho 5 ngày trước.",
+      "no_referrals_description": "Bạn chưa có bất kỳ lượt giới thiệu nào.",
+      "users_tier_1": "Người dùng bậc 1",
+      "users_tier_2": "Người dùng bậc 2",
+      "title_team": "NHÓM",
+      "description_team": "Thống kê nhóm trong 5 ngày gần đây",
+      "no_referrals_description_team": "Hiện tại bạn không có thành viên trong nhóm nào.",
+      "users": "Người dùng"
+    },
+    "adoption": {
+      "title": "ÁP DỤNG",
+      "level": "cấp độ",
+      "users": "người dùng"
+    },
+    "tasks": {
+      "achievements": "THÀNH TỰU",
+      "title": "Tiến độ của bạn",
+      "description": "Hoàn thành các nhiệm vụ dưới đây và lên cấp!",
+      "completed": {
+        "title": "Xin chúc mừng",
+        "description": "Hãy tiếp tục điểm danh hàng ngày để nhận thêm phần thưởng!"
+      },
+      "popup": {
+        "title": "Tham gia kênh Telegram của chúng tôi",
+        "description": "Chỉ định biệt danh của bạn để sử dụng trên Telegram.",
+        "placeholder": "Biệt danh"
+      },
+      "claim_username": {
+        "title": "Xác nhận biệt danh của bạn",
+        "description": "Đặt biệt danh và chia sẻ với bạn bè."
+      },
+      "start_mining": {
+        "title": "Bắt đầu kiếm tiền",
+        "description": "Phiên điểm danh đầu tiên của bạn."
+      },
+      "upload_profile_picture": {
+        "title": "Ảnh hồ sơ",
+        "description": "Tải lên ảnh hồ sơ của bạn."
+      },
+      "join_telegram": {
+        "title": "Tham gia Telegram",
+        "description": "Hãy là một phần của cộng đồng và tham gia ngay bây giờ."
+      },
+      "follow_us_on_twitter": {
+        "title": "Theo dõi chúng tôi trên Twitter",
+        "description": "Hãy giữ liên lạc và theo dõi chúng tôi trên Twitter."
+      },
+      "invite_friends": {
+        "title": "Mời 5 người bạn",
+        "description": "Phát triển nhóm của bạn và tăng thu nhập."
+      }
+    },
+    "overview": {
+      "title": "Tổng quan"
+    },
+    "menu": {
+      "notifications": "Thông báo",
+      "staking": "Giữ và khóa",
+      "stats": "Thống kê",
+      "help": "Trợ giúp",
+      "tips": "Mẹo"
+    },
+    "team": {
+      "title": "Nhóm",
+      "view_team": "xem nhóm"
+    },
+    "mining_rate": {
+      "title": "LÃI SUẤT",
+      "base": "Cơ bản"
+    },
+    "engagement": {
+      "title": "TƯƠNG TÁC",
+      "description_part1": "Chuỗi là số ngày điểm danh liên tiếp của bạn.",
+      "description_part2": "Cứ 6 ngày liên tiếp thì bạn được nghỉ một ngày.",
+      "streak": "CHUỖI",
+      "days_off": "NGÀY NGHỈ"
+    },
+    "roadmap": {
+      "title": "TƯƠNG LAI CỦA CHÚNG TÔI",
+      "button_title": "Whitepaper",
+      "button_subtitle": "Tìm hiểu thêm về tầm nhìn của chúng tôi tại Ice."
+    },
+    "join_mainnet": {
+      "title": "Tham gia Tương lai Phi tập trung",
+      "subtitle": "Nhận cái nhìn sơ bộ về ứng dụng Mainnet sắp tới của chúng tôi và các tính năng độc đáo của nó."
+    },
+    "bsc_address": {
+      "title": "Địa chỉ BNB Smart Chain",
+      "subtitle": "Vui lòng nhập địa chỉ BSC của bạn ở đây."
+    },
+    "verified_tooltip": {
+      "title": "KYC Đã Xác Minh"
+    }
+  },
+  "settings": {
+    "title": "Cài đặt",
+    "profile": "Hồ sơ",
+    "legal": "Pháp lý",
+    "support": "Hỗ trợ",
+    "personal_information_title": "Thông tin cá nhân",
+    "personal_information_description": "Quản lý chi tiết hồ sơ của bạn.",
+    "notifications_title": "Thông báo",
+    "notifications_description": "Quản lý thông báo của bạn tại đây.",
+    "push_notifications_title": "Thông báo đẩy",
+    "push_notifications_description": "Tùy chỉnh cài đặt thông báo đẩy của bạn.",
+    "email_notifications_title": "Thông báo qua email",
+    "email_notifications_description": "Tùy chỉnh cài đặt thông báo email của bạn.",
+    "terms_title": "Điều khoản dịch vụ",
+    "terms_description": "Xem lại các điều khoản dịch vụ của chúng tôi.",
+    "privacy_title": "Chính sách quyền riêng tư",
+    "privacy_description": "Tìm hiểu về chính sách quyền riêng tư của chúng tôi.",
+    "feedback_title": "Gửi phản hồi",
+    "feedback_description": "Chia sẻ suy nghĩ của bạn với chúng tôi.",
+    "invite_title": "Mời bạn bè",
+    "invite_description": "Kiếm thêm Ice bằng cách mời bạn bè.",
+    "delete_title": "Xóa tài khoản",
+    "delete_description": "Xóa tài khoản của bạn.",
+    "delete_confirmation_title": "Bạn có chắc chắn muốn xóa tài khoản không?",
+    "delete_confirmation_yes": "Có, hãy xóa",
+    "logout_title": "Đăng xuất",
+    "logout_description": "Đăng xuất và nghỉ ngơi.",
+    "logout_confirmation_title": "Bạn có chắc chắn muốn đăng xuất không?",
+    "logout_confirmation_yes": "Có, hãy đăng xuất",
+    "confirm_phone": {
+      "title": "Xác nhận số điện thoại mới",
+      "description": "Vui lòng xác nhận mã quốc gia của bạn và nhập số điện thoại mới của bạn.",
+      "button": "Xác nhận số điện thoại mới"
+    },
+    "notifications": {
+      "enable_prompt": "Không cho phép thông báo. Bạn có muốn bật không?",
+      "channel_achievements": "Thành tựu",
+      "channel_news": "Tin tức",
+      "channel_reminders": "Nhắc nhở",
+      "channel_team": "Nhóm",
+      "type_push": "ĐẨY",
+      "type_email": "EMAIL",
+      "disable_notifications": "Tắt thông báo?",
+      "disable_notifications_description": "Bằng cách tắt thông báo, bạn sẽ không nhận được thông tin cập nhật khi bạn có thể bắt đầu điểm danh, tin tức hoặc thông tin nhóm.",
+      "domain": {
+        "disable_all": {
+          "title": "",
+          "description": ""
+        },
+        "weekly_stats": {
+          "title": "Thống kê hàng tuần",
+          "description": "Nhận thông báo về hoạt động của bạn."
+        },
+        "weekly_report": {
+          "title": "Báo cáo hàng tuần",
+          "description": "Nhận thông báo về hoạt động của bạn."
+        },
+        "achievements": {
+          "title": "Thành tựu",
+          "description": "Nhận thông báo về tiến trình của bạn."
+        },
+        "promotions": {
+          "title": "Khuyến mãi",
+          "description": "Nhận thông báo về cách phát triển nhóm và tăng thu nhập."
+        },
+        "news": {
+          "title": "Tin tức",
+          "description": "Nhận thông báo từ nhóm của chúng tôi."
+        },
+        "micro_community": {
+          "title": "Cộng đồng vi mô",
+          "description": "Nhận thông báo về nhóm của bạn."
+        },
+        "daily_bonus": {
+          "title": "Thưởng hàng ngày",
+          "description": "Nhận thông báo để nhận thưởng hàng ngày của bạn."
+        },
+        "mining": {
+          "title": "Trạng thái phiên",
+          "description": "Nhận thông báo về hoạt động điểm danh của bạn."
+        },
+        "system": {
+          "title": "Hệ thống",
+          "description": "Nhận thông báo quan trọng về ứng dụng Ice."
+        }
+      }
+    },
+    "language_settings": "Cài đặt ngôn ngữ",
+    "change_lang_confirm": {
+      "title": "Thay đổi ngôn ngữ",
+      "prompt": "Áp dụng cài đặt này sẽ khởi động lại ứng dụng."
+    },
+    "profile_image": "Ảnh hồ sơ",
+    "inapp_privacy_title": "Quyền riêng tư",
+    "inapp_privacy_description": "Quản lý thông tin của bạn tại đây.",
+    "developer": "Nhà phát triển",
+    "user_id": "ID người dùng",
+    "user_token": "Token người dùng",
+    "profile_photo": {
+      "delete": "Xóa ảnh",
+      "edit": "Chỉnh sửa ảnh hồ sơ",
+      "photo_gallery": "Thư viện ảnh",
+      "camera": "Máy ảnh"
+    },
+    "confirm_email_confirmation_title": "Xác nhận email?",
+    "update_email_confirmation_title": "Cập nhật email?",
+    "update_email_confirmation_subtitle": "Thay đổi địa chỉ email sẽ yêu cầu bạn đăng nhập lại. Bạn có chắc chắn muốn tiếp tục không?",
+    "unlink_logins_title": "Hủy liên kết đăng nhập",
+    "unlink_logins_description": "Bạn có thể hủy liên kết đăng nhập của mình tại đây."
+  },
+  "invite_share": {
+    "title": "Mời bạn bè",
+    "telegram": "Telegram",
+    "twitter": "Twitter",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email": "Email",
+    "fb": "Nguồn cấp tin tức",
+    "sms": "Tin nhắn SMS",
+    "copy_link": "Sao chép liên kết",
+    "more": "Thêm",
+    "copied": "ĐÃ SAO CHÉP",
+    "share_message": "Xin chào Người tuyết ☃️! Tham gia nhóm của tôi trên Ice và nhận 10 đồng Ice khi bạn đăng ký bằng mã giới thiệu của tôi:",
+    "share_subject": "Tham gia nhóm của tôi trên Ice",
+    "description": "Lan tỏa và mời bạn bè của bạn. Bạn kiếm được [[:ice]] cho mỗi lượt giới thiệu mà bạn mang lại.",
+    "share": "Chia sẻ"
+  },
+  "users": {
+    "ping": "PING",
+    "active": "Đang hoạt động",
+    "inactive": "Không hoạt động",
+    "referralType": {
+      "T1": "Bậc 1",
+      "T2": "Bậc 2",
+      "team": "Thành viên nhóm"
+    },
+    "team": "Nhóm"
+  },
+  "personal_information": {
+    "first_name": "Tên",
+    "last_name": "Họ",
+    "country": "Quốc gia",
+    "city": "Thành phố",
+    "title": "Thông tin cá nhân",
+    "phone": "Số điện thoại",
+    "email": "Email",
+    "username": "Biệt danh"
+  },
+  "username": {
+    "error": {
+      "already_taken": "Biệt danh đã được sử dụng.",
+      "length": "Kích thước biệt danh: 4-20 ký tự.",
+      "invalid_characters": "Xóa ký tự không hợp lệ.",
+      "not_found": "Không tìm thấy biệt danh.",
+      "some_error": "Đã xảy ra lỗi.",
+      "refer_yourself": "Bạn không thể giới thiệu chính mình."
+    }
+  },
+  "staking": {
+    "time_left": "Thời gian còn lại",
+    "mining_rate": "Lãi suất",
+    "appeal": "Tăng lãi suất của bạn",
+    "benefits_description": "Giữ và khóa sớm các phần thưởng Ice của bạn trong tối đa 5 năm và tăng lãi suất lên đến 250%.",
+    "bonus_label": "Thưởng giữ và khóa sớm",
+    "period_label": "Thời gian giữ và khóa",
+    "title": "Giữ và khóa sớm",
+    "current_rate": "Lãi suất hiện tại",
+    "allocation": "Phân bổ",
+    "description": "Giữ và khóa là một quá trình liên quan đến việc cam kết tài sản tiền mã hóa của bạn để hỗ trợ mạng chuỗi khối và xác nhận giao dịch.",
+    "terms_agree": "Tôi đồng ý với [[:ice]] [[:link]]Điều khoản giữ và khóa[[/:link]]. Lượng Ice mà bạn nắm giữ sẽ bị khóa trong khoảng thời gian đã chọn.",
+    "stake_now": "Giữ và khóa sớm ngay!",
+    "balance_label": "Số dư giữ và khóa",
+    "confirm_title": "Xác nhận giữ và khóa sớm",
+    "confirm_subtitle": "Bạn có chắc chắn muốn giữ và khóa sớm số đồng tiền của mình không? Không thể hoàn tác sau khi bạn xác nhận.",
+    "remove_pre_staking": "Xóa Trước Khi Stake"
+  },
+  "stats": {
+    "header_title": "Thống kê",
+    "active": "Người dùng đang hoạt động",
+    "total": "Tổng số người dùng",
+    "user_growth": "Tăng trưởng người dùng",
+    "top_miners": "Người dùng hàng đầu",
+    "top_countries": "Các quốc gia hàng đầu",
+    "online_miners": "Người dùng trực tuyến",
+    "detailed_information": "Thông tin chi tiết",
+    "total_coins": "Tổng số đồng tiền",
+    "filter": {
+      "total": "Tổng",
+      "on_app": "Có sẵn trên ứng dụng",
+      "pre_staked": "Trước khi gắn cờ",
+      "on_blockchain": "Trên Blockchain"
+    }
+  },
+  "update_required": {
+    "title": "Vui lòng cập nhật",
+    "description": "Bạn đang sử dụng phiên bản ứng dụng cũ và cần cập nhật phiên bản này để tiếp tục sử dụng.",
+    "button_title": "Cập nhật ngay"
+  },
   "general": {
     "good_morning": "Chào buổi sáng",
     "good_afternoon": "Chào buổi chiều",
@@ -126,25 +583,350 @@
     "seconds_short": "giây",
     "minutes_short": "phút",
     "hours_short": "giờ",
-    "days_short": "ngày",
-    "hour": {
-      "zero": "giờ",
-      "one": "giờ",
-      "two": "giờ",
-      "few": "giờ",
-      "many": "giờ",
-      "other": "giờ"
+    "days_short": "ngày"
+  },
+  "news": {
+    "news_feed": "Nguồn cấp tin tức",
+    "read_more": "Đọc thêm",
+    "no_more_news": "đây là mục cuối cùng của nguồn cấp tin tức.",
+    "views": "{{viewsCount}} lượt xem"
+  },
+  "search": {
+    "empty": "Tìm kiếm địa chỉ liên lạc, bạn bè Ice và các thành viên trong cộng đồng vi mô của bạn.",
+    "nothing_is_found": "Không tìm thấy gì cho truy vấn của bạn.",
+    "search_by_country": "Tìm kiếm theo quốc gia",
+    "search_for_users": "Tìm kiếm người dùng",
+    "loading": "Đang tìm kiếm..."
+  },
+  "tabbar": {
+    "mining_inactive_tooltip": "Nhấn vào đây để bắt đầu phiên điểm danh đầu tiên của bạn.",
+    "mining_reset_tooltip": "Nhấn trong 1 giây để kéo dài phiên điểm danh của bạn.",
+    "mining_holiday_reset_tooltip": "Bạn đang sử dụng Ngày nghỉ! Nhấn trong 1 giây để kéo dài phiên điểm danh của bạn.",
+    "mining_holiday_active": "Bạn đang sử dụng Ngày nghỉ!"
+  },
+  "invite_friend": {
+    "invite_button": "Mời bạn bè",
+    "button_title": "Mời bạn bè",
+    "description": "Bạn bè của bạn chưa tham gia [[:ice]]. Hãy gửi cho họ một lời mời!"
+  },
+  "balance_history": {
+    "title": "Lịch sử số dư",
+    "wallet": "Ví",
+    "blockchain": "Chuỗi khối",
+    "wallet_update_interval": "được cập nhật mỗi giờ",
+    "blockchain_update_interval": "được cập nhật mỗi 28 ngày",
+    "list_end_label": "đây là mục cuối cùng của lịch sử số dư.",
+    "no_data": "Không có dữ liệu để hiển thị trong khoảng thời gian được chỉ định.",
+    "you": "bạn",
+    "contribution": "đóng góp"
+  },
+  "pop_up": {
+    "update_now": "Cập nhật ngay",
+    "please_update": "Vui lòng cập nhật",
+    "update_now_text": "Bạn đang sử dụng phiên bản ứng dụng cũ và cần cập nhật phiên bản này để tiếp tục sử dụng.",
+    "you_are_up_to_date": "Bạn đã cập nhật!",
+    "up_to_date_text": "Bạn hiện đang sử dụng phiên bản mới nhất. Tìm hiểu tất cả các thay đổi dưới đây.",
+    "resurrection": "Hồi sinh",
+    "resurrection_message": "Bạn có một cơ hội để hồi sinh và nhận [[:amount]] đồng mà bạn đã mất trong [[:period]] qua.",
+    "resurrection_warning": "Bạn chỉ có thể hồi sinh một lần!",
+    "please_confirm": "Vui lòng xác nhận",
+    "resurrection_no_confirm_message": "Bạn sẽ mất vĩnh viễn [[:amount]] đồng. Bạn có chắc chắn muốn tiếp tục không?",
+    "resurrection_yes_confirm_message": "Bạn chỉ có thể hồi sinh một lần! Bạn có chắc chắn muốn tiếp tục không? [[:amount]] đồng sẽ được hoàn trả vào số dư của bạn trong vòng một giờ tới.",
+    "delete_account_confirmation_title": "Xác nhận xóa",
+    "delete_account_confirmation_text": "Xóa tài khoản của bạn sẽ xóa vĩnh viễn tất cả dữ liệu của bạn, bao gồm cả số dư Ice của bạn. Bạn có muốn tiến hành không?",
+    "registration_update_title": "Cập Nhật Đăng Ký",
+    "registration_update_text": "Chúng tôi đã tạm ngừng việc tạo tài khoản mới bằng số điện thoại. Để tiếp tục, bạn cần chọn địa chỉ email hoặc đăng nhập thông qua mạng xã hội.",
+    "link_email_title": "Liên Kết Địa Chỉ Email",
+    "link_email_text": "Chúng tôi đã tạm ngừng đăng nhập bằng số điện thoại. Vui lòng liên kết địa chỉ email của bạn và xác nhận để có thể đăng nhập.",
+    "account_error_title": "Lỗi Tài Khoản",
+    "account_error_text": "Chúng tôi đã tạm ngừng đăng nhập bằng số điện thoại. Xin lỗi, tài khoản của bạn không qua được KYC và không đủ điều kiện để khôi phục.",
+    "login_via_email_title": "Vui lòng Đăng Nhập Bằng Email",
+    "login_via_email_text": "Chúng tôi đã tạm ngừng đăng nhập bằng số điện thoại. Vui lòng sử dụng địa chỉ email được liên kết với tài khoản của bạn để đăng nhập.",
+    "email_in_use_title": "Email Đã Được Sử Dụng",
+    "email_in_use_text_part1": "Địa chỉ email bạn đang cố gắng liên kết đã được sử dụng.",
+    "email_in_use_text_part2": "Nếu đây là địa chỉ email của bạn, vui lòng đăng nhập trước với nó, hoàn tất quá trình đăng ký và xóa tài khoản đó để có sẵn địa chỉ email, sau đó quay lại đăng nhập bằng số điện thoại để hoàn thành quá trình liên kết.",
+    "successfully_linked_title": "Liên Kết Thành Công!",
+    "successfully_linked_text": "Địa chỉ email đã được liên kết thành công với tài khoản của bạn."
+  },
+  "periods": {
+    "3_days": "3 ngày",
+    "7_days": "7 ngày",
+    "30_days": "30 ngày",
+    "1_day": "1 Ngày",
+    "1_week": "1 Tuần",
+    "1_month": "1 Tháng",
+    "90_days": "90 ngày",
+    "14_days": "14 ngày"
+  },
+  "notifications": {
+    "joined": " đã tham gia nhóm của bạn.",
+    "multiply": " và {{count}} người khác đã tham gia nhóm của bạn.",
+    "ping": " đã ping bạn, hãy thức dậy!",
+    "delete": "Xóa",
+    "add_notifications": "Thêm thông báo mô phỏng",
+    "no_notifications": "Không có thông báo để hiển thị.",
+    "add_announcements": "Thêm công bố mô phỏng",
+    "add_both": "Thêm thông báo và công bố mô phỏng cùng nhau",
+    "clear_title": "Xóa tất cả thông báo?",
+    "title": "Thông báo"
+  },
+  "notification_feed_screen": {
+    "yesterday": "Hôm qua",
+    "last_week": "Tuần trước",
+    "this_month": "Tháng này",
+    "last_month": "Tháng trước",
+    "this_week": "Tuần này"
+  },
+  "profile_privacy_edit": {
+    "step1": {
+      "title": "1. Thống kê hồ sơ của bạn",
+      "description": "Nhấn vào các khối mà bạn muốn ẩn."
     },
-    "day": {
-      "zero": "ngày",
-      "one": "ngày",
-      "two": "ngày",
-      "few": "ngày",
-      "many": "ngày",
-      "other": "ngày"
+    "step2": {
+      "description": "Nhấn vào khối này để ẩn.",
+      "title": "2. Vai trò hiện tại của bạn"
     },
-    "minutes_abbr": "ph",
-    "seconds_abbr": "giây"
+    "step3": {
+      "title": "3. Huy hiệu kiếm được của bạn",
+      "description": "Nhấn vào đây để ẩn huy hiệu của bạn."
+    }
+  },
+  "confirm_email": {
+    "title": "Xác nhận email của bạn",
+    "description": "Vui lòng nhập địa chỉ email của bạn và chúng tôi sẽ gửi mã.",
+    "note": "Nếu bạn không nhận được email trong vòng 5 phút, vui lòng kiểm tra thư mục thư rác.",
+    "wrong_email": "Email không đúng?",
+    "check_email": "Kiểm tra email của bạn",
+    "emailed_link_to": "Chúng tôi đã gửi một liên kết kỳ diệu qua email đến",
+    "emailed_steps_to": "Chúng tôi đã gửi các bước qua email đến",
+    "link_instruction": "Nhấn vào liên kết để đăng nhập hoặc đăng ký.",
+    "reset_link_instruction": "Nhấn vào liên kết để đặt lại mật khẩu của bạn.",
+    "modify_title": "Xác nhận email mới",
+    "modify_description": "Vui lòng nhập địa chỉ email mới của bạn."
+  },
+  "invalid_link": {
+    "title": "Liên kết không hợp lệ",
+    "description": "Rất tiếc, liên kết này không hợp lệ, vui lòng nhập lại email của bạn và chúng tôi sẽ gửi cho bạn một liên kết mới."
+  },
+  "confirm_code": {
+    "title": "Xác nhận mã",
+    "description": "Vui lòng nhập mã được gửi đến",
+    "send_code_again": "Gửi lại mã",
+    "resend_time_label": "Mã mới có sẵn sau ",
+    "enter_code": "Nhập mã",
+    "wrong_number": "Số điện thoại không đúng?"
+  },
+  "ice_bonus": {
+    "title": "Phần thưởng chào mừng",
+    "description": "Xin chúc mừng, bạn đã nhận được [[:value]] đồng [[:ice]] đầu tiên, điều này chứng tỏ chúng tôi [[:bold]]Tin tưởng[[/:bold]] [[:bold]]Bạn[[/:bold]].",
+    "balance_label": "Số dư hiện tại của bạn"
+  },
+  "country_select": {
+    "title": "Chọn quốc gia"
+  },
+  "roles": {
+    "snowman": {
+      "title": "Người tuyết",
+      "subtitle": "Xây dựng một đế chế tuyết",
+      "description": "Kiếm tiền bằng cách điểm danh sau mỗi 24 giờ để thể hiện cam kết của bạn với mạng Ice và chứng minh rằng bạn là người chứ không phải máy."
+    },
+    "ambassador": {
+      "title": "Đại sứ",
+      "subtitle": "Người cai trị của đế chế tuyết",
+      "description": "Bạn trở thành đại sứ khi có ít nhất 100 người tham gia nhóm của bạn. Mỗi đại sứ sẽ có quyền truy cập sớm vào các tính năng mới."
+    }
+  },
+  "confirm_phone": {
+    "modify_title": "Xác nhận số điện thoại",
+    "modify_description": "Vui lòng xác nhận mã quốc gia của bạn và nhập số điện thoại của bạn.",
+    "button": "Xác nhận quốc gia và số điện thoại"
+  },
+  "date_select": {
+    "title": "Chọn ngày"
+  },
+  "walkthrough": {
+    "overrides": {
+      "home": {
+        "team": {
+          "description": "[[:ice]] tốt hơn khi có bạn bè. Trên trang này, bạn có thể xem trạng thái của các thành viên trong đội của bạn. Bạn cũng có thể gửi tin nhắn cho họ từ đây."
+        },
+        "referralscard": {
+          "title": "Thẻ đội",
+          "description": "Chạm vào thẻ này để xem tiến trình thống kê của các thành viên trong đội của bạn trong vòng 5 ngày qua."
+        }
+      },
+      "team": {
+        "segmented_control_tier_one": {
+          "title": "Đội",
+          "description": "Ở đây, bạn có thể xem danh sách những người bạn đã mời tham gia Ice Network. Bạn có thể dễ dàng theo dõi tình trạng của họ từ đây và gửi thông báo cho những người không hoạt động."
+        },
+        "active_users": {
+          "description": "Đây là trạng thái hiện tại của hoạt động kiểm tra của các thành viên trong đội của bạn. Họ được coi là hoạt động khi có phiên kiểm tra hoạt động."
+        },
+        "ping": {
+          "description": "Thông báo cho các thành viên trong đội của bạn bắt đầu phiên kiểm tra của họ. Bạn có thể gửi một thông báo cho mỗi người giới thiệu mỗi 24 giờ."
+        }
+      }
+    },
+    "profile": {
+      "hidden_data": {
+        "title": "Dữ liệu ẩn",
+        "description": "Chạm vào biểu tượng mắt để xem cách người dùng khác nhìn thấy hồ sơ của bạn."
+      }
+    },
+    "news": {
+      "readmore": {
+        "title": "Đọc thêm",
+        "description": "Tại đây, bạn có thể xem tin tức mới nhất từ nhóm của chúng tôi. Nhấn vào nút này để đọc toàn bộ bài viết."
+      },
+      "releasednews": {
+        "title": "Tin tức đã phát hành",
+        "description": "Nhấn vào từng tiêu đề tin tức riêng lẻ và đọc phiên bản đầy đủ. Luôn cập nhật mọi tin tức và các cuộc thăm dò của chúng tôi."
+      }
+    },
+    "team": {
+      "allow_contacts": {
+        "title": "Cho phép truy cập danh bạ",
+        "description": "Đồng bộ danh bạ của bạn và xem ai đã tham gia [[:ice]]. Trong tương lai, bạn sẽ có thể gửi [[:ice]] cho bất kỳ địa chỉ liên hệ nào của mình."
+      },
+      "confirm_phone": {
+        "title": "Xác nhận số điện thoại",
+        "description": "Xác nhận danh tính của bạn và cho phép các địa chỉ liên hệ của bạn biết rằng bạn cũng là thành viên của mạng Ice. Số điện thoại của bạn sẽ không được chia sẻ với các bên thứ ba khác."
+      },
+      "contacts_list": {
+        "title": "Danh sách địa chỉ liên hệ",
+        "description": "Đây là danh sách tất cả các địa chỉ liên hệ của bạn, những người đã tham gia mạng [[:ice]] sẽ được hiển thị ở đầu danh sách."
+      },
+      "referrals": {
+        "title": "Lượt giới thiệu",
+        "description": "Tại đây bạn có thể xem tổng số lượt giới thiệu mà bạn có. Bạn mời càng nhiều người, thu nhập của bạn càng tăng."
+      },
+      "earnings": {
+        "title": "Thu nhập",
+        "description": "Số dư hiện tại của bạn được cập nhật mỗi giờ và hiển thị tại đây. Bao gồm thu nhập trực tiếp và thu nhập giữ và khóa của bạn cùng với thu nhập Bậc 1 và Bậc 2."
+      },
+      "segmented_control_tier_one": {
+        "title": "Bậc 1",
+        "description": "Tại đây, bạn có thể xem danh sách các lượt giới thiệu Bậc 1 của mình. Đối với mỗi người bạn điểm danh cùng lúc với bạn, bạn sẽ nhận được thêm 25% trên lãi suất cơ bản hiện được áp dụng. [[:link]]Đọc thêm[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "segmented_control_tier_two": {
+        "title": "Bậc 2",
+        "description": "Tại đây, bạn có thể xem danh sách các lượt giới thiệu Bậc 2 của mình. Đối với mỗi người bạn điểm danh cùng lúc với bạn, bạn sẽ nhận được thêm 5% trên lãi suất cơ bản hiện được áp dụng. [[:link]]Đọc thêm[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "active_users": {
+        "title": "Người dùng đang hoạt động",
+        "description": "Đây là trạng thái hiện tại của hoạt động điểm danh từ các lượt giới thiệu của bạn. Họ được tính là đang hoạt động khi họ có một phiên điểm danh đang hoạt động."
+      },
+      "tier_one_earnings": {
+        "title": "Thu nhập Bậc 1",
+        "description": "Tại đây, bạn có thể xem danh sách các lượt giới thiệu Bậc 1 của mình. Đối với mỗi thành viên điểm danh cùng lúc với bạn, cả hai bạn sẽ nhận được thêm 25% trên lãi suất cơ bản hiện được áp dụng."
+      },
+      "ping": {
+        "title": "Nút Ping",
+        "description": "Thông báo đến các lượt giới thiệu của bạn để họ bắt đầu phiên điểm danh. Bạn có thể gửi một thông báo đến mỗi lượt giới thiệu sau mỗi 24 giờ."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "Trang chủ",
+        "description": "Chào mừng đến với [[:ice]]. Trên màn hình chính, bạn có thể tìm thấy tất cả số liệu thống kê về số dư, lãi suất hiện tại, xếp hạng toàn cầu của bạn cùng với nhóm của bạn."
+      },
+      "invite": {
+        "title": "Mời",
+        "description": "Đối với mỗi người mà bạn mời, cả hai bạn sẽ nhận được lên đến 25% trên lãi suất cơ bản. Bạn mời càng nhiều người, thu nhập của bạn càng tăng."
+      },
+      "team": {
+        "title": "Nhóm",
+        "description": "[[:ice]] sẽ tốt hơn khi có nhiều bạn bè. Trên trang này, bạn có thể xem trạng thái của các thành viên trong nhóm từ cả cấp độ Bậc 1 và Bậc 2. Bạn cũng có thể ping họ tại đây."
+      },
+      "news": {
+        "title": "Tin tức",
+        "description": "Luôn cập nhật mọi tin tức và các cuộc thăm dò của chúng tôi. Vì chúng tôi là một Tổ chức tự trị phi tập trung, bạn sẽ có thể bỏ phiếu tại đây cho các tính năng trong tương lai."
+      },
+      "profile": {
+        "title": "Hồ sơ",
+        "description": "Tùy chỉnh chi tiết hồ sơ và xem tất cả các thành tựu và huy hiệu mà bạn đã kiếm được. Sử dụng máy tính tại đây để bạn có thể ước tính thu nhập của mình."
+      },
+      "earningicestart": {
+        "title": "Kiếm Ice",
+        "description": "Bạn có thể bắt đầu phiên điểm danh [[:ice]] sau mỗi 24 giờ bằng cách nhấn vào nút này. Đừng quên quay lại mỗi ngày và bắt đầu kiếm tiền!"
+      },
+      "earningiceseemore": {
+        "title": "Kiếm Ice",
+        "description": "Nhấn lại và xem thêm chi tiết về phiên điểm danh hiện tại của bạn."
+      },
+      "stats": {
+        "title": "Thống kê",
+        "description": "Trên trang thống kê, bạn có thể xem tổng số người dùng và những người dùng đang hoạt động đã điểm danh mỗi ngày cùng với các quốc gia và người dùng hàng đầu."
+      },
+      "help": {
+        "title": "Trợ giúp",
+        "description": "Bạn có câu hỏi nào không? Xem danh sách các câu hỏi thường gặp của chúng tôi. Nếu bạn không tìm được thông tin cần tìm, đừng ngần ngại liên hệ với chúng tôi tại hi@ice.io."
+      },
+      "preStaking": {
+        "title": "Giữ và khóa sớm",
+        "description": "Tối đa hóa lợi nhuận bằng cách giữ và khóa sớm các phần thưởng thu nhập của bạn. Chọn thời gian phân bổ và giữ & khóa của bạn để nhận tiền thưởng ngoài thu nhập của bạn."
+      },
+      "wallet": {
+        "title": "Thẻ ví",
+        "description": "Tại đây bạn có thể tìm số dư [[:ice]] hiện tại của mình cùng với lãi suất. Càng có nhiều lượt giới thiệu đang hoạt động từ nhóm của bạn, thì lãi suất càng cao."
+      },
+      "earning": {
+        "title": "Thẻ thu nhập",
+        "description": "Luôn cập nhật về lãi suất và tiền thưởng của bạn! Tại đây, bạn có thể kiểm tra lãi suất hiện tại của bạn, lãi suất cơ bản của chúng tôi và lãi suất tiền thưởng cho các hoạt động khác nhau trong ứng dụng."
+      },
+      "engagement": {
+        "title": "Thẻ tương tác",
+        "description": "Theo dõi chuỗi các phiên điểm danh và ngày nghỉ của bạn! Xem phần này để biết thêm chi tiết về các phiên điểm danh liên tiếp của bạn và để xem bạn có bao nhiêu ngày nghỉ."
+      },
+      "profilecard": {
+        "title": "Thẻ hồ sơ",
+        "description": "Bạn có thể theo dõi trạng thái hồ sơ của mình bằng cách theo dõi thẻ này. Thẻ này hiển thị xếp hạng toàn cầu hiện tại của bạn, cùng với vai trò, cấp độ và tổng số lượt giới thiệu của bạn."
+      },
+      "referralscard": {
+        "title": "Thẻ giới thiệu",
+        "description": "Xem mức độ tăng trưởng trong thống kê lượt giới thiệu của bạn trong 5 ngày trước đó cho cả lượt giới thiệu Bậc 1 và Bậc 2 bằng cách nhấn vào thẻ này."
+      },
+      "adoptioncard": {
+        "title": "Thẻ áp dụng",
+        "description": "Dựa trên mức trung bình của tổng số Người tuyết đang hoạt động trong tuần trước, bạn có thể xem lãi suất [[:ice]] hiện tại. Lãi suất giảm một nửa khi đạt đến ngưỡng tiếp theo."
+      },
+      "nickname": {
+        "title": "Biệt danh",
+        "description": "Biệt danh là thứ khiến bạn trở nên độc đáo. Bạn bè của bạn sẽ cần sử dụng nó để tham gia nhóm của bạn. Bạn cũng có thể sử dụng phím tắt này để mở hồ sơ của mình."
+      },
+      "balancehistory": {
+        "title": "Lịch sử số dư",
+        "description": "Tại đây bạn có thể tìm thấy số dư [[:ice]] hiện tại của mình trên ví cục bộ và chuỗi khối. Số dư ví cục bộ được cập nhật mỗi giờ, trong khi số dư chuỗi khối được cập nhật 24 giờ một lần."
+      },
+      "achievements": {
+        "title": "Thành tựu",
+        "description": "Hoàn thành các nhiệm vụ dưới đây và lên cấp! Bắt đầu phiên điểm danh đầu tiên của bạn ngay bây giờ!"
+      }
+    }
+  },
+  "ActiveSessionsScreen": {
+    "title": "Hủy liên kết đăng nhập",
+    "sessionName": "Đăng nhập qua {{providerName}}",
+    "buttons": {
+      "currentSession": "Phiên hiện tại",
+      "endSession": "Kết thúc phiên",
+      "loginUnlinked": "Đã hủy liên kết đăng nhập",
+      "sessionEnded": "Phiên đã kết thúc",
+      "unlink": "Hủy liên kết"
+    },
+    "dialogs": {
+      "unlinkLogin": {
+        "title": "Hủy liên kết đăng nhập?",
+        "message": "Bạn có chắc chắn muốn hủy liên kết đăng nhập qua {{providerName}} từ thiết bị này không?"
+      },
+      "endSession": {
+        "title": "Kết thúc phiên?",
+        "message": "Bạn có chắc chắn muốn kết thúc phiên đăng nhập {{providerName}} từ thiết bị này không?"
+      }
+    }
   },
   "links": {
     "pre_staking": "https://ice.io/pre-staking/",
@@ -152,28 +934,464 @@
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
   },
-  "mainnet_landing": {
-    "header": "Hoạt động đào Ice đã kết thúc. Trong khi chúng tôi chuẩn bị cho việc ra mắt mạng chính vào ngày 7 tháng 10 năm 2024, hãy giữ ứng dụng được cài đặt để nhận cập nhật độc quyền và truy cập sớm vào ứng dụng mạng chính.",
-    "stats": {
-      "header": "Thống kê Ice",
-      "circulating_supply": "Cung cấp lưu hành",
-      "total_supply": "Tổng cung",
-      "price": "Giá",
-      "market_cap": "Vốn hóa thị trường",
-      "daily_trading_volume": "Khối lượng giao dịch hàng ngày 24 giờ",
-      "dilluted_market_cap": "Vốn hóa thị trường thực tế"
+  "extra_bonus": {
+    "claim_title": "Tiền thưởng hôm nay",
+    "claim_message": "Đã đến lúc nhận thưởng của hôm nay, hãy nhấn vào nút [[:bold]]“Nhận thưởng”[[/:bold]] bên dưới.",
+    "link": "Tìm hiểu thêm",
+    "extra_message": "Bạn đã nhận được tiền thưởng bổ sung hàng ngày trên lãi suất của bạn.",
+    "expired_title": "Tiền thưởng đã hết hạn",
+    "expired_message": "Rất tiếc, tiền thưởng hôm nay đã hết hạn. Hãy theo dõi thông báo tiếp theo!",
+    "result_title": "Xin chúc mừng"
+  },
+  "qr_code": {
+    "description": "Quét mã QR để tham gia nhóm của tôi."
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "Tham gia với chúng tôi trên TikTok",
+      "description": "Chúng tôi chỉ muốn liên hệ và thông báo cho bạn biết về cộng đồng mới thú vị của chúng tôi trên TikTok. Chúng tôi đang chia sẻ những nội dung thú vị và nhiều thông tin về Ice (đồng tiền kỹ thuật số của chúng tôi) và chúng tôi rất muốn bạn tham gia cùng!"
     },
-    "countdown": {
-      "header": "Khởi động Mạng chính Ice"
+    "youtube": {
+      "title": "Tham gia với chúng tôi trên YouTube",
+      "description": "Từ các hướng dẫn về cách kiếm Ice, đến các bản cập nhật về các tính năng mới và thậm chí cả nội dung cộng đồng thú vị, kênh YouTube của chúng tôi là nơi lý tưởng để cập nhật tin tức mới nhất."
     },
-    "roadmap": {
-      "header": "Tầm nhìn của chúng tôi",
-      "title": "Whitepaper",
-      "subtitle": "Tìm hiểu thêm về tầm nhìn của chúng tôi tại Ice."
+    "linkedin": {
+      "title": "Tham gia với chúng tôi trên LinkedIn",
+      "description": "Tham gia cộng đồng Ice trên LinkedIn là một cách tuyệt vời để cập nhật thông tin về những phát triển mới nhất và kết nối với những cá nhân có cùng chí hướng, những người cũng có niềm đam mê về tương lai của tiền kỹ thuật số giống như bạn."
     },
-    "join_mainnet": {
-      "title": "Tham gia Tương lai Phi trung gian",
-      "subtitle": "Nhận một cái nhìn trước về ứng dụng Mạng chính sắp tới của chúng tôi và các tính năng độc đáo của nó."
+    "facebook": {
+      "title": "Tham gia với chúng tôi trên Facebook",
+      "description_part1": "Chúng tôi khuyên bạn nên theo dõi trang Facebook của chúng tôi.",
+      "description_part2": "Điều này không chỉ giúp bạn cập nhật mọi thứ đang diễn ra với dự án Ice mà còn là một cách tuyệt vời để kết nối với cộng đồng của chúng tôi và tham gia vào cuộc trò chuyện."
+    },
+    "instagram": {
+      "title": "Tham gia với chúng tôi trên Instagram",
+      "description_part1": "Theo dõi chúng tôi trên Instagram là một cách tuyệt vời để cập nhật thông tin và kết nối với những người dùng khác cũng đam mê Ice",
+      "description_part2": "Ngoài ra, bạn sẽ là người đầu tiên được biết mọi tính năng hoặc chương trình khuyến mãi mới mà chúng tôi sắp tung ra."
+    },
+    "reddit": {
+      "title": "Tham gia cùng chúng tôi trên Reddit",
+      "description": "Khám phá cộng đồng Ice trên Reddit, nơi những người có quan điểm tương tự tụ họp để chia sẻ ý kiến của họ.\n\nTham gia cuộc trò chuyện, đặt câu hỏi và khám phá các cuộc thảo luận hấp dẫn về việc khai thác Ice, các tính năng và nhiều hơn nữa."
+    },
+    "discord": {
+      "title": "Tham gia cùng chúng tôi trên Discord",
+      "description": "Tham gia cộng đồng nhiệt huyết của chúng tôi trên Discord và đắm chìm vào cuộc trò chuyện và cái nhìn độc đáo về Ice.\n\nTham gia cuộc trò chuyện sống động, cập nhật tin tức liên quan đến Ice và trở thành một phần của một cộng đồng chia sẻ đam mê của bạn."
+    },
+    "ice_founder_twitter": {
+      "title": "Theo dõi Zeus trên X",
+      "description": "Theo dõi Zeus, người sáng lập tầm nhìn của chúng tôi, trên X, nơi ông chia sẻ thông tin, cập nhật và suy nghĩ về sứ mệnh của chúng tôi. Tham gia cuộc trò chuyện, đặt câu hỏi và duy trì liên lạc với người lãnh đạo truyền cảm hứng của chúng tôi khi chúng tôi bắt đầu hành trình thú vị này cùng nhau.",
+      "button": "Theo dõi Zeus"
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Vui lòng đợi trong khi chúng tôi ping tất cả bạn bè của bạn · {{count}}"
+  },
+  "creative_library": {
+    "title": "Thư Viện Sáng Tạo Ice",
+    "share": "Xây dựng đội nhóm mơ ước trên mạng lưới Ice!",
+    "get_started": {
+      "header": "Xây Dựng Đội Nhóm Mơ Ước",
+      "subtitle": "Bắt đầu trên Ice và xây dựng cộng đồng micro phát triển của bạn",
+      "description": "Tham gia vào số người dùng Ice đang tăng nhanh chóng, xây dựng cộng đồng micro của riêng bạn và kiếm thêm phần thưởng. Công cụ quảng cáo, hướng dẫn và gợi ý của chúng tôi giúp bạn dễ dàng lan truyền thông điệp và xây dựng một cộng đồng thành công.",
+      "get_started": "Bắt Đầu",
+      "carousel": {
+        "01": {
+          "title": "Tham Gia",
+          "description": "Tải xuống ứng dụng của chúng tôi, yêu cầu tên đặt và bắt đầu khai thác.\n\nBạn sẽ tham gia vào một cộng đồng người dùng toàn cầu đam mê về phân quyền, tự chủ và sức mạnh của mọi người."
+        },
+        "02": {
+          "title": "Mời Gọi",
+          "description": "Mời khán giả của bạn tham gia Ice và cùng nhau mở khóa phần thưởng bổ sung.\n\nNgoài ra, bạn sẽ giúp lan truyền thông điệp về lợi ích của phân quyền và tương lai tài chính."
+        },
+        "03": {
+          "title": "Kiếm Thêm",
+          "description": "Mở rộng mạng lưới của bạn và khuyến khích người khác tham gia cộng đồng Ice để tăng thưởng của bạn.\n\nHãy tham gia cùng chúng tôi trong sứ mệnh thay đổi tương lai tài chính thông qua phân quyền và tự chủ."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Video",
+        "description": "Sử dụng bộ sưu tập video của chúng tôi để quảng cáo mã giới thiệu, chế độ ngang hoặc dọc, có hoặc không có phụ đề, chúng tôi đã chuẩn bị sẵn cho bạn.",
+        "action": "Xem Video"
+      },
+      "02": {
+        "title": "Hình Ảnh",
+        "description": "Hình ảnh đôi khi có giá trị hơn ngàn lời nói. Bạn có thể lựa chọn từ bộ sưu tập biểu ngữ, tài sản truyền thông xã hội, mẫu và mẫu ứng dụng của chúng tôi.",
+        "action": "Xem Hình Ảnh"
+      },
+      "03": {
+        "title": "Biểu Ngữ Nhúng",
+        "description": "Với biểu ngữ nhúng của chúng tôi, bạn có thể dễ dàng quảng cáo Ice đến khách truy cập trang web của bạn và mời họ tham gia cộng đồng micro của bạn.",
+        "action": "Cài Đặt Biểu Ngữ"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Chia Sẻ Câu Chuyện Của Bạn",
+        "description": "Chia sẻ hành trình của bạn với mạng lưới Ice và các lợi ích của nó bằng cách viết một bài viết bằng ngôn ngữ của bạn.\n\nChia sẻ trên Blog, Medium, Reddit, Quora, Blogger và nhiều nơi khác.\n\nBạn có thể tìm thấy mọi thông tin về Ice và các tính năng độc đáo của nó trên trang [[:link]]Knowledge Base[[/:link]], [[:link]]Homepage[[/:link]], và trang [[:link]]FAQ[[/:link]] của chúng tôi."
+      },
+      "spread": {
+        "title": "Lan Truyền Tin Tức",
+        "description": "Tham gia cuộc trò chuyện và giới thiệu mạng lưới Ice đến các diễn đàn yêu thích của bạn.\nBắt đầu các chủ đề mới và chia sẻ suy nghĩ của bạn về tài chính phân quyền, tương lai của tiền tệ và sức mạnh của việc xây dựng cộng đồng micro với Ice.\n\nHãy trở thành ☃️ Snowman và khởi đầu một cuộc thảo luận về tiềm năng của đồng tiền toàn cầu này."
+      },
+      "bring": {
+        "title": "Mời Bạn Bè Tham Gia",
+        "description": "Sử dụng tính năng mời dễ dàng của chúng tôi và chia sẻ mã mời cá nhân của bạn với bạn bè trên các nền tảng truyền thông xã hội yêu thích của bạn."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Plug & Play cho Chủ Sở Hữu Website",
+        "description": "Nhúng mạng lưới Ice trực tiếp vào trang web của bạn với biểu ngữ JS đơn giản và linh hoạt của chúng tôi. Đây là một cài đặt nhanh chóng và dễ dàng có thể được tùy chỉnh để phù hợp với thương hiệu của trang web của bạn. Nó đã được dịch sang 50 ngôn ngữ và tương thích với bất kỳ nền tảng trang web nào.\n\nSao chép và dán mã vào trang web của bạn, và bắt đầu quảng cáo mạng lưới Ice đến khách truy cập của bạn ngay hôm nay.",
+        "action": "Cài Đặt Biểu Ngữ"
+      },
+      "mobile": {
+        "title": "Thư Viện cho Ứng Dụng Di Động",
+        "description": "Tích hợp thư viện dễ sử dụng của chúng tôi vào ứng dụng di động của bạn và mời người dùng tham gia cộng đồng micro của bạn và bắt đầu khai thác.\n\nVới hỗ trợ dịch và các tùy chọn thiết lập linh hoạt, bạn có thể đảm bảo rằng tất cả người dùng của bạn đều có trải nghiệm Ice tuyệt vời như nhau, bất kể họ ở đâu trên thế giới.",
+        "action1": "Thư Viện Android",
+        "action2": "Thư Viện React Native"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Thói Quen Tốt",
+        "rules": {
+          "01": {
+            "title": "Trung Thực",
+            "description": "Viết từ trải nghiệm và góc nhìn cá nhân của bạn. Chia sẻ suy nghĩ và cảm xúc chân thành của bạn về mạng lưới Ice."
+          },
+          "02": {
+            "title": "Sử Dụng Ngôn Ngữ Thân Thiện",
+            "description": "Viết như khi bạn đang trò chuyện với một người bạn và tránh sử dụng thuật ngữ kỹ thuật quá nhiều hoặc ngôn ngữ mà độc giả có thể khó hiểu."
+          },
+          "03": {
+            "title": "Sáng Tạo",
+            "description": "Đừng sợ thử nghiệm với các loại nội dung khác nhau, chẳng hạn như bài đăng trên blog, video hoặc cập nhật trên mạng xã hội. Hãy vui vẻ và sáng tạo trong cách bạn quảng cáo mạng lưới Ice đến khán giả của mình."
+          }
+        }
+      },
+      "bad": {
+        "title": "Thói Quen Xấu",
+        "rules": {
+          "01": {
+            "title": "Tránh Gửi Thư Rác",
+            "description": "Tránh gửi tin nhắn không mời mà bạn không được hỏi hoặc đăng nhiều lần cùng nội dung trên các nền tảng khác nhau. Điều này có thể bị coi là phiền toái và gây khó chịu."
+          },
+          "02": {
+            "title": "Tránh Lừa Dối Người Khác",
+            "description": "Dự án Ice không trả tiền cho người dùng bằng tiền mặt, chúng tôi chỉ thưởng bằng đồng Ice. Xin vui lòng tránh đăng nội dung như \"Biến Ice của bạn thành tiền mặt\" hoặc \"Làm thế nào để kiếm 100 đô la với Ice\" và những thứ tương tự."
+          },
+          "03": {
+            "title": "Tránh Tham Gia Hoạt Động Lừa Đảo",
+            "description": "Chúng tôi đặt giá trị trong sự透明和诚实 trong cộng đồng của chúng tôi. Mọi hoạt động lừa đảo như tạo nhiều tài khoản hoặc cố gắng manipulát mạng lưới Ice sẽ không được dung thứ."
+          }
+        }
+      }
+    }
+  },
+  "face_auth": {
+    "header": "Xác thực khuôn mặt",
+    "title": "Bước KYC #1",
+    "description": "Để trải nghiệm mượt mà, chúng tôi đang thêm tính năng xác thực khuôn mặt. Bước này đóng vai trò là [[:bold]]Bước #1 KYC sớm[[/:bold]], chuẩn bị bạn cho việc xác minh mạng Mainnet trong tương lai. \n\nHãy xác nhận danh tính của bạn hôm nay để đảm bảo một hành trình mượt mà phía trước!",
+    "consent": "Tôi đồng ý với [[:link]]Điều khoản và Điều kiện KYC của Ice[[/:link]].",
+    "confirmation": "Tôi xác nhận rằng danh tính tôi sử dụng cho xác thực này sẽ giống với danh tính được liên kết với tài khoản này và lựa chọn này không thể thay đổi sau này.",
+    "auth_status": {
+      "loading": {
+        "description": "Vui lòng chờ trong khi chúng tôi xác thực bạn..."
+      },
+      "success": {
+        "title": "✅ Xác thực thành công",
+        "description": "Cảm ơn bạn đã xác nhận danh tính. Phiên kiểm tra của bạn sẽ bắt đầu ngay bây giờ.",
+        "action": "Hoàn tất"
+      },
+      "failure": {
+        "title": "❌ Xác thực thất bại",
+        "description": "Chúng tôi không thể xác minh danh tính của bạn. Vui lòng đảm bảo ánh sáng tốt và khuôn mặt của bạn được nhìn thấy đầy đủ, sau đó thử lại.",
+        "action": "Thử lại"
+      },
+      "try_later": {
+        "title": "❌ Xác thực thất bại",
+        "description": "Chúng tôi không thể xác minh danh tính của bạn. Vui lòng đảm bảo ánh sáng tốt và khuôn mặt của bạn được nhìn thấy đầy đủ, sau đó thử lại sau 1 giờ.",
+        "action": "Đóng"
+      },
+      "continue": {
+        "title": "😁 Xác minh cảm xúc KYC",
+        "description": "Làm tốt lắm! Bạn đã hoàn thành bước đầu tiên bằng cách tự chụp ảnh selfie. Bây giờ, hãy tiếp tục theo các cảm xúc được hiển thị để tiếp tục quá trình KYC của bạn.",
+        "action": "Tiếp tục"
+      },
+      "banned": {
+        "title": "❌ Tắt chức năng đào tiền",
+        "description": "Chúng tôi đã xác định rằng danh tính của bạn liên quan đến một tài khoản khác. Nếu bạn nghĩ đó là một lỗi, vui lòng gửi email đến [[:bold]]feedback@ice.io[[/:bold]] với biệt danh và một bức ảnh tự sướng chất lượng cao.",
+        "action": "Đóng"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Bắt đầu",
+      "please_show_this": "Vui lòng hiển thị cảm xúc này",
+      "emotions": {
+        "anger": "tức giận",
+        "contempt": "khinh bỉ",
+        "disgust": "ghê tởm",
+        "fear": "sợ hãi",
+        "happiness": "hạnh phúc",
+        "neutral": "trung lập",
+        "sadness": "buồn",
+        "surprise": "ngạc nhiên"
+      }
+    },
+    "device_angle_warning": {
+      "title": "Cảnh báo",
+      "description": "Vui lòng giữ điện thoại thẳng khi nhìn vào máy ảnh"
+    },
+    "camera_permission": {
+      "title": "Quyền truy cập máy ảnh",
+      "description": "Để tiếp tục, vui lòng cho phép truy cập máy ảnh.",
+      "action": "Cho phép truy cập"
+    },
+    "selfie_guidelines": {
+      "title": "Hướng dẫn Selfie",
+      "instruction": "Trước khi tiếp tục, hãy tuân thủ các hướng dẫn sau để thực hiện xác minh KYC bằng khuôn mặt thành công:",
+      "check_1": "✅ Đảm bảo bạn có hình ảnh chất lượng cao.",
+      "check_2": "✅ Có đủ ánh sáng.",
+      "check_3": "✅ Có nền sạch sẽ.",
+      "check_4": "✅ Không có hình ảnh tối.",
+      "check_5": "✅ Không có hình ảnh mờ hoặc sương mù.",
+      "check_6": "✅ Làm sạch ống kính máy ảnh.",
+      "warning": "Nếu bạn không tuân thủ các hướng dẫn trên, bạn có thể mất quyền truy cập vào tài khoản của mình.",
+      "confirmation": "Tôi xác nhận rằng tôi sẽ tuân theo các tiêu chí.",
+      "popup_title": "Xác nhận",
+      "popup_body": "Bạn có xác nhận rằng bạn đã tuân thủ tất cả các hướng dẫn về selfie không?"
+    }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Vui lòng đảm bảo bạn đã nhập tên hiệu chính xác.",
+      "description": "Nhập biệt danh của người bạn mời bạn."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Theo dõi tiến trình của bạn và tình trạng toàn cầu",
+        "referrals": "BẠN BÈ"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Phát triển đội của bạn và xây dựng một cộng đồng"
+        }
+      },
+      "team": {
+        "title": "Bạn bè",
+        "view_team": "xem bạn bè"
+      },
+      "roadmap": {
+        "button_subtitle": "Tìm hiểu thêm về tầm nhìn tương lai của chúng tôi tại Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Nhận cái nhìn sơ qua về ứng dụng Mainnet của chúng tôi sắp tới và những tính năng độc đáo của nó sẽ ra mắt vào cuối năm 2024."
+      }
+    },
+    "settings": {
+      "invite_description": "Phát triển đội của bạn với các thành viên mới"
+    },
+    "profile": {
+      "invite_friends_engage": "Lan truyền tin tức và mời bạn bè tham gia cộng đồng Mạng lưới Ice!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Sử dụng tính năng này để mời bạn bè tham gia cộng đồng Ice. Mở rộng mạng lưới của bạn, chia sẻ trải nghiệm và xây dựng mối quan hệ lâu dài cùng nhau."
+        },
+        "wallet": {
+          "description": "Bạn có thể tìm thấy số dư Ice hiện tại của bạn ở đây, cùng với tỷ lệ thu nhập của bạn."
+        },
+        "earning": {
+          "description": "Giữ cho tỷ lệ thu nhập và tiền thưởng của bạn luôn cập nhật! Ở đây, bạn có thể kiểm tra tỷ lệ hiện tại của bạn, tỷ lệ cơ sở của chúng tôi và tỷ lệ tiền thưởng."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Trong phần này, bạn sẽ thấy tổng số thành viên trong đội bạn đã mời, giúp bạn theo dõi sự phát triển và tiến bộ của cộng đồng của bạn."
+        },
+        "earnings": {
+          "description": "Số dư hiện tại của bạn được cập nhật mỗi giờ và hiển thị ở đây. Nó bao gồm thu nhập trực tiếp và thu nhập đặt cược của bạn."
+        }
+      }
+    },
+    "claimUsername": {
+      "description": "Bạn bè của bạn phải sử dụng biệt danh này khi tham gia [[:ice]]."
+    },
+    "users": {
+      "team": "Bạn bè"
+    },
+    "team": {
+      "empty": {
+        "team": "Hiện tại bạn không có bạn bè nào!"
+      },
+      "contacts": {
+        "empty_description": "Đồng bộ hóa danh bạ của bạn và xem ai đã có trong [[:ice]]."
+      }
+    }
+  },
+  "bsc_address": {
+    "title": "Địa chỉ BNB Smart Chain",
+    "enter_address_title": "Nhập địa chỉ\ncủa bạn vào đây",
+    "enter_address_description": "Trong giai đoạn Một, token ICE sẽ được phát hành trên blockchain BNB Smart Chain. Sau khi Mainnet được khởi chạy, token có thể được đổi từ BNB Smart Chain sang mạng lưới Ice Open Network (ION).",
+    "enter_address_confirmation": "Bạn có chắc rằng địa chỉ BNB Smart Chain của bạn là chính xác không?",
+    "validators_warning_title": "Xác Nhận Địa Chỉ",
+    "validators_warning_text": "Vui lòng lưu ý: Những người đã thêm địa chỉ BNB Smart Chain vào tài khoản của họ không được phép trở thành một trong 300 người xác minh chính theo whitepaper của chúng tôi cho sự ra mắt mạng chính.",
+    "walletDescription": "Chúng tôi khuyên bạn nên sử dụng một ví tự quản lý như [[:bold]]Metamask[[/:bold]] hoặc [[:bold]]Trust Wallet[[/:bold]].\n\nVui lòng đảm bảo bạn kiểm tra địa chỉ ví của mình hai lần để đảm bảo bạn sẽ nhận được phân phối."
+  },
+  "social_kyc": {
+    "header": "Xác minh",
+    "verify_with_title": "Xác minh bằng {{method}}",
+    "select_method_step": {
+      "title": "Bước KYC #2",
+      "description": "Xác minh tài khoản của bạn một cách dễ dàng bằng cách sử dụng hồ sơ X hiện có của bạn."
+    },
+    "instructions_step": {
+      "show_example": "Hiển thị ví dụ",
+      "example_title": "Ví dụ về bài đăng lại",
+      "x": {
+        "1": "Mở X và tìm kiếm tài khoản [[:bold]]@ice_blockchain[[/:bold]]",
+        "2": "Tìm bài đăng đã ghim, đó là bài đăng đầu tiên trên hồ sơ.",
+        "3": "❤️ Thích & 🔄 Đăng lại nó với [[:bold]]Trích dẫn[[/:bold]] bằng cách sử dụng văn bản [[:bold]]CHÍNH XÁC[[/:bold]] dưới đây.",
+        "pop_up": {
+          "title": "Xác nhận",
+          "description": "Bạn đã thích bài đăng đã ghim và đăng lại nó với một trích dẫn bằng văn bản chính xác được cung cấp, như trong ví dụ chưa?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Nhấn để sao chép văn bản",
+        "copied": "Đã sao chép"
+      }
+    },
+    "verification_step": {
+      "title": "Xác nhận",
+      "description": "Để hoàn tất quá trình xác minh của bạn, vui lòng dán liên kết đến bài đăng mà bạn đã thực hiện các bước trước đó. Đảm bảo liên kết là chính xác.",
+      "placeholder": "Dán liên kết",
+      "instructions_step": {
+        "4": "Dán liên kết của bài đăng của bạn ở dưới. 👇"
+      },
+      "action": {
+        "verify": "Xác minh",
+        "wait": "Vui lòng đợi",
+        "countdown": "{{countdown}} giây còn lại"
+      },
+      "pop_up": {
+        "title": "Liên kết Không Hợp Lệ",
+        "description": "Vui lòng đảm bảo bạn đã sao chép liên kết đúng.\n\n[[:bold]]Ví dụ:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "Số lần thử còn lại: {{count}}",
+      "success": {
+        "title": "Xác minh Hoàn tất",
+        "description": "Chúc mừng bạn đã hoàn thành thành công Bước KYC #2. Bây giờ bạn đã được xác minh."
+      },
+      "error_try_again": {
+        "title": "Lỗi Xác minh",
+        "description": "Vui lòng đảm bảo bạn đã đăng lại bài đăng chính xác, sử dụng văn bản được cung cấp và bài đăng là công khai."
+      },
+      "error_try_later": {
+        "title": "Lỗi Xác minh",
+        "description": "Chúng tôi không thể hoàn thành quá trình xác minh. Bạn có thể thử lại sau 7 ngày."
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Phân phối BNB Smart Chain",
+      "description": "Nhận các đồng ICE của bạn trên BNB Smart Chain bằng cách xác minh tài khoản của bạn dễ dàng bằng hồ sơ X hiện có."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Nhấn vào liên kết [[:bold]]tại đây[[/:bold]] để mở trực tiếp bài viết X của chúng tôi.",
+        "pop_up": {
+          "description": "Tuân theo hướng dẫn và đảm bảo bạn đã nhấn vào liên kết trong bước đầu tiên để mở trực tiếp bài viết X của chúng tôi.",
+          "description2": "Bạn có thích bài viết đúng và chia sẻ lại nó với dấu trích dẫn sử dụng văn bản chính xác được cung cấp, như trong ví dụ không?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Chúc mừng, bạn đã hoàn thành việc xác minh của mình thành công. Bây giờ bạn đã đủ điều kiện để tham gia phân phối BNB Smart Chain."
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "Xác Nhận Tài Khoản",
+    "description": "Để xác minh danh tính tài khoản của bạn và liên kết địa chỉ email của bạn một cách an toàn, vui lòng đảm bảo rằng bạn đã vượt qua thành công bước kiểm tra cảm xúc của chúng tôi trong quá trình xác thực.",
+    "description2": "Bước này giúp chúng tôi đảm bảo tính bảo mật và xác thực của tài khoản của bạn. Cảm ơn sự hợp tác của bạn!"
+  },
+  "quiz": {
+    "title": "Kiểm tra",
+    "intro": {
+      "description": "Tại Ice, chúng tôi tin tưởng trong việc tạo dựng một cộng đồng thành viên hoạt động và thông tin. Sứ mệnh của chúng tôi là đảm bảo rằng các đồng Ice được phân phối cho những người thực sự tham gia và chia sẻ tầm nhìn của chúng tôi.",
+      "community_engagement": {
+        "title": "🙌 Tương tác cộng đồng tích cực",
+        "description": "Sự tham gia của bạn trong Hệ sinh thái Ice ảnh hưởng trực tiếp đến khả năng đào của bạn:",
+        "point1": "Luôn cập nhật: Tương tác với bài viết tin tức và video của chúng tôi.",
+        "point2": "Tham gia tích cực: Tham gia vào Chương trình Phát triển Cá nhân của chúng tôi và các buổi trực tiếp trên YouTube hoặc Twitter Space.",
+        "point3": "Tương tác xã hội: Tăng sự hiện diện của bạn bằng cách thích, chia sẻ, theo dõi hoặc đăng bài về Ice.",
+        "bottom_description": "Bạn càng tương tác tích cực, điểm tương tác tích cực càng cao, giúp bạn đi qua quy trình KYC."
+      },
+      "terms_privacy": "Tôi hiểu và tôi đồng ý với [[:link]]Điều khoản và Điều kiện[[/:link]] cùng với Chính sách bảo mật[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Kiểm tra kiến thức",
+        "point2": "Để đậu bài kiểm tra, bạn cần trả lời ít nhất 18 câu hỏi đúng.",
+        "point3": "Bài kiểm tra không đạt nghĩa là bạn cần tiếp tục nghiên cứu tài liệu của chúng tôi thêm.",
+        "point4": "Có giới hạn thời gian để hoàn thành bài kiểm tra. Bạn có thể xem còn bao nhiêu ngày trước ngày hết hạn trên trang chủ của bạn trong phần kiểm tra.",
+        "point5": "Bạn có 3 lần thử lại trước ngày hết hạn. Nếu bạn trượt bài kiểm tra 3 lần hoặc qua ngày hết hạn, bạn sẽ không thể đào tiền nữa và tài khoản của bạn sẽ bị giảm điểm.",
+        "point6": "📚 Tất cả thông tin về bài kiểm tra này có thể đọc tại đây [[:link]]ở đây[[/:link]].",
+        "description": "Để đảm bảo cộng đồng của chúng tôi được thông tin và đồng lòng với tầm nhìn của chúng tôi:",
+        "point1": "Bạn sẽ được đặt ra 21 câu hỏi dựa trên nguồn tài liệu phong phú của chúng tôi."
+      },
+      "why_quiz": {
+        "title": "💡 Tại sao lại có bài kiểm tra?",
+        "description": "Sự cam kết của chúng tôi đối với kiến thức và sự hiểu biết đang ở hàng đầu của cộng đồng của chúng tôi. Với bài kiểm tra, chúng tôi muốn đảm bảo rằng Ice sẽ đi vào tay đúng người, những người thực sự hiểu và đồng tình với tầm nhìn của dự án của chúng tôi."
+      }
+    },
+    "quiz_failure": {
+      "title": "Bài kiểm tra không đỗ",
+      "description": "Bạn không trả lời đúng hơn 18 câu hỏi hoặc hết thời gian, vì vậy bạn không thể qua bài kiểm tra.",
+      "check_faq": "Để trả lời đúng vào lần sau, chúng tôi đề xuất bạn tìm hiểu về cơ sở kiến thức và Câu hỏi thường gặp của chúng tôi."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Câu hỏi {{current}} của {{total}}",
+      "time_over": "⌛️ Hết giờ",
+      "correct_answers": "Câu trả lời đúng",
+      "wrong_answers": "Câu trả lời sai"
+    },
+    "confirmation_popup": {
+      "title": "Xác nhận",
+      "start_description": "Bạn có chắc chắn muốn bắt đầu bài kiểm tra không?",
+      "cancel_description": "Bằng cách bỏ qua bài kiểm tra, bạn sẽ sử dụng một trong số 3 lần thử lại có sẵn. Bạn có chắc chắn muốn bỏ qua bài kiểm tra ngay bây giờ không?"
+    },
+    "quiz_success": {
+      "title": "Xác minh Hoàn tất",
+      "description": "Xin chúc mừng, bạn đã hoàn thành thành công KYC của bạn. Các câu trả lời chính xác liên tục của bạn đã chứng minh sự tận tụy và kiến thức của bạn. Bây giờ bạn đã được xác minh."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Không thể đào tiền",
+      "description": "Truy cập đào tiền của bạn đã bị vô hiệu hóa do ba lần thất bại liên tiếp trong bài kiểm tra hoặc hết thời gian quy định, theo quy trình KYC của chúng tôi."
+    },
+    "action": "Hoàn thành bài kiểm tra",
+    "reminder": "Vui lòng lưu ý rằng bạn cần hoàn thành bài kiểm tra để được tiếp tục đào và tránh bị trừ điểm.",
+    "days_left": "Số ngày còn lại: {{days}}",
+    "retries_left": "Các lần thử lại còn lại: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "Phân phối BNB Smart Chain",
+      "description": "Duy trì đủ điều kiện hàng tháng để phân phối đồng ICE từ BNB Smart Chain bằng cách ủng hộ mạnh mẽ các thông báo trao đổi mới nhất trên X."
+    },
+    "results_step": {
+      "success": {
+        "description": "Xin chúc mừng, bạn đã hoàn thành xác minh của bạn thành công. Bây giờ bạn đã đủ điều kiện duy trì trạng thái phân phối hàng tháng của BNB Smart Chain."
+      }
+    }
+  },
+  "buttons": {
+    "skip": "Bỏ qua"
   }
 }

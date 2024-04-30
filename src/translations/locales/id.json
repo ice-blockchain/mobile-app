@@ -1,4 +1,33 @@
 {
+  "welcome": {
+    "page1": {
+      "title": "Selamat datang di Ice",
+      "description": "[[:ice]] merupakan mata uang digital yang bisa didapatkan melalui ponsel. Ice dimiliki dan dioperasikan oleh pengguna harian seperti Anda."
+    },
+    "page2": {
+      "title": "Ramah Planet",
+      "description": "[[:ice]] secara inheren lebih hemat energi dibandingkan BTC karena menggunakan mekanisme konsensus “Proof of Stake”. Dengan proof-of-stake (POS), pemilik mata uang kripto memvalidasi transaksi blok berdasarkan jumlah koin yang dikunci oleh validator."
+    },
+    "page3": {
+      "title": "Koin Publik",
+      "description_part1": "Kekuatan ada dalam genggaman Anda.",
+      "description_part2": "Semua yang kami kembangkan di [[:ice]] akan menjadi sumber terbuka & dikendalikan oleh Organisasi Otonom Terdesentralisasi (DAO)."
+    },
+    "page4": {
+      "title": "Tetap Terhubung",
+      "description": "Ketuk [[:iceLogo]] untuk lapor masuk harian dengan aplikasi seluler kami yang gratis dan hemat energi. Mengetuk setiap hari akan memastikan Ice dioperasikan oleh tangan manusia sungguhan, bukan bot."
+    },
+    "page5": {
+      "title": "Rujuk & Dapatkan",
+      "description": "Undang teman dan dapatkan (keduanya) bonus hingga 25% dari nilai pendapatan dasar Anda untuk setiap teman yang bergabung dengan tim Anda."
+    },
+    "page6": {
+      "title": "Notifikasi",
+      "description_part1": "[[:ice]] sesi lapor masuk hanya berlangsung selama 24 jam. Dapatkan notifikasi saat sesi saat ini berakhir?",
+      "description_part2": "Jangan khawatir, kami tidak akan mengirim spam kepada Anda!",
+      "not_now": "Tidak sekarang"
+    }
+  },
   "button": {
     "yes_btn": "Ya, silakan",
     "next_btn": "Berikutnya",
@@ -46,6 +75,81 @@
     "start": "Mulai",
     "faq": "FAQ",
     "knowledge_base": "Basis Pengetahuan"
+  },
+  "team": {
+    "contacts_tab": "Kontak",
+    "tierOne_tab": "Tingkat 1",
+    "tierTwo_tab": "Tingkat 2",
+    "empty": {
+      "contacts": "Saat ini Anda tidak memiliki kontak di buku telepon.",
+      "button_title": "Undang Teman",
+      "t1": "Saat ini Anda tidak memiliki referensi T1 apa pun!",
+      "t2": "Saat ini Anda tidak memiliki referensi T2 apa pun!",
+      "team": "Saat ini Anda tidak memiliki anggota tim apa pun!"
+    },
+    "contacts": {
+      "empty_title": "[[:ice]] lebih seru bersama teman",
+      "empty_button_title": "Izinkan akses kontak",
+      "empty_description": "Sinkronkan kontak Anda dan lihat siapa saja yang sudah menggunakan [[:ice]]. Di masa mendatang, Anda bisa mengirim Ice ke salah satu kontak Anda."
+    },
+    "header": {
+      "search_placeholder": "Telusuri pengguna",
+      "referrals": "Rujukan",
+      "earnings": "Pendapatan"
+    },
+    "confirm_code": {
+      "title": "Konfirmasikan Kode",
+      "description": "Masukkan kode konfirmasi yang telah dikirimkan ke ponsel Anda.",
+      "placeholder": "Masukkan kode",
+      "button": "Konfirmasikan kode Anda sekarang"
+    },
+    "confirm_phone": {
+      "title": "Konfirmasikan Telepon",
+      "description": "Konfirmasikan kode negara Anda dan masukkan nomor telepon Anda."
+    },
+    "contacts_list": {
+      "ice_header": {
+        "friends": "teman-teman"
+      },
+      "all_contacts": "Semua kontak",
+      "invite": "undang",
+      "invitation_text": "Hai {{name}}, saya ingin mengundang Anda untuk bergabung dengan Ice."
+    },
+    "tier_one": {
+      "header_list": {
+        "title_earnings": "Pendapatan Tingkat 1"
+      }
+    },
+    "tier_two": {
+      "header_list": {
+        "title_earnings": "Pendapatan Tingkat 2"
+      }
+    }
+  },
+  "signIn": {
+    "logInSignUp": "Masuk/Daftar",
+    "phone": "Telepon",
+    "or": "atau",
+    "reset_password": "Reset kata sandi",
+    "welcome": "Selamat datang di Ice",
+    "email": "Email",
+    "slogan": "Masa Depan Terdesentralisasi",
+    "privacy": "Dengan melanjutkan, Anda menyetujui [[:link]]Persyaratan Layanan[[/:link]] dan [[:link]]Kebijakan Privasi[[/:link]] kami"
+  },
+  "claimUsername": {
+    "title": "Klaim nama panggilan",
+    "description": "Teman Anda harus menggunakan nama panggilan ini untuk bergabung dengan tim Anda.",
+    "inputPlaceholder": "Masukkan nama panggilan Anda",
+    "note_part1": "Saat membuat nama panggilan, gunakan huruf, angka, dan titik saja.",
+    "note_part2": "Contoh:",
+    "note_example": "your.name01"
+  },
+  "whoInvitedYou": {
+    "title": "Siapa yang mengundang Anda?",
+    "description": "Masukkan nama panggilan orang yang mengundang Anda.",
+    "inputPlaceholder": "Masukkan nama panggilan",
+    "dontHaveInvitationCode": "Dengan menyelesaikan langkah ini, Anda dan teman Anda akan menerima bonus sebesar 25% dari nilai pendapatan dasar saat keduanya lapor masuk pada waktu yang sama.",
+    "dontHaveCodeTip": "Jika Anda tidak memiliki kode undangan, kami akan memilih anggota secara acak sebagai rujukan Anda!"
   },
   "errors": {
     "nicknameSize": "Panjang nama panggilan: 4-20 karakter.",
@@ -99,6 +203,45 @@
     "same_phone_error": "Anda tidak dapat menggunakan nomor yang sama.",
     "unable_to_validate_bsc_addr_eoa": "Tidak dapat memvalidasi alamat EOA"
   },
+  "profile": {
+    "my_roles": {
+      "title": "Peran Saya"
+    },
+    "mining_calculator": "kalkulator pendapatan",
+    "invite_friends": "Undang Teman",
+    "invite_friends_engage": "Sebarkan berita dan undang teman Anda. Semakin banyak rujukan, semakin banyak yang akan Anda dapatkan!",
+    "global_rank": "peringkat global",
+    "view_all_roles": "tampilkan semua peran",
+    "data_is_hidden": "data disembunyikan",
+    "progress_text": "{{value}} dari {{total}}",
+    "not_found": {
+      "title": "Pengguna tidak ditemukan",
+      "description": "Ups, kami tidak dapat menemukan pengguna ini."
+    },
+    "my_badges": {
+      "title": "Lencana Saya"
+    },
+    "badges": {
+      "title": "Lencana"
+    },
+    "roles": {
+      "title": "Peran"
+    },
+    "badge_types": {
+      "coin": {
+        "title": "Koin",
+        "description": "koin"
+      },
+      "social": {
+        "title": "Sosial",
+        "description": "teman-teman"
+      },
+      "level": {
+        "title": "Level",
+        "description": "Level"
+      }
+    }
+  },
   "global": {
     "level": "level",
     "referrals": "rujukan",
@@ -117,6 +260,320 @@
       "today": "Hari ini"
     }
   },
+  "mining_calculator": {
+    "result_label": "Anda akan mendapatkan",
+    "active_inviter": "Pengundang aktif",
+    "tier_1_ref": "Rujukan tingkat 1",
+    "tier_2_ref": "Rujukan tingkat 2",
+    "active_miners": "Rujukan aktif",
+    "team_members": "Anggota tim",
+    "active_team_members": "Anggota tim aktif"
+  },
+  "home": {
+    "wallet": {
+      "title": "DOMPET",
+      "rate": "NILAI PENDAPATAN",
+      "balance": "SALDO SAAT INI"
+    },
+    "pioneer": {
+      "rank": "PERINGKAT GLOBAL",
+      "referrals": "RUJUKAN",
+      "description": "Rujuk lebih banyak pengguna dan dapatkan lebih banyak [[:ice]]."
+    },
+    "referrals": {
+      "title": "RUJUKAN",
+      "description": "Statistik rujukan selama 5 hari sebelumnya.",
+      "no_referrals_description": "Anda belum memiliki rujukan.",
+      "users_tier_1": "Pengguna tingkat 1",
+      "users_tier_2": "Pengguna tingkat 2",
+      "title_team": "TIM",
+      "description_team": "Statistik tim selama 5 hari terakhir",
+      "no_referrals_description_team": "Saat ini Anda tidak memiliki anggota tim apa pun.",
+      "users": "Pengguna"
+    },
+    "adoption": {
+      "title": "ADOPSI",
+      "level": "level",
+      "users": "pengguna"
+    },
+    "tasks": {
+      "achievements": "PENCAPAIAN",
+      "title": "Progres Anda",
+      "description": "Selesaikan tugas di bawah ini dan naik level!",
+      "completed": {
+        "title": "Selamat",
+        "description": "Lapor masuk setiap hari untuk mendapatkan imbalan tambahan!"
+      },
+      "popup": {
+        "title": "Bergabunglah dengan saluran Telegram kami",
+        "description": "Tentukan nama panggilan yang akan digunakan di Telegram.",
+        "placeholder": "Nama panggilan"
+      },
+      "claim_username": {
+        "title": "Klaim nama panggilan Anda",
+        "description": "Atur dan bagikan kepada teman-teman Anda."
+      },
+      "start_mining": {
+        "title": "Mulailah menghasilkan",
+        "description": "Sesi lapor masuk pertama Anda."
+      },
+      "upload_profile_picture": {
+        "title": "Foto profil",
+        "description": "Unggah gambar profil Anda."
+      },
+      "join_telegram": {
+        "title": "Bergabunglah dengan Telegram",
+        "description": "Jadilah bagian dari komunitas kami dan bergabunglah sekarang."
+      },
+      "follow_us_on_twitter": {
+        "title": "Ikuti kami di Twitter",
+        "description": "Mari tetap berhubungan, ikuti kami di Twitter."
+      },
+      "invite_friends": {
+        "title": "Undang 5 Teman",
+        "description": "Kembangkan tim Anda dan tingkatkan pendapatan Anda."
+      }
+    },
+    "overview": {
+      "title": "Ringkasan"
+    },
+    "menu": {
+      "notifications": "Notifikasi",
+      "staking": "Penguncian",
+      "stats": "Statistik",
+      "help": "Bantuan",
+      "tips": "Tips"
+    },
+    "team": {
+      "title": "Tim",
+      "view_team": "tampilkan tim"
+    },
+    "mining_rate": {
+      "title": "NILAI PENDAPATAN",
+      "base": "Dasar"
+    },
+    "engagement": {
+      "title": "KETERLIBATAN",
+      "description_part1": "Streak mengacu pada berapa hari Anda telah lapor masuk secara berturut-turut.",
+      "description_part2": "Untuk setiap 6 hari berturut-turut Anda menerima satu hari libur.",
+      "streak": "STREAK",
+      "days_off": "HARI LIBUR"
+    },
+    "roadmap": {
+      "title": "VISI KAMI",
+      "button_title": "Whitepaper",
+      "button_subtitle": "Pelajari lebih lanjut tentang visi kami di Ice."
+    },
+    "join_mainnet": {
+      "title": "Bergabung dengan Masa Depan Terdesentralisasi",
+      "subtitle": "Dapatkan pratinjau aplikasi Mainnet kami yang akan datang dan fitur-fitur uniknya."
+    },
+    "bsc_address": {
+      "title": "Alamat BNB Smart Chain",
+      "subtitle": "Silakan masukkan alamat BSC Anda di sini."
+    },
+    "verified_tooltip": {
+      "title": "KYC Terverifikasi"
+    }
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "profile": "Profil",
+    "legal": "Hukum",
+    "support": "Dukungan",
+    "personal_information_title": "Informasi Pribadi",
+    "personal_information_description": "Kelola detail profil Anda.",
+    "notifications_title": "Notifikasi",
+    "notifications_description": "Kelola notifikasi Anda di sini.",
+    "push_notifications_title": "Notifikasi Push",
+    "push_notifications_description": "Sesuaikan pengaturan notifikasi push.",
+    "email_notifications_title": "Notifikasi Email",
+    "email_notifications_description": "Sesuaikan pengaturan notifikasi email.",
+    "terms_title": "Persyaratan Layanan",
+    "terms_description": "Tinjau persyaratan layanan kami.",
+    "privacy_title": "Kebijakan Privasi",
+    "privacy_description": "Pelajari seputar kebijakan privasi kami.",
+    "feedback_title": "Kirim Umpan Balik",
+    "feedback_description": "Bagikan pendapat Anda kepada kami.",
+    "invite_title": "Undang Teman",
+    "invite_description": "Dapatkan Ice tambahan dengan mengundang teman Anda.",
+    "delete_title": "Hapus Akun",
+    "delete_description": "Hapus akun Anda.",
+    "delete_confirmation_title": "Yakin hapus akun ini?",
+    "delete_confirmation_yes": "Ya, hapus",
+    "logout_title": "Keluar",
+    "logout_description": "Keluar dan beristirahatlah.",
+    "logout_confirmation_title": "Yakin ingin keluar?",
+    "logout_confirmation_yes": "Ya, keluar",
+    "confirm_phone": {
+      "title": "Konfirmasikan Telepon Baru",
+      "description": "Konfirmasikan kode negara Anda dan masukkan nomor telepon baru.",
+      "button": "Konfirmasikan nomor telepon baru"
+    },
+    "notifications": {
+      "enable_prompt": "Notifikasi tidak diizinkan. Aktifkan sekarang?",
+      "channel_achievements": "Pencapaian",
+      "channel_news": "Berita",
+      "channel_reminders": "Pengingat",
+      "channel_team": "Tim",
+      "type_push": "PUSH",
+      "type_email": "EMAIL",
+      "disable_notifications": "Nonaktifkan Notifikasi?",
+      "disable_notifications_description": "Dengan menonaktifkan notifikasi, Anda tidak akan mendapatkan pembaruan saat mulai lapor masuk, berita, atau informasi tim.",
+      "domain": {
+        "disable_all": {
+          "title": "",
+          "description": ""
+        },
+        "weekly_stats": {
+          "title": "Statistik mingguan",
+          "description": "Dapatkan notifikasi seputar aktivitas Anda."
+        },
+        "weekly_report": {
+          "title": "Laporan mingguan",
+          "description": "Dapatkan notifikasi seputar aktivitas Anda."
+        },
+        "achievements": {
+          "title": "Pencapaian",
+          "description": "Dapatkan notifikasi terkait progres Anda."
+        },
+        "promotions": {
+          "title": "Promosi",
+          "description": "Dapatkan notifikasi terkait cara mengembangkan tim Anda dan mendapatkan lebih banyak."
+        },
+        "news": {
+          "title": "Berita",
+          "description": "Dapatkan notifikasi dari tim kami."
+        },
+        "micro_community": {
+          "title": "Komunitas mikro",
+          "description": "Dapatkan notifikasi seputar tim Anda."
+        },
+        "daily_bonus": {
+          "title": "Bonus harian",
+          "description": "Dapatkan notifikasi untuk mengeklaim bonus harian Anda."
+        },
+        "mining": {
+          "title": "Status sesi",
+          "description": "Dapatkan notifikasi seputar aktivitas lapor masuk Anda."
+        },
+        "system": {
+          "title": "Sistem",
+          "description": "Dapatkan notifikasi penting seputar aplikasi Ice."
+        }
+      }
+    },
+    "language_settings": "Pengaturan bahasa",
+    "change_lang_confirm": {
+      "title": "Ubah bahasa",
+      "prompt": "Aplikasi akan dimulai ulang setelah pengaturan ini diterapkan."
+    },
+    "profile_image": "Gambar Profil",
+    "inapp_privacy_title": "Privasi",
+    "inapp_privacy_description": "Kelola informasi Anda di sini.",
+    "developer": "Pengembang",
+    "user_id": "ID Pengguna",
+    "user_token": "Token Pengguna",
+    "profile_photo": {
+      "delete": "Hapus Foto",
+      "edit": "Edit foto profil",
+      "photo_gallery": "Galeri Foto",
+      "camera": "Kamera"
+    },
+    "confirm_email_confirmation_title": "Konfirmasikan email?",
+    "update_email_confirmation_title": "Perbarui email?",
+    "update_email_confirmation_subtitle": "Anda harus masuk kembali apabila mengubah alamat email. Lanjutkan?",
+    "unlink_logins_title": "Batalkan Tautan Masuk",
+    "unlink_logins_description": "Batalkan tautan masuk dari sini."
+  },
+  "invite_share": {
+    "title": "Undang Teman",
+    "telegram": "Telegram",
+    "twitter": "Twitter",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email": "Email",
+    "fb": "Umpan berita",
+    "sms": "SMS",
+    "copy_link": "Salin tautan",
+    "more": "Lainnya",
+    "copied": "TERSALIN",
+    "share_message": "Hai ☃️ Manusia Salju! Bergabunglah dengan tim saya di Ice dan dapatkan 10 koin Ice saat Anda mendaftar menggunakan kode rujukan saya:",
+    "share_subject": "Bergabunglah dengan tim saya di Ice",
+    "description": "Sebarkan berita dan undang teman Anda. Anda mendapatkan [[:ice]] untuk setiap rujukan baru yang dibawa.",
+    "share": "Bagikan"
+  },
+  "users": {
+    "ping": "PING",
+    "active": "Aktif",
+    "inactive": "Tidak aktif",
+    "referralType": {
+      "T1": "Tingkat 1",
+      "T2": "Tingkat 2",
+      "team": "Anggota tim"
+    },
+    "team": "Tim"
+  },
+  "personal_information": {
+    "first_name": "Nama depan",
+    "last_name": "Nama belakang",
+    "country": "Negara",
+    "city": "Kota",
+    "title": "Informasi Pribadi",
+    "phone": "Telepon",
+    "email": "Email",
+    "username": "Nama panggilan"
+  },
+  "username": {
+    "error": {
+      "already_taken": "Nama panggilan sudah digunakan.",
+      "length": "Panjang nama panggilan: 4-20 karakter.",
+      "invalid_characters": "Hapus karakter yang tidak valid.",
+      "not_found": "Nama panggilan tidak ditemukan.",
+      "some_error": "Terjadi kesalahan.",
+      "refer_yourself": "Anda tidak dapat merujuk diri sendiri."
+    }
+  },
+  "staking": {
+    "time_left": "Sisa Waktu",
+    "mining_rate": "Nilai Pendapatan",
+    "appeal": "Tingkatkan nilai pendapatan Anda",
+    "benefits_description": "Kunci terlebih dahulu imbalan Ice sampai 5 tahun dan tingkatkan nilai pendapatan Anda hingga 250%.",
+    "bonus_label": "Bonus Prapenguncian",
+    "period_label": "Periode Penguncian",
+    "title": "Prapenguncian",
+    "current_rate": "Nilai Saat Ini",
+    "allocation": "Alokasi",
+    "description": "Penguncian adalah proses yang melibatkan penyerahan aset kripto Anda untuk mendukung jaringan blockchain dan mengonfirmasi transaksi.",
+    "terms_agree": "Saya menyetujui [[:ice]] [[:link]]Persyaratan Penguncian[[/:link]]. Kepemilikan Ice Anda akan dikunci untuk periode yang dipilih.",
+    "stake_now": "Kunci Terlebih Dahulu Sekarang!",
+    "balance_label": "Saldo dikunci",
+    "confirm_title": "Konfirmasikan Prapenguncian",
+    "confirm_subtitle": "Yakin kunci koin Anda terlebih dahulu? Tindakan ini tidak dapat diurungkan setelah dikonfirmasi.",
+    "remove_pre_staking": "Hapus Pre-Staking"
+  },
+  "stats": {
+    "header_title": "Statistik",
+    "active": "Pengguna aktif",
+    "total": "Jumlah pengguna",
+    "user_growth": "Pertumbuhan pengguna",
+    "top_miners": "Pengguna teratas",
+    "top_countries": "Negara teratas",
+    "online_miners": "Pengguna online",
+    "detailed_information": "Informasi mendetail",
+    "total_coins": "Total koin",
+    "filter": {
+      "total": "Total",
+      "on_app": "Tersedia di Aplikasi",
+      "pre_staked": "Pre-Staked",
+      "on_blockchain": "Di Blockchain"
+    }
+  },
+  "update_required": {
+    "title": "Perbarui",
+    "description": "Anda menggunakan versi aplikasi lama dan perlu memperbaruinya untuk dapat terus menggunakannya.",
+    "button_title": "Perbarui Sekarang"
+  },
   "general": {
     "good_morning": "Selamat pagi",
     "good_afternoon": "Selamat siang",
@@ -126,25 +583,350 @@
     "seconds_short": "d",
     "minutes_short": "m",
     "hours_short": "j",
-    "days_short": "h",
-    "hour": {
-      "zero": "jam",
-      "one": "jam",
-      "two": "jam",
-      "few": "jam",
-      "many": "jam",
-      "other": "jam"
+    "days_short": "h"
+  },
+  "news": {
+    "news_feed": "Umpan Berita",
+    "read_more": "Baca selengkapnya",
+    "no_more_news": "ini adalah entri terakhir dari umpan berita.",
+    "views": "{{viewsCount}} tampilan"
+  },
+  "search": {
+    "empty": "Telusuri kontak, teman Ice, dan anggota komunitas mikro.",
+    "nothing_is_found": "Kueri Anda kosong.",
+    "search_by_country": "Cari berdasarkan negara",
+    "search_for_users": "Telusuri pengguna",
+    "loading": "Mencari…"
+  },
+  "tabbar": {
+    "mining_inactive_tooltip": "Ketuk di sini untuk memulai sesi lapor masuk pertama Anda.",
+    "mining_reset_tooltip": "Tekan selama 1 detik untuk memperpanjang sesi lapor masuk Anda.",
+    "mining_holiday_reset_tooltip": "Anda menggunakan Hari Libur! Tekan selama 1 detik untuk memperpanjang sesi lapor masuk Anda.",
+    "mining_holiday_active": "Anda menggunakan Hari Libur!"
+  },
+  "invite_friend": {
+    "invite_button": "Undang Teman",
+    "button_title": "Undang Teman",
+    "description": "Teman Anda belum menggunakan [[:ice]]. Kirimi undangan!"
+  },
+  "balance_history": {
+    "title": "Riwayat Saldo",
+    "wallet": "Dompet",
+    "blockchain": "Blockchain",
+    "wallet_update_interval": "diperbarui setiap jam",
+    "blockchain_update_interval": "diperbarui setiap 28 hari",
+    "list_end_label": "ini adalah entri terakhir dari riwayat saldo.",
+    "no_data": "Data untuk periode yang ditentukan kosong.",
+    "you": "kamu",
+    "contribution": "kontribusi"
+  },
+  "pop_up": {
+    "update_now": "Perbarui Sekarang",
+    "please_update": "Perbarui",
+    "update_now_text": "Anda menggunakan versi aplikasi lama dan perlu memperbaruinya untuk dapat terus menggunakannya.",
+    "you_are_up_to_date": "Anda menggunakan versi terbaru!",
+    "up_to_date_text": "Saat ini Anda sudah menggunakan versi terbaru. Periksa semua perubahan di bawah ini.",
+    "resurrection": "Pemulihan",
+    "resurrection_message": "Anda memiliki satu kali peluang untuk pulih dan menerima [[:amount]] koin yang hilang dalam [[:period]] terakhir.",
+    "resurrection_warning": "Anda hanya bisa pulih satu kali!",
+    "please_confirm": "Konfirmasikan",
+    "resurrection_no_confirm_message": "[[:amount]] koin Anda akan hilang selamanya. Yakin lanjutkan?",
+    "resurrection_yes_confirm_message": "Anda hanya bisa pulih satu kali! Yakin lanjutkan? [[:amount]] koin akan kembali ke saldo Anda dalam satu jam berikutnya.",
+    "delete_account_confirmation_title": "Konfirmasikan Penghapusan",
+    "delete_account_confirmation_text": "Semua data termasuk saldo Ice Anda akan hilang secara permanen apabila akun dihapus. Lanjutkan?",
+    "registration_update_title": "Pembaruan Pendaftaran",
+    "registration_update_text": "Kami telah menangguhkan pembuatan akun baru menggunakan nomor telepon. Untuk melanjutkan, Anda perlu memilih antara alamat email atau login melalui jaringan sosial.",
+    "link_email_title": "Hubungkan alamat email Anda",
+    "link_email_text": "Kami telah menangguhkan login menggunakan nomor telepon. Silakan hubungkan alamat email Anda dan konfirmasi agar dapat login.",
+    "account_error_title": "Kesalahan Akun",
+    "account_error_text": "Kami telah menangguhkan login menggunakan nomor telepon. Sayangnya, akun Anda tidak berhasil melewati verifikasi KYC dan tidak dapat dipulihkan.",
+    "login_via_email_title": "Silakan login melalui email",
+    "login_via_email_text": "Kami telah menangguhkan login menggunakan nomor telepon. Silakan gunakan alamat email yang terhubung ke akun Anda untuk login.",
+    "email_in_use_title": "Email sudah digunakan",
+    "email_in_use_text_part1": "Alamat email yang Anda coba hubungkan sudah digunakan.",
+    "email_in_use_text_part2": "Jika ini adalah alamat email Anda, silakan login terlebih dahulu dengannya, selesaikan proses pendaftaran, dan hapus akun tersebut agar email tersedia, kemudian kembali ke login menggunakan nomor telepon untuk menyelesaikan proses penghubungan.",
+    "successfully_linked_title": "Berhasil dihubungkan!",
+    "successfully_linked_text": "Alamat email telah berhasil dihubungkan ke akun Anda."
+  },
+  "periods": {
+    "3_days": "3 hari",
+    "7_days": "7 hari",
+    "30_days": "30 hari",
+    "1_day": "1 Hari",
+    "1_week": "1 Minggu",
+    "1_month": "1 Bulan",
+    "90_days": "90 hari",
+    "14_days": "14 hari"
+  },
+  "notifications": {
+    "joined": " telah bergabung dengan tim Anda.",
+    "multiply": " dan {{count}} orang lainnya telah bergabung dengan tim Anda.",
+    "ping": " telah mem-ping Anda, bangun!",
+    "delete": "Hapus",
+    "add_notifications": "Tambahkan notifikasi tiruan",
+    "no_notifications": "Notifikasi kosong.",
+    "add_announcements": "Tambahkan pengumuman tiruan",
+    "add_both": "Tambahkan notifikasi dan pengumuman tiruan secara bersamaan",
+    "clear_title": "Hapus semua notifikasi?",
+    "title": "Notifikasi"
+  },
+  "notification_feed_screen": {
+    "yesterday": "Kemarin",
+    "last_week": "Minggu Lalu",
+    "this_month": "Bulan ini",
+    "last_month": "Bulan Lalu",
+    "this_week": "Minggu ini"
+  },
+  "profile_privacy_edit": {
+    "step1": {
+      "title": "1. Statistik Profil Anda",
+      "description": "Ketuk blok yang ingin Anda sembunyikan dari penglihatan publik."
     },
-    "day": {
-      "zero": "hari",
-      "one": "hari",
-      "two": "hari",
-      "few": "hari",
-      "many": "hari",
-      "other": "hari"
+    "step2": {
+      "description": "Ketuk blok ini untuk menyembunyikannya dari penglihatan publik.",
+      "title": "2. Peran Anda Saat Ini"
     },
-    "minutes_abbr": "mnt",
-    "seconds_abbr": "dtk"
+    "step3": {
+      "title": "3. Lencana yang Anda Peroleh",
+      "description": "Ketuk di sini untuk menyembunyikan lencana Anda dari penglihatan publik."
+    }
+  },
+  "confirm_email": {
+    "title": "Konfirmasikan email Anda",
+    "description": "Masukkan alamat email Anda dan kami akan mengirimkan kodenya.",
+    "note": "Jika Anda tidak menerima email dalam 5 menit, periksa folder spam.",
+    "wrong_email": "Email salah?",
+    "check_email": "Periksa email Anda",
+    "emailed_link_to": "Kami mengirimkan email yang berisi tautan ajaib ke",
+    "emailed_steps_to": "Kami mengirimkan email yang berisi langkah-langkah untuk",
+    "link_instruction": "Klik tautan untuk masuk atau mendaftar.",
+    "reset_link_instruction": "Klik tautan untuk mereset kata sandi Anda.",
+    "modify_title": "Konfirmasikan Email Baru",
+    "modify_description": "Masukkan alamat email baru Anda."
+  },
+  "invalid_link": {
+    "title": "Tautan tidak valid",
+    "description": "Sayangnya, tautan ini tidak valid, masukkan kembali email Anda dan kami akan mengirimkan tautan baru kepada Anda."
+  },
+  "confirm_code": {
+    "title": "Konfirmasikan kode",
+    "description": "Masukkan kode yang dikirim ke",
+    "send_code_again": "Kirim lagi kodenya",
+    "resend_time_label": "Kode baru tersedia dalam ",
+    "enter_code": "Masukkan kode",
+    "wrong_number": "Nomor salah?"
+  },
+  "ice_bonus": {
+    "title": "Imbalan selamat datang",
+    "description": "Selamat, Anda mendapatkan [[:value]] koin [[:ice]] pertama sebagai bukti [[:bold]]Kepercayaan[[/:bold]] kami kepada [[:bold]]Anda[[/:bold]].",
+    "balance_label": "Saldo saat ini"
+  },
+  "country_select": {
+    "title": "Pilih negara"
+  },
+  "roles": {
+    "snowman": {
+      "title": "Manusia salju",
+      "subtitle": "Bangun kerajaan salju",
+      "description": "Dapatkan dengan melapor masuk setiap 24 jam untuk menunjukkan komitmen Anda pada jaringan Ice dan membuktikan bahwa Anda adalah manusia, bukan robot."
+    },
+    "ambassador": {
+      "title": "Duta besar",
+      "subtitle": "Penguasa kerajaan salju",
+      "description": "Anda menjadi duta besar saat minimal 100 orang bergabung dengan tim Anda. Setiap duta besar akan mendapatkan akses awal ke fitur-fitur terbaru."
+    }
+  },
+  "confirm_phone": {
+    "modify_title": "Konfirmasikan Telepon",
+    "modify_description": "Konfirmasikan kode negara Anda dan masukkan nomor telepon Anda.",
+    "button": "Konfirmasikan negara dan telepon"
+  },
+  "date_select": {
+    "title": "Pilih tanggal"
+  },
+  "walkthrough": {
+    "overrides": {
+      "home": {
+        "team": {
+          "description": "[[:ice]] lebih baik dengan teman-teman. Di halaman ini, Anda dapat melihat status anggota tim Anda. Anda juga dapat mengirim pesan kepada mereka dari sini."
+        },
+        "referralscard": {
+          "title": "Kartu Tim",
+          "description": "Lihat perkembangan statistik anggota tim Anda selama 5 hari terakhir dengan mengetuk kartu ini."
+        }
+      },
+      "team": {
+        "segmented_control_tier_one": {
+          "title": "Tim",
+          "description": "Di sini Anda dapat melihat daftar orang yang telah Anda undang untuk bergabung dengan Jaringan Ice. Anda dapat dengan mudah melacak status mereka dari sini dan mengirim pemberitahuan kepada yang tidak aktif."
+        },
+        "active_users": {
+          "description": "Ini adalah status aktivitas check-in anggota tim Anda saat ini. Mereka dianggap aktif ketika mereka memiliki sesi check-in aktif."
+        },
+        "ping": {
+          "description": "Beri tahu anggota tim Anda untuk memulai sesi check-in mereka. Anda dapat mengirim satu pemberitahuan ke setiap referral setiap 24 jam."
+        }
+      }
+    },
+    "profile": {
+      "hidden_data": {
+        "title": "Data Tersembunyi",
+        "description": "Ketuk ikon mata untuk melihat bagaimana pengguna lain melihat profil Anda."
+      }
+    },
+    "news": {
+      "readmore": {
+        "title": "Baca selengkapnya",
+        "description": "Lihat berita terbaru dari tim kami di sini. Ketuk tombol ini untuk membaca artikel lengkapnya."
+      },
+      "releasednews": {
+        "title": "Berita yang dirilis",
+        "description": "Ketuk setiap judul berita dan baca versi lengkapnya. Jangan lewatkan semua berita dan jajak pendapat kami."
+      }
+    },
+    "team": {
+      "allow_contacts": {
+        "title": "Izinkan kontak",
+        "description": "Sinkronkan kontak Anda dan lihat siapa saja yang sudah menggunakan [[:ice]]. Di masa mendatang, Anda bisa mengirim [[:ice]] ke salah satu kontak Anda."
+      },
+      "confirm_phone": {
+        "title": "Konfirmasikan telepon",
+        "description": "Konfirmasikan identitas Anda dan beri tahu kontak Anda bahwa Anda juga anggota jaringan Ice. Nomor telepon Anda tidak akan dibagikan kepada pihak ketiga lainnya."
+      },
+      "contacts_list": {
+        "title": "Daftar kontak",
+        "description": "Ini adalah daftar yang berisi semua kontak Anda, orang-orang yang sudah bergabung dengan jaringan [[:ice]] ditampilkan di bagian atas daftar."
+      },
+      "referrals": {
+        "title": "Rujukan",
+        "description": "Lihat berapa banyak rujukan yang Anda miliki secara total di sini. Semakin banyak orang yang Anda undang, semakin banyak yang akan Anda dapatkan."
+      },
+      "earnings": {
+        "title": "Pendapatan",
+        "description": "Saldo saat ini diperbarui setiap jam dan ditampilkan di sini. Ini mencakup pendapatan langsung & yang dikunci bersama dengan pendapatan Tingkat 1 dan Tingkat 2."
+      },
+      "segmented_control_tier_one": {
+        "title": "Tingkat 1",
+        "description": "Lihat daftar rujukan Tingkat 1 di sini. Untuk setiap teman yang lapor masuk pada waktu yang sama, Anda akan mendapatkan tambahan 25% dari nilai pendapatan adopsi dasar saat ini. [[:link]]Baca selengkapnya[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "segmented_control_tier_two": {
+        "title": "Tingkat 2",
+        "description": "Lihat daftar rujukan Tingkat 2 di sini. Untuk setiap teman yang lapor masuk pada waktu yang sama, Anda akan mendapatkan tambahan 5% dari nilai pendapatan adopsi dasar saat ini. [[:link]]Baca selengkapnya[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "active_users": {
+        "title": "Pengguna Aktif",
+        "description": "Ini adalah status aktivitas lapor masuk rujukan Anda saat ini. Pengguna dianggap aktif saat memiliki sesi lapor masuk aktif."
+      },
+      "tier_one_earnings": {
+        "title": "Pendapatan Tingkat 1",
+        "description": "Lihat daftar rujukan Tingkat 1 di sini. Untuk setiap anggota yang lapor masuk pada waktu yang sama, keduanya akan mendapatkan tambahan 25% dari nilai pendapatan adopsi dasar saat ini."
+      },
+      "ping": {
+        "title": "Tombol Ping",
+        "description": "Beri tahu rujukan Anda untuk memulai sesi lapor masuknya. Anda bisa mengirim satu notifikasi ke masing-masing rujukan setiap 24 jam."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "Beranda",
+        "description": "Selamat datang di [[:ice]]. Di layar beranda, Anda dapat menemukan semua statistik terkait saldo Anda, nilai pendapatan saat ini, peringkat global Anda bersama dengan tim Anda."
+      },
+      "invite": {
+        "title": "Undang",
+        "description": "Untuk setiap orang yang Anda undang, keduanya akan mendapatkan hingga 25% dari nilai pendapatan dasar Anda. Semakin banyak orang yang Anda undang, semakin banyak yang akan Anda dapatkan."
+      },
+      "team": {
+        "title": "Tim",
+        "description": "[[:ice]] lebih seru bersama teman. Di halaman ini Anda dapat melihat status anggota tim dari level Tingkat 1 dan Tingkat 2. Anda juga dapat mem-ping dari sini."
+      },
+      "news": {
+        "title": "Berita",
+        "description": "Jangan lewatkan semua berita dan jajak pendapat kami. Karena kami adalah Organisasi Otonomi Terdesentralisasi, Anda dapat mengusulkan fitur-fitur mendatang di sini."
+      },
+      "profile": {
+        "title": "Profil",
+        "description": "Sesuaikan detail profil Anda dan lihat semua pencapaian serta lencana yang telah Anda peroleh. Gunakan kalkulator dari sini, sehingga Anda dapat memperkirakan pendapatan Anda."
+      },
+      "earningicestart": {
+        "title": "Menghasilkan Ice",
+        "description": "Anda bisa memulai sesi lapor masuk [[:ice]] setiap 24 jam dengan mengetuk tombol ini. Jangan lupa untuk kembali setiap hari dan mulai menghasilkan!"
+      },
+      "earningiceseemore": {
+        "title": "Menghasilkan Ice",
+        "description": "Ketuk lagi dan lihat detail selengkapnya terkait sesi lapor masuk Anda saat ini."
+      },
+      "stats": {
+        "title": "Statistik",
+        "description": "Di halaman statistik, Anda dapat melihat pengguna Total dan Aktif yang lapor masuk setiap hari beserta negara dan pengguna Teratas."
+      },
+      "help": {
+        "title": "Bantuan",
+        "description": "Ada pertanyaan? Lihat daftar pertanyaan umum kami. Jika tidak dapat menemukan yang Anda cari, jangan ragu untuk menghubungi kami di hi@ice.io."
+      },
+      "preStaking": {
+        "title": "Prapenguncian",
+        "description": "Maksimalkan pengembalian Anda dengan mengunci imbalan pendapatan terlebih dahulu. Pilih alokasi dan periode penguncian untuk menerima bonus selain pendapatan Anda."
+      },
+      "wallet": {
+        "title": "Kartu Dompet",
+        "description": "Di sini Anda dapat menemukan saldo [[:ice]] saat ini, bersama dengan nilai pendapatan. Semakin banyak rujukan dari tim Anda yang online, semakin tinggi nilai pendapatannya."
+      },
+      "earning": {
+        "title": "Kartu Pendapatan",
+        "description": "Jangan lewatkan nilai pendapatan dan bonus Anda! Di sini Anda dapat memeriksa nilai Anda saat ini, nilai dasar kami, dan nilai bonus untuk berbagai aktivitas di aplikasi."
+      },
+      "engagement": {
+        "title": "Kartu Keterlibatan",
+        "description": "Lacak sesi lapor masuk streak dan hari libur! Lihat bagian ini untuk detail lebih lanjut seputar sesi lapor masuk berturut-turut dan untuk melihat berapa banyak hari libur yang Anda miliki."
+      },
+      "profilecard": {
+        "title": "Kartu Profil",
+        "description": "Anda dapat melacak status profil Anda dengan mengikuti kartu ini. Ini akan menampilkan peringkat global Anda saat ini, bersama dengan peran, level, dan total rujukan Anda."
+      },
+      "referralscard": {
+        "title": "Kartu Rujukan",
+        "description": "Lihat perkembangan statistik rujukan Anda selama 5 hari sebelumnya untuk rujukan Tingkat 1 dan Tingkat 2 dengan mengetuk kartu ini."
+      },
+      "adoptioncard": {
+        "title": "Kartu Adopsi",
+        "description": "Berdasarkan rata-rata total Manusia Salju aktif minggu lalu, Anda dapat melihat nilai pendapatan [[:ice]] saat ini. Nilai pendapatan dibagi dua saat mencapai ambang berikutnya."
+      },
+      "nickname": {
+        "title": "Nama panggilan",
+        "description": "Nama panggilanlah yang membuat Anda berbeda dari yang lain. Teman Anda harus menggunakannya untuk bergabung dengan tim Anda. Gunakan pintasan ini untuk membuka profil Anda."
+      },
+      "balancehistory": {
+        "title": "Riwayat Saldo",
+        "description": "Di sini Anda bisa menemukan saldo [[:ice]] saat ini di dompet lokal dan blockchain. Saldo dompet lokal diperbarui setiap jam, sedangkan saldo blockchain diperbarui setiap 24 jam."
+      },
+      "achievements": {
+        "title": "Pencapaian",
+        "description": "Selesaikan tugas di bawah ini dan naik level! Mulai sesi lapor masuk pertama Anda sekarang!"
+      }
+    }
+  },
+  "ActiveSessionsScreen": {
+    "title": "Batalkan Tautan Masuk",
+    "sessionName": "Masuk melalui {{providerName}}",
+    "buttons": {
+      "currentSession": "Sesi saat ini",
+      "endSession": "Akhiri Sesi",
+      "loginUnlinked": "Tautan Masuk Dibatalkan",
+      "sessionEnded": "Sesi Berakhir",
+      "unlink": "Batalkan tautan"
+    },
+    "dialogs": {
+      "unlinkLogin": {
+        "title": "Batalkan Tautan Masuk?",
+        "message": "Yakin batalkan tautan masuk melalui {{providerName}} dari perangkat ini?"
+      },
+      "endSession": {
+        "title": "Akhiri Sesi?",
+        "message": "Yakin akhiri sesi masuk {{providerName}} dari perangkat ini?"
+      }
+    }
   },
   "links": {
     "pre_staking": "https://ice.io/pre-staking/",
@@ -152,28 +934,464 @@
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
   },
-  "mainnet_landing": {
-    "header": "Aktivitas penambangan Ice telah berakhir. Saat kami mempersiapkan peluncuran mainnet pada 7 Oktober 2024, tetapkan aplikasi terpasang untuk pembaruan eksklusif dan akses awal ke aplikasi mainnet.",
-    "stats": {
-      "header": "Statistik Ice",
-      "circulating_supply": "Pasokan Peredaran",
-      "total_supply": "Pasokan Total",
-      "price": "Harga",
-      "market_cap": "Kapitalisasi Pasar",
-      "daily_trading_volume": "Volume Perdagangan 24 Jam",
-      "dilluted_market_cap": "Kapitalisasi Pasar Dilusi Penuh"
+  "extra_bonus": {
+    "claim_title": "Bonus Hari Ini",
+    "claim_message": "Saatnya mengeklaim bonus Anda hari ini, ketuk tombol [[:bold]]“Klaim Bonus”[[/:bold]] di bawah ini.",
+    "link": "Cari tahu selengkapnya",
+    "extra_message": "Anda telah menerima bonus tambahan harian sesuai nilai pendapatan Anda.",
+    "expired_title": "Bonus Kedaluwarsa",
+    "expired_message": "Sayangnya, bonus hari ini telah kedaluwarsa. Nantikan notifikasi selanjutnya!",
+    "result_title": "Selamat"
+  },
+  "qr_code": {
+    "description": "Pindai kode QR untuk bergabung dengan tim saya."
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "Bergabunglah dengan kami di TikTok",
+      "description": "Kami ingin menjangkau dan memberikan informasi seputar komunitas baru kami yang menarik di TikTok. Kami membagikan konten yang seru dan informatif seputar mata uang digital kami, Ice, dan kami ingin Anda bergabung bersama kami!"
     },
-    "countdown": {
-      "header": "Peluncuran Mainnet Ice"
+    "youtube": {
+      "title": "Bergabunglah dengan kami di YouTube",
+      "description": "Dari tutorial tentang cara mendapatkan Ice, hingga pembaruan seputar fitur terbaru, dan bahkan konten komunitas yang seru, saluran YouTube kami adalah tempat yang tepat untuk mendapatkan informasi terbaru."
     },
-    "roadmap": {
-      "header": "Visi Kami",
-      "title": "Whitepaper",
-      "subtitle": "Pelajari lebih lanjut tentang visi kami di Ice."
+    "linkedin": {
+      "title": "Bergabunglah dengan kami di LinkedIn",
+      "description": "Bergabung dengan komunitas Ice di LinkedIn adalah cara terbaik untuk terus mendapatkan informasi seputar perkembangan terbaru dan terhubung dengan orang-orang yang berpikiran sama yang sangat menantikan masa depan mata uang digital seperti Anda."
     },
-    "join_mainnet": {
-      "title": "Bergabung dengan Masa Depan Terdesentralisasi",
-      "subtitle": "Dapatkan gambaran singkat tentang aplikasi Mainnet kami yang akan datang dan fitur-fitur uniknya."
+    "facebook": {
+      "title": "Bergabunglah dengan kami di Facebook",
+      "description_part1": "Kami sarankan agar Anda mengikuti halaman Facebook kami.",
+      "description_part2": "Selain membantu Anda untuk mengetahui segala hal seputar proyek Ice, ini juga merupakan cara terbaik untuk terhubung dengan komunitas kami dan menjadi bagian dari percakapan."
+    },
+    "instagram": {
+      "title": "Bergabunglah dengan kami di Instagram",
+      "description_part1": "Ikuti kami di Instagram untuk tetap terhubung dengan kami dan juga pengguna lainnya yang menyukai Ice",
+      "description_part2": "Selain itu, Anda akan menjadi orang pertama yang mengetahui tentang fitur atau promosi baru yang kami luncurkan."
+    },
+    "reddit": {
+      "title": "Bergabunglah dengan Kami di Reddit",
+      "description": "Temukan komunitas Ice di Reddit, tempat individu dengan pemikiran serupa berkumpul untuk berbagi pemikiran mereka.\n\nBergabunglah dalam percakapan, ajukan pertanyaan, dan eksplorasi diskusi menarik tentang penambangan Ice, fitur-fitur, dan banyak lagi."
+    },
+    "discord": {
+      "title": "Bergabunglah dengan Kami di Discord",
+      "description": "Bergabunglah dengan komunitas Discord kami yang bersemangat dan ikuti diskusi serta wawasan eksklusif tentang Ice.\n\nTerlibat dalam obrolan yang hidup, tetap terinformasi tentang berita terkait Ice, dan menjadi bagian dari komunitas yang berbagi minat dengan Anda."
+    },
+    "ice_founder_twitter": {
+      "title": "Ikuti Zeus di X",
+      "description": "Ikuti Zeus, pendiri visioner kami, di X, di mana dia berbagi wawasan, pembaruan, dan pemikiran tentang misi kami. Bergabung dalam percakapan, ajukan pertanyaan, dan tetap terhubung dengan pemimpin inspiratif kami saat kita memulai perjalanan yang menarik ini bersama-sama.",
+      "button": "Ikuti Zeus"
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Harap tunggu sementara kami ping semua teman Anda · {{count}}"
+  },
+  "creative_library": {
+    "title": "Perpustakaan Kreatif Ice",
+    "share": "Bangun tim impian Anda di jaringan Ice!",
+    "get_started": {
+      "header": "Bangun tim impian Anda",
+      "subtitle": "Mulai di Ice dan bangun komunitas mikro yang berkembang",
+      "description": "Bergabunglah dengan jumlah pengguna Ice yang semakin bertambah yang sedang membangun komunitas mikro mereka sendiri dan mendapatkan lebih banyak imbalan. Alat promosi, panduan, dan tips kami memudahkan penyebaran pesan dan pembangunan komunitas yang sukses.",
+      "get_started": "Mulai",
+      "carousel": {
+        "01": {
+          "title": "Bergabung",
+          "description": "Unduh aplikasi kami, klaim nama panggilan Anda, dan mulai menambang.\n\nAnda akan bergabung dengan komunitas global pengguna Ice yang antusias tentang desentralisasi, otonomi, dan kekuatan dari masyarakat."
+        },
+        "02": {
+          "title": "Undang",
+          "description": "Undang audiens Anda untuk bergabung dengan Ice dan bekerja sama untuk membuka imbalan tambahan.\n\nSelain itu, Anda akan membantu menyebarkan pesan tentang manfaat desentralisasi dan masa depan keuangan."
+        },
+        "03": {
+          "title": "Dapatkan",
+          "description": "Tingkatkan imbalan Anda dengan memperluas jaringan Anda dan mendorong orang lain untuk bergabung dengan komunitas Ice.\n\nBergabunglah dengan misi kami untuk merevolusi masa depan keuangan melalui desentralisasi dan otonomi."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Video",
+        "description": "Gunakan koleksi video kami untuk mempromosikan kode undangan Anda, dalam mode lanskap atau potret, dengan atau tanpa teks terjemahan, kami mendukung Anda.",
+        "action": "Lihat video"
+      },
+      "02": {
+        "title": "Gambar",
+        "description": "Sebuah gambar bernilai seribu kata. Anda dapat memilih dari koleksi spanduk, aset media sosial, template, dan mockup aplikasi kami.",
+        "action": "Lihat gambar"
+      },
+      "03": {
+        "title": "Spanduk Tertanam",
+        "description": "Dengan spanduk tertanam kami, Anda dapat dengan mudah mempromosikan Ice kepada pengunjung situs web Anda dan mengundang mereka untuk bergabung dengan komunitas mikro Anda.",
+        "action": "Pasang spanduk"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Bagikan Cerita Anda",
+        "description": "Bagikan perjalanan Anda dengan jaringan Ice dan manfaat-manfaatnya yang banyak dengan menulis artikel dalam bahasa Anda.\n\nBagikan di blog Anda, Medium, Reddit, Quora, Blogger, dan banyak lagi.\n\nAnda dapat menemukan semua informasi tentang Ice dan fitur-fitur uniknya di [[/:link]] Basis Pengetahuan [[/:link]], [[/:link]] Halaman Beranda [[/:link]], dan [[/:link]] Halaman FAQ [[/:link]]."
+      },
+      "spread": {
+        "title": "Sebarkan Pesan",
+        "description": "Bergabunglah dalam percakapan dan perkenalkan jaringan Ice kepada forum-forum favorit Anda. Mulai thread baru dan bagikan pemikiran Anda tentang keuangan terdesentralisasi, masa depan mata uang, dan kekuatan membangun komunitas mikro dengan Ice.\n\nJadilah manusia salju ☃️ dan mulailah diskusi tentang potensi mata uang global ini."
+      },
+      "bring": {
+        "title": "Ajak Teman Anda Bergabung",
+        "description": "Gunakan fitur undangan yang mudah digunakan kami dan bagikan kode undangan pribadi Anda dengan teman-teman Anda di platform media sosial favorit Anda."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Plug & Play untuk Pemilik Situs Web",
+        "description": "Integrasikan Ice langsung ke situs web Anda dengan spanduk JS sederhana dan fleksibel kami. Ini adalah pengaturan cepat dan mudah yang dapat disesuaikan untuk mencocokkan branding situs web Anda. Ini diterjemahkan ke dalam 50 bahasa dan kompatibel dengan semua platform situs web.\n\nSalin dan tempel kode ke situs web Anda, dan mulailah mempromosikan Ice kepada pengunjung Anda hari ini.",
+        "action": "Pasang spanduk"
+      },
+      "mobile": {
+        "title": "Perpustakaan untuk Aplikasi Seluler",
+        "description": "Integrasikan perpustakaan kami yang mudah digunakan ke dalam aplikasi seluler Anda dan undang pengguna Anda untuk bergabung dengan komunitas mikro Anda dan memulai penambangan.\n\nDengan dukungan terjemahan dan opsi pengaturan yang fleksibel, Anda dapat memastikan bahwa semua pengguna Anda memiliki akses ke pengalaman Ice yang hebat yang sama, di mana pun mereka berada di dunia.",
+        "action1": "Perpustakaan Android",
+        "action2": "Perpustakaan React Native"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Praktik Baik",
+        "rules": {
+          "01": {
+            "title": "Jadilah Autentik",
+            "description": "Tulis dari pengalaman dan sudut pandang pribadi Anda. Bagikan pemikiran dan perasaan Anda yang jujur tentang jaringan Ice."
+          },
+          "02": {
+            "title": "Gunakan Bahasa Ramah",
+            "description": "Tulis seolah-olah Anda sedang berbicara dengan seorang teman, dan hindari menggunakan istilah teknis yang berlebihan atau bahasa yang mungkin sulit dipahami oleh pembaca."
+          },
+          "03": {
+            "title": "Jadilah Kreatif",
+            "description": "Jangan takut untuk bereksperimen dengan berbagai jenis konten, seperti artikel blog, video, atau pembaruan media sosial. Bersenang-senanglah dan berinovasilah dalam cara Anda mempromosikan Ice kepada audiens Anda."
+          }
+        }
+      },
+      "bad": {
+        "title": "Praktik Buruk",
+        "rules": {
+          "01": {
+            "title": "Hindari Spam",
+            "description": "Hindari mengirim pesan yang tidak diminta atau mengirim konten yang sama berkali-kali di berbagai platform. Ini bisa dianggap sebagai tindakan yang mengganggu dan menjengkelkan."
+          },
+          "02": {
+            "title": "Jangan Menyesatkan Orang",
+            "description": "Proyek Ice tidak membayar pengguna dengan uang tunai, hanya memberikan imbalan dengan koin Ice. Harap hindari mengirimkan konten seperti \"Ubah koin Ice Anda menjadi uang tunai\". \"Bagaimana cara menghasilkan $100 dengan Ice\", dan sejenisnya."
+          },
+          "03": {
+            "title": "Jangan Terlibat dalam Aktivitas Penipuan",
+            "description": "Kami menghargai transparansi dan kejujuran dalam komunitas kami. Setiap aktivitas penipuan seperti membuat beberapa akun atau mencoba memanipulasi jaringan Ice tidak akan ditoleransi."
+          }
+        }
+      }
+    }
+  },
+  "face_auth": {
+    "header": "Otentikasi Wajah",
+    "title": "Langkah KYC #1",
+    "description": "Untuk pengalaman yang lancar, kami menambahkan otentikasi wajah. Langkah ini berfungsi sebagai [[:bold]]Langkah #1 KYC awal[[/:bold]], mempersiapkan Anda untuk verifikasi yang lebih mudah di Mainnet masa depan. \n\nKonfirmasi identitas Anda hari ini untuk memastikan perjalanan yang mulus ke depan!",
+    "consent": "Saya setuju dengan [[:link]]Syarat dan Ketentuan KYC Ice[[/:link]].",
+    "confirmation": "Saya mengkonfirmasi bahwa identitas yang saya gunakan untuk otentikasi ini akan sama dengan yang terkait dengan akun ini, dan pilihan ini tidak dapat diubah nanti.",
+    "auth_status": {
+      "loading": {
+        "description": "Harap tunggu saat kami mengotentikasi Anda..."
+      },
+      "success": {
+        "title": "✅ Otentikasi Berhasil",
+        "description": "Terima kasih telah mengkonfirmasi identitas Anda. Sesi pemeriksaan Anda akan dimulai sekarang.",
+        "action": "Selesai"
+      },
+      "failure": {
+        "title": "❌ Otentikasi Gagal",
+        "description": "Kami tidak dapat memverifikasi identitas Anda. Pastikan pencahayaan cukup dan wajah Anda sepenuhnya terlihat, kemudian coba lagi.",
+        "action": "Coba Lagi"
+      },
+      "try_later": {
+        "title": "❌ Otentikasi Gagal",
+        "description": "Kami tidak dapat memverifikasi identitas Anda. Pastikan pencahayaan cukup dan wajah Anda sepenuhnya terlihat, kemudian coba lagi dalam 1 jam.",
+        "action": "Tutup"
+      },
+      "continue": {
+        "title": "😁 Verifikasi Emosi KYC",
+        "description": "Bagus! Anda telah menyelesaikan langkah pertama dengan mengambil selfie. Sekarang, mari lanjutkan dengan mengikuti emosi yang ditampilkan untuk melanjutkan proses KYC Anda.",
+        "action": "Lanjutkan"
+      },
+      "banned": {
+        "title": "❌ Penambangan Dinonaktifkan",
+        "description": "Kami telah mengidentifikasi bahwa identitas Anda terkait dengan akun lain. Jika Anda menganggap ini sebagai kesalahan, harap kirim email ke [[:bold]]feedback@ice.io[[/:bold]] dengan nama panggilan Anda dan selfie berkualitas tinggi.",
+        "action": "Tutup"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Mulai",
+      "please_show_this": "Tunjukkan emosi ini, tolong",
+      "emotions": {
+        "anger": "marah",
+        "contempt": "meremehkan",
+        "disgust": "jijik",
+        "fear": "ketakutan",
+        "happiness": "kebahagiaan",
+        "neutral": "netral",
+        "sadness": "kesedihan",
+        "surprise": "kejutan"
+      }
+    },
+    "device_angle_warning": {
+      "title": "Peringatan",
+      "description": "Mohon tetapkan ponsel lurus saat melihat ke kamera"
+    },
+    "camera_permission": {
+      "title": "Izin Kamera",
+      "description": "Untuk melanjutkan, harap izinkan akses ke kamera.",
+      "action": "Izinkan akses"
+    },
+    "selfie_guidelines": {
+      "title": "Pedoman Selfie",
+      "instruction": "Sebelum melanjutkan, ikuti panduan ini untuk keberhasilan otentikasi wajah KYC:",
+      "check_1": "✅ Pastikan Anda memiliki foto berkualitas tinggi.",
+      "check_2": "✅ Gunakan pencahayaan yang baik.",
+      "check_3": "✅ Pastikan latar belakang bersih.",
+      "check_4": "✅ Tidak ada foto yang gelap.",
+      "check_5": "✅ Tidak ada foto yang buram atau berkabut.",
+      "check_6": "✅ Bersihkan lensa kamera.",
+      "warning": "Jika Anda tidak mengikuti panduan di atas, Anda mungkin kehilangan akses ke akun Anda.",
+      "confirmation": "Saya mengkonfirmasi bahwa saya akan mengikuti kriteria.",
+      "popup_title": "Konfirmasi",
+      "popup_body": "Apakah Anda mengkonfirmasi bahwa Anda telah mengikuti semua panduan selfie?"
+    }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Pastikan Anda memasukkan nama panggilan yang benar.",
+      "description": "Masukkan nama panggilan teman yang mengundang Anda."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Lacak kemajuan Anda dan status global",
+        "referrals": "TEMAN"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Tingkatkan tim Anda dan bangun komunitas"
+        }
+      },
+      "team": {
+        "title": "Teman",
+        "view_team": "lihat teman"
+      },
+      "roadmap": {
+        "button_subtitle": "Pelajari lebih lanjut tentang visi masa depan kami di Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Dapatkan gambaran singkat tentang aplikasi Mainnet masa depan kami dan fitur-fitur uniknya, yang akan dirilis pada akhir 2024."
+      }
+    },
+    "settings": {
+      "invite_description": "Tingkatkan tim Anda dengan anggota baru"
+    },
+    "profile": {
+      "invite_friends_engage": "Sebarkan kabar dan undang teman Anda untuk bergabung dengan komunitas Jaringan Ice!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Gunakan fitur ini untuk mengundang teman Anda untuk bergabung dengan komunitas Ice. Perluas jaringan Anda, bagikan pengalaman, dan bangun hubungan yang langgeng bersama."
+        },
+        "wallet": {
+          "description": "Anda dapat menemukan saldo Ice Anda saat ini di sini, bersama dengan tingkat penghasilan."
+        },
+        "earning": {
+          "description": "Tetap terkini dengan tingkat penghasilan dan bonus Anda! Di sini Anda dapat memeriksa tingkat Anda saat ini, tingkat dasar kami, dan tingkat bonus."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Di bagian ini, Anda akan melihat jumlah total anggota tim yang telah Anda undang, memungkinkan Anda untuk melacak pertumbuhan dan perkembangan komunitas Anda."
+        },
+        "earnings": {
+          "description": "Saldo Anda saat ini diperbarui setiap jam dan ditampilkan di sini. Ini termasuk penghasilan langsung dan yang disetor Anda."
+        }
+      }
+    },
+    "claimUsername": {
+      "description": "Teman-teman Anda perlu menggunakan nama panggilan ini saat bergabung dengan [[:ice]]."
+    },
+    "users": {
+      "team": "Teman"
+    },
+    "team": {
+      "empty": {
+        "team": "Anda saat ini tidak memiliki teman!"
+      },
+      "contacts": {
+        "empty_description": "Sinkronkan kontak Anda dan lihat siapa yang sudah ada di [[:ice]]."
+      }
+    }
+  },
+  "bsc_address": {
+    "title": "Alamat BNB Smart Chain",
+    "enter_address_title": "Masukkan alamat\nBNB Smart Chain Anda",
+    "enter_address_description": "Selama Tahap Satu, token ICE akan dirilis di blockchain BNB Smart Chain. Begitu Mainnet diluncurkan, token dapat ditukar dari BNB Smart Chain ke Ice Open Network (ION) blockchain.",
+    "enter_address_confirmation": "Apakah Anda yakin bahwa alamat BNB Smart Chain ini benar?",
+    "validators_warning_title": "Konfirmasi Alamat",
+    "validators_warning_text": "Harap dicatat bahwa individu yang telah menambahkan alamat BNB Smart Chain ke akun mereka tidak memenuhi syarat untuk menjadi salah satu validator teratas sesuai dengan whitepaper kami untuk peluncuran mainnet.",
+    "walletDescription": "Kami menyarankan menggunakan dompet self-custodial seperti [[:bold]]Metamask[[/:bold]] atau [[:bold]]Trust Wallet[[/:bold]].\n\nPastikan Anda memeriksa alamat dompet Anda dua kali untuk memastikan Anda akan menerima distribusi."
+  },
+  "social_kyc": {
+    "header": "Verifikasi",
+    "verify_with_title": "Verifikasi dengan {{method}}",
+    "select_method_step": {
+      "title": "Langkah KYC #2",
+      "description": "Verifikasi akun Anda dengan mudah menggunakan profil X yang sudah ada."
+    },
+    "instructions_step": {
+      "show_example": "Tampilkan contoh",
+      "example_title": "Contoh repost",
+      "x": {
+        "1": "Buka X dan cari akun [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Temukan pos yang dipasang, yang merupakan pos pertama di profil.",
+        "3": "❤️ Suka & 🔄 Repost dengan [[:bold]]Kutip[[/:bold]] menggunakan teks [[:bold]]TEPAT[[/:bold]] di bawah ini.",
+        "pop_up": {
+          "title": "Konfirmasi",
+          "description": "Apakah Anda menyukai pos yang dipasang dan repost dengan kutipan menggunakan teks yang tepat seperti contoh?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Ketuk untuk menyalin teks",
+        "copied": "Tersalin"
+      }
+    },
+    "verification_step": {
+      "title": "Konfirmasi",
+      "description": "Untuk menyelesaikan verifikasi Anda, silakan tempelkan tautan ke pos di mana Anda menyelesaikan langkah-langkah sebelumnya. Pastikan tautannya benar.",
+      "placeholder": "Masukkan tautan",
+      "instructions_step": {
+        "4": "Tempelkan tautan pos Anda di bawah. 👇"
+      },
+      "action": {
+        "verify": "Verifikasi",
+        "wait": "Harap tunggu",
+        "countdown": "{{countdown}} detik tersisa"
+      },
+      "pop_up": {
+        "title": "Tautan Tidak Valid",
+        "description": "Pastikan Anda telah menyalin tautan yang benar.\n\n[[:bold]]Contoh:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "Jumlah percobaan tersisa: {{count}}",
+      "success": {
+        "title": "Verifikasi Selesai",
+        "description": "Selamat, Anda telah berhasil menyelesaikan Langkah KYC #2. Sekarang Anda sudah terverifikasi."
+      },
+      "error_try_again": {
+        "title": "Kesalahan Verifikasi",
+        "description": "Pastikan bahwa Anda telah melakukan repost pos yang benar, menggunakan teks yang diberikan, dan pos tersebut dapat diakses oleh publik."
+      },
+      "error_try_later": {
+        "title": "Kesalahan Verifikasi",
+        "description": "Kami tidak dapat menyelesaikan verifikasi. Anda dapat mencoba lagi dalam 7 hari."
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Distribusi BNB Smart Chain",
+      "description": "Terima koin ICE BNB Smart Chain Anda dengan memverifikasi akun Anda dengan mudah menggunakan profil X yang sudah ada."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Klik tautan [[:bold]]di sini[[/:bold]] untuk membuka langsung kiriman X kami.",
+        "pop_up": {
+          "description": "Ikuti petunjuk dan pastikan Anda telah mengklik tautan pada langkah pertama untuk membuka langsung kiriman X kami.",
+          "description2": "Apakah Anda menyukai postingan yang benar dan mempostingnya kembali dengan mengutip menggunakan teks yang tepat seperti contoh yang diberikan?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Selamat, Anda telah berhasil menyelesaikan verifikasi Anda. Anda sekarang memenuhi syarat untuk distribusi BNB Smart Chain."
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "Konfirmasi Akun",
+    "description": "Untuk memverifikasi identitas akun Anda dan menghubungkan alamat email Anda secara aman, pastikan Anda berhasil melewati pemeriksaan emosi kami selama proses otentikasi.",
+    "description2": "Langkah ini membantu kami memastikan keamanan dan otentisitas akun Anda. Terima kasih atas kerjasamanya!"
+  },
+  "quiz": {
+    "title": "Kuis",
+    "intro": {
+      "description": "Di Ice, kami percaya dalam memupuk komunitas anggota yang aktif dan terinformasi. Misi kami adalah memastikan bahwa koin Ice didistribusikan kepada mereka yang benar-benar terlibat dan sejalan dengan visi kami.",
+      "community_engagement": {
+        "title": "🙌 Keterlibatan Komunitas Aktif",
+        "description": "Keterlibatan Anda dalam Ekosistem Ice secara langsung memengaruhi kemampuan penambangan Anda:",
+        "point1": "Tetap Terkini: Terlibat dengan artikel berita dan video kami.",
+        "point2": "Berkontribusi Aktif: Bergabung dengan Program Pengembangan Pribadi kami dan sesi live di YouTube atau Twitter Space.",
+        "point3": "Interaksi Sosial: Tingkatkan kehadiran Anda dengan menyukai, berbagi, mengikuti, atau memposting tentang Ice.",
+        "bottom_description": "Semakin aktif Anda, semakin tinggi skor interaksi positif Anda, memungkinkan Anda melewati proses KYC."
+      },
+      "terms_privacy": "Saya memahami & Saya setuju dengan [[:link]]Syarat dan Ketentuan[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Pemeriksaan Pengetahuan",
+        "point2": "Untuk lulus kuis ini, Anda perlu menjawab setidaknya 18 pertanyaan dengan benar.",
+        "point3": "Kuis yang gagal menunjukkan perlunya keterlibatan lebih lanjut dengan materi kami.",
+        "point4": "Ada batas waktu untuk menyelesaikan kuis ini. Anda dapat melihat berapa hari tersisa hingga tanggal kedaluwarsa di halaman utama Anda pada bagian kuis.",
+        "point5": "Anda memiliki 3 kesempatan untuk mencoba lagi sebelum tanggal kedaluwarsa. Jika Anda gagal kuis 3 kali atau jika tanggal kedaluwarsa berlalu, Anda tidak akan dapat melakukan penambangan lagi dan akun Anda akan dimatikan.",
+        "point6": "📚 Semua informasi untuk kuis ini dapat dibaca [[:link]]di sini[[/:link]].",
+        "description": "Untuk memastikan komunitas kami terinformasi dengan baik dan sejalan dengan visi kami:",
+        "point1": "Anda akan disajikan dengan 21 pertanyaan yang berasal dari sumber daya kami yang komprehensif."
+      },
+      "why_quiz": {
+        "title": "💡 Mengapa Kuis Ini?",
+        "description": "Komitmen kami terhadap pengetahuan dan pemahaman berada di garis depan komunitas kami. Dengan kuis ini, kami bertujuan untuk memastikan bahwa Ice mencapai tangan yang tepat, yaitu mereka yang benar-benar memahami dan sejalan dengan visi proyek kami."
+      }
+    },
+    "quiz_failure": {
+      "title": "Kuis Gagal",
+      "description": "Anda tidak menjawab lebih dari 18 pertanyaan dengan benar atau waktu sudah habis, sehingga Anda tidak dapat lulus ujian.",
+      "check_faq": "Untuk menjawab dengan benar next time, kami sarankan Anda mengenal lebih dekat basis pengetahuan kami dan FAQ kami."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Pertanyaan {{current}} dari {{total}}",
+      "time_over": "⌛️ Waktu telah habis",
+      "correct_answers": "Jawaban Benar",
+      "wrong_answers": "Jawaban Salah"
+    },
+    "confirmation_popup": {
+      "title": "Konfirmasi",
+      "start_description": "Apakah Anda yakin ingin memulai kuis?",
+      "cancel_description": "Dengan melewati kuis ini, Anda akan menggunakan satu kesempatan mencoba lagi yang tersedia. Apakah Anda yakin ingin melewati kuis ini sekarang?"
+    },
+    "quiz_success": {
+      "title": "Verifikasi Selesai",
+      "description": "Selamat, Anda telah berhasil menyelesaikan KYC Anda. Jawaban yang benar secara konsisten telah membuktikan dedikasi dan pengetahuan Anda. Anda sekarang diverifikasi."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Penambangan Dinonaktifkan",
+      "description": "Akses penambangan Anda telah dinonaktifkan karena tiga kegagalan kuis berturut-turut atau berakhirnya waktu yang ditentukan, sesuai dengan proses KYC kami."
+    },
+    "action": "Selesaikan kuis",
+    "reminder": "Harap perhatikan bahwa Anda perlu menyelesaikan kuis untuk memenuhi syarat untuk melanjutkan penambangan dan menghindari pemotongan.",
+    "days_left": "Hari tersisa: {{days}}",
+    "retries_left": "Percobaan tersisa: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "Distribusi BNB Smart Chain",
+      "description": "Pertahankan kelayakan distribusi koin ICE BNB Smart Chain bulanan Anda dengan mendukung aktivitas terbaru di Exchange di X."
+    },
+    "results_step": {
+      "success": {
+        "description": "Selamat, Anda telah berhasil menyelesaikan verifikasi Anda. Anda sekarang berhak untuk mempertahankan status distribusi BNB Smart Chain bulanan Anda."
+      }
+    }
+  },
+  "buttons": {
+    "skip": "Lewati"
   }
 }

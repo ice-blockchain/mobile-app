@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {setCalendarLocale} from '@services/calendar';
 import {setDayjsLocale} from '@services/dayjs';
-import {getPluralizer} from '@translations/getPluralizer';
 import {localeConfig, SupportedLocale} from '@translations/localeConfig';
 import {Translations} from '@translations/locales/en.json';
 // eslint-disable-next-line no-restricted-imports
-import {I18n, TranslateOptions, useMakePlural} from 'i18n-js';
+import {I18n, TranslateOptions} from 'i18n-js';
 import {I18nManager} from 'react-native';
 import RNLocalize from 'react-native-localize';
 // eslint-disable-next-line no-restricted-imports
@@ -18,12 +18,8 @@ const i18n = new I18n();
 export const setLocale = (newLocale: SupportedLocale) => {
   i18n.store({[newLocale]: localeConfig[newLocale].translations});
   i18n.locale = newLocale;
-  i18n.pluralization.register(
-    newLocale,
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    useMakePlural({pluralizer: getPluralizer(newLocale), includeZero: false}),
-  );
   setDayjsLocale(newLocale);
+  setCalendarLocale(newLocale);
 };
 
 export const getLocale = (): SupportedLocale => {

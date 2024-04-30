@@ -13,6 +13,8 @@ buildscript {
         ndkVersion = "23.1.7779620"
         androidXAnnotation = "1.5.0"
         androidXBrowser = "1.4.0"
+        // https://github.com/arthenica/ffmpeg-kit/tree/main/react-native
+        ffmpegKitPackage = "video-lts"
     }
     repositories {
         google()
@@ -30,5 +32,13 @@ allprojects {
         jcenter()
         maven { url "$rootDir/../node_modules/detox/Detox-android" }
         maven { url 'https://maven.google.com' }
+        maven {
+            // react-native-background-fetch
+            url("${project(':react-native-background-fetch').projectDir}/libs")
+        }
+        maven {
+            // expo-camera bundles a custom com.google.android:cameraview
+            url "$rootDir/../node_modules/expo-camera/android/maven"
+        }
     }
 }

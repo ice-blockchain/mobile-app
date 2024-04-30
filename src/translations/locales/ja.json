@@ -1,4 +1,33 @@
 {
+  "welcome": {
+    "page1": {
+      "title": "iceへようこそ",
+      "description": "[[:ice]] はお手持ちのスマートフォンで手軽に獲得できるデジタル通貨です。あなたのように毎日スマートフォンを使うユーザーによって保有され、運営されています。"
+    },
+    "page2": {
+      "title": "地球にやさしい",
+      "description": "[[:ice]] には「プルーフ・オブ・ステーク」というコンセンサスメカニズムが採用されています。その結果、本質的にBTCよりもエネルギー効率が高くなります。プルーフ・オブ・ステーク(POS)では、バリデータがステーキングしたコインの量に基づいて、仮想通貨保有者がブロックトランザクションを検証します。"
+    },
+    "page3": {
+      "title": "みんなのコイン",
+      "description_part1": "ユーザーであるあなたにも、iceの未来を変える力が与えられます。",
+      "description_part2": "私たちが[[:ice]]で開発しているものは全てオープンソースであり、分散型自律組織(DAO)によって管理されます。"
+    },
+    "page4": {
+      "title": "いつもそばに",
+      "description": "[[:iceLogo]]をタップして、エネルギー消費量の少ない無料アプリから毎日チェックイン。毎日タップすることで、ロボットではなく、本物の人間の手にiceが渡ります。"
+    },
+    "page5": {
+      "title": "紹介して、獲得しよう",
+      "description": "友達を招待しましょう。招待された友達がチームに参加するごとに、あなたと紹介されたメンバーの両方に、基本収益率に25％のボーナスが付与されます。"
+    },
+    "page6": {
+      "title": "通知",
+      "description_part1": "[[:ice]] チェックインセッションは24時間のみ持続します。現在のセッションが終了したときに通知を受け取りますか？",
+      "description_part2": "スパムメールは送信されませんので、ご安心ください。",
+      "not_now": "いいえ"
+    }
+  },
   "button": {
     "yes_btn": "はい",
     "next_btn": "次",
@@ -46,6 +75,81 @@
     "start": "開始",
     "faq": "FAQ",
     "knowledge_base": "知識ベース"
+  },
+  "team": {
+    "contacts_tab": "連絡先",
+    "tierOne_tab": "Tier1",
+    "tierTwo_tab": "Tier2",
+    "empty": {
+      "contacts": "現在、電話帳に連絡先がありません。",
+      "button_title": "友達を招待",
+      "t1": "現在、T1の紹介はありません！",
+      "t2": "現在、T2の紹介はありません！",
+      "team": "現在、チームメンバーはいません！"
+    },
+    "contacts": {
+      "empty_title": "[[:ice]] 友達と一緒ならもっと楽しめます",
+      "empty_button_title": "連絡先へのアクセスを許可",
+      "empty_description": "連絡先を同期して、誰がすでに[[:ice]]を使っているか見てみましょう。近い将来、連絡先にiceを送ることができるようになります。"
+    },
+    "header": {
+      "search_placeholder": "ユーザー検索",
+      "referrals": "紹介者",
+      "earnings": "収益"
+    },
+    "confirm_code": {
+      "title": "コード認証",
+      "description": "スマートフォンに送られた認証コードを入力してください。",
+      "placeholder": "コードを入力",
+      "button": "今すぐコードを認証"
+    },
+    "confirm_phone": {
+      "title": "電話番号認証",
+      "description": "国番号を確認し、電話番号を入力してください。"
+    },
+    "contacts_list": {
+      "ice_header": {
+        "friends": "友達"
+      },
+      "all_contacts": "全ての連絡先",
+      "invite": "招待",
+      "invitation_text": "{{name}}さん、こんにちは。一緒にiceをしてみませんか？"
+    },
+    "tier_one": {
+      "header_list": {
+        "title_earnings": "Tier1収益"
+      }
+    },
+    "tier_two": {
+      "header_list": {
+        "title_earnings": "Tier2収益"
+      }
+    }
+  },
+  "signIn": {
+    "logInSignUp": "ログイン/新規登録",
+    "phone": "電話番号",
+    "or": "もしくは",
+    "reset_password": "パスワードをリセット",
+    "welcome": "iceへようこそ",
+    "email": "メール",
+    "slogan": "分散化された未来",
+    "privacy": "続行すると、弊社の[[:link]]サービス利用規約[[/:link]]と[[:link]]プライバシー ポリシー[[/:link]]に同意したとみなされます。"
+  },
+  "claimUsername": {
+    "title": "ニックネームの登録",
+    "description": "友達があなたのチームに参加するには、このニックネームを使用する必要があります。",
+    "inputPlaceholder": "ニックネームを入力",
+    "note_part1": "ニックネームを作成に使用できるのは、文字、数字、ピリオドのみです。",
+    "note_part2": "例：",
+    "note_example": "your.name01"
+  },
+  "whoInvitedYou": {
+    "title": "誰に招待されましたか？",
+    "description": "あなたを招待した人のニックネームを入力してください。",
+    "inputPlaceholder": "ニックネームを入力",
+    "dontHaveInvitationCode": "このステップを完了すれば、あなたとお友達が同時にチェックインした際に、基本収益率に25％のボーナスが付与されます。",
+    "dontHaveCodeTip": "招待コードをお持ちでない場合、ランダムに選ばれたメンバーが紹介者となります。"
   },
   "errors": {
     "nicknameSize": "ニックネーム文字数：4～20文字",
@@ -99,6 +203,45 @@
     "same_phone_error": "同じ番号を使うことはできません。",
     "unable_to_validate_bsc_addr_eoa": "EOAアドレスを検証できません"
   },
+  "profile": {
+    "my_roles": {
+      "title": "現在の役職"
+    },
+    "mining_calculator": "収益換算",
+    "invite_friends": "友達を招待",
+    "invite_friends_engage": "情報を広めて、友達を招待しましょう。紹介者が多ければ多いほど、たくさん収益がもらえます。",
+    "global_rank": "グローバルランク",
+    "view_all_roles": "全ての役職を見る",
+    "data_is_hidden": "データは公開されていません",
+    "progress_text": "{{value}} の {{total}}",
+    "not_found": {
+      "title": "ユーザーが見つかりません",
+      "description": "このユーザーは見つかりませんでした。"
+    },
+    "my_badges": {
+      "title": "所有バッジ"
+    },
+    "badges": {
+      "title": "バッジ"
+    },
+    "roles": {
+      "title": "役職"
+    },
+    "badge_types": {
+      "coin": {
+        "title": "コイン",
+        "description": "コイン"
+      },
+      "social": {
+        "title": "ソーシャル",
+        "description": "友達"
+      },
+      "level": {
+        "title": "レベル",
+        "description": "レベル"
+      }
+    }
+  },
   "global": {
     "level": "レベル",
     "referrals": "紹介者",
@@ -117,6 +260,320 @@
       "today": "今日"
     }
   },
+  "mining_calculator": {
+    "result_label": "以下の収益が手に入ります：",
+    "active_inviter": "アクティブな紹介者",
+    "tier_1_ref": "Tier1紹介者",
+    "tier_2_ref": "Tier2紹介",
+    "active_miners": "アクティブな紹介者",
+    "team_members": "チームメンバー",
+    "active_team_members": "アクティブなチームメンバー"
+  },
+  "home": {
+    "wallet": {
+      "title": "ウォレット",
+      "rate": "収益率",
+      "balance": "現在の残高"
+    },
+    "pioneer": {
+      "rank": "グローバルランク",
+      "referrals": "紹介者",
+      "description": "ユーザーを紹介すればするほど、たくさんの[[:ice]]がもらえます。"
+    },
+    "referrals": {
+      "title": "紹介者",
+      "description": "過去5日間の紹介者統計です。",
+      "no_referrals_description": "現在、紹介者はいません。",
+      "users_tier_1": "Tier1ユーザー",
+      "users_tier_2": "Tier2ユーザー",
+      "title_team": "チーム",
+      "description_team": "過去5日間のチームの統計データ",
+      "no_referrals_description_team": "現在、チームメンバーはいません。",
+      "users": "ユーザー"
+    },
+    "adoption": {
+      "title": "採用",
+      "level": "レベル",
+      "users": "ユーザー"
+    },
+    "tasks": {
+      "achievements": "実績",
+      "title": "進捗状況",
+      "description": "以下のタスクをこなしてレベルアップを目指そう！",
+      "completed": {
+        "title": "おめでとうございます",
+        "description": "毎日チェックインして、さらなる報酬を獲得しよう！"
+      },
+      "popup": {
+        "title": "Telegramチャンネルに参加しましょう",
+        "description": "Telegramで使用するニックネームを入力してください。",
+        "placeholder": "ニックネーム"
+      },
+      "claim_username": {
+        "title": "ニックネームの登録",
+        "description": "ニックネームを設定し、友達と共有しましょう。"
+      },
+      "start_mining": {
+        "title": "収益を増やそう",
+        "description": "最初のチェックインセッションです。"
+      },
+      "upload_profile_picture": {
+        "title": "プロフィール写真",
+        "description": "プロフィール写真をアップロードしてください。"
+      },
+      "join_telegram": {
+        "title": "Telegramに参加する",
+        "description": "私たちのコミュニティに参加しませんか。"
+      },
+      "follow_us_on_twitter": {
+        "title": "Twitterでフォローする",
+        "description": "私たちのTwitterアカウントをフォローしてください。"
+      },
+      "invite_friends": {
+        "title": "友達を5人招待",
+        "description": "チームを成長させて、収益を増やしましょう。"
+      }
+    },
+    "overview": {
+      "title": "概要"
+    },
+    "menu": {
+      "notifications": "通知",
+      "staking": "ステーキング",
+      "stats": "成績",
+      "help": "ヘルプ",
+      "tips": "ヒント"
+    },
+    "team": {
+      "title": "チーム",
+      "view_team": "チームを表示"
+    },
+    "mining_rate": {
+      "title": "収益率",
+      "base": "ベース"
+    },
+    "engagement": {
+      "title": "エンゲージメント",
+      "description_part1": "ストリークとは連続してチェックインした日数を指します。",
+      "description_part2": "6日間連続でチェックインするごとに、1日の休日が与えられます。",
+      "streak": "ストリーク",
+      "days_off": "休日"
+    },
+    "roadmap": {
+      "title": "私たちのビジョン",
+      "button_title": "ホワイトペーパー",
+      "button_subtitle": "Iceでの私たちのビジョンについて詳しく学びましょう。"
+    },
+    "join_mainnet": {
+      "title": "分散型未来に参加",
+      "subtitle": "今後のメインネットアプリとそのユニークな機能の一部をご紹介します。"
+    },
+    "bsc_address": {
+      "title": "BNB Smart Chain アドレス",
+      "subtitle": "ここにBSCアドレスを入力してください。"
+    },
+    "verified_tooltip": {
+      "title": "KYC 認証済み"
+    }
+  },
+  "settings": {
+    "title": "設定",
+    "profile": "プロフィール",
+    "legal": "法的情報",
+    "support": "サポート",
+    "personal_information_title": "個人情報",
+    "personal_information_description": "プロフィール詳細を管理できます。",
+    "notifications_title": "通知",
+    "notifications_description": "ここで通知を管理できます。",
+    "push_notifications_title": "プッシュ通知",
+    "push_notifications_description": "プッシュ通知設定をカスタマイズします。",
+    "email_notifications_title": "メール通知",
+    "email_notifications_description": "メール通知設定をカスタマイズします。",
+    "terms_title": "利用規約",
+    "terms_description": "弊社の利用規約をご確認いただけます。",
+    "privacy_title": "プライバシーポリシー",
+    "privacy_description": "弊社のプライバシーポリシーをご確認いただけます。",
+    "feedback_title": "フィードバックを送信",
+    "feedback_description": "ご意見をお寄せください。",
+    "invite_title": "友達を招待",
+    "invite_description": "友達を招待して、追加でiceを獲得しましょう。",
+    "delete_title": "アカウントの消去",
+    "delete_description": "アカウントを消去します。",
+    "delete_confirmation_title": "本当にアカウントを消去しますか？",
+    "delete_confirmation_yes": "消去",
+    "logout_title": "ログアウト",
+    "logout_description": "サインオフして、一休みしましょう。",
+    "logout_confirmation_title": "本当にサインオフしますか？",
+    "logout_confirmation_yes": "ログアウト",
+    "confirm_phone": {
+      "title": "新しい電話番号認証",
+      "description": "国番号を確認し、新しい電話番号を入力してください。",
+      "button": "新しい電話番号認証"
+    },
+    "notifications": {
+      "enable_prompt": "通知が許可されていません。通知を許可しますか？",
+      "channel_achievements": "実績",
+      "channel_news": "ニュース",
+      "channel_reminders": "リマインダー",
+      "channel_team": "チーム",
+      "type_push": "プッシュ",
+      "type_email": "メール",
+      "disable_notifications": "通知を無効にしますか？",
+      "disable_notifications_description": "通知を無効にすると、チェックインを開始できるタイミングやニュース、チーム情報などの最新情報を受け取ることができなくなります。",
+      "domain": {
+        "disable_all": {
+          "title": "",
+          "description": ""
+        },
+        "weekly_stats": {
+          "title": "週間成績",
+          "description": "アクティビティに関する通知を受け取ります。"
+        },
+        "weekly_report": {
+          "title": "週間レポート",
+          "description": "アクティビティに関する通知を受け取ります。"
+        },
+        "achievements": {
+          "title": "実績",
+          "description": "進捗状況に関する通知を受け取ります。"
+        },
+        "promotions": {
+          "title": "プロモーション",
+          "description": "どのようにチームを成長させて、よりたくさんの収益を上げるかについての通知を受け取ります。"
+        },
+        "news": {
+          "title": "ニュース",
+          "description": "弊社チームからの通知を受け取ります。"
+        },
+        "micro_community": {
+          "title": "マイクロコミュニティ",
+          "description": "自身のチームに関する通知を受け取ります。"
+        },
+        "daily_bonus": {
+          "title": "デイリーボーナス",
+          "description": "デイリーボーナスに関する通知を受け取ります。"
+        },
+        "mining": {
+          "title": "セッションステータス",
+          "description": "チェックインアクティビティに関する通知を受け取ります。"
+        },
+        "system": {
+          "title": "システム",
+          "description": "iceアプリに関する重要な通知を受け取ります。"
+        }
+      }
+    },
+    "language_settings": "言語設定",
+    "change_lang_confirm": {
+      "title": "言語を変更",
+      "prompt": "この設定を適用すると、アプリが再起動します。"
+    },
+    "profile_image": "プロフィール写真",
+    "inapp_privacy_title": "プライバシー",
+    "inapp_privacy_description": "ここで情報の管理を行うことができます。",
+    "developer": "デベロッパ",
+    "user_id": "ユーザーID",
+    "user_token": "ユーザートークン",
+    "profile_photo": {
+      "delete": "写真を消去",
+      "edit": "プロフィール写真を編集",
+      "photo_gallery": "フォトギャラリー",
+      "camera": "カメラ"
+    },
+    "confirm_email_confirmation_title": "メールアドレスに誤りはありませんか？",
+    "update_email_confirmation_title": "メールアドレスを更新しますか？",
+    "update_email_confirmation_subtitle": "メールアドレスを変更する場合は、再ログインが必要です。続行しますか？",
+    "unlink_logins_title": "ログイン連携解除",
+    "unlink_logins_description": "ここからログインの連携を解除することができます。"
+  },
+  "invite_share": {
+    "title": "友達を招待",
+    "telegram": "Telegram",
+    "twitter": "Twitter",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email": "メール",
+    "fb": "ニュースフィード",
+    "sms": "SMS",
+    "copy_link": "リンクをコピー",
+    "more": "詳細",
+    "copied": "コピーされました",
+    "share_message": "こんにちは☃️ スノーマンさん！iceで私のチームのメンバーになってくれませんか？登録時に次の紹介者コードを使うと、もれなくアイスコイン10枚をゲット：",
+    "share_subject": "iceでチームメンバーになる",
+    "description": "情報を広めて、友達を招待しましょう。新しく紹介した友達が参加するごとに、[[:ice]]がもらえます。",
+    "share": "シェア"
+  },
+  "users": {
+    "ping": "連絡",
+    "active": "アクティブ",
+    "inactive": "非アクティブ",
+    "referralType": {
+      "T1": "Tier1",
+      "T2": "Tier2",
+      "team": "チームメンバー"
+    },
+    "team": "チーム"
+  },
+  "personal_information": {
+    "first_name": "姓",
+    "last_name": "名",
+    "country": "国",
+    "city": "市",
+    "title": "個人情報",
+    "phone": "電話番号",
+    "email": "メールアドレス",
+    "username": "ニックネーム"
+  },
+  "username": {
+    "error": {
+      "already_taken": "このニックネームはすでに使用されています。",
+      "length": "ニックネーム文字数：4～20文字",
+      "invalid_characters": "無効な文字列を削除してください。",
+      "not_found": "ニックネームが見つかりません。",
+      "some_error": "エラーが発生しました。",
+      "refer_yourself": "自分自身を紹介することはできません。"
+    }
+  },
+  "staking": {
+    "time_left": "残り時間",
+    "mining_rate": "収益率",
+    "appeal": "収益率を向上させよう",
+    "benefits_description": "最長5年間、ice報酬を事前にステーキングすることができます。この場合、収益率は最大250%アップします。",
+    "bonus_label": "事前ステーキングボーナス",
+    "period_label": "保有期間",
+    "title": "事前ステーキング",
+    "current_rate": "現在のレート",
+    "allocation": "配当",
+    "description": "ステーキングとは、ブロックチェーンネットワークをサポートし、トランザクションを承認するために、暗号資産を投入するプロセスのことを指します。",
+    "terms_agree": " [[:ice]] [[:link]]ステーキング規約[[/:link]]に同意します。選択した期間中、保有するiceはロックされます。",
+    "stake_now": "今すぐ事前ステーキングをしよう！",
+    "balance_label": "ステーキングした通貨量",
+    "confirm_title": "事前ステーキングの確定",
+    "confirm_subtitle": "本当にコインの事前ステーキングを行いますか？一度確定すると取り消すことはできません。",
+    "remove_pre_staking": "プリステーキングの解除"
+  },
+  "stats": {
+    "header_title": "成績",
+    "active": "アクティブユーザー",
+    "total": "総ユーザー",
+    "user_growth": "ユーザー数の伸び",
+    "top_miners": "トップユーザー",
+    "top_countries": "上位国",
+    "online_miners": "オンラインユーザー",
+    "detailed_information": "詳細情報",
+    "total_coins": "総コイン数",
+    "filter": {
+      "total": "合計",
+      "on_app": "アプリで利用可能",
+      "pre_staked": "事前ステーク",
+      "on_blockchain": "ブロックチェーン上"
+    }
+  },
+  "update_required": {
+    "title": "アップデートしてください",
+    "description": "現在お使いのバージョンは最新ではありません。このまま使用するにはアップデートが必要です。",
+    "button_title": "今すぐアップデート"
+  },
   "general": {
     "good_morning": "おはようございます",
     "good_afternoon": "こんにちは",
@@ -126,25 +583,350 @@
     "seconds_short": "秒",
     "minutes_short": "分",
     "hours_short": "時",
-    "days_short": "日",
-    "hour": {
-      "zero": "時間",
-      "one": "時間",
-      "two": "時間",
-      "few": "時間",
-      "many": "時間",
-      "other": "時間"
+    "days_short": "日"
+  },
+  "news": {
+    "news_feed": "ニュースフィード",
+    "read_more": "続きを読む",
+    "no_more_news": "これがニュースフィードの最後のエントリです。",
+    "views": "{{viewsCount}} 閲覧数"
+  },
+  "search": {
+    "empty": "連絡先、iceフレンド、マイクロコミュニティのメンバーを検索しましょう。",
+    "nothing_is_found": "検索条件に該当するものは見つかりませんでした。",
+    "search_by_country": "国別検索",
+    "search_for_users": "ユーザー検索",
+    "loading": "検索中..."
+  },
+  "tabbar": {
+    "mining_inactive_tooltip": "最初のチェックインセッションを開始するにはここをタップしてください。",
+    "mining_reset_tooltip": "1秒間押すと、チェックインセッションが延長されます。",
+    "mining_holiday_reset_tooltip": "現在「休日」を利用しています。チェックインセッションを延長するには1秒間押してください。",
+    "mining_holiday_active": "現在「休日」を利用しています。"
+  },
+  "invite_friend": {
+    "invite_button": "友達を招待",
+    "button_title": "友達を招待",
+    "description": "あなたの友達はまだ [[:ice]]に登録していません。招待状を送りましょう！"
+  },
+  "balance_history": {
+    "title": "残高履歴",
+    "wallet": "ウォレット",
+    "blockchain": "ブロックチェーン",
+    "wallet_update_interval": "1時間ごとに更新",
+    "blockchain_update_interval": "28日ごとに更新",
+    "list_end_label": "これが残高履歴の最後のエントリです。",
+    "no_data": "指定された期間に表示するデータがありません。",
+    "you": "あなた",
+    "contribution": "貢献"
+  },
+  "pop_up": {
+    "update_now": "今すぐアップデート",
+    "please_update": "アップデートしてください",
+    "update_now_text": "現在お使いのバージョンは最新ではありません。このまま使用するにはアップデートが必要です。",
+    "you_are_up_to_date": "最新の状態です。",
+    "up_to_date_text": "現在お使いのバージョンは最新です。以下のすべての変更点を確認してください。",
+    "resurrection": "復活",
+    "resurrection_message": "一度だけ、過去[[:period]]に失った[[:amount]]枚分のコインを取り戻すチャンスが与えられます。",
+    "resurrection_warning": "このチャンスを逃すと、復活させられる機会は二度とありません！",
+    "please_confirm": "ご確認ください",
+    "resurrection_no_confirm_message": "[[:amount]]枚のコインが永久に失われます。本当に続行しますか？",
+    "resurrection_yes_confirm_message": "このチャンスを逃すと、復活させられる機会は二度とありません！本当に続行しますか？[[:amount]]枚のコインは1時間以内に残高に戻ります。",
+    "delete_account_confirmation_title": "削除の確認",
+    "delete_account_confirmation_text": "アカウントを削除すると、iceの残高を含む全てのデータが永久に消去されます。続行しますか？",
+    "registration_update_title": "登録の更新",
+    "registration_update_text": "電話番号を使用した新しいアカウントの作成を一時停止しました。続行するには、メールアドレスまたはソーシャルネットワークを使用したログインの選択が必要です。",
+    "link_email_title": "メールアドレスをリンク",
+    "link_email_text": "電話番号を使用したログインを一時停止しました。ログインできるようにするには、メールアドレスをリンクし、確認する必要があります。",
+    "account_error_title": "アカウントエラー",
+    "account_error_text": "電話番号を使用したログインを一時停止しました。残念ながら、あなたのアカウントはKYCの検証に合格せず、回復できません。",
+    "login_via_email_title": "メールアドレスを使用してログインしてください",
+    "login_via_email_text": "電話番号を使用したログインを一時停止しました。アカウントに関連付けられたメールアドレスを使用してログインしてください。",
+    "email_in_use_title": "既に使用中のメールアドレス",
+    "email_in_use_text_part1": "リンクしようとしているメールアドレスはすでに使用中です。",
+    "email_in_use_text_part2": "これがあなたのメールアドレスの場合、まずそれを使用してログインし、登録プロセスを完了し、そのアカウントを削除してメールアドレスを使用可能にし、その後、電話番号を使用したログインに戻り、リンクプロセスを完了してください。",
+    "successfully_linked_title": "リンクが成功しました！",
+    "successfully_linked_text": "メールアドレスがアカウントに正常にリンクされました。"
+  },
+  "periods": {
+    "3_days": "3日",
+    "7_days": "7日",
+    "30_days": "30日",
+    "1_day": "1日",
+    "1_week": "1週",
+    "1_month": "1ヶ月",
+    "90_days": "90日",
+    "14_days": "14日"
+  },
+  "notifications": {
+    "joined": " がチームのメンバーになりました。",
+    "multiply": " チームメンバーが{{count}}人増えました。",
+    "ping": " から連絡が来ています、起きてください！",
+    "delete": "削除",
+    "add_notifications": "模擬通知を追加",
+    "no_notifications": "表示する通知がありません。",
+    "add_announcements": "模擬アナウンスメントを追加",
+    "add_both": "模擬通知とアナウンスメントを一緒に追加",
+    "clear_title": "全ての通知を消去しますか？",
+    "title": "通知"
+  },
+  "notification_feed_screen": {
+    "yesterday": "昨日",
+    "last_week": "先週",
+    "this_month": "今月",
+    "last_month": "先月",
+    "this_week": "今週"
+  },
+  "profile_privacy_edit": {
+    "step1": {
+      "title": "1. プロフィール詳細",
+      "description": "非表示にするブロックをタップしてください。"
     },
-    "day": {
-      "zero": "日",
-      "one": "日",
-      "two": "日",
-      "few": "日",
-      "many": "日",
-      "other": "日"
+    "step2": {
+      "description": "このブロックを非表示にするにはタップしてください。",
+      "title": "2. 現在の役職"
     },
-    "minutes_abbr": "分",
-    "seconds_abbr": "秒"
+    "step3": {
+      "title": "3. 獲得バッジ",
+      "description": "バッジを非表示にするにはここをタップしてください。"
+    }
+  },
+  "confirm_email": {
+    "title": "メールアドレス認証",
+    "description": "コードを送信するメールアドレスを入力してください。",
+    "note": "5分以内にメールが届かない場合は、迷惑メールフォルダもご確認ください。",
+    "wrong_email": "メールアドレスが違いますか？",
+    "check_email": "メールを確認",
+    "emailed_link_to": "次のメールアドレスに魔法のリンクを送信しました：",
+    "emailed_steps_to": "次のメールアドレスに今後の手順を送信しました：",
+    "link_instruction": "ログインまたはサインアップするには、リンクをクリックしてください。",
+    "reset_link_instruction": "パスワードをリセットするには、リンクをクリックしてください。",
+    "modify_title": "新しいメールアドレス認証",
+    "modify_description": "新しいメールアドレスを入力してください。"
+  },
+  "invalid_link": {
+    "title": "無効なリンク",
+    "description": "リンクの有効期限が切れました。メールアドレスをもう一度入力してください。新しいリンクをお送りします。"
+  },
+  "confirm_code": {
+    "title": "コード認証",
+    "description": "送信されたコードを入力してください。",
+    "send_code_again": "コードを再送信",
+    "resend_time_label": "新しいコードをリクエストできるようになるまで残り： ",
+    "enter_code": "コードを入力",
+    "wrong_number": "番号が違いますか？"
+  },
+  "ice_bonus": {
+    "title": "ウェルカム報酬",
+    "description": "おめでとうございます。最初の[[:value]][[:ice]]枚のコインを受け取りました。これは私たちが[[:bold]]あなた[[/:bold]]を[[:bold]]信頼[[/:bold]]している証です。",
+    "balance_label": "現在の残高"
+  },
+  "country_select": {
+    "title": "国を選択"
+  },
+  "roles": {
+    "snowman": {
+      "title": "スノーマン",
+      "subtitle": "雪の帝国を築こう",
+      "description": "24時間ごとにチェックインすることは、iceネットワークへのコミットメントを表します。また、あなたがロボットではなく、人間であることの証明にもなります。"
+    },
+    "ambassador": {
+      "title": "アンバサダー",
+      "subtitle": "雪の帝国の統治者",
+      "description": "自身のチームメンバーが100人に達すると、アンバサダーへと昇格します。アンバサダーになると、新機能にいち早くアクセスすることができます。"
+    }
+  },
+  "confirm_phone": {
+    "modify_title": "電話番号認証",
+    "modify_description": "国番号を確認し、電話番号を入力してください。",
+    "button": "国と電話番号を確認"
+  },
+  "date_select": {
+    "title": "日付を選択"
+  },
+  "walkthrough": {
+    "overrides": {
+      "home": {
+        "team": {
+          "description": "[[:ice]]は友達と一緒にするともっと良いです。このページでは、あなたのチームメンバーのステータスを確認できます。ここから彼らにメッセージを送信することもできます。"
+        },
+        "referralscard": {
+          "title": "チームカード",
+          "description": "このカードをタップして、過去5日間のチームメンバーの統計の進化を見てください。"
+        }
+      },
+      "team": {
+        "segmented_control_tier_one": {
+          "title": "チーム",
+          "description": "ここでは、Iceネットワークに招待した人々のリストを見ることができます。ここから簡単に彼らのステータスを追跡し、非アクティブなメンバーに通知を送信できます。"
+        },
+        "active_users": {
+          "description": "これはあなたのチームメンバーのチェックインアクティビティの現在のステータスです。アクティブなチェックインセッションがある場合、それらはアクティブとみなされます。"
+        },
+        "ping": {
+          "description": "チームメンバーにチェックインセッションを開始するように通知します。各リファラルに対して24時間ごとに1回の通知を送信できます。"
+        }
+      }
+    },
+    "profile": {
+      "hidden_data": {
+        "title": "非表示データ",
+        "description": "他のユーザーがあなたのプロフィールをどのように見るかを表示するには、目のアイコンをタップしてください。"
+      }
+    },
+    "news": {
+      "readmore": {
+        "title": "続きを読む",
+        "description": "チームからの最新ニュースをご覧いただけます。記事全文を読むには、このボタンをタップしてください。"
+      },
+      "releasednews": {
+        "title": "リリースされたニュース",
+        "description": "各ニュースのタイトルをタップすると、全文を読むことができます。ニュースや投票などの最新情報をお見逃しなく。"
+      }
+    },
+    "team": {
+      "allow_contacts": {
+        "title": "連絡先へのアクセスを許可",
+        "description": "連絡先を同期して、誰がすでに[[:ice]]をやっているか見てみましょう。近い将来、連絡先に[[:ice]]を送ることができるようになります。"
+      },
+      "confirm_phone": {
+        "title": "電話番号認証",
+        "description": "本人確認を行うと、あなたがiceネットワークのメンバーであることを連絡先に知らせることができます。この電話番号が他の第三者と共有されることはありません。"
+      },
+      "contacts_list": {
+        "title": "連絡先リスト",
+        "description": "このリストには全ての連絡先が表示されています。すでに[[:ice]]ネットワークに参加している連絡先はリストの一番上に表示されます。"
+      },
+      "referrals": {
+        "title": "紹介者",
+        "description": "ここでは自身の紹介者数を確認することができます。より多くの人を招待すればするほど、よりたくさんの収益を得ることができます。"
+      },
+      "earnings": {
+        "title": "収益",
+        "description": "現在の残高は1時間ごとに更新され、ここに表示されます。これには、Tier1とTier2の収益のほか、自身が直接獲得した収益とステーキング収益が含まれます。"
+      },
+      "segmented_control_tier_one": {
+        "title": "Tier1",
+        "description": "ここではTier1紹介者のリストを確認することができます。同時にチェックインした友達1人につき、現在採用されている基本収益率に25％が上乗せされます。[[:link]]続きを読む[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "segmented_control_tier_two": {
+        "title": "第2段",
+        "description": "ここではTier2紹介者のリストを確認することができます。同時にチェックインした友達1人につき、現在採用されている基本収益率に5％が上乗せされます。[[:link]]続きを読む[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "active_users": {
+        "title": "アクティブユーザー",
+        "description": "あなたが紹介したメンバーのチェックインアクティビティの状況です。アクティブなチェックインセッションがあった場合、アクティブユーザーとしてカウントされます。"
+      },
+      "tier_one_earnings": {
+        "title": "Tier1収益",
+        "description": "ここではTier1紹介者のリストを確認することができます。同時にチェックインしたメンバー1人につき、あなたと該当するメンバーの両方に現在採用されている基本収益率に25％が上乗せされます。"
+      },
+      "ping": {
+        "title": "連絡ボタン",
+        "description": "紹介したメンバーがチェックインセッションを開始するよう、通知してあげましょう。24時間ごとに各紹介者に1回ずつ通知を送ることができます。"
+      }
+    },
+    "home": {
+      "home": {
+        "title": "ホーム",
+        "description": "[[:ice]]にようこそ。ホーム画面では、自身の残高、現在の収益率、世界ランク、自身のチームに関する詳細を確認することができます。"
+      },
+      "invite": {
+        "title": "招待",
+        "description": "一人招待するごとに、あなたと招待されたメンバーの両方に、基本収益率に25％のボーナスが付与されます。より多くの人を招待すればするほど、よりたくさんの収入を得ることができます。"
+      },
+      "team": {
+        "title": "チーム",
+        "description": "[[:ice]] 友達と一緒ならもっと楽しめます。このページでは、Tier1とTier2の両レベルのチームメンバーのステータスを確認することができます。ここからも連絡を取ることができます。"
+      },
+      "news": {
+        "title": "ニュース",
+        "description": "ニュースや投票などの最新情報をお見逃しなく。私たちは分散型の自律組織であるため、ユーザーの皆様には将来の追加機能に関する投票に参加していただけます。"
+      },
+      "profile": {
+        "title": "プロフィール",
+        "description": "プロフィールの詳細をカスタマイズして、これまでに獲得した全ての実績とバッジを確認しましょう。ここで換算ツールを使えば、収益を見積もることができます。"
+      },
+      "earningicestart": {
+        "title": "iceを獲得する",
+        "description": "このボタンをタップすると、24時間ごとに[[:ice]]チェックインセッションを開始することができます。毎日忘れずにアクセスし、収入を増やしましょう！"
+      },
+      "earningiceseemore": {
+        "title": "iceを獲得する",
+        "description": "もう一度タップすると、現在のチェックインセッションの詳細が表示されます。"
+      },
+      "stats": {
+        "title": "成績",
+        "description": "成績ページでは、毎日チェックインした総ユーザー数とアクティブユーザー数に加え、上位国やユーザー数を見ることができます。"
+      },
+      "help": {
+        "title": "ヘルプ",
+        "description": "ご不明な点がおありですか？よくある質問のリストをご覧ください。お探しのものが見つからない場合は、hi@ice.ioまでお気軽にお問い合わせください。"
+      },
+      "preStaking": {
+        "title": "事前ステーキング",
+        "description": "収益報酬を事前にステーキングして、リターンを最大化しましょう。配当とステーキング期間を選択して、収益に加えてボーナスを受け取りましょう。"
+      },
+      "wallet": {
+        "title": "ウォレットカード",
+        "description": "現在の[[:ice]]残高ならびに収益率はこちらでご確認いただけます。自身のチームが紹介したメンバーがオンラインであればあるほど、収益率も高まります。"
+      },
+      "earning": {
+        "title": "収益カード",
+        "description": "最新の収益率とボーナスをお見逃しなく！このアプリでは、現在のレート、基本レートを始め、様々なアクティビティーのボーナスレートをご確認いただけます。"
+      },
+      "engagement": {
+        "title": "エンゲージメントカード",
+        "description": "チェックインセッションストリークと休日の記録を残しておきましょう！連続チェックインセッションの詳細や取得可能な休日の日数については、このセクションをご確認ください。"
+      },
+      "profilecard": {
+        "title": "プロフィールカード",
+        "description": "このカードを使えば、プロフィールのステータスを記録に残すことができます。自身の現在のグローバルランクに加え、役割、レベル、総紹介者数が表示されます。"
+      },
+      "referralscard": {
+        "title": "紹介者カード",
+        "description": "このカードをタップすると、Tier1とTier2の両段階の紹介者に関する、過去5日間の紹介者統計の推移を確認することができます。"
+      },
+      "adoptioncard": {
+        "title": "採用カード",
+        "description": "過去1週間のアクティブなスノーマンの平均をもとに、現在の[[:ice]]収益率を確認することができます。次の閾値に達した場合、収益率は半減します。"
+      },
+      "nickname": {
+        "title": "ニックネーム",
+        "description": "ニックネームは他の人々があなたを識別するためにあります。友達があなたのチームに参加するには、このニックネームを使用する必要があります。このショートカットを使って、自分のプロフィールを開くこともできます。"
+      },
+      "balancehistory": {
+        "title": "残高履歴",
+        "description": "ローカルウォレットとブロックチェーン上の現在の[[:ice]]残高を確認できます。ローカルウォレットの残高は1時間ごとに更新され、ブロックチェーンの残高は24時間ごとに更新されます。"
+      },
+      "achievements": {
+        "title": "実績",
+        "description": "以下のタスクをこなしてレベルアップを目指そう！最初のチェックインセッションを開始しましょう！"
+      }
+    }
+  },
+  "ActiveSessionsScreen": {
+    "title": "ログイン連携解除",
+    "sessionName": "次を経由して接続 {{providerName}}",
+    "buttons": {
+      "currentSession": "現在のセッション",
+      "endSession": "セッションを終了する",
+      "loginUnlinked": "ログインの連携が解除されました",
+      "sessionEnded": "セッションが終了しました",
+      "unlink": "連携解除"
+    },
+    "dialogs": {
+      "unlinkLogin": {
+        "title": "ログインの連携を解除しますか？",
+        "message": "このデバイスでの{{providerName}}からのログインの連携を解除してもよろしいですか？"
+      },
+      "endSession": {
+        "title": "セッションを終了しますか？",
+        "message": "このデバイスでの{{providerName}}からのログインを終了してもよろしいですか？"
+      }
+    }
   },
   "links": {
     "pre_staking": "https://ice.io/pre-staking/",
@@ -152,28 +934,464 @@
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
   },
-  "mainnet_landing": {
-    "header": "Iceのマイニング活動は終了しました。2024年10月7日のメインネットのローンチに向けて準備を進める中、独占的なアップデートやメインネットアプリへの早期アクセスを得るためにアプリをインストールしたままにしてください。",
-    "stats": {
-      "header": "Iceの統計",
-      "circulating_supply": "流通供給量",
-      "total_supply": "総供給量",
-      "price": "価格",
-      "market_cap": "時価総額",
-      "daily_trading_volume": "24時間取引量",
-      "dilluted_market_cap": "希釈時価総額"
+  "extra_bonus": {
+    "claim_title": "今日のボーナス",
+    "claim_message": "今日のボーナスの時間です。下の[[:bold]]「ボーナスをもらう」[[/:bold]]ボタンをタップしてください。",
+    "link": "詳細はこちら",
+    "extra_message": "収益率に応じた特別デイリーボーナスを受け取りました。",
+    "expired_title": "ボーナスの期限が切れました",
+    "expired_message": "残念ながら、今日のボーナスは期限切れとなりました。次回の通知をお見逃しなく！",
+    "result_title": "おめでとうございます"
+  },
+  "qr_code": {
+    "description": "チームのメンバーになるには、QRコードをスキャンしてください。"
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "TikTokアカウントをフォロー",
+      "description": "私たちの新しいTikTokコミュニティのことはもうご存知ですか？デジタル通貨「Ice」について、楽しくてためになるコンテンツを共有しています。あなたも参加してみませんか？"
     },
-    "countdown": {
-      "header": "Iceメインネットローンチ"
+    "youtube": {
+      "title": "Youtubeチャンネル登録",
+      "description": "iceの獲得方法に関するチュートリアルから、新機能に関する最新情報、さらには楽しいコミュニティコンテンツまで、YouTubeチャンネルは最新の情報をゲットするのにぴったりです。"
     },
-    "roadmap": {
-      "header": "私たちのビジョン",
-      "title": "Whitepaper",
-      "subtitle": "Iceにおける私たちのビジョンについて詳しく知る。"
+    "linkedin": {
+      "title": "LinkedInコミュニティに参加",
+      "description": "LinkedInのiceコミュニティに参加すれば、最新の動向を知ることができるほか、あなたと同じようにデジタル通貨の未来に熱い思いを抱く人たちとつながることができます。"
     },
-    "join_mainnet": {
-      "title": "分散型未来に参加する",
-      "subtitle": "今後のメインネットアプリとそのユニークな機能のプレビューを入手。"
+    "facebook": {
+      "title": "Facebookページをフォロー",
+      "description_part1": "ぜひ私たちFacebookページをフォローしてください。",
+      "description_part2": "iceのプロジェクトに関する全てのニュースを知ることができるだけでなく、私たちのコミュニティとつながり、会話に参加することができます。"
+    },
+    "instagram": {
+      "title": "Instagramアカウントをフォロー",
+      "description_part1": "Instagramをフォローすれば、あなたと同じくiceに熱い思いを抱いているユーザーとつながることができます。",
+      "description_part2": "さらに、新機能やキャンペーン情報もいち早くご案内します。"
+    },
+    "reddit": {
+      "title": "Redditで私たちに参加してください",
+      "description": "RedditでIceコミュニティを発見し、志を同じくする個人が集まり、考えを共有します。\n\n会話に参加し、質問を投げかけ、Iceのマイニング、機能などについての魅力的なディスカッションを探索してください。"
+    },
+    "discord": {
+      "title": "Discordで私たちに参加してください",
+      "description": "私たちの活気あるDiscordコミュニティに参加し、Iceに関するディスカッションや独占的な洞察に没頭してください。\n\n活気あるチャットに参加し、Iceに関連するニュースを把握し、共感を共有するコミュニティの一部としてください。"
+    },
+    "ice_founder_twitter": {
+      "title": "X で Zeus をフォロー",
+      "description": "私たちのビジョナリーファウンダーであるZeusをXでフォローし、彼が私たちの使命についての洞察、更新情報、考えを共有している場所で、会話に参加し、質問をし、このエキサイティングな旅を一緒に始める中で私たちのインスピレーションリーダーと連絡を取り続けてください。",
+      "button": "Zeus をフォロー"
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "すべての友達にピングを送る間お待ちください · {{count}}"
+  },
+  "creative_library": {
+    "title": "クリエイティブ Ice ライブラリ",
+    "share": "Ice ネットワークで夢のチームを結成しましょう！",
+    "get_started": {
+      "header": "夢のチームを結成しよう",
+      "subtitle": "Ice で始めて繁栄するマイクロコミュニティを築きましょう",
+      "description": "自分自身のマイクロコミュニティを築き、より多くの報酬を獲得している Ice ユーザーの急成長する数に参加してください。当社のプロモーションツール、ガイド、ヒントが、メッセージの拡散と成功したコミュニティの構築を容易にします。",
+      "get_started": "始める",
+      "carousel": {
+        "01": {
+          "title": "参加する",
+          "description": "アプリをダウンロードし、ニックネームを取得してマイニングを開始しましょう。\n\nあなたは、分散化、自治、人々の力に情熱を持つグローバルコミュニティの一員になります。"
+        },
+        "02": {
+          "title": "招待する",
+          "description": "観客を Ice に招待し、追加の報酬を解除するために協力してみましょう。\n\nさらに、分散化の利点や未来の金融についてのメッセージを広めるお手伝いができます。"
+        },
+        "03": {
+          "title": "報酬を得る",
+          "description": "ネットワークを拡大し、他の人々にコミュニティへの参加を奨励することで報酬を増やしていきましょう。\n\n分散化と自治を通じて未来の金融を革命化するミッションに参加しましょう。"
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "動画",
+        "description": "招待コードを宣伝するために動画コレクションを使用しましょう。ランドスケープまたはポートレート、字幕付きまたはなし、すべてをサポートしています。",
+        "action": "動画を表示"
+      },
+      "02": {
+        "title": "画像",
+        "description": "1枚の画像は1000の言葉に匹敵します。バナー、ソーシャルメディアアセット、テンプレート、アプリモックアップから選択できます。",
+        "action": "画像を表示"
+      },
+      "03": {
+        "title": "埋め込みバナー",
+        "description": "埋め込みバナーを使用して、ウェブサイトの訪問者に Ice を宣伝し、彼らをあなたのマイクロコミュニティに参加させましょう。",
+        "action": "バナーをインストール"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "あなたのストーリーをシェア",
+        "description": "Ice ネットワークとその多くの利点に関するあなたの旅を、あなたの言葉で記事に書いてシェアしましょう。\n\nブログ、Medium、Reddit、Quora、Bloggerなどで共有しましょう。\n\nあなたは[[/:link]]ナレッジベース[[/:link]]、[[/:link]]ホームページ[[/:link]]、[[/:link]]FAQページ[[/:link]]で Ice とそのユニークな機能についてのすべてを見つけることができます。"
+      },
+      "spread": {
+        "title": "メッセージを広める",
+        "description": "会話に参加してお気に入りのフォーラムに Ice ネットワークを紹介しましょう。分散化したファイナンス、通貨の未来、Ice というマイクロコミュニティの構築の力についての考えを共有しましょう。\n\n雪だるまのように、このグローバル通貨の可能性について議論を始め、ディスカッションを刺激させましょう。"
+      },
+      "bring": {
+        "title": "友達を招待しよう",
+        "description": "使いやすい招待機能を利用して、お気に入りのソーシャルメディアプラットフォームで友達に個人的な招待コードを共有しましょう。"
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "ウェブサイトオーナーのためのプラグ＆プレイ",
+        "description": "シンプルで柔軟なJSバナーを使用してiceネットワークを直接ウェブサイトに埋め込むことができます。素早く簡単なセットアップで、ウェブサイトのブランディングに合わせてカスタマイズできます。50言語に翻訳され、すべてのウェブサイトプラットフォームに対応しています。\n\nコードをコピーしてウェブサイトに貼り付け、今すぐ訪問者にiceネットワークを宣伝しましょう。",
+        "action": "バナーをインストール"
+      },
+      "mobile": {
+        "title": "モバイルアプリ用ライブラリ",
+        "description": "使いやすいライブラリをモバイルアプリに統合し、ユーザーにマイクロコミュニティに参加してマイニングを始めるよう招待しましょう。\n\n翻訳サポートと柔軟なセットアップオプションを提供して、ユーザーが世界中どこでも同じ素晴らしいice体験をすることができるようにします。",
+        "action1": "Androidライブラリ",
+        "action2": "React Nativeライブラリ"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "良い実践",
+        "rules": {
+          "01": {
+            "title": "正直であること",
+            "description": "個人的な経験と視点から書いてください。iceネットワークに関する率直な思考や感情を共有しましょう。"
+          },
+          "02": {
+            "title": "フレンドリーなトーンを使用する",
+            "description": "友人と話しているかのように書き、技術的な専門用語や読者にとって理解が難しい言葉を避けましょう。"
+          },
+          "03": {
+            "title": "創造的であること",
+            "description": "ブログ投稿、動画、またはソーシャルメディアの更新など、異なる種類のコンテンツを試してみることに抵抗しないでください。楽しんで、あなたの観客にiceネットワークを宣伝する方法で革新的であることを心がけましょう。"
+          }
+        }
+      },
+      "bad": {
+        "title": "悪い実践",
+        "rules": {
+          "01": {
+            "title": "スパムを避ける",
+            "description": "要求されていないメッセージを送信したり、同じ内容を異なるプラットフォームで繰り返し投稿することを避けましょう。これは侵入的で迷惑とされる可能性があります。"
+          },
+          "02": {
+            "title": "人々を誤導しない",
+            "description": "iceプロジェクトはユーザーに現金を支払わず、代わりにiceコインで報酬を提供しています。\"iceを現金に変える\"といったコンテンツを掲載することは避けてください。\"iceで$100を稼ぐ方法\"なども同様です。"
+          },
+          "03": {
+            "title": "詐欺活動に加担しない",
+            "description": "当社のコミュニティで透明性と誠実さを尊重しています。複数のアカウントを作成したり、iceネットワークを操作しようとするなどの詐欺活動は許容されません。"
+          }
+        }
+      }
+    }
+  },
+  "face_auth": {
+    "header": "顔認証",
+    "title": "KYC ステップ #1",
+    "description": "スムーズなエクスペリエンスのため、顔認証を追加しています。このステップは将来のメインネットのスムーズな確認のための準備として、[[:bold]]初期のステップ #1 KYC[[/:bold]] の役割を果たします。\n\n今日、あなたのアイデンティティを確認して、スムーズな旅を確保してください！",
+    "consent": "私はIceの[[:link]]KYC利用規約[[/:link]]に同意します。",
+    "confirmation": "この認証に使用するアイデンティティは、このアカウントに関連付けられているものと同じであり、後で変更できないことを確認します。",
+    "auth_status": {
+      "loading": {
+        "description": "認証中、お待ちください..."
+      },
+      "success": {
+        "title": "✅ 認証成功",
+        "description": "アイデンティティを確認していただき、ありがとうございます。チェックインセッションが開始されます。",
+        "action": "完了"
+      },
+      "failure": {
+        "title": "❌ 認証失敗",
+        "description": "アイデンティティを確認できませんでした。適切な照明が確保され、顔が完全に見えることを確認し、再試行してください。",
+        "action": "再試行"
+      },
+      "try_later": {
+        "title": "❌ 認証失敗",
+        "description": "アイデンティティを確認できませんでした。適切な照明が確保され、顔が完全に見えることを確認し、1時間後に再試行してください。",
+        "action": "閉じる"
+      },
+      "continue": {
+        "title": "😁 KYC 感情認識",
+        "description": "素晴らしい仕事です！セルフィーを撮影して最初のステップを完了しました。次に、表示された感情に従ってKYCプロセスを続行しましょう。",
+        "action": "続行"
+      },
+      "banned": {
+        "title": "❌ マイニングが無効になっています",
+        "description": "あなたのアイデンティティが別のアカウントに関連付けられていることが特定されました。これが誤りであると思われる場合、[[:bold]]feedback@ice.io[[/:bold]]にニックネームと高品質のセルフィーを含むメールを送信してください。",
+        "action": "閉じる"
+      }
+    },
+    "emotions_recognition": {
+      "start": "開始",
+      "please_show_this": "この感情を表示してください",
+      "emotions": {
+        "anger": "怒り",
+        "contempt": "軽蔑",
+        "disgust": "嫌悪",
+        "fear": "恐れ",
+        "happiness": "幸福",
+        "neutral": "中立",
+        "sadness": "悲しみ",
+        "surprise": "驚き"
+      }
+    },
+    "device_angle_warning": {
+      "title": "警告",
+      "description": "カメラを見ながら電話をまっすぐに保ってください"
+    },
+    "camera_permission": {
+      "title": "カメラの許可",
+      "description": "続行するには、カメラへのアクセスを許可してください。",
+      "action": "アクセスを許可"
+    },
+    "selfie_guidelines": {
+      "title": "セルフィーガイドライン",
+      "instruction": "続行する前に、成功したKYC顔認証のためにこれらのガイドラインに従ってください：",
+      "check_1": "✅ 高品質の写真を持っていることを確認してください。",
+      "check_2": "✅ 適切な照明があることを確認してください。",
+      "check_3": "✅ クリアな背景を確保してください。",
+      "check_4": "✅ 暗い写真は避けてください。",
+      "check_5": "✅ ボケたり霞んだ写真を避けてください。",
+      "check_6": "✅ カメラレンズを清潔に保ってください。",
+      "warning": "上記のガイドラインに従わない場合、アカウントへのアクセスが失われる可能性があります。",
+      "confirmation": "私は基準に従うことを確認します。",
+      "popup_title": "確認",
+      "popup_body": "すべてのセルフィーガイドラインに従ったことを確認しますか？"
+    }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "正しいニックネームを入力していることを確認してください。",
+      "description": "あなたを招待した友達のニックネームを入力してください。"
+    },
+    "home": {
+      "pioneer": {
+        "description": "進捗とグローバルステータスを追跡する",
+        "referrals": "友達"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "チームを育て、コミュニティを築く"
+        }
+      },
+      "team": {
+        "title": "友達",
+        "view_team": "友達を表示"
+      },
+      "roadmap": {
+        "button_subtitle": "Iceの将来のビジョンについて詳しく学びましょう。"
+      },
+      "join_mainnet": {
+        "subtitle": "将来のMainnetアプリとそのユニークな機能の一部を、2024年末にリリース予定ですので、ぜひご覧ください。"
+      }
+    },
+    "settings": {
+      "invite_description": "新しいメンバーとチームを成長させる"
+    },
+    "profile": {
+      "invite_friends_engage": "情報を広め、友達をIce Networkコミュニティに招待しましょう！"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "この機能を使用して友達をIceコミュニティに招待しましょう。ネットワークを拡大し、経験を共有し、一緒に持続可能なつながりを築きましょう。"
+        },
+        "wallet": {
+          "description": "ここでは現在のIce残高と収益率を確認できます。"
+        },
+        "earning": {
+          "description": "収益率とボーナスについて最新情報をチェックしましょう！ここでは現在の収益率、基本収益率、ボーナス収益率を確認できます。"
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "このセクションでは、招待したチームメンバーの総数が表示され、コミュニティの成長と進化を追跡できます。"
+        },
+        "earnings": {
+          "description": "現在の残高は毎時更新され、ここに表示されます。直接の収益とステークされた収益が含まれています。"
+        }
+      }
+    },
+    "claimUsername": {
+      "description": "友達は[[:ice]]に参加する際、このニックネームを使用する必要があります。"
+    },
+    "users": {
+      "team": "友達"
+    },
+    "team": {
+      "empty": {
+        "team": "現在、友達はいません！"
+      },
+      "contacts": {
+        "empty_description": "連絡先を同期して、すでに[[:ice]]にいる人を見つけましょう。"
+      }
+    }
+  },
+  "bsc_address": {
+    "title": "BNB Smart Chain アドレス",
+    "enter_address_title": "あなたの\nBNB Smart Chain アドレスを入力してください",
+    "enter_address_description": "フェーズ1中、ICEトークンはBNB Smart Chainブロックチェーン上にリリースされます。メインネットが開始されると、トークンはBNB Smart ChainからIce Open Network（ION）ブロックチェーンに交換できるようになります。",
+    "enter_address_confirmation": "BNB Smart Chainアドレスが正しいことを確認していますか？",
+    "validators_warning_title": "アドレスを確認",
+    "validators_warning_text": "アカウントにBNB Smart Chainアドレスを追加した個人は、メインネットの発売に関するホワイトペーパーに従ってトップ300バリデータの1つになる資格がありません。",
+    "walletDescription": "[[:bold]]Metamask[[/:bold]] または [[:bold]]Trust Wallet[[/:bold]] のようなセルフカストディアルウォレットの使用をお勧めします。\n\n配布を受け取ることを確認するために、ウォレットアドレスを2回確認してください。"
+  },
+  "social_kyc": {
+    "header": "認証",
+    "verify_with_title": "{{method}}で認証",
+    "select_method_step": {
+      "title": "KYCステップ #2",
+      "description": "既存のXプロフィールを使用してアカウントを簡単に認証します。"
+    },
+    "instructions_step": {
+      "show_example": "例を表示",
+      "example_title": "リポストの例",
+      "x": {
+        "1": "Xを開いて、[[:bold]]@ice_blockchain[[/:bold]] アカウントを検索します。",
+        "2": "プロフィール内で最初の投稿である固定投稿を見つけます。",
+        "3": "❤️ いいね！と 🔄 リポストを、以下の[[:bold]]正確な[[/:bold]]テキストを使って行います。",
+        "pop_up": {
+          "title": "確認",
+          "description": "固定投稿にいいね！をし、提供された正確なテキストを使用してリポストしましたか？"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "テキストをコピーするにはタップ",
+        "copied": "コピー済み"
+      }
+    },
+    "verification_step": {
+      "title": "確認",
+      "description": "認証を完了するには、前のステップで行ったポストへのリンクを貼り付けてください。リンクが正しいことを確認してください。",
+      "placeholder": "リンクを貼り付ける",
+      "instructions_step": {
+        "4": "ポストのリンクを以下に貼り付けてください。👇"
+      },
+      "action": {
+        "verify": "確認",
+        "wait": "お待ちください",
+        "countdown": "{{countdown}}秒 残り"
+      },
+      "pop_up": {
+        "title": "無効なリンク",
+        "description": "正しいリンクをコピーしたことを確認してください。\n\n[[:bold]]例：[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "残りの試行回数: {{count}}",
+      "success": {
+        "title": "認証完了",
+        "description": "おめでとうございます、KYCステップ #2を成功裏に完了しました。あなたは今、認証済みです。"
+      },
+      "error_try_again": {
+        "title": "認証エラー",
+        "description": "正しい投稿を提供されたテキストを使用してリポストしたこと、およびその投稿が一般に公開されていることを確認してください。"
+      },
+      "error_try_later": {
+        "title": "認証エラー",
+        "description": "認証を完了できませんでした。7日後に再試行できます。"
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "BNB Smart Chainディストリビューション",
+      "description": "既存のXプロファイルを使用してアカウントを簡単に確認し、BNB Smart Chain ICEコインを受け取ります。"
+    },
+    "instructions_step": {
+      "x": {
+        "1": "当社のXポストを直接開くために、[[:bold]]こちら[[/:bold]]のリンクをクリックしてください。",
+        "pop_up": {
+          "description": "指示に従い、最初のステップでリンクをクリックしたことを確認して、当社のXポストを直接開いてください。",
+          "description2": "正しい投稿をお気に入りにし、提供された正確なテキストを使用して引用符をつけて再投稿しましたか、例のように？"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "おめでとうございます、あなたは確認を成功裡に完了しました。BNB Smart Chainディストリビューションの対象となります。"
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "アカウント確認",
+    "description": "アカウントの身元を確認し、メールアドレスを安全にリンクするために、認証プロセス中に当社の感情チェックを成功裏にパスすることを確認してください。",
+    "description2": "このステップは、アカウントのセキュリティと正当性を確保するのに役立ちます。ご協力いただきありがとうございます！"
+  },
+  "quiz": {
+    "title": "クイズ",
+    "intro": {
+      "description": "Iceでは、積極的で情報豊富なメンバーのコミュニティを育てることを信じています。私たちの使命は、Iceコインが私たちのビジョンと一致し、真に関与している人々に配布されることを確保することです。",
+      "community_engagement": {
+        "title": "🙌 コミュニティへの積極的な参加",
+        "description": "Iceエコシステム内でのあなたの関与は、直接採掘能力に影響を与えます：",
+        "point1": "最新情報を確認：私たちのニュース記事や動画と関わります。",
+        "point2": "積極的に参加：YouTubeやTwitter Spaceでのライブセッションや、個人開発プログラムに参加します。",
+        "point3": "ソーシャルインタラクション：Iceについての投稿、いいね、共有、フォローなどでプレゼンスを高めます。",
+        "bottom_description": "あなたがより積極的に参加すれば、より高いポジティブインタラクションスコアが得られ、KYCプロセスを進めることができます。"
+      },
+      "terms_privacy": "私は[[:link]]利用規約[[/:link]]を理解し、同意します。",
+      "knowledge_check": {
+        "title": "🧠 知識チェック",
+        "point2": "クイズに合格するには、少なくとも18問の質問に正しく回答する必要があります。",
+        "point3": "失敗したクイズは、当社の資料とのさらなる関与の必要性を示します。",
+        "point4": "クイズを合格する期限があります。クイズセクションのホームページで、期限までの残り日数を確認できます。",
+        "point5": "期限切れの前に3回の再試行があります。クイズに3回失敗するか、期限が切れると、もはやマイニングできず、アカウントは凍結されます。",
+        "point6": "📚 このクイズのすべての情報は[[:link]]こちら[[/:link]]で読むことができます。",
+        "description": "コミュニティが情報を適切に把握し、私たちのビジョンに沿っていることを確認するために：",
+        "point1": "私たちは、包括的なリソースから派生した21の質問を提供します。"
+      },
+      "why_quiz": {
+        "title": "💡 なぜクイズなのか？",
+        "description": "知識と理解に対する私たちのコミットメントは、コミュニティの前面にあります。私たちのクイズを通じて、Iceが正しい手に渡ること、つまりプロジェクトのビジョンを本当に理解し、共感する人々に渡ることを確実にしたいと考えています。"
+      }
+    },
+    "quiz_failure": {
+      "title": "クイズ失敗",
+      "description": "18以上の質問に正しく答えていないか、時間が切れているため、クイズに合格できません。",
+      "check_faq": "次回正しく回答するために、知識ベースとよくある質問に詳しくなることをお勧めします。"
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "{{current}} / {{total}}の質問",
+      "time_over": "⌛️ 時間切れ",
+      "correct_answers": "正しい回答",
+      "wrong_answers": "誤った回答"
+    },
+    "confirmation_popup": {
+      "title": "確認",
+      "start_description": "本当にクイズを開始しますか？",
+      "cancel_description": "クイズをスキップすると、利用可能な3つのリトライのうち1つを使用します。本当に今クイズをスキップしますか？"
+    },
+    "quiz_success": {
+      "title": "確認完了",
+      "description": "おめでとうございます、KYCを成功裏に完了しました。一貫して正しい回答があなたの献身と知識を証明しました。あなたは今、確認されています。"
+    },
+    "mining_disabled_popup": {
+      "title": "❌ マイニング無効",
+      "description": "3回連続でクイズに失敗したか、指定された期間が切れたため、マイニングアクセスが無効になりました。これは私たちのKYCプロセスで必要とされるものです。"
+    },
+    "action": "クイズを完了する",
+    "reminder": "マイニングの継続とスラッシングを回避するために、クイズを完了する必要があることに注意してください。",
+    "days_left": "残り日数: {{days}}",
+    "retries_left": "残りの試行回数：{{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "BNBスマートチェーン配布",
+      "description": "Xで最新の取引所の発表を積極的にサポートすることにより、月次BNBスマートチェーンICEコインの配布資格を維持してください。"
+    },
+    "results_step": {
+      "success": {
+        "description": "おめでとうございます、あなたは正常に認証を完了しました。今、月次BNBスマートチェーンの配布ステータスを維持する資格があります。"
+      }
+    }
+  },
+  "buttons": {
+    "skip": "スキップ"
   }
 }

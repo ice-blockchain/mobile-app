@@ -2,6 +2,7 @@
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {configureStore} from '@reduxjs/toolkit';
+import {loggingReduxEnhancer} from '@services/logging';
 import {
   FLUSH,
   PAUSE,
@@ -55,7 +56,7 @@ export const store = configureStore({
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }).concat(middlewares),
-  enhancers: [],
+  enhancers: [loggingReduxEnhancer],
 });
 
 export const persistor = persistStore(store);

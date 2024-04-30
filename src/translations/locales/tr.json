@@ -1,4 +1,33 @@
 {
+  "welcome": {
+    "page1": {
+      "title": "Ice'e hoşgeldin",
+      "description": "[[:ice]] telefonunla kazanabileceğin bir dijital para birimidir. Ice, senin gibi günlük kullanıcılara aittir ve onlar tarafından işletilmektedir."
+    },
+    "page2": {
+      "title": "Gezegen Dostu",
+      "description": "[[:ice]] bir \"Hisse İspatı (PoS)\" mutabakat mekanizması kullandığından doğası gereği BTC'den daha enerji verimlidir. Hisse İspatı (PoS) ile kripto para sahipleri, blok işlemlerini bir doğrulayıcının yatırdığı coin sayısına göre onaylar."
+    },
+    "page3": {
+      "title": "Halkın Coin'u",
+      "description_part1": "Güç senin ellerinde.",
+      "description_part2": "[[:ice]]'da geliştirdiğimiz her şey açık kaynak olacak ve Merkezi Olmayan Otonom Organizasyon (DAO) tarafından kontrol edilecek."
+    },
+    "page4": {
+      "title": "Bağlantıda kal",
+      "description": "Ücretsiz, enerji açısından hafif mobil uygulamamızla günlük check-in işlemin için [[:iceLogo]]'a tıkla. Günlük tıklamaların, Ice botların değil gerçek insanların eline geçmesini sağlar."
+    },
+    "page5": {
+      "title": "Tavsiye Et & Kazan",
+      "description": "Arkadaşlarını davet et ve ekibine katılan her arkadaşın için taban kazanç oranın üzerinden (ikiniz de) %25'e varan bonus kazanın."
+    },
+    "page6": {
+      "title": "Bildirimler",
+      "description_part1": "[[:ice]] check-in seansları sadece 24 saat sürmektedir. Mevcut oturumun sona erdiğinde bir bildirim almak ister misin?",
+      "description_part2": "Endişelenme, sana spam göndermeyeceğiz!",
+      "not_now": "Şimdi değil"
+    }
+  },
   "button": {
     "yes_btn": "Evet lütfen",
     "next_btn": "Sonraki",
@@ -46,6 +75,81 @@
     "start": "Başla",
     "faq": "SSS",
     "knowledge_base": "Bilgi Tabanı"
+  },
+  "team": {
+    "contacts_tab": "Kişiler",
+    "tierOne_tab": "Kademe 1",
+    "tierTwo_tab": "Kademe 2",
+    "empty": {
+      "contacts": "Şu anda telefon rehberinde herhangi bir kişi yok.",
+      "button_title": "Arkadaşlarını Davet Et",
+      "t1": "Şu anda T1 yönlendirmeniz yok!",
+      "t2": "Şu anda T2 yönlendirmeniz yok!",
+      "team": "Şu anda takım üyeniz yok!"
+    },
+    "contacts": {
+      "empty_title": "[[:ice]] arkadaşlarla daha iyi",
+      "empty_button_title": "Kişilere erişime izin ver",
+      "empty_description": "Kişilerini senkronize et ve kimlerin halihazırda [[:ice]]'da olduğunu gör. Gelecekte, kişilerine Ice gönderebileceksin."
+    },
+    "header": {
+      "search_placeholder": "Kullanıcı ara",
+      "referrals": "Referanslar",
+      "earnings": "Kazançlar"
+    },
+    "confirm_code": {
+      "title": "Kodu Onayla",
+      "description": "Lütfen telefonuna gelen onay kodunu gir.",
+      "placeholder": "Kodu gir",
+      "button": "Kodunu şimdi onayla"
+    },
+    "confirm_phone": {
+      "title": "Telefonu Onayla",
+      "description": "Lütfen ülke kodunu onayla ve telefon numaranı gir."
+    },
+    "contacts_list": {
+      "ice_header": {
+        "friends": "arkadaşlar"
+      },
+      "all_contacts": "Tüm kişiler",
+      "invite": "davet et",
+      "invitation_text": "Merhaba {{name}}, Seni Ice'e katılmaya davet etmek istiyorum."
+    },
+    "tier_one": {
+      "header_list": {
+        "title_earnings": "Kademe 1 Kazançları"
+      }
+    },
+    "tier_two": {
+      "header_list": {
+        "title_earnings": "Kademe 2 Kazançları"
+      }
+    }
+  },
+  "signIn": {
+    "logInSignUp": "Giriş yap / Kaydol",
+    "phone": "Telefon",
+    "or": "veya",
+    "reset_password": "Parolayı sıfırla",
+    "welcome": "Ice'e hoşgeldin",
+    "email": "E-posta",
+    "slogan": "Merkezi Olmayan Gelecek",
+    "privacy": "Devam ederek [[:link]]Hizmet Şartlarımızı[[/:link]] ve [[:link]]Gizlilik Politikamızı[[/:link]] kabul etmiş olursun"
+  },
+  "claimUsername": {
+    "title": "Takma ad talep et",
+    "description": "Arkadaşlarının ekibine katılmak için bu takma adı kullanmaları gerekecek.",
+    "inputPlaceholder": "Takma adını gir",
+    "note_part1": "Takma ad oluştururken yalnızca harf, rakam ve nokta kullan.",
+    "note_part2": "Örnek:",
+    "note_example": "senin.ismin01"
+  },
+  "whoInvitedYou": {
+    "title": "Seni kim davet etti?",
+    "description": "Seni davet eden kişinin takma adını gir.",
+    "inputPlaceholder": "Takma adı gir",
+    "dontHaveInvitationCode": "Bu adımı tamamladığında, ikiniz de aynı anda check-in yaptığınızda, sen ve arkadaşın temel kazanç oranı üzerinden %25 bonus alacaksınız.",
+    "dontHaveCodeTip": "Davet kodun yoksa, referansın olarak rastgele bir üye seçeceğiz!"
   },
   "errors": {
     "nicknameSize": "Takma ad boyutu: 4-20 karakter.",
@@ -99,6 +203,45 @@
     "same_phone_error": "Aynı numarayı kullanamazsın.",
     "unable_to_validate_bsc_addr_eoa": "EOA adresi doğrulanamıyor"
   },
+  "profile": {
+    "my_roles": {
+      "title": "Benim rolüm"
+    },
+    "mining_calculator": "kazanç hesap makinesi",
+    "invite_friends": "Arkadaşlarını Davet Et",
+    "invite_friends_engage": "Haberi yay ve arkadaşlarını davet et. Ne kadar çok referans, o kadar çok kazanırsın!",
+    "global_rank": "küresel sıralama",
+    "view_all_roles": "tüm rolleri görüntüle",
+    "data_is_hidden": "veriler gizlendi",
+    "progress_text": "{{value}} ile ilgili {{total}}",
+    "not_found": {
+      "title": "Kullanıcı bulunamadı",
+      "description": "Hay aksi, bu kullanıcıyı bulamadık."
+    },
+    "my_badges": {
+      "title": "Benim Rozetlerim"
+    },
+    "badges": {
+      "title": "Rozetler"
+    },
+    "roles": {
+      "title": "Roller"
+    },
+    "badge_types": {
+      "coin": {
+        "title": "Coinler",
+        "description": "coinler"
+      },
+      "social": {
+        "title": "Sosyal",
+        "description": "arkadaşlar"
+      },
+      "level": {
+        "title": "Seviye",
+        "description": "Seviye"
+      }
+    }
+  },
   "global": {
     "level": "seviye",
     "referrals": "referanslar",
@@ -117,6 +260,320 @@
       "today": "Bugün"
     }
   },
+  "mining_calculator": {
+    "result_label": "Kazanacaksın",
+    "active_inviter": "Aktif davetçi",
+    "tier_1_ref": "Kademe 1 referansları",
+    "tier_2_ref": "Kademe 2 referansları",
+    "active_miners": "Aktif referanslar",
+    "team_members": "Takım Üyeleri",
+    "active_team_members": "Aktif Takım Üyeleri"
+  },
+  "home": {
+    "wallet": {
+      "title": "CÜZDAN",
+      "rate": "KAZANÇ ORANI",
+      "balance": "GÜNCEL BAKİYE"
+    },
+    "pioneer": {
+      "rank": "KÜRESEL SIRALAMA",
+      "referrals": "REFERANSLAR",
+      "description": "Daha fazla kullanıcıya referans ol ve daha fazla kazan [[:ice]]."
+    },
+    "referrals": {
+      "title": "REFERANSLAR",
+      "description": "Önceki 5 gün için referans istatistikleri.",
+      "no_referrals_description": "Şu anda herhangi bir referansın yok!",
+      "users_tier_1": "Kademe 1 kullanıcıları",
+      "users_tier_2": "Kademe 2 kullanıcıları",
+      "title_team": "Ekip",
+      "description_team": "Son 5 günün ekip istatistikleri",
+      "no_referrals_description_team": "Şu anda takım üyeniz yok.",
+      "users": "Kullanıcılar"
+    },
+    "adoption": {
+      "title": "BENİMSEME",
+      "level": "seviye",
+      "users": "kullanıcılar"
+    },
+    "tasks": {
+      "achievements": "BAŞARILAR",
+      "title": "İlerleme durumun",
+      "description": "Aşağıdaki görevleri tamamla ve seviye atla!",
+      "completed": {
+        "title": "Tebrikler",
+        "description": "Ekstra ödüller kazanmak için günlük giriş yapmaya devam et!"
+      },
+      "popup": {
+        "title": "Telegram kanalımıza katıl",
+        "description": "Telegram'da kullandığın takma adını belirt.",
+        "placeholder": "Takma Ad"
+      },
+      "claim_username": {
+        "title": "Takma adını talep et",
+        "description": "Ayarla ve arkadaşlarınla paylaş."
+      },
+      "start_mining": {
+        "title": "Kazanmaya başla",
+        "description": "İlk check-in seansın."
+      },
+      "upload_profile_picture": {
+        "title": "Profil fotoğrafı",
+        "description": "Profil resmini yükle."
+      },
+      "join_telegram": {
+        "title": "Telegram'a Katıl",
+        "description": "Topluluğumuzun bir parçası ol, şimdi katıl."
+      },
+      "follow_us_on_twitter": {
+        "title": "Bizi Twitter'da takip et",
+        "description": "İletişimde kalalım, bizi Twitter'da takip et."
+      },
+      "invite_friends": {
+        "title": "5 Arkadaşını Davet Et",
+        "description": "Ekibini büyüt ve kazancını artır."
+      }
+    },
+    "overview": {
+      "title": "Genel Görünüm"
+    },
+    "menu": {
+      "notifications": "Bildirimler",
+      "staking": "Hisselendirme",
+      "stats": "İstatistikler",
+      "help": "Yardım",
+      "tips": "İpuçları"
+    },
+    "team": {
+      "title": "Ekip",
+      "view_team": "ekibi görüntüle"
+    },
+    "mining_rate": {
+      "title": "KAZANÇ ORANI",
+      "base": "Baz"
+    },
+    "engagement": {
+      "title": "DAHİL OLMAK",
+      "description_part1": "Kesintisizlik, art arda kaç gün check-in yaptığını ifade eder.",
+      "description_part2": "Birbirini takip eden her 6 gün için bir gün izin alırsın.",
+      "streak": "KESİNTİSİZLİK",
+      "days_off": "İZİN GÜNLERİ"
+    },
+    "roadmap": {
+      "title": "VİZYONUMUZ",
+      "button_title": "Beyaz kağıt",
+      "button_subtitle": "Ice'teki vizyonumuz hakkında daha fazla bilgi edinin."
+    },
+    "join_mainnet": {
+      "title": "Merkezi Olmayan Geleceğe Katılın",
+      "subtitle": "Yaklaşan Mainnet uygulamamızın ve benzersiz özelliklerinin bir önizlemesini alın."
+    },
+    "bsc_address": {
+      "title": "BNB Smart Chain Adresi",
+      "subtitle": "Lütfen BSC adresinizi buraya girin."
+    },
+    "verified_tooltip": {
+      "title": "KYC Onaylandı"
+    }
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "profile": "Profil",
+    "legal": "Yasal",
+    "support": "Destek",
+    "personal_information_title": "Kişisel Bilgiler",
+    "personal_information_description": "Profil ayrıntılarını yönet.",
+    "notifications_title": "Bildirimler",
+    "notifications_description": "Bildirimlerini buradan yönet.",
+    "push_notifications_title": "Anlık Bildirimler",
+    "push_notifications_description": "Anlık bildirim ayarlarını özelleştir.",
+    "email_notifications_title": "E-posta Bildirimleri",
+    "email_notifications_description": "E-posta bildirim ayarlarını özelleştir.",
+    "terms_title": "Kullanım Şartları",
+    "terms_description": "Kullanım şartlarımızı incele.",
+    "privacy_title": "Gizlilik Politikası",
+    "privacy_description": "Gizlilik politikamız hakkında bilgi edin.",
+    "feedback_title": "Geri Bildirim Gönder",
+    "feedback_description": "Düşüncelerini bizimle paylaş.",
+    "invite_title": "Arkadaşını Davet Et",
+    "invite_description": "Arkadaşlarını davet ederek ekstra Ice kazan.",
+    "delete_title": "Hesabı Sil",
+    "delete_description": "Hesabını sil.",
+    "delete_confirmation_title": "Hesabı silmek istediğinden emin misin?",
+    "delete_confirmation_yes": "Evet, sil",
+    "logout_title": "Çıkış Yap",
+    "logout_description": "Oturumu kapat ve bir ara ver.",
+    "logout_confirmation_title": "Oturumu kapatmak istediğinden emin misin?",
+    "logout_confirmation_yes": "Evet, çıkış yap",
+    "confirm_phone": {
+      "title": "Yeni Telefonu Onayla",
+      "description": "Lütfen ülke kodunu onayla ve yeni telefon numaranı gir.",
+      "button": "Yeni telefon numarasını onayla"
+    },
+    "notifications": {
+      "enable_prompt": "Bildirimlere izin verilmemiştir. Bildirimleri etkinleştirmek istiyor musun?",
+      "channel_achievements": "Başarılar",
+      "channel_news": "Heberler",
+      "channel_reminders": "Hatırlatıcılar",
+      "channel_team": "Ekip",
+      "type_push": "ANLIK",
+      "type_email": "E-POSTA",
+      "disable_notifications": "Bildirimleri Devre Dışı Bırak?",
+      "disable_notifications_description": "Bildirimleri devre dışı bırakarak check-in, haberler veya ekip bilgilerine başladığında güncellemeleri alamazsın.",
+      "domain": {
+        "disable_all": {
+          "title": "",
+          "description": ""
+        },
+        "weekly_stats": {
+          "title": "Haftalık istatistikler",
+          "description": "Etkinliklerin hakkında bildirimler al."
+        },
+        "weekly_report": {
+          "title": "Haftalık rapor",
+          "description": "Etkinliklerin hakkında bildirimler al."
+        },
+        "achievements": {
+          "title": "Başarılar",
+          "description": "İlerlemen hakkında bildirimler al."
+        },
+        "promotions": {
+          "title": "Promosyonlar",
+          "description": "Ekibini nasıl büyüteceğin ve daha fazla kazanacağın konusunda bildirimler al."
+        },
+        "news": {
+          "title": "Heberler",
+          "description": "Ekibimizden bildirimler al."
+        },
+        "micro_community": {
+          "title": "Mikro-topluluk",
+          "description": "Ekibin hakkında bildirimler al."
+        },
+        "daily_bonus": {
+          "title": "Günlük bonus",
+          "description": "Günlük bonusunu talep etmek için bildirimler al."
+        },
+        "mining": {
+          "title": "Oturum durumu",
+          "description": "Check-in etkinliklerin hakkında bildirimler al."
+        },
+        "system": {
+          "title": "Sistem",
+          "description": "Ice uygulaması hakkında önemli bildirimler al."
+        }
+      }
+    },
+    "language_settings": "Dil ayarları",
+    "change_lang_confirm": {
+      "title": "Dili değiştir",
+      "prompt": "Bu ayarın uygulanması uygulamayı yeniden başlatır."
+    },
+    "profile_image": "Profil Resmi",
+    "inapp_privacy_title": "Gizlilik",
+    "inapp_privacy_description": "Bilgilerini buradan yönet.",
+    "developer": "Geliştirici",
+    "user_id": "Kullanıcı Kimliği",
+    "user_token": "Kullanıcı Jetonu",
+    "profile_photo": {
+      "delete": "Fotoğrafı Sil",
+      "edit": "Profil fotoğrafını düzenle",
+      "photo_gallery": "Fotoğraf Galerisi",
+      "camera": "Kamera"
+    },
+    "confirm_email_confirmation_title": "E-postayı onayla?",
+    "update_email_confirmation_title": "E-postayı güncelle?",
+    "update_email_confirmation_subtitle": "E-posta adresini değiştirmek, yeniden oturum açmanı gerektirecektir. Devam etmek istediğinden emin misin?",
+    "unlink_logins_title": "Girişlerin Bağlantılarını Kaldır",
+    "unlink_logins_description": "Girişlerinin bağlantılarını buradan kaldırabilirsin."
+  },
+  "invite_share": {
+    "title": "Arkadaşını davet et",
+    "telegram": "Telegram",
+    "twitter": "Twitter",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email": "E-posta",
+    "fb": "Haber akışı",
+    "sms": "SMS",
+    "copy_link": "Bağlantıyı kopyala",
+    "more": "Daha fazlası",
+    "copied": "KOPYALANDI",
+    "share_message": "Merhaba ☃️ Kar Adam! Ice'teki ekibime katıl ve referans kodumu kullanarak kaydolduğunda 10 Ice coin kazan:",
+    "share_subject": "Ice'teki ekibime katıl",
+    "description": "Haberi yay ve arkadaşlarını davet et. Getirdiğin her yeni referans için [[:ice]] kazanırsın.",
+    "share": "Paylaş"
+  },
+  "users": {
+    "ping": "PİNG",
+    "active": "Aktif",
+    "inactive": "Aktif Değil",
+    "referralType": {
+      "T1": "Kademe 1",
+      "T2": "Kademe 2",
+      "team": "Takım Üyeleri"
+    },
+    "team": "Takım"
+  },
+  "personal_information": {
+    "first_name": "Ad",
+    "last_name": "Soyadı",
+    "country": "Ülke",
+    "city": "Şehir",
+    "title": "Kişisel Bilgiler",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "username": "Takma Ad"
+  },
+  "username": {
+    "error": {
+      "already_taken": "Bu takma ad alınmış.",
+      "length": "Takma ad boyutu: 4-20 karakter.",
+      "invalid_characters": "Geçersiz karakterleri kaldır.",
+      "not_found": "Takma ad bulunamadı.",
+      "some_error": "Bir hata oluştu.",
+      "refer_yourself": "Kendine referans olamazsın."
+    }
+  },
+  "staking": {
+    "time_left": "Kalan Zaman",
+    "mining_rate": "Kazanç Oranı",
+    "appeal": "Kazanç oranını artır",
+    "benefits_description": "Ice ödüllerini 5 yıla kadar ön hisselendirmelerini yap ve kazanma oranını %250'ye kadar artır.",
+    "bonus_label": "Hisselendirme Bonusu",
+    "period_label": "Hisselendirme Dönemi",
+    "title": "Ön Hisselendirme",
+    "current_rate": "Mevcut Oran",
+    "allocation": "Tahsislendirme",
+    "description": "Hisselendirme, bir blok zincir ağını desteklemek ve işlemleri onaylamak için kripto varlıklarını taahhüt etmeyi içeren bir süreçtir.",
+    "terms_agree": "Ben [[:ice]] [[:link]]Hisselendirme Koşullarını[[/:link]] kabul ediyorum. Ice stokların seçilen süre boyunca kilitlenecektir.",
+    "stake_now": "Şimdi ön hisselendirme yap!",
+    "balance_label": "Hisselendirme bakiyesi",
+    "confirm_title": "Ön Hisselendirmeyi Onayla",
+    "confirm_subtitle": "Coinlarını ön hisselendirmek istediğinden emin misin? Onayladıktan sonra bu işlem geri alınamaz.",
+    "remove_pre_staking": "Ön-Yatırımı Kaldır"
+  },
+  "stats": {
+    "header_title": "İstatistikler",
+    "active": "Aktif kullanıcılar",
+    "total": "Toplam kullanıcılar",
+    "user_growth": "Kullanıcı artışı",
+    "top_miners": "En popüler kullanıcılar",
+    "top_countries": "En popüler ülkeler",
+    "online_miners": "Çevrimiçi kullanıcılar",
+    "detailed_information": "Detaylı bilgi",
+    "total_coins": "Toplam Madeni Para",
+    "filter": {
+      "total": "Toplam",
+      "on_app": "Uygulamada Mevcut",
+      "pre_staked": "Önceden Stake Edilen",
+      "on_blockchain": "Blockchain Üzerinde"
+    }
+  },
+  "update_required": {
+    "title": "Lütfen Güncelle",
+    "description": "Eski bir uygulama sürümü kullanıyorsun, kullanmayı devam etmek için uygulamayı güncellemen gerekiyor.",
+    "button_title": "Şimdi Güncelle"
+  },
   "general": {
     "good_morning": "Günaydın",
     "good_afternoon": "Tünaydın",
@@ -126,25 +583,350 @@
     "seconds_short": "sn",
     "minutes_short": "dk",
     "hours_short": "sa",
-    "days_short": "g",
-    "hour": {
-      "zero": "saat",
-      "one": "saat",
-      "two": "saat",
-      "few": "saat",
-      "many": "saat",
-      "other": "saat"
+    "days_short": "g"
+  },
+  "news": {
+    "news_feed": "Haber Akışı",
+    "read_more": "Devamını oku",
+    "no_more_news": "bu, haber akışının son girişidir.",
+    "views": "{{viewsCount}} Görüntülemeler"
+  },
+  "search": {
+    "empty": "Kişileri, Ice arkadaşlarını ve mikro-topluluğunun üyelerini ara.",
+    "nothing_is_found": "Sorgunuz için hiçbir şey bulunamadı.",
+    "search_by_country": "Ülkeye göre ara",
+    "search_for_users": "Kullanıcı ara",
+    "loading": "Aranıyor…"
+  },
+  "tabbar": {
+    "mining_inactive_tooltip": "İlk check-in oturumunu başlatmak için buraya tıkla.",
+    "mining_reset_tooltip": "Check-in oturumunu uzatmak için 1 saniye bas.",
+    "mining_holiday_reset_tooltip": "İzin Günü kullanıyorsun! Check-in oturumunu uzatmak için 1 saniye bas.",
+    "mining_holiday_active": "İzin Günü kullanıyorsun!"
+  },
+  "invite_friend": {
+    "invite_button": "Arkadaşını Davet Et",
+    "button_title": "Arkadaşını Davet Et",
+    "description": "Arkadaşın henüz [[:ice]]'da değil. Ona bir davetiye gönder!"
+  },
+  "balance_history": {
+    "title": "Bakiye Geçmişi",
+    "wallet": "Cüzdan",
+    "blockchain": "Blok Zincir",
+    "wallet_update_interval": "saatte bir güncellenir",
+    "blockchain_update_interval": "her 28 günde güncellenir",
+    "list_end_label": "bu, bakiye geçmişinin son girişidir.",
+    "no_data": "Belirtilen dönem için görüntülenecek veri yok.",
+    "you": "sen",
+    "contribution": "katkı"
+  },
+  "pop_up": {
+    "update_now": "Şimdi Güncelle",
+    "please_update": "Lütfen Güncelle",
+    "update_now_text": "Eski bir uygulama sürümü kullanıyorsun, kullanmayı devam etmek için uygulamayı güncellemen gerekiyor.",
+    "you_are_up_to_date": "Uygulama günceldir!",
+    "up_to_date_text": "Şu anda en son sürümü kullanıyorsun. Tüm değişiklikleri aşağıda kontrol edebilirsin.",
+    "resurrection": "Diriliş",
+    "resurrection_message": "Geçmiş [[:period]]'de kaybettiğin [[:amount]] coinu diriltmek ve almak için tek seferlik bir şansın var.",
+    "resurrection_warning": "Sadece bir kez diriltebilirsin!",
+    "please_confirm": "Lütfen onayla",
+    "resurrection_no_confirm_message": "[[:amount]] coinlarını sonsuza kadar kaybedeceksin. Devam etmek istediğine emin misin?",
+    "resurrection_yes_confirm_message": "Sadece bir kez diriltebilirsin! Devam etmek istediğine emin misin? [[:amount]] coinlar, sonraki saat içinde bakiyene geri dönecektir.",
+    "delete_account_confirmation_title": "Silme İşlemini Onayla",
+    "delete_account_confirmation_text": "Hesabını silmek, Ice bakiyen dahil olmak üzere tüm verilerini kalıcı olarak siler. Devam etmek istiyor musun?",
+    "registration_update_title": "Kayıt Güncellemesi",
+    "registration_update_text": "Telefon numarası kullanarak yeni hesapların oluşturulmasını geçici olarak durdurduk. Devam etmek için ya e-posta adresi seçmelisiniz veya sosyal ağ üzerinden giriş yapmalısınız.",
+    "link_email_title": "E-postanızı Bağlayın",
+    "link_email_text": "Telefon numarasıyla girişi geçici olarak durdurduk. Devam etmek için lütfen e-posta adresinizi bağlayın ve onaylayın.",
+    "account_error_title": "Hesap Hatası",
+    "account_error_text": "Telefon numarası kullanarak girişi geçici olarak durdurduk. Üzgünüz, hesabınız KYC sürecini geçemedi ve kurtarılmaya uygun değil.",
+    "login_via_email_title": "Lütfen E-posta ile Giriş Yapın",
+    "login_via_email_text": "Telefon numarasıyla girişi geçici olarak durdurduk. Lütfen hesabınıza bağlı olan e-posta adresini kullanarak giriş yapın.",
+    "email_in_use_title": "E-posta Zaten Kullanımda",
+    "email_in_use_text_part1": "Bağlamaya çalıştığınız e-posta adresi zaten kullanımda.",
+    "email_in_use_text_part2": "Eğer bu sizin e-posta adresinizse, lütfen önce bununla giriş yapın, kayıt işlemini tamamlayın ve e-postayı kullanılabilir hale getirmek için o hesabı silin, sonra telefon numarasıyla giriş yaparak bağlama işlemini tamamlayın.",
+    "successfully_linked_title": "Başarıyla Bağlandı!",
+    "successfully_linked_text": "E-posta adresi başarıyla hesabınıza bağlandı."
+  },
+  "periods": {
+    "3_days": "3 gün",
+    "7_days": "7 gün",
+    "30_days": "30 gün",
+    "1_day": "1 Gün",
+    "1_week": "1 Hafta",
+    "1_month": "1 Ay",
+    "90_days": "90 gün",
+    "14_days": "14 gün"
+  },
+  "notifications": {
+    "joined": " ekibine katıldı.",
+    "multiply": " ve {{count}} kişi ekibine katıldı.",
+    "ping": " sana ping attı, uyan!",
+    "delete": "Sil",
+    "add_notifications": "Sahte bildirimler ekle",
+    "no_notifications": "Görüntülenecek bildirim yok.",
+    "add_announcements": "Sahte duyurular ekle",
+    "add_both": "Sahte bildirimler ve duyurular ekle",
+    "clear_title": "Tüm bildirimler silinsin mi?",
+    "title": "Bildirimler"
+  },
+  "notification_feed_screen": {
+    "yesterday": "Dün",
+    "last_week": "Geçen Hafta",
+    "this_month": "Bu ay",
+    "last_month": "Geçen Ay",
+    "this_week": "Bu hafta"
+  },
+  "profile_privacy_edit": {
+    "step1": {
+      "title": "1. Profil İstatistiklerin",
+      "description": "Herkesin gözünden gizlemek istediğin bloklara dokun."
     },
-    "day": {
-      "zero": "gün",
-      "one": "gün",
-      "two": "gün",
-      "few": "gün",
-      "many": "gün",
-      "other": "gün"
+    "step2": {
+      "description": "Herkesin gözünden gizlemek istediğin bu bloğa dokun.",
+      "title": "2. Şu anki Rolün"
     },
-    "minutes_abbr": "dk",
-    "seconds_abbr": "sn"
+    "step3": {
+      "title": "3. Kazandığın Rozetler",
+      "description": "Rozetlerini herkesin gözünden gizlemek için buraya dokun."
+    }
+  },
+  "confirm_email": {
+    "title": "E-postanı onayla",
+    "description": "Lütfen e-posta adresini gir, kodu gönderelim.",
+    "note": "E-postayı 5 dakika içinde almadıysan, lütfen spam klasörünü kontrol et.",
+    "wrong_email": "Yanlış e-posta?",
+    "check_email": "E-postanı kontrol et",
+    "emailed_link_to": "Sihirli bir bağlantıyı şu e-postaya gönderdik",
+    "emailed_steps_to": "Adımları şu e-postaya gönderdik",
+    "link_instruction": "Giriş yapmak veya kaydolmak için bağlantıya tıkla.",
+    "reset_link_instruction": "Parolanı sıfırlamak için bağlantıya tıkla.",
+    "modify_title": "Yeni e-postayı onayla",
+    "modify_description": "Lütfen yeni e-posta adresini girin."
+  },
+  "invalid_link": {
+    "title": "Geçersiz bağlantı",
+    "description": "Maalesef bu bağlantı geçersiz, lütfen e-postanı tekrar gir, sana yeni bir bağlantı göndereceğiz."
+  },
+  "confirm_code": {
+    "title": "Kodu onayla",
+    "description": "Lütfen şuna gönderilen kodu gir",
+    "send_code_again": "Kodu tekrar gönder",
+    "resend_time_label": "Yeni kod şu süre içinde kullanılabilir ",
+    "enter_code": "Kodu gir",
+    "wrong_number": "Yanlış numara?"
+  },
+  "ice_bonus": {
+    "title": "Hoş geldin ödülü",
+    "description": "Tebrikler, [[:bold]]Sana[[/:bold]] olan [[:bold]]Güvenimizi[[/:bold]] kanıtlayan ilk [[:value]] [[:ice]] coinunu aldın.",
+    "balance_label": "GÜNCEL BAKİYEN"
+  },
+  "country_select": {
+    "title": "Ülke seç"
+  },
+  "roles": {
+    "snowman": {
+      "title": "Kar Adam",
+      "subtitle": "Bir kar imparatorluğu inşa et",
+      "description": "Ice ağına bağlılığını, insan olduğunu ve robot olmadığını göstermek için, her 24 saatte bir giriş yap."
+    },
+    "ambassador": {
+      "title": "Elçi",
+      "subtitle": "Kar imparatorluğunun hükümdarı",
+      "description": "Ekibine en az 100 kişi katıldığında elçi olursun. Her elçi, yeni özelliklere erken erişim elde edecek."
+    }
+  },
+  "confirm_phone": {
+    "modify_title": "Telefonu Onayla",
+    "modify_description": "Lütfen ülke kodunu onayla ve telefon numaranı gir.",
+    "button": "Ülkeyi ve telefonu onayla"
+  },
+  "date_select": {
+    "title": "Tarih seç"
+  },
+  "walkthrough": {
+    "overrides": {
+      "home": {
+        "team": {
+          "description": "[[:ice]], arkadaşlarınızla daha iyidir. Bu sayfada takım üyelerinizin durumunu görebilirsiniz. Ayrıca buradan onlara mesaj gönderebilirsiniz."
+        },
+        "referralscard": {
+          "title": "Takım Kartı",
+          "description": "Bu kartı dokunarak takım üyelerinizin son 5 gün boyunca istatistiklerinin gelişimini görüntüleyebilirsiniz."
+        }
+      },
+      "team": {
+        "segmented_control_tier_one": {
+          "title": "Takım",
+          "description": "Burada Ice Network'e katılmaları için davet ettiğiniz kişilerin listesini görebilirsiniz. Onların durumunu buradan kolayca takip edebilir ve pasif olanlara bildirimler gönderebilirsiniz."
+        },
+        "active_users": {
+          "description": "Bu, takım üyelerinizin giriş aktivitesinin mevcut durumudur. Aktif bir giriş oturumu yaptıklarında aktif olarak kabul edilirler."
+        },
+        "ping": {
+          "description": "Takım üyelerinize giriş oturumlarını başlatmaları için bildirim gönderin. Her bir yönlendirme için 24 saatte bir bildirim gönderebilirsiniz."
+        }
+      }
+    },
+    "profile": {
+      "hidden_data": {
+        "title": "Gizli veri",
+        "description": "Profilinizin diğer kullanıcılar tarafından nasıl görüldüğünü görmek için göz simgesine dokunun."
+      }
+    },
+    "news": {
+      "readmore": {
+        "title": "Devamını oku",
+        "description": "Burada ekibimizden en son haberleri görebilirsin. Makalenin tamamını okumak için bu düğmeye dokun."
+      },
+      "releasednews": {
+        "title": "Yayınlanan haberler",
+        "description": "Her bir haber başlığına dokun ve tam sürümünü oku. Tüm haber ve anketlerimizden haberdar ol."
+      }
+    },
+    "team": {
+      "allow_contacts": {
+        "title": "Tüm kişiler",
+        "description": "Kişilerini senkronize et ve kimlerin halihazırda [[:ice]]'da olduğunu gör. Gelecekte kişilerinin herhangi birine [[:ice]] gönderebileceksin."
+      },
+      "confirm_phone": {
+        "title": "Telefonu onayla",
+        "description": "Kimliğini onayla ve kişilerinin de Ice ağının bir üyesi olduğunu bilmelarine izin ver. Telefon numaran diğer üçüncü kişilerle paylaşılmayacaktır."
+      },
+      "contacts_list": {
+        "title": "Kişi listesi",
+        "description": "Bu, tüm kişilerinizi içeren listedir, [[:ice]] ağına katılmış olanlar listenin başında gösteriliyor."
+      },
+      "referrals": {
+        "title": "Referanslar",
+        "description": "Burada toplamda kaç referansın olduğunu göreceksin. Ne kadar çok kişi davet edersen o kadar çok kazanırsın."
+      },
+      "earnings": {
+        "title": "Kazançlar",
+        "description": "Güncel bakiyen her saat güncellenir ve burada gösterilir. Kademe 1 ve Kademe 2 kazançları ile birlikte doğrudan ve stake edilmiş kazançlarını içerir."
+      },
+      "segmented_control_tier_one": {
+        "title": "Kademe 1",
+        "description": "Burada Kademe 1 referanslarının listesini görebilirsin. Seninle aynı anda check-in yapan her arkadaşın için, temel mevcut benimseme kazanç oranına göre ekstra %25 alacaksın. [[:link]]Devamını oku[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "segmented_control_tier_two": {
+        "title": "Kademe 2",
+        "description": "Burada Kademe 2 referanslarının listesini görebilirsin. Seninle aynı anda check-in yapan her arkadaşın için, temel mevcut benimseme kazanç oranına göre ekstra %5 alacaksın. [[:link]]Devamını oku[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "active_users": {
+        "title": "Aktif Kullanıcılar",
+        "description": "Bu, referanslarının check-in etkinliklerinin mevcut durumlarıdır. Aktif bir check-in oturumu olduğunda aktif sayılırlar."
+      },
+      "tier_one_earnings": {
+        "title": "Kademe 1 Kazançları",
+        "description": "Burada Kademe 1 referanslarının listesini görebilirsin. Seninle aynı anda check-in yapan her arkadaşın için, temel mevcut benimseme kazanç oranına göre ekstra %25 alacaksın."
+      },
+      "ping": {
+        "title": "Ping Butonu",
+        "description": "Referanslarını check-in oturumlarına başlamaları için bilgilendir. Her referansa 24 saatte bir bildirim gönderebilirsin."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "Ana Sayfa",
+        "description": "[[:ice]]'a Hoş Geldin. Ana ekranda, bakiyen, mevcut kazanç oranın, global sıralaman ve ekibinle ilgili tüm istatistikleri bulabilirsin."
+      },
+      "invite": {
+        "title": "Davet et",
+        "description": "Davet ettiğin her kişi için, her ikiniz de temel kazanç oranınızın %25'ine varan kazanç elde edeceksiniz. Ne kadar çok kişi davet edersen o kadar çok kazanırsın."
+      },
+      "team": {
+        "title": "Ekip",
+        "description": "[[:ice]] arkadaşlarla daha iyi. Bu sayfada ekip üyelerinin durumlarını hem Kademe 1 hem de Kademe 2 seviyesinde görebilirsin. Onlara buradan da ping atabilirsin."
+      },
+      "news": {
+        "title": "Heberler",
+        "description": "Tüm haber ve anketlerimizden haberdar ol. Merkezi Olmayan Otonom bir Kuruluş olduğumuz için, gelecekteki özellikler için burada oy kullanabileceksin."
+      },
+      "profile": {
+        "title": "Profil",
+        "description": "Profil ayrıntılarını özelleştir ve kazandığın tüm başarıları ve rozetleri gör. Hesap makinesini buradan kullan, böylece kazancını tahmin edebilirsin."
+      },
+      "earningicestart": {
+        "title": "Ice kazanmak",
+        "description": "Bu düğmeye dokunarak [[:ice]] check-in oturumunu 24 saatte bir başlatabilirsin. Her gün geri gelmeyi ve kazanmaya başlamayı unutma!"
+      },
+      "earningiceseemore": {
+        "title": "Ice kazanmak",
+        "description": "Tekrar dokun ve mevcut check-in oturumunla ilgili daha fazla ayrıntı gör."
+      },
+      "stats": {
+        "title": "İstatistikler",
+        "description": "İstatistikler sayfasında, her gün check-in yapan Toplam ve Aktif kullanıcıları, En iyi ülkeleri ve kullanıcıları görebilirsin."
+      },
+      "help": {
+        "title": "Yardım",
+        "description": "Sormak istediğin bir şey var mı? Sık sorulan sorular listemize göz at. Aradığınızı bulamıyorsan hi@ice.io adresinden bize ulaşmaktan çekinme."
+      },
+      "preStaking": {
+        "title": "Ön Hisselendirme",
+        "description": "Kazandığın ödülleri ön hisselendirirsen getirilerini en üst düzeye çıkarırsın. Kazançlarına ek olarak bir bonus almak için hisselendirmelerini ve bonus süreni seç."
+      },
+      "wallet": {
+        "title": "Cüzdan Kartı",
+        "description": "Kazanç oranıyla birlikte mevcut [[:ice]] bakiyeni burada bulabilirsin. Ekibinden ne kadar çok referans çevrimiçi olursa, kazanma oranı o kadar yüksek olur."
+      },
+      "earning": {
+        "title": "Kazanç Kartı",
+        "description": "Kazanç oranından ve bonuslarından haberdar ol! Burada, uygulamadaki çeşitli etkinlikler için mevcut oranını, taban oranımızı ve bonus oranlarımızı kontrol edebilirsin."
+      },
+      "engagement": {
+        "title": "DAHİL OLMA KARTI",
+        "description": "Check-in seans serini ve izin günlerini takip et! Ardışık check-in seansların hakkında daha fazla ayrıntı ve kaç izin günün olduğunu görmek için bu bölümü kontrol et."
+      },
+      "profilecard": {
+        "title": "Profil Kartı",
+        "description": "Bu kartı takip ederek profil durumunu takip edebilirsin. Rolün, seviyen ve toplam referanslarınla birlikte mevcut küresel sıralamanı gösterir."
+      },
+      "referralscard": {
+        "title": "Referans Kartı",
+        "description": "Bu karta dokunarak hem Kademe 1 hem de Kademe 2 referansları için önceki 5 gündeki istatistiklerinin gelişimini gör."
+      },
+      "adoptioncard": {
+        "title": "Benimseme Kartı",
+        "description": "Geçen hafta toplam aktif Kardan Adamların ortalamasına göre, mevcut [[:ice]] kazanç oranını görebilirsin. Bir sonraki eşiğe ulaşıldığında kazanç oranı yarıya iner."
+      },
+      "nickname": {
+        "title": "Takma Ad",
+        "description": "Takma ad, seni benzersiz kılan şeydir. Arkadaşlarının ekibine katılmak için bu takma adı kullanmaları gerekecek. Profilini açmak için bu kısayolu da kullanabilirsin."
+      },
+      "balancehistory": {
+        "title": "Bakiye Geçmişi",
+        "description": "Yerel cüzdan ve blok zincirindeki mevcut [[:ice]] bakiyeni burada bulabilirsin. Yerel cüzdan bakiyesi her saat güncellenirken, blok zincir bakiyesi her 24 saatte bir güncellenir."
+      },
+      "achievements": {
+        "title": "Başarılar",
+        "description": "Aşağıdaki görevleri tamamla ve seviye atla! İlk check-in oturumunu şimdi başlat!"
+      }
+    }
+  },
+  "ActiveSessionsScreen": {
+    "title": "Girişlerin Bağlantılarını Kaldır",
+    "sessionName": "Şunula oturum aç {{providerName}}",
+    "buttons": {
+      "currentSession": "Mevcut oturum",
+      "endSession": "Oturumu Sonlandır",
+      "loginUnlinked": "Giriş bağlantısı kaldırıldı",
+      "sessionEnded": "Oturum Sona Erdi",
+      "unlink": "Bağlantıyı kaldır"
+    },
+    "dialogs": {
+      "unlinkLogin": {
+        "title": "Girişin bağlantısı kaldırılsın mı?",
+        "message": "{{providerName}} aracılığıyla oturum açma bağlantısını bu cihazdan kaldırmak istediğinden emin misin?"
+      },
+      "endSession": {
+        "title": "Oturum Sonlandırılsın mı?",
+        "message": "Bu cihazdan {{providerName}} oturumunu sonlandırmak istediğinden emin misin?"
+      }
+    }
   },
   "links": {
     "pre_staking": "https://ice.io/pre-staking/",
@@ -152,28 +934,464 @@
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
   },
-  "mainnet_landing": {
-    "header": "Ice madencilik faaliyeti sona erdi. 7 Ekim 2024 tarihinde ana ağı başlatmaya hazırlanırken, uygulamayı özel güncellemeler ve ana ağ uygulamasına erken erişim için kurulu tutun.",
-    "stats": {
-      "header": "Ice İstatistikleri",
-      "circulating_supply": "Dolaşımdaki Arz",
-      "total_supply": "Toplam Arz",
-      "price": "Fiyat",
-      "market_cap": "Piyasa Değeri",
-      "daily_trading_volume": "24 Saatlik İşlem Hacmi",
-      "dilluted_market_cap": "Sulandırılmış Piyasa Değeri"
+  "extra_bonus": {
+    "claim_title": "Bugünün Bonusu",
+    "claim_message": "Bugünün bonusunun zamanı geldi, lütfen aşağıdaki [[:bold]]“Bonus Talep Et”[[/:bold]] düğmesine dokun.",
+    "link": "Daha fazlasını öğren",
+    "extra_message": "Kazanç oranın üzerinden günlük ekstra bonusunu aldın.",
+    "expired_title": "Bonusun Süresi Doldu",
+    "expired_message": "Ne yazık ki, bugünün bonusunun süresi doldu. Bir sonraki bildirim için bizi izlemeye devam et!",
+    "result_title": "Tebrikler"
+  },
+  "qr_code": {
+    "description": "Ekibime katılmak için QR kodunu tara."
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "TikTok'ta bize katıl",
+      "description": "Sana ulaşmak ve TikTok'taki heyecan verici yeni topluluğumuz hakkında bilgi vermek istedik. Dijital para birimimiz Ice hakkında eğlenceli ve bilgilendirici içerikler paylaşıyoruz, aramıza katılmanı çok isteriz!"
     },
-    "countdown": {
-      "header": "Ice Ana Ağı Başlatma"
+    "youtube": {
+      "title": "YouTube'da bize katıl",
+      "description": "Nasıl Ice kazanılacağına ilişkin eğitimlerden, yeni özellikler hakkındaki güncellemelere ve hatta eğlenceli topluluk içeriğine kadar, YouTube kanalımız güncel kalmak için mükemmel bir yerdir."
     },
-    "roadmap": {
-      "header": "Vizyonumuz",
-      "title": "Whitepaper",
-      "subtitle": "Ice'teki vizyonumuz hakkında daha fazla bilgi edinin."
+    "linkedin": {
+      "title": "LinkedIn'de bize katıl",
+      "description": "LinkedIn'deki Ice topluluğuna katılmak, en son gelişmelerden haberdar olmanın ve dijital para birimlerinin geleceği konusunda senin kadar tutkulu olan benzer düşünen kişilerle bağlantı kurmanın harika bir yoludur."
     },
-    "join_mainnet": {
-      "title": "Merkezi Olmayan Geleceğe Katılın",
-      "subtitle": "Yaklaşan Ana Ağ uygulamamızı ve benzersiz özelliklerini önceden görüntüleyin."
+    "facebook": {
+      "title": "Facebook'ta bize katıl",
+      "description_part1": "Facebook sayfamızı takip etmeni önemle tavsiye ederiz.",
+      "description_part2": "Yalnızca Ice projesinde olup biten her şeyden haberdar olmana yardımcı olmakla kalmaz, aynı zamanda topluluğumuzla bağlantı kurmanın ve sohbetin bir parçası olmanın harika bir yoludur."
+    },
+    "instagram": {
+      "title": "Instagram'da bize katıl",
+      "description_part1": "Bizi Instagram'da takip etmek, döngüden haberdar olmanın ve aynı zamanda Ice tutkunu olan diğer kullanıcılarla bağlantı kurmanın harika bir yoludur.",
+      "description_part2": "Ayrıca, kullanıma sunduğumuz tüm yeni özelliklerden veya promosyonlardan ilk sen haberdar olacaksın."
+    },
+    "reddit": {
+      "title": "Bize Reddit'te Katılın",
+      "description": "Reddit'te Ice topluluğunu keşfedin, benzer düşüncelere sahip bireylerin fikirlerini paylaştığı bir platform.\n\nSohbete katılın, sorular sorun ve Ice madenciliği, özellikler ve daha fazlası hakkında ilgi çekici tartışmaları keşfedin."
+    },
+    "discord": {
+      "title": "Bize Discord'ta Katılın",
+      "description": "Canlı Discord topluluğumuza katılın ve Ice ile ilgili özel içgörüler ve tartışmalara dalın.\n\nCanlı sohbetlere katılın, Ice ile ilgili haberlerden haberdar olun ve tutkunuzu paylaşan bir topluluğun parçası olun."
+    },
+    "ice_founder_twitter": {
+      "title": "Zeus'u X'te Takip Edin",
+      "description": "Zeus'u, vizyoner kurucumuzu X'te takip edin, burada misyonumuz hakkında görüşlerini, güncellemeleri ve düşünceleri paylaşıyor. Sohbete katılın, sorular sorun ve bu heyecan verici yolculuğa birlikte başlarken bizi ilham verici liderimizle bağlı kalın.",
+      "button": "Zeus'u Takip Edin"
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Lütfen tüm arkadaşlarınıza ping atarken bekleyin · {{count}}"
+  },
+  "creative_library": {
+    "title": "Yaratıcı Ice Kütüphanesi",
+    "share": "Rüya takımınızı Ice ağı üzerinde oluşturun!",
+    "get_started": {
+      "header": "Rüya Takımınızı Oluşturun",
+      "subtitle": "Ice'te başlayın ve başarılı bir mikro topluluk oluşturun",
+      "description": "Kendi mikro topluluklarını oluşturan ve daha fazla ödül kazanan Ice kullanıcılarının hızla büyüyen sayısına katılın. Tanıtım araçlarımız, rehberlerimiz ve ipuçlarımız, sözü yaymak ve başarılı bir topluluk oluşturmak için kolay bir yol sunar.",
+      "get_started": "Başlayın",
+      "carousel": {
+        "01": {
+          "title": "Katılın",
+          "description": "Uygulamamızı indirin, takma adınızı alın ve madenciliğe başlayın.\n\nKüresel bir topluluğa katılacaksınız, insanların merkezileşmeye, özerkliğe ve insanların gücüne olan tutkusunu paylaşıyorlar."
+        },
+        "02": {
+          "title": "Davet Edin",
+          "description": "İzleyicinizi Ice'a katılmaya ve ek ödüller kazanmaya davet edin.\n\nAyrıca, merkezileşmenin ve finansın geleceği hakkındaki faydalarını ve haberini yaymaya yardımcı olacaksınız."
+        },
+        "03": {
+          "title": "Kazanın",
+          "description": "Ağınızı genişleterek ve diğerlerini Ice topluluğuna katılmaya teşvik ederek ödüllerinizi büyütün.\n\nFinansın geleceğini merkezileşme ve özerklik yoluyla devrimleştirmek misyonumuza katılın."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Videolar",
+        "description": "Davet kodunuzu tanıtmak için videolar koleksiyonumuzu kullanın, manzara veya portre, altyazılı veya altyazısız, sizin için varız.",
+        "action": "Videoları Görüntüle"
+      },
+      "02": {
+        "title": "Resimler",
+        "description": "Bir resim bin kelimeye değer. Bannerlarımız, sosyal medya varlıklarımız, şablonlarımız ve uygulama örneklemelerimiz arasından seçim yapabilirsiniz.",
+        "action": "Resimleri Görüntüle"
+      },
+      "03": {
+        "title": "Gömülü Banner",
+        "description": "Gömülü bannerımızla web sitenizin ziyaretçilerine kolayca Ice'ı tanıtabilir ve onları mikro topluluğunuza katılmaya davet edebilirsiniz.",
+        "action": "Bannerı Kur"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Hikayenizi Paylaşın",
+        "description": "Ice ağıyla olan yolculuğunuzu ve onun birçok faydasını kendi dilinizde bir makale yazarak paylaşın.\n\nBunları Blogunuzda, Medium, Reddit, Quora, Blogger ve daha fazlasında paylaşın.\n\nIce ve onun eşsiz özellikleri hakkında tüm bilgileri bulabilirsiniz [[:link]]Bilgi Bankası[[/:link]], [[:link]]Ana Sayfa[[/:link]], ve [[:link]]SSS[[/:link]] sayfalarımızda."
+      },
+      "spread": {
+        "title": "Haberi Yayın",
+        "description": "Sohbete katılın ve Ice ağını favori forumlarınıza tanıtın.\nYeni konular başlatın ve finansın merkezileşmesi, para biriminin geleceği ve Ice ile bir mikro topluluk oluşturmanın gücü hakkındaki düşüncelerinizi paylaşın.\n\nBir ☃️ Kar Adamı olun ve bu küresel para biriminin potansiyeli hakkında bir tartışma başlatın."
+      },
+      "bring": {
+        "title": "Arkadaşlarınızı Getirin",
+        "description": "Kolay kullanımlı davet özelliğimizi kullanın ve kişisel davet kodunuzu favori sosyal medya platformlarınızda arkadaşlarınızla paylaşın."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Web Sitesi Sahipleri için Tak & Çalıştır",
+        "description": "Ice ağını basit ve esnek JS bannerımızla doğrudan web sitenize gömün. Hızlı ve kolay bir kurulumdur ve web sitenizin markasına uygun hale getirilebilir. 50 dilde çevrilmiş ve herhangi bir web sitesi platformuyla uyumludur.\n\nKodu kopyalayın ve web sitenize yapıştırın, ve bugün ziyaretçilerinize Ice ağını tanıtmaya başlayın.",
+        "action": "Bannerı Kur"
+      },
+      "mobile": {
+        "title": "Mobil Uygulamalar için Kütüphane",
+        "description": "Kolay kullanımlı kütüphanemizi mobil uygulamanıza entegre edin ve kullanıcılarınızı mikro topluluğunuza katılmaya ve madenciliğe başlamaya davet edin.\n\nÇeviri desteği ve esnek kurulum seçenekleri ile tüm kullanıcılarınızın dünya genelinde aynı harika Ice deneyimine sahip olmalarını sağlayabilirsiniz.",
+        "action1": "Android kütüphanesi",
+        "action2": "React Native kütüphanesi"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "İyi Uygulamalar",
+        "rules": {
+          "01": {
+            "title": "Orijinal Olun",
+            "description": "Kişisel deneyiminiz ve bakış açınızdan yazın. Ice ağıyla ilgili dürüst düşüncelerinizi ve duygularınızı paylaşın."
+          },
+          "02": {
+            "title": "Dostça Bir Ton Kullanın",
+            "description": "Bir arkadaşınıza konuşuyormuş gibi yazın ve okuyucuların anlamakta zorluk çekebileceği aşırı teknik jargon veya dil kullanmaktan kaçının."
+          },
+          "03": {
+            "title": "Yaratıcı Olun",
+            "description": "Blog yazıları, videolar veya sosyal medya güncellemeleri gibi farklı içerik türleri denemekten çekinmeyin. Audience'nıza Ice ağı'nı nasıl tanıttığınızda eğlenin ve yenilikçi olun."
+          }
+        }
+      },
+      "bad": {
+        "title": "Kötü Uygulamalar",
+        "rules": {
+          "01": {
+            "title": "Spam Yapmayın",
+            "description": "İstenmeyen mesajlar göndermekten veya farklı platformlarda aynı içeriği tekrar tekrar paylaşmaktan kaçının. Bu rahatsız edici ve rahatsız edici olarak görülebilir."
+          },
+          "02": {
+            "title": "İnsanları Yanıltmayın",
+            "description": "Ice projesi kullanıcılara herhangi bir nakit ödeme yapmaz, yalnızca Ice coin'lerle ödüllendirir. Lütfen \"Ice'ınızı nakde dönüştürün\" veya \"Ice ile nasıl 100 dolar kazanılır\" gibi içerikleri paylaşmaktan kaçının."
+          },
+          "03": {
+            "title": "Dolandırıcı Faaliyetlere Katılmayın",
+            "description": "Topluluğumuzda şeffaflığı ve dürüstlüğü değerli buluyoruz. Birden fazla hesap oluşturma veya Ice ağını manipüle etme gibi herhangi bir dolandırıcı faaliyet kabul edilmeyecektir."
+          }
+        }
+      }
+    }
+  },
+  "face_auth": {
+    "header": "Yüz Onayı",
+    "title": "KYC Adımı #1",
+    "description": "Sorunsuz bir deneyim için yüz onayı ekliyoruz. Bu adım, gelecekteki Ana Ağ için sizi hazırlayan [[:bold]]erken Adım #1 KYC[[/:bold]] olarak görev yapar. \n\nBugün kimliğinizi onaylayın ve gelecekteki yolculuğunuzu sorunsuz hale getirin!",
+    "consent": "Ice [[:link]]KYC Şartları ve Koşulları[[/:link]] ile aynı fikirdeyim.",
+    "confirmation": "Bu kimlik doğrulaması için kullandığım kimliğin, bu hesapla ilişkilendirilen kimlikle aynı olacağını ve bu seçimin daha sonra değiştirilemeyeceğini onaylıyorum.",
+    "auth_status": {
+      "loading": {
+        "description": "Sizi kimlik doğrularken lütfen bekleyin..."
+      },
+      "success": {
+        "title": "✅ Kimlik Doğrulaması Başarılı",
+        "description": "Kimliğinizi onayladığınız için teşekkür ederiz. Giriş oturumunuz şimdi başlayacak.",
+        "action": "Tamam"
+      },
+      "failure": {
+        "title": "❌ Kimlik Doğrulaması Başarısız",
+        "description": "Kimliğinizi doğrulayamadık. Lütfen iyi bir aydınlatma ve yüzünüzün tamamen görünür olduğundan emin olun, sonra tekrar deneyin.",
+        "action": "Yeniden Dene"
+      },
+      "try_later": {
+        "title": "❌ Kimlik Doğrulaması Başarısız",
+        "description": "Kimliğinizi doğrulayamadık. Lütfen iyi bir aydınlatma ve yüzünüzün tamamen görünür olduğundan emin olun, sonra 1 saat içinde tekrar deneyin.",
+        "action": "Kapat"
+      },
+      "continue": {
+        "title": "😁 KYC Duygu Onayı",
+        "description": "Harika iş! İlk adımı bir selfie çekerek tamamladınız. Şimdi KYC sürecinizi devam ettirmek için gösterilen duyguları takip ederek devam edelim.",
+        "action": "Devam"
+      },
+      "banned": {
+        "title": "❌ Madencilik Devre Dışı Bırakıldı",
+        "description": "Kimliğinizin başka bir hesapla ilişkilendirildiğini tespit ettik. Bu bir hata olduğunu düşünüyorsanız, lütfen [[:bold]]feedback@ice.io[[/:bold]] adresine kullanıcı adınızı ve yüksek kaliteli bir selfie ekleyerek bir e-posta gönderin.",
+        "action": "Kapat"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Başla",
+      "please_show_this": "Lütfen bu duyguyu gösterin",
+      "emotions": {
+        "anger": "öfke",
+        "contempt": "hoşgörüsüzlük",
+        "disgust": "iğrenme",
+        "fear": "korku",
+        "happiness": "mutluluk",
+        "neutral": "tarafsız",
+        "sadness": "üzüntü",
+        "surprise": "şaşkınlık"
+      }
+    },
+    "device_angle_warning": {
+      "title": "Uyarı",
+      "description": "Lütfen kameraya bakarken telefonu düz tutun"
+    },
+    "camera_permission": {
+      "title": "Kamera İzni",
+      "description": "Devam etmek için lütfen kameraya erişime izin verin.",
+      "action": "Erişime izin ver"
+    },
+    "selfie_guidelines": {
+      "title": "Selfie Talimatları",
+      "instruction": "Devam etmeden önce, başarılı bir yüz kimlik doğrulama için bu talimatları izleyin:",
+      "check_1": "✅ Yüksek kaliteli bir fotoğrafınız olduğundan emin olun.",
+      "check_2": "✅ Işıklandırmanın iyi olduğundan emin olun.",
+      "check_3": "✅ Temiz bir arka planınız olsun.",
+      "check_4": "✅ Karanlık fotoğraflar olmasın.",
+      "check_5": "✅ Bulanık veya sisli fotoğraflar olmasın.",
+      "check_6": "✅ Kamera lensini temizleyin.",
+      "warning": "Yukarıdaki talimatları izlemezseniz, hesabınıza erişimi kaybedebilirsiniz.",
+      "confirmation": "Kriterleri izleyeceğimi onaylıyorum.",
+      "popup_title": "Onay",
+      "popup_body": "Tüm selfie talimatlarını izlediğinizi onaylıyor musunuz?"
+    }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Lütfen doğru takma adı girdiğinizden emin olun.",
+      "description": "Sizi davet eden arkadaşınızın takma adını girin."
+    },
+    "home": {
+      "pioneer": {
+        "description": "İlerlemenizi ve küresel durumu takip edin",
+        "referrals": "ARKADAŞLAR"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Ekibinizi büyütün ve bir topluluk oluşturun"
+        }
+      },
+      "team": {
+        "title": "Arkadaşlar",
+        "view_team": "arkadaşları görüntüle"
+      },
+      "roadmap": {
+        "button_subtitle": "Ice'teki geleceğimize dair daha fazla bilgi edinin."
+      },
+      "join_mainnet": {
+        "subtitle": "2024 sonunda piyasaya sürülecek olan gelecekteki Mainnet uygulamamızın bir önizlemesini alın ve benzersiz özelliklerini görün."
+      }
+    },
+    "settings": {
+      "invite_description": "Yeni üyelerle ekibinizi büyütün"
+    },
+    "profile": {
+      "invite_friends_engage": "Haberleri yayın ve arkadaşlarınızı Ice Network topluluğuna katılmaya davet edin!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Arkadaşlarınızı Ice topluluğuna katılmaya davet etmek için bu özelliği kullanın. Ağınızı genişletin, deneyimleri paylaşın ve kalıcı bağlantılar kurun."
+        },
+        "wallet": {
+          "description": "Mevcut Ice bakiyenizi ve kazanç oranınızı burada bulabilirsiniz."
+        },
+        "earning": {
+          "description": "Kazanç oranınızı ve bonuslarınızı güncel tutun! Burada mevcut oranınızı, temel oranımızı ve bonus oranlarını kontrol edebilirsiniz."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Bu bölümde davet ettiğiniz takım üyelerinin toplam sayısını göreceksiniz, böylece topluluğunuzun büyümesini ve gelişimini takip edebilirsiniz."
+        },
+        "earnings": {
+          "description": "Mevcut bakiyeniz her saat güncellenir ve burada gösterilir. Doğrudan ve staked kazançlarınızı içerir."
+        }
+      }
+    },
+    "claimUsername": {
+      "description": "Arkadaşlarınız [[:ice]]'ye katıldıklarında bu takma adı kullanmalıdır."
+    },
+    "users": {
+      "team": "Arkadaşlar"
+    },
+    "team": {
+      "empty": {
+        "team": "Şu anda hiç arkadaşınız yok!"
+      },
+      "contacts": {
+        "empty_description": "Kişilerinizi senkronize edin ve [[:ice]]'de kimin olduğunu görün."
+      }
+    }
+  },
+  "bsc_address": {
+    "title": "BNB Smart Chain Adresi",
+    "enter_address_title": "BNB Smart Chain adresinizi\nburaya girin",
+    "enter_address_description": "Faz 1 sırasında ICE jetonları BNB Smart Chain blockchain üzerinde piyasaya sürülecektir. Mainnet başlatıldıktan sonra, jetonlar BNB Smart Chain'den Ice Open Network (ION) blockchainine değiştirilebilir.",
+    "enter_address_confirmation": "BNB Smart Chain adresinizin doğru olduğundan emin misiniz?",
+    "validators_warning_title": "Adresi Onayla",
+    "validators_warning_text": "Lütfen dikkat: Hesaplarına BNB Smart Chain adresi ekleyen kişiler, ana ağ lansmanımız için whitepaperımızda belirtildiği gibi 300 anahtar doğrulayıcıdan biri olma hakkına sahip değillerdir.",
+    "walletDescription": "[[:bold]]Metamask[[/:bold]] veya [[:bold]]Trust Wallet[[/:bold]] gibi kendi kendini saklayan bir cüzdan kullanmanızı öneririz.\n\nLütfen cüzdan adresinizi iki kez kontrol ederek dağıtımı alacağınızdan emin olun."
+  },
+  "social_kyc": {
+    "header": "Doğrulama",
+    "verify_with_title": "{{method}} ile Doğrula",
+    "select_method_step": {
+      "title": "KYC Adımı #2",
+      "description": "Mevcut X profilinizi kullanarak hesabınızı kolayca doğrulayın."
+    },
+    "instructions_step": {
+      "show_example": "Örnek Göster",
+      "example_title": "Repost Örneği",
+      "x": {
+        "1": "X'i açın ve [[:bold]]@ice_blockchain[[/:bold]] hesabını arayın.",
+        "2": "Profildeki ilk gönderi olan sabitlenmiş gönderiyi bulun.",
+        "3": "❤️ Beğenin ve [[:bold]]Alıntı[[/:bold]] kullanarak aşağıdaki [[:bold]]KESİNLİKLE[[/:bold]] metni kullanarak yeniden paylaşın.",
+        "pop_up": {
+          "title": "Onay",
+          "description": "Sabitlenmiş gönderiyi beğendiniz mi ve tam metni kullanarak alıntıladınız mı, örnekteki gibi?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Metni kopyalamak için dokunun",
+        "copied": "Kopyalandı"
+      }
+    },
+    "verification_step": {
+      "title": "Onay",
+      "description": "Doğrulamanızı tamamlamak için lütfen önceki adımları tamamladığınız gönderinin bağlantısını yapıştırın. Bağlantının doğru olduğundan emin olun.",
+      "placeholder": "Bağlantıyı yapıştırın",
+      "instructions_step": {
+        "4": "Lütfen gönderinizin bağlantısını aşağıya yapıştırın. 👇"
+      },
+      "action": {
+        "verify": "Doğrula",
+        "wait": "Lütfen bekleyin",
+        "countdown": "Kalan süre: {{countdown}} saniye"
+      },
+      "pop_up": {
+        "title": "Geçersiz Bağlantı",
+        "description": "Doğru bağlantıyı kopyaladığınızdan emin olun.\n\n[[:bold]]Örnek:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "Kalan deneme sayısı: {{count}}",
+      "success": {
+        "title": "Doğrulama Tamamlandı",
+        "description": "Tebrikler, KYC Adımı #2'yi başarıyla tamamladınız. Şimdi doğrulandınız."
+      },
+      "error_try_again": {
+        "title": "Doğrulama Hatası",
+        "description": "Lütfen doğru gönderiyi paylaştığınızdan, verilen metni kullandığınızdan ve gönderinin kamuya açık olduğundan emin olun."
+      },
+      "error_try_later": {
+        "title": "Doğrulama Hatası",
+        "description": "Doğrulamayı tamamlayamadık. 7 gün sonra tekrar deneyebilirsiniz."
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "BNB Smart Chain Dağıtımı",
+      "description": "Mevcut X profilinizi kullanarak hesabınızı kolayca doğrulayarak BNB Smart Chain üzerindeki ICE jetonlarınızı alın."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "X gönderimimizi doğrudan açmak için [[:bold]]burayı[[/:bold]] tıklayın.",
+        "pop_up": {
+          "description": "Talimatları izleyin ve ilk adımda bağlantıyı tıkladığınızdan emin olun.",
+          "description2": "Doğru gönderiyi beğendiniz ve örnekte olduğu gibi tam metni kullanarak alıntı yaparak yeniden paylaştınız mı?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Tebrikler, doğrulamanızı başarıyla tamamladınız. Şimdi BNB Smart Chain dağıtımına hak kazandınız."
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "Hesap Onayı",
+    "description": "Hesabınızın kimliğini doğrulamak ve e-posta adresinizi güvenli bir şekilde bağlamak için lütfen kimlik doğrulama sürecimiz sırasında duygusal bir kontrolü başarıyla geçtiğinizden emin olun.",
+    "description2": "Bu adım, hesabınızın güvenliği ve gerçekliğini sağlamamıza yardımcı olur. İşbirliğiniz için teşekkür ederiz!"
+  },
+  "quiz": {
+    "title": "Quiz",
+    "intro": {
+      "description": "Ice'de, aktif ve bilgili üyelerin bir topluluğunu teşvik etmeye inanıyoruz. Misyonumuz, Ice coin'lerin, gerçekten bağlı ve vizyonumuzla uyumlu olanlara dağıtılmasını sağlamaktır.",
+      "community_engagement": {
+        "title": "🙌 Aktif Topluluk Katılımı",
+        "description": "Ice Ekosistemi içindeki katılımınız, madencilik yeteneklerinizi doğrudan etkiler:",
+        "point1": "Güncel Kalın: Haber makalelerimiz ve videolarımızla etkileşimde bulunun.",
+        "point2": "Aktif Katılım: Kişisel Gelişim Programımıza katılın ve YouTube veya Twitter Space'deki canlı oturumlara katılın.",
+        "point3": "Sosyal Etkileşimler: Ice hakkında beğenme, paylaşma, takip etme veya paylaşma yaparak varlığınızı artırın.",
+        "bottom_description": "Daha fazla katıldıkça, pozitif etkileşim puanınız o kadar yüksek olur ve KYC sürecini geçmenizi sağlar."
+      },
+      "terms_privacy": "[[:link]]Kullanım Koşulları ve Gizlilik Politikamızı[[/:link]] anladım ve kabul ediyorum.",
+      "knowledge_check": {
+        "title": "🧠 Bilgi Kontrolü",
+        "point2": "Quiz'i geçmek için en az 18 soruyu doğru cevaplamalısınız.",
+        "point3": "Başarısız bir quiz, materyallerimizle daha fazla ilgilenme gerekliliğini işaret eder.",
+        "point4": "Quiz'i tamamlamak için bir süre sınırlaması vardır. Ana sayfanızda quiz bölümünde son kullanma tarihine ne kadar süre kaldığınızı görebilirsiniz.",
+        "point5": "Son kullanma tarihinden önce 3 deneme hakkınız vardır. Quiz'i 3 kez başaramazsanız veya son kullanma tarihi geçerse, madencilik yapamayacak ve hesabınız kesintiye uğrayacaktır.",
+        "point6": "📚 Bu quiz hakkındaki tüm bilgilere [[:link]]buradan[[/:link]] ulaşabilirsiniz.",
+        "description": "Topluluğumuzun iyi bilgilendirilmiş ve vizyonumuzla uyumlu olduğundan emin olmak için:",
+        "point1": "Kapsamlı kaynaklarımızdan türetilen 21 soru ile karşılaşacaksınız."
+      },
+      "why_quiz": {
+        "title": "💡 Neden Quiz?",
+        "description": "Bilgi ve anlayışa olan bağlılığımız, topluluğumuzun en önündedir. Quiz ile Ice'ın doğru ellerde, projemizin vizyonuyla gerçekten uyum sağlayan kişilere ulaşmasını amaçlıyoruz."
+      }
+    },
+    "quiz_failure": {
+      "title": "Başarısız Sınav",
+      "description": "18'den fazla soruya doğru cevap vermediniz veya süre doldu, bu nedenle sınavı geçemezsiniz.",
+      "check_faq": "Bir sonraki sefer doğru cevap vermek için, bilgi tabanımızı ve Sıkça Sorulan Soruları incelemenizi öneririz."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Soru {{current}} / {{total}}",
+      "time_over": "⌛️ Süre doldu",
+      "correct_answers": "Doğru Cevaplar",
+      "wrong_answers": "Yanlış Cevaplar"
+    },
+    "confirmation_popup": {
+      "title": "Onay",
+      "start_description": "Sınavı başlatmak istediğinizden emin misiniz?",
+      "cancel_description": "Quiz'i atlayarak kullanabileceğiniz 3 denemeden birini kullanacaksınız. Quiz'i şimdi atlamak istediğinizden emin misiniz?"
+    },
+    "quiz_success": {
+      "title": "Doğrulama Tamamlandı",
+      "description": "Tebrikler, KYC'nizi başarıyla tamamladınız. Sürekli doğru cevaplarınız bağlılığınızı ve bilginizi kanıtladı. Şimdi doğrulandınız."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Madencilik Devre Dışı Bırakıldı",
+      "description": "KYC sürecimiz gereği üç ardışık quiz başarısızlığı veya tahsis edilen sürenin sona ermesi nedeniyle madencilik erişiminiz devre dışı bırakılmıştır."
+    },
+    "action": "Quiz'i Tamamlayın",
+    "reminder": "Lütfen madenciliğe devam etmek ve kesmeyi önlemek için sınavı tamamlamanız gerektiğini unutmayın.",
+    "days_left": "Kalan Gün: {{days}}",
+    "retries_left": "Kalan deneme sayısı: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "BNB Akıllı Zincir Dağıtımı",
+      "description": "X üzerindeki en son Borsa duyurularını aktif olarak destekleyerek aylık BNB Akıllı Zincir ICE coin dağıtım uygunluğunuzu sürdürün."
+    },
+    "results_step": {
+      "success": {
+        "description": "Tebrikler, başarıyla doğrulamanızı tamamladınız. Artık aylık BNB Akıllı Zincir dağıtım durumunuzu sürdürme hakkına sahipsiniz."
+      }
+    }
+  },
+  "buttons": {
+    "skip": "Atla"
   }
 }

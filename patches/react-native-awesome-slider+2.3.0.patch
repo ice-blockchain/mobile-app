@@ -1,0 +1,147 @@
+diff --git a/node_modules/react-native-awesome-slider/src/slide.tsx b/node_modules/react-native-awesome-slider/src/slide.tsx
+index 6d4dca6..bfcaf00 100644
+--- a/node_modules/react-native-awesome-slider/src/slide.tsx
++++ b/node_modules/react-native-awesome-slider/src/slide.tsx
+@@ -7,6 +7,7 @@ import {
+   TextStyle,
+   View,
+   ViewStyle,
++  I18nManager,
+ } from 'react-native';
+ import { GestureDetector, Gesture } from 'react-native-gesture-handler';
+ import Animated, {
+@@ -17,11 +18,13 @@ import Animated, {
+   useSharedValue,
+   withSpring,
+   withTiming,
++  WithTimingConfig,
+ } from 'react-native-reanimated';
+ import { Bubble, BubbleRef } from './ballon';
+ import { palette } from './theme/palette';
+ import { clamp } from './utils';
+ const formatSeconds = (second: number) => `${Math.round(second * 100) / 100}`;
++const isRTL = I18nManager.isRTL;
+ const hitSlop = {
+   top: 12,
+   bottom: 12,
+@@ -183,7 +186,7 @@ export type AwesomeSliderProps = {
+   /**
+    * withTiming options when step is defined. if false, no animation will be used. default false.
+    */
+-  stepTimingOptions?: false | Animated.WithTimingConfig;
++  stepTimingOptions?: false | WithTimingConfig;
+   markStyle?: StyleProp<ViewStyle>;
+   markWidth?: number;
+   onHapticFeedback?: () => void;
+@@ -291,7 +294,10 @@ export const Slider: FC<AwesomeSliderProps> = memo(function Slider({
+     let seekWidth = 0;
+     // when you set step
+     if (snappingEnabled && markLeftArr.value.length >= step) {
+-      seekWidth = markLeftArr.value[thumbIndex.value] + thumbWidth / 2;
++      const seekWidthValue = isRTL ? 
++        markLeftArr.value[markLeftArr.value.length - 1 - thumbIndex.value] :
++        markLeftArr.value[thumbIndex.value]
++      seekWidth = seekWidthValue + thumbWidth / 2;
+     } else {
+       seekWidth = progressToValue(progress.value) + thumbWidth / 2;
+     }
+@@ -309,9 +315,13 @@ export const Slider: FC<AwesomeSliderProps> = memo(function Slider({
+     let translateX = 0;
+     // when you set step
+     if (snappingEnabled && markLeftArr.value.length >= step) {
++      const translateXValue = isRTL ? 
++        markLeftArr.value[markLeftArr.value.length - 1 - thumbIndex.value] :
++        markLeftArr.value[thumbIndex.value]
++
+       translateX = stepTimingOptions
+-        ? withTiming(markLeftArr.value[thumbIndex.value], stepTimingOptions)
+-        : markLeftArr.value[thumbIndex.value];
++        ? withTiming(translateXValue, stepTimingOptions)
++        : translateXValue;
+     } else if (disableTrackFollow && isScrubbingInner.value) {
+       translateX = clamp(
+         thumbValue.value,
+@@ -329,7 +339,7 @@ export const Slider: FC<AwesomeSliderProps> = memo(function Slider({
+     return {
+       transform: [
+         {
+-          translateX,
++          translateX: isRTL ? -translateX : translateX,
+         },
+         {
+           scale: withTiming(thumbScaleValue ? thumbScaleValue.value : 1, {
+@@ -474,23 +484,41 @@ export const Slider: FC<AwesomeSliderProps> = memo(function Slider({
+         isScrubbing.value = true;
+       }
+       if (snappingEnabled) {
+-        const index = markLeftArr.value.findIndex((item) => item >= x);
+-        const arrNext = markLeftArr.value[index];
+-        const arrPrev = markLeftArr.value[index - 1];
++        const index = isRTL ?
++          markLeftArr.value.findIndex((item) => item <= x) :
++          markLeftArr.value.findIndex((item) => item >= x);
++        const arrNext = isRTL ? markLeftArr.value[index - 1] : markLeftArr.value[index];
++        const arrPrev = isRTL ? markLeftArr.value[index] : markLeftArr.value[index - 1];
+         // Computing step boundaries
+-        const currentX = (arrNext + arrPrev) / 2;
++        const currentX = isRTL ? (arrPrev - arrNext) / 2 : (arrNext + arrPrev) / 2;
+         const thumbIndexPrev = thumbIndex.value;
+-        if (x - thumbWidth / 2 > currentX) {
+-          thumbIndex.value = index;
++
++        if (isRTL) {
++          if (x - thumbWidth / 2 < currentX) {
++            thumbIndex.value = index;
++          } else {
++            if (index - 1 === -1) {
++              thumbIndex.value = 0;
++            } else if (index - 1 < -1) {
++              thumbIndex.value = step;
++            } else {
++              thumbIndex.value = index;
++            }
++          }
+         } else {
+-          if (index - 1 === -1) {
+-            thumbIndex.value = 0;
+-          } else if (index - 1 < -1) {
+-            thumbIndex.value = step;
++          if (x - thumbWidth / 2 > currentX) {
++            thumbIndex.value = index;
+           } else {
+-            thumbIndex.value = index - 1;
++            if (index - 1 === -1) {
++              thumbIndex.value = 0;
++            } else if (index - 1 < -1) {
++              thumbIndex.value = step;
++            } else {
++              thumbIndex.value = index - 1;
++            }
+           }
+         }
++
+         // Determine trigger haptics callback
+         if (
+           thumbIndexPrev !== thumbIndex.value &&
+@@ -582,6 +610,7 @@ export const Slider: FC<AwesomeSliderProps> = memo(function Slider({
+           bubbleOpacity.value = withSpring(1);
+ 
+           onActiveSlider(x);
++
+         })
+         .onEnd(({ x }) => {
+           if (disable) {
+@@ -676,7 +705,12 @@ export const Slider: FC<AwesomeSliderProps> = memo(function Slider({
+       return [];
+     },
+     (data) => {
+-      markLeftArr.value = data;
++      if (isRTL) {
++        const reverse = data.reverse();
++        markLeftArr.value = reverse;
++      } else {
++        markLeftArr.value = data;
++      }
+     },
+     [thumbWidth, markWidth, step, progress, width]
+   );

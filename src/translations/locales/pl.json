@@ -1,4 +1,33 @@
 {
+  "welcome": {
+    "page1": {
+      "title": "Witamy w Ice",
+      "description": "[[:ice]] to cyfrowa waluta, którą można gromadzić za pomocą telefonu. Ice należy do użytkowników takich jak Ty i jest przez nich używana."
+    },
+    "page2": {
+      "title": "Przyjazny dla planety",
+      "description": "[[:ice]] jest z natury bardziej energooszczędny niż BTC, ponieważ wykorzystuje mechanizm konsensusu „Proof of Stake”. W przypadku proof-of-stake (POS) właściciele kryptowalut walidują transakcje blokowe na podstawie liczby coinów stakowanych przez walidatora."
+    },
+    "page3": {
+      "title": "Moneta ludzi",
+      "description_part1": "Moc jest w twoich rękach.",
+      "description_part2": "Wszystko, co rozwijamy w [[:ice]], będzie open source oraz będzie kontrolowane przez zdecentralizowaną autonomiczną organizację (DAO)."
+    },
+    "page4": {
+      "title": "Bądź na bieżąco",
+      "description": "Dotknij [[:iceLogo]], aby codziennie meldować się w naszej bezpłatnej, energooszczędnej aplikacji mobilnej. Codzienne kliknięcie gwarantuje, że Ice trafi w ręce prawdziwych ludzi, a nie botów."
+    },
+    "page5": {
+      "title": "Polecaj i zarabiaj",
+      "description": "Zaproś swoich znajomych i razem zarabiajcie do 25% premii do podstawowej stawki zarobków za każdego znajomego, który dołączy do Twojego zespołu."
+    },
+    "page6": {
+      "title": "Powiadomienia",
+      "description_part1": "[[:ice]] sesje meldunkowe trwają tylko 24 godziny. Czy chcesz otrzymywać powiadomienia o zakończeniu bieżącej sesji?",
+      "description_part2": "Nie martw się, nie będziemy wysyłać spamu!",
+      "not_now": "Nie teraz"
+    }
+  },
   "button": {
     "yes_btn": "Tak, proszę",
     "next_btn": "Dalej",
@@ -46,6 +75,81 @@
     "start": "Rozpocznij",
     "faq": "FAQ",
     "knowledge_base": "Baza wiedzy"
+  },
+  "team": {
+    "contacts_tab": "Kontakty",
+    "tierOne_tab": "Poziom 1",
+    "tierTwo_tab": "Poziom 2",
+    "empty": {
+      "contacts": "Obecnie w książce telefonicznej nie ma żadnych kontaktów.",
+      "button_title": "Zaproś znajomych",
+      "t1": "Obecnie nie masz żadnych poleceń T1!",
+      "t2": "Obecnie nie masz żadnych poleceń T2!",
+      "team": "Obecnie nie masz żadnych członków zespołu!"
+    },
+    "contacts": {
+      "empty_title": "[[:ice]] działa lepiej ze znajomymi",
+      "empty_button_title": "Zezwalaj na dostęp do kontaktów",
+      "empty_description": "Zsynchronizuj swoje kontakty i zobacz, kto jest już w [[:ice]]. W przyszłości będzie można wysyłać Ice do dowolnych kontaktów."
+    },
+    "header": {
+      "search_placeholder": "Wyszukiwanie użytkowników",
+      "referrals": "Polecenia",
+      "earnings": "Zarobki"
+    },
+    "confirm_code": {
+      "title": "Potwierdź kod",
+      "description": "Wprowadź kod potwierdzający otrzymany na telefonie.",
+      "placeholder": "Wprowadź kod",
+      "button": "Potwierdź swój kod teraz"
+    },
+    "confirm_phone": {
+      "title": "Potwierdź telefon",
+      "description": "Potwierdź kod kraju i wprowadź numer telefonu."
+    },
+    "contacts_list": {
+      "ice_header": {
+        "friends": "znajomi"
+      },
+      "all_contacts": "Wszystkie kontakty",
+      "invite": "zaproszenie",
+      "invitation_text": "Cześć {{name}}, chcę Cię zaprosić do Ice."
+    },
+    "tier_one": {
+      "header_list": {
+        "title_earnings": "Zarobki na poziomie 1"
+      }
+    },
+    "tier_two": {
+      "header_list": {
+        "title_earnings": "Zarobki na poziomie 2"
+      }
+    }
+  },
+  "signIn": {
+    "logInSignUp": "Zaloguj się / Zarejestruj się",
+    "phone": "Telefon",
+    "or": "lub",
+    "reset_password": "Resetowanie hasła",
+    "welcome": "Witamy w Ice",
+    "email": "E-mail",
+    "slogan": "Zdecentralizowana przyszłość",
+    "privacy": "Kontynuując, wyrażasz zgodę na nasze [[:link]]Warunki korzystania z usługi[[/:link]] i [[:link]]Politykę prywatności[[/:link]]"
+  },
+  "claimUsername": {
+    "title": "Podaj pseudonim",
+    "description": "Twoi znajomi będą musieli użyć tego pseudonimu, aby dołączyć do Twojego zespołu.",
+    "inputPlaceholder": "Wprowadź swój pseudonim",
+    "note_part1": "Podczas tworzenia pseudonimu należy używać wyłącznie liter, cyfr i kropek.",
+    "note_part2": "Przykład:",
+    "note_example": "twoje.imie01"
+  },
+  "whoInvitedYou": {
+    "title": "Kto cię zaprosił?",
+    "description": "Wprowadź pseudonim osoby, która Cię zaprosiła.",
+    "inputPlaceholder": "Wprowadź pseudonim",
+    "dontHaveInvitationCode": "Wykonując ten krok, Ty i Twój znajomy otrzymacie 25% premii do podstawowej stawki zarobków, gdy oboje zameldujecie się w tym samym czasie.",
+    "dontHaveCodeTip": "Jeśli nie masz kodu zaproszenia, wybierzemy losowego członka jako osobę poleconą!"
   },
   "errors": {
     "nicknameSize": "Długość pseudonimu: od 4 do 20 znaków.",
@@ -99,6 +203,45 @@
     "same_phone_error": "Nie można użyć tego samego numeru.",
     "unable_to_validate_bsc_addr_eoa": "Nie można zweryfikować adresu EOA"
   },
+  "profile": {
+    "my_roles": {
+      "title": "Moja rola"
+    },
+    "mining_calculator": "kalkulator zarobków",
+    "invite_friends": "Zaproś znajomych",
+    "invite_friends_engage": "Przekazuj dalej i zapraszaj znajomych. Im więcej poleconych, tym więcej zarobisz!",
+    "global_rank": "globalna ranga",
+    "view_all_roles": "wyświetl wszystkie role",
+    "data_is_hidden": "dane są ukryte",
+    "progress_text": "{{value}}z{{total}}",
+    "not_found": {
+      "title": "Nie znaleziono użytkownika",
+      "description": "Niestety nie mogliśmy znaleźć tego użytkownika."
+    },
+    "my_badges": {
+      "title": "Moje odznaki"
+    },
+    "badges": {
+      "title": "Odznaki"
+    },
+    "roles": {
+      "title": "Role"
+    },
+    "badge_types": {
+      "coin": {
+        "title": "Monety",
+        "description": "monety"
+      },
+      "social": {
+        "title": "Społeczny",
+        "description": "znajomi"
+      },
+      "level": {
+        "title": "Poziom",
+        "description": "Poziom"
+      }
+    }
+  },
   "global": {
     "level": "poziom",
     "referrals": "polecenia",
@@ -117,6 +260,320 @@
       "today": "Dzisiaj"
     }
   },
+  "mining_calculator": {
+    "result_label": "Zarobisz",
+    "active_inviter": "Aktywny zapraszający",
+    "tier_1_ref": "Polecenia poziomu 1",
+    "tier_2_ref": "Polecenia poziomu 2",
+    "active_miners": "Aktywne polecenia",
+    "team_members": "Członkowie zespołu",
+    "active_team_members": "Aktywni członkowie zespołu"
+  },
+  "home": {
+    "wallet": {
+      "title": "PORTFEL",
+      "rate": "STAWKA WYNAGRODZENIA",
+      "balance": "BIEŻĄCE SALDO"
+    },
+    "pioneer": {
+      "rank": "RANKING GLOBALNY",
+      "referrals": "POLECENIA",
+      "description": "Poleć więcej użytkowników i zarabiaj więcej [[:ice]]."
+    },
+    "referrals": {
+      "title": "POLECENIA",
+      "description": "Statystyki poleceń z ostatnich 5 dni.",
+      "no_referrals_description": "Nie masz jeszcze żadnych poleceń.",
+      "users_tier_1": "Użytkownicy poziomu 1",
+      "users_tier_2": "Użytkownicy poziomu 2",
+      "title_team": "ZESPÓŁ",
+      "description_team": "Statystyki zespołu za ostatnie 5 dni",
+      "no_referrals_description_team": "Obecnie nie masz żadnych członków zespołu.",
+      "users": "Użytkownicy"
+    },
+    "adoption": {
+      "title": "WDRAŻANIE",
+      "level": "poziom",
+      "users": "użytkownicy"
+    },
+    "tasks": {
+      "achievements": "OSIĄGNIĘCIA",
+      "title": "Twoje postępy",
+      "description": "Wykonaj poniższe zadania i osiągnij wyższy poziom!",
+      "completed": {
+        "title": "Gratulacje",
+        "description": "Zaglądaj tu codziennie, by zdobyć dodatkowe nagrody!"
+      },
+      "popup": {
+        "title": "Dołącz do naszego kanału na Telegramie",
+        "description": "Podaj swój pseudonim używany w aplikacji Telegram.",
+        "placeholder": "Pseudonim"
+      },
+      "claim_username": {
+        "title": "Podaj swój pseudonim",
+        "description": "Ustaw go i udostępnij znajomym."
+      },
+      "start_mining": {
+        "title": "Zacznij zarabiać",
+        "description": "Pierwsza sesja meldunkowa."
+      },
+      "upload_profile_picture": {
+        "title": "Zdjęcie profilowe",
+        "description": "Prześlij swoje zdjęcie profilowe."
+      },
+      "join_telegram": {
+        "title": "Dołącz do Telegramu",
+        "description": "Bądź częścią naszej społeczności i dołącz już teraz."
+      },
+      "follow_us_on_twitter": {
+        "title": "Śledź nas na Twitterze",
+        "description": "Pozostańmy w kontakcie – śledź nas na Twitterze."
+      },
+      "invite_friends": {
+        "title": "Zaproś 5 znajomych",
+        "description": "Rozwijaj swój zespół i zwiększaj zarobki."
+      }
+    },
+    "overview": {
+      "title": "Przegląd"
+    },
+    "menu": {
+      "notifications": "Powiadomienia",
+      "staking": "Staking",
+      "stats": "Statystyki",
+      "help": "Pomoc",
+      "tips": "Porady"
+    },
+    "team": {
+      "title": "Zespół",
+      "view_team": "zobacz zespół"
+    },
+    "mining_rate": {
+      "title": "STAWKA WYNAGRODZENIA",
+      "base": "Podstawa"
+    },
+    "engagement": {
+      "title": "ZAANGAŻOWANIE",
+      "description_part1": "Seria odnosi się do liczby kolejnych dni, w których dokonano meldunku.",
+      "description_part2": "Za każde 6 kolejnych dni przysługuje jeden dzień wolny.",
+      "streak": "SERIA",
+      "days_off": "DNI WOLNE"
+    },
+    "roadmap": {
+      "title": "NASZA WIZJA",
+      "button_title": "Biała księga",
+      "button_subtitle": "Dowiedz się więcej o naszej wizji w Ice."
+    },
+    "join_mainnet": {
+      "title": "Dołącz do Zdecentralizowanej Przyszłości",
+      "subtitle": "Otrzymaj przedsmak naszej nadchodzącej aplikacji Mainnet i jej unikalnych funkcji."
+    },
+    "bsc_address": {
+      "title": "Adres BNB Smart Chain",
+      "subtitle": "Proszę wprowadzić swój adres BSC tutaj."
+    },
+    "verified_tooltip": {
+      "title": "KYC Zweryfikowane"
+    }
+  },
+  "settings": {
+    "title": "Ustawienia",
+    "profile": "Profil",
+    "legal": "Przepisy",
+    "support": "Wsparcie",
+    "personal_information_title": "Dane osobowe",
+    "personal_information_description": "Zarządzaj szczegółami swojego profilu.",
+    "notifications_title": "Powiadomienia",
+    "notifications_description": "Zarządzaj powiadomieniami tutaj.",
+    "push_notifications_title": "Powiadomienia push",
+    "push_notifications_description": "Dostosuj ustawienia powiadomień push.",
+    "email_notifications_title": "Powiadomienia e-mail",
+    "email_notifications_description": "Dostosuj ustawienia powiadomień e-mail.",
+    "terms_title": "Warunki świadczenia usług",
+    "terms_description": "Zapoznaj się z naszymi warunkami świadczenia usług.",
+    "privacy_title": "Polityka prywatności",
+    "privacy_description": "Zapoznaj się z naszą polityką prywatności.",
+    "feedback_title": "Wyślij opinię",
+    "feedback_description": "Podziel się z nami swoimi spostrzeżeniami.",
+    "invite_title": "Zaproś znajomego",
+    "invite_description": "Zdobądź dodatkowe Ice, zapraszając znajomych.",
+    "delete_title": "Usuń konto",
+    "delete_description": "Wymaż swoje konto.",
+    "delete_confirmation_title": "Czy na pewno chcesz usunąć konto?",
+    "delete_confirmation_yes": "Tak, usuń",
+    "logout_title": "Wyloguj się",
+    "logout_description": "Wyloguj się i zrób sobie przerwę.",
+    "logout_confirmation_title": "Czy na pewno chcesz się wylogować?",
+    "logout_confirmation_yes": "Tak, wyloguj się",
+    "confirm_phone": {
+      "title": "Potwierdź nowy telefon",
+      "description": "Potwierdź kod kraju i wprowadź nowy numer telefonu.",
+      "button": "Potwierdź nowy numer telefonu"
+    },
+    "notifications": {
+      "enable_prompt": "Powiadomienia nie są włączone. Czy chcesz je włączyć?",
+      "channel_achievements": "Osiągnięcia",
+      "channel_news": "Aktualności",
+      "channel_reminders": "Przypomnienia",
+      "channel_team": "Zespół",
+      "type_push": "PUSH",
+      "type_email": "EMAIL",
+      "disable_notifications": "Wyłączyć powiadomienia?",
+      "disable_notifications_description": "Wyłączenie powiadomień spowoduje, że nie będziesz otrzymywać aktualizacji, kiedy możesz rozpocząć meldunek, nie będziesz otrzymywać wiadomości ani informacji o drużynie.",
+      "domain": {
+        "disable_all": {
+          "title": "",
+          "description": ""
+        },
+        "weekly_stats": {
+          "title": "Statystyki tygodniowe",
+          "description": "Otrzymuj powiadomienia o swojej aktywności."
+        },
+        "weekly_report": {
+          "title": "Raport tygodniowy",
+          "description": "Otrzymuj powiadomienia o swojej aktywności."
+        },
+        "achievements": {
+          "title": "Osiągnięcia",
+          "description": "Otrzymuj powiadomienia o swoich postępach."
+        },
+        "promotions": {
+          "title": "Rozwój",
+          "description": "Otrzymuj powiadomienia o tym, jak rozwijać swój zespół i zarabiać więcej."
+        },
+        "news": {
+          "title": "Aktualności",
+          "description": "Otrzymuj powiadomienia od naszego zespołu."
+        },
+        "micro_community": {
+          "title": "Mikrospołeczność",
+          "description": "Otrzymuj powiadomienia o swoim zespole."
+        },
+        "daily_bonus": {
+          "title": "Premia dzienna",
+          "description": "Otrzymuj powiadomienia, aby odebrać swój dzienny bonus."
+        },
+        "mining": {
+          "title": "Status sesji",
+          "description": "Otrzymuj powiadomienia o aktywności związanej z meldowaniem."
+        },
+        "system": {
+          "title": "System",
+          "description": "Otrzymuj ważne powiadomienia dotyczące aplikacji Ice."
+        }
+      }
+    },
+    "language_settings": "Ustawienia języka",
+    "change_lang_confirm": {
+      "title": "Zmień język",
+      "prompt": "Zastosowanie tego ustawienia spowoduje ponowne uruchomienie aplikacji."
+    },
+    "profile_image": "Zdjęcie profilowe",
+    "inapp_privacy_title": "Prywatność",
+    "inapp_privacy_description": "Zarządzaj swoimi informacjami tutaj.",
+    "developer": "Deweloper",
+    "user_id": "Identyfikator użytkownika",
+    "user_token": "Token użytkownika",
+    "profile_photo": {
+      "delete": "Usuń zdjęcie",
+      "edit": "Edytuj zdjęcie profilowe",
+      "photo_gallery": "Galeria zdjęć",
+      "camera": "Kamera"
+    },
+    "confirm_email_confirmation_title": "Potwierdzić e-mail?",
+    "update_email_confirmation_title": "Zaktualizować e-mail?",
+    "update_email_confirmation_subtitle": "Zmiana adresu e-mail będzie wymagała ponownego zalogowania. Czy na pewno chcesz kontynuować?",
+    "unlink_logins_title": "Odłącz loginy",
+    "unlink_logins_description": "Tutaj możesz odłączyć swoje loginy."
+  },
+  "invite_share": {
+    "title": "Zaproś znajomego",
+    "telegram": "Telegram",
+    "twitter": "Twitter",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email": "E-mail",
+    "fb": "Kanał informacyjny",
+    "sms": "SMS",
+    "copy_link": "Kopiuj link",
+    "more": "Więcej",
+    "copied": "SKOPIOWANO",
+    "share_message": "Hej ☃️ Bałwanek! Dołącz do mojego zespołu w Ice i otrzymaj 10 monet Ice przy rejestracji używając mojego kodu polecającego:",
+    "share_subject": "Dołącz do mojego zespołu w Ice",
+    "description": "Przekazuj dalej i zapraszaj znajomych. Zarabiasz [[:ice]] za każdą nową osobę poleconą.",
+    "share": "Udostępnij"
+  },
+  "users": {
+    "ping": "PING",
+    "active": "Aktywny",
+    "inactive": "Nieaktywny",
+    "referralType": {
+      "T1": "Poziom 1",
+      "T2": "Poziom 2",
+      "team": "Członkowie zespołu"
+    },
+    "team": "Zespół"
+  },
+  "personal_information": {
+    "first_name": "Imię",
+    "last_name": "Nazwisko",
+    "country": "Kraj",
+    "city": "Miasto",
+    "title": "Dane osobowe",
+    "phone": "Telefon",
+    "email": "E-mail",
+    "username": "Pseudonim"
+  },
+  "username": {
+    "error": {
+      "already_taken": "Pseudonim jest już zajęty.",
+      "length": "Długość pseudonimu: od 4 do 20 znaków.",
+      "invalid_characters": "Usuń nieprawidłowe znaki.",
+      "not_found": "Nie znaleziono pseudonimu.",
+      "some_error": "Wystąpił błąd.",
+      "refer_yourself": "Nie możesz polecić siebie."
+    }
+  },
+  "staking": {
+    "time_left": "Pozostały czas",
+    "mining_rate": "Stawka zarobków",
+    "appeal": "Zwiększ swoją stawkę zarobków",
+    "benefits_description": "Pre-stake'uj swoje nagrody Ice przez okres do 5 lat i zwiększ swoje zarobki nawet o 250%.",
+    "bonus_label": "Premia za pre-staking",
+    "period_label": "Okres stakingu",
+    "title": "Pre-staking",
+    "current_rate": "Aktualna stawka",
+    "allocation": "Przydział",
+    "description": "Staking to proces, który polega na zaangażowaniu posiadanych aktywów krypto w celu wsparcia sieci blockchain i potwierdzenia transakcji.",
+    "terms_agree": "Zgadzam się na [[:link]]Warunki Stakingu[[/:link]] [[:ice]]. Twoje zasoby Ice zostaną zablokowane na wybrany okres.",
+    "stake_now": "Pre-stake'uj teraz!",
+    "balance_label": "Stake'owane saldo",
+    "confirm_title": "Potwierdź pre-stake",
+    "confirm_subtitle": "Czy na pewno chcesz pre-stake'ować swoje monety? Po potwierdzeniu nie można tego cofnąć.",
+    "remove_pre_staking": "Usuń Pre-Staking"
+  },
+  "stats": {
+    "header_title": "Statystyki",
+    "active": "Aktywni użytkownicy",
+    "total": "Całkowita liczba użytkowników",
+    "user_growth": "Wzrost liczby użytkowników",
+    "top_miners": "Najlepsi użytkownicy",
+    "top_countries": "Czołowe kraje",
+    "online_miners": "Użytkownicy online",
+    "detailed_information": "Szczegółowe informacje",
+    "total_coins": "Łączna liczba monet",
+    "filter": {
+      "total": "Łącznie",
+      "on_app": "Dostępne w aplikacji",
+      "pre_staked": "Pre-staked",
+      "on_blockchain": "Na blockchainie"
+    }
+  },
+  "update_required": {
+    "title": "Prosimy o aktualizację",
+    "description": "Używasz starej wersji aplikacji i musisz ją zaktualizować, aby móc z niej dalej korzystać.",
+    "button_title": "Zaktualizuj teraz"
+  },
   "general": {
     "good_morning": "Dzień dobry",
     "good_afternoon": "Dzień dobry",
@@ -126,25 +583,350 @@
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
-    "days_short": "d",
-    "hour": {
-      "zero": "godzin",
-      "one": "godzina",
-      "two": "godziny",
-      "few": "godziny",
-      "many": "godzin",
-      "other": "godzin"
+    "days_short": "d"
+  },
+  "news": {
+    "news_feed": "Kanał informacyjny",
+    "read_more": "Czytaj więcej",
+    "no_more_news": "to ostatni wpis w kanale wiadomości.",
+    "views": "{{viewsCount}} wyświetleń"
+  },
+  "search": {
+    "empty": "Wyszukuj kontakty, znajomych z Ice i członków swojej mikrospołeczności.",
+    "nothing_is_found": "Nic nie znaleziono dla tego zapytania.",
+    "search_by_country": "Wyszukiwanie według kraju",
+    "search_for_users": "Wyszukiwanie użytkowników",
+    "loading": "Wyszukiwanie..."
+  },
+  "tabbar": {
+    "mining_inactive_tooltip": "Dotknij tutaj, aby rozpocząć pierwszą sesję meldunku.",
+    "mining_reset_tooltip": "Naciśnij i przytrzymaj przez 1 sekundę, aby przedłużyć sesję meldunku.",
+    "mining_holiday_reset_tooltip": "Korzystasz z dnia wolnego! Naciśnij i przytrzymaj przez 1 sekundę, aby przedłużyć sesję meldunku.",
+    "mining_holiday_active": "Korzystasz z dnia wolnego!"
+  },
+  "invite_friend": {
+    "invite_button": "Zaproś znajomego",
+    "button_title": "Zaproś znajomego",
+    "description": "Twój znajomy nie jest jeszcze w [[:ice]]. Wyślij mu zaproszenie!"
+  },
+  "balance_history": {
+    "title": "Historia salda",
+    "wallet": "Portfel",
+    "blockchain": "Blockchain",
+    "wallet_update_interval": "aktualizowane co godzinę",
+    "blockchain_update_interval": "aktualizowane co 28 dni",
+    "list_end_label": "jest to ostatni wpis w historii salda.",
+    "no_data": "Brak danych do wyświetlenia dla określonego okresu.",
+    "you": "ty",
+    "contribution": "wkład"
+  },
+  "pop_up": {
+    "update_now": "Zaktualizuj teraz",
+    "please_update": "Prosimy o aktualizację",
+    "update_now_text": "Używasz starej wersji aplikacji i musisz ją zaktualizować, aby móc z niej dalej korzystać.",
+    "you_are_up_to_date": "Jesteś na bieżąco!",
+    "up_to_date_text": "Korzystasz teraz z najnowszej wersji. Sprawdź wszystkie zmiany poniżej.",
+    "resurrection": "Wskrzeszenie",
+    "resurrection_message": "Masz jednorazową szansę na wskrzeszenie i otrzymanie [[:amount]] monet, które straciłeś/aś w następującym ubiegłym okresie: [[:period]].",
+    "resurrection_warning": "Wskrzeszenie jest możliwe tylko raz!",
+    "please_confirm": "Prosimy o potwierdzenie",
+    "resurrection_no_confirm_message": "Stracisz następującą liczbę monet na zawsze: [[:amount]]. Czy na pewno chcesz kontynuować?",
+    "resurrection_yes_confirm_message": "Wskrzeszenie jest możliwe tylko raz! Czy na pewno chcesz kontynuować? Monety, które powrócą na saldo w ciągu następnej godziny: [[:amount]].",
+    "delete_account_confirmation_title": "Potwierdź usunięcie",
+    "delete_account_confirmation_text": "Usunięcie konta spowoduje trwałe usunięcie wszystkich danych, w tym salda Ice. Czy chcesz kontynuować?",
+    "registration_update_title": "Aktualizacja rejestracji",
+    "registration_update_text": "Tymczasowo wstrzymaliśmy tworzenie nowych kont za pomocą numeru telefonu. Aby kontynuować, musisz wybrać adres e-mail lub logowanie za pomocą sieci społecznościowych.",
+    "link_email_title": "Połącz swój adres e-mail",
+    "link_email_text": "Tymczasowo wstrzymaliśmy logowanie za pomocą numeru telefonu. Proszę połącz swój adres e-mail i potwierdź go, aby móc się zalogować.",
+    "account_error_title": "Błąd konta",
+    "account_error_text": "Tymczasowo wstrzymaliśmy logowanie za pomocą numeru telefonu. Niestety twoje konto nie przeszło procesu KYC i nie jest uprawnione do odzyskania.",
+    "login_via_email_title": "Proszę zaloguj się za pomocą adresu e-mail",
+    "login_via_email_text": "Tymczasowo wstrzymaliśmy logowanie za pomocą numeru telefonu. Proszę użyj adresu e-mail powiązanego z twoim kontem, aby się zalogować.",
+    "email_in_use_title": "Adres e-mail jest już używany",
+    "email_in_use_text_part1": "Adres e-mail, który próbujesz połączyć, jest już używany.",
+    "email_in_use_text_part2": "Jeśli to jest twój adres e-mail, zaloguj się najpierw za jego pomocą, zakończ proces rejestracji i usuń to konto, aby uwolnić adres e-mail, a następnie wróć, aby zalogować się za pomocą numeru telefonu i ukończyć proces łączenia.",
+    "successfully_linked_title": "Pomyślnie połączono!",
+    "successfully_linked_text": "Adres e-mail został pomyślnie połączony z twoim kontem."
+  },
+  "periods": {
+    "3_days": "3 dni",
+    "7_days": "7 dni",
+    "30_days": "30 dni",
+    "1_day": "1 dzień",
+    "1_week": "1 tydzień",
+    "1_month": "1 miesiąc",
+    "90_days": "90 dni",
+    "14_days": "14 dni"
+  },
+  "notifications": {
+    "joined": " jest teraz w Twoim zespole.",
+    "multiply": " i {{count}} innych dołączyło do twojego zespołu.",
+    "ping": " pinguje Cię – obudź się!",
+    "delete": "Usuń",
+    "add_notifications": "Dodaj próbne powiadomienia",
+    "no_notifications": "Brak powiadomień do wyświetlenia.",
+    "add_announcements": "Dodaj próbne ogłoszenia",
+    "add_both": "Dodawanie próbnych powiadomień i ogłoszeń razem",
+    "clear_title": "Wyczyścić wszystkie powiadomienia?",
+    "title": "Powiadomienia"
+  },
+  "notification_feed_screen": {
+    "yesterday": "Wczoraj",
+    "last_week": "Ostatni tydzień",
+    "this_month": "W tym miesiącu",
+    "last_month": "Ostatni miesiąc",
+    "this_week": "W tym tygodniu"
+  },
+  "profile_privacy_edit": {
+    "step1": {
+      "title": "1. Statystyki profilu",
+      "description": "Stuknij bloki, które chcesz ukryć przed dostępem publicznym."
     },
-    "day": {
-      "zero": "dni",
-      "one": "dzień",
-      "two": "dni",
-      "few": "dni",
-      "many": "dni",
-      "other": "dni"
+    "step2": {
+      "description": "Stuknij ten blok, aby ukryć go przed dostępem publicznym.",
+      "title": "2. Twoja obecna rola"
     },
-    "minutes_abbr": "min",
-    "seconds_abbr": "sek"
+    "step3": {
+      "title": "3. Zdobyte odznaki",
+      "description": "Stuknij tutaj, aby ukryć swoje odznaki przed dostępem publicznym."
+    }
+  },
+  "confirm_email": {
+    "title": "Potwierdź swój adres e-mail",
+    "description": "Podaj swój adres e-mail, a my wyślemy kod.",
+    "note": "Jeśli nie otrzymałeś wiadomości e-mail w ciągu 5 minut, sprawdź folder spamu.",
+    "wrong_email": "Nieprawidłowy e-mail?",
+    "check_email": "Sprawdź pocztę e-mail",
+    "emailed_link_to": "Wysłaliśmy magiczny link do",
+    "emailed_steps_to": "Wysłaliśmy e-mailem instrukcje do",
+    "link_instruction": "Kliknij łącze, aby się zalogować lub zarejestrować.",
+    "reset_link_instruction": "Kliknij łącze, aby zresetować hasło.",
+    "modify_title": "Potwierdź nowy adres e-mail",
+    "modify_description": "Wprowadź swój nowy adres e-mail."
+  },
+  "invalid_link": {
+    "title": "Nieprawidłowy link",
+    "description": "Niestety ten link jest nieprawidłowy, wprowadź ponownie swój adres e-mail, a my wyślemy Ci nowy link."
+  },
+  "confirm_code": {
+    "title": "Potwierdź kod",
+    "description": "Wprowadź kod wysłany do",
+    "send_code_again": "Wyślij kod ponownie",
+    "resend_time_label": "Nowy kod dostępny za ",
+    "enter_code": "Wprowadź kod",
+    "wrong_number": "Zły numer?"
+  },
+  "ice_bonus": {
+    "title": "Nagroda powitalna",
+    "description": "Gratulacje, zdobywasz swoje pierwsze [[:value]] monet(y) [[:ice]], co świadczy o naszym [[:bold]]zaufaniu[[/:bold]] do [[:bold]]Ciebie[[/:bold]].",
+    "balance_label": "Bieżące saldo"
+  },
+  "country_select": {
+    "title": "Wybierz kraj"
+  },
+  "roles": {
+    "snowman": {
+      "title": "Bałwanek",
+      "subtitle": "Zbuduj śnieżne imperium",
+      "description": "Zarabiaj, meldując się co 24 godziny, aby pokazać swoje zaangażowanie na rzecz sieci Ice i udowodnić, że jesteś człowiekiem, a nie robotem."
+    },
+    "ambassador": {
+      "title": "Ambasador",
+      "subtitle": "Władca śnieżnego imperium",
+      "description": "Ambasadorem zostaje się, gdy do zespołu dołączy co najmniej 100 osób. Każdy ambasador otrzyma wczesny dostęp do nowych funkcji."
+    }
+  },
+  "confirm_phone": {
+    "modify_title": "Potwierdź telefon",
+    "modify_description": "Potwierdź kod kraju i wprowadź numer telefonu.",
+    "button": "Potwierdź kraj i telefon"
+  },
+  "date_select": {
+    "title": "Wybierz datę"
+  },
+  "walkthrough": {
+    "overrides": {
+      "home": {
+        "team": {
+          "description": "[[:ice]] jest lepsze z przyjaciółmi. Na tej stronie możesz sprawdzić status członków swojego zespołu. Możesz również wysyłać do nich wiadomości stąd."
+        },
+        "referralscard": {
+          "title": "Karta zespołu",
+          "description": "Naciśnij tę kartę, aby sprawdzić rozwój statystyk członków swojego zespołu z ostatnich 5 dni."
+        }
+      },
+      "team": {
+        "segmented_control_tier_one": {
+          "title": "Zespół",
+          "description": "Tutaj możesz zobaczyć listę osób, które zaprosiłeś do dołączenia do Sieci Ice. Łatwo śledź ich status stąd i wysyłaj powiadomienia do tych nieaktywnych."
+        },
+        "active_users": {
+          "description": "To jest aktualny status aktywności członków Twojego zespołu podczas sesji meldunkowej. Są uważani za aktywnych, gdy mają aktywną sesję meldunkową."
+        },
+        "ping": {
+          "description": "Powiadom członków swojego zespołu, aby rozpoczęli sesję meldunkową. Możesz wysyłać jedno powiadomienie do każdej poleconej osoby co 24 godziny."
+        }
+      }
+    },
+    "profile": {
+      "hidden_data": {
+        "title": "Ukryte dane",
+        "description": "Dotknij ikony oka, aby zobaczyć, jak inni użytkownicy widzą twój profil."
+      }
+    },
+    "news": {
+      "readmore": {
+        "title": "Czytaj więcej",
+        "description": "Tutaj możesz zobaczyć najnowsze wiadomości od naszego zespołu. Naciśnij ten przycisk, aby przeczytać cały artykuł."
+      },
+      "releasednews": {
+        "title": "Opublikowane wiadomości",
+        "description": "Stuknij w poszczególne tytuły wiadomości i przeczytaj ich pełną wersję. Bądź na bieżąco z naszymi wiadomościami i ankietami."
+      }
+    },
+    "team": {
+      "allow_contacts": {
+        "title": "Zezwalaj na dostęp do kontaktów",
+        "description": "Zsynchronizuj swoje kontakty i zobacz, kto już jest w [[:ice]]. W przyszłości będzie można wysyłać [[:ice]] do dowolnego ze swoich kontaktów."
+      },
+      "confirm_phone": {
+        "title": "Potwierdź telefon",
+        "description": "Potwierdź swoją tożsamość i pozwól swoim kontaktom wiedzieć, że też jesteś członkiem sieci Ice. Numer telefonu użytkownika nie będzie udostępniany osobom trzecim."
+      },
+      "contacts_list": {
+        "title": "Lista kontaktów",
+        "description": "Jest to lista ze wszystkimi kontaktami, z których te, które już dołączyły do sieci [[:ice]], są wyświetlane na górze listy."
+      },
+      "referrals": {
+        "title": "Polecenia",
+        "description": "Tutaj zobaczysz, ilu masz łącznie poleconych. Im więcej osób zaprosisz, tym więcej zarobisz."
+      },
+      "earnings": {
+        "title": "Zarobki",
+        "description": "Twoje bieżące saldo jest aktualizowane co godzinę i wyświetlane tutaj. Obejmuje ono zarobki bezpośrednie i stakowane wraz z zarobkami poziomu 1 i 2."
+      },
+      "segmented_control_tier_one": {
+        "title": "Poziom 1",
+        "description": "Tutaj możesz zobaczyć listę poleconych na poziomie 1. Za każdego znajomego, który zamelduje się w tym samym czasie co Ty, otrzymasz dodatkowe 25% do podstawowej stawki zarobków wdrażania projektu. [[:link]]Czytaj więcej[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "segmented_control_tier_two": {
+        "title": "Poziom 2",
+        "description": "Tutaj możesz zobaczyć listę poleconych na poziomie 2. Za każdego znajomego, który zamelduje się w tym samym czasie co Ty, otrzymasz dodatkowe 5% do podstawowej stawki zarobków wdrażania projektu. [[:link]]Czytaj więcej[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "active_users": {
+        "title": "Aktywni użytkownicy",
+        "description": "Jest to aktualny stan aktywności związanej z meldunkiem poleconych. Liczą się jako aktywni, gdy mają aktywną sesję meldunku."
+      },
+      "tier_one_earnings": {
+        "title": "Zarobki na poziomie 1",
+        "description": "Tutaj możesz zobaczyć listę poleconych na poziomie 1. Za każdego członka, który zamelduje się w tym samym czasie co Ty, oboje otrzymacie dodatkowe 25% do podstawowej stawki zarobków za wdrażanie projektu."
+      },
+      "ping": {
+        "title": "Przycisk pingowania",
+        "description": "Powiadom poleconych o rozpoczęciu sesji meldunku. Możesz wysłać jedno powiadomienie do każdego poleconego co 24 godziny."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "Strona główna",
+        "description": "Witamy w [[:ice]]. Na ekranie głównym można znaleźć wszystkie statystyki dotyczące salda, bieżącego wskaźnika zarobków, globalnej pozycji oraz zespołu."
+      },
+      "invite": {
+        "title": "Zaproszenie",
+        "description": "Za każdą osobę, którą zaprosisz, oboje zarobicie do 25% podstawowej stawki zarobków. Im więcej osób zaprosisz, tym więcej zarobisz."
+      },
+      "team": {
+        "title": "Zespół",
+        "description": "[[:ice]] jest lepszy ze znajomymi. Na tej stronie można sprawdzić status członków zespołu z poziomów 1 i 2. Możesz również wysłać do nich powiadomienie z tego miejsca."
+      },
+      "news": {
+        "title": "Aktualności",
+        "description": "Bądź na bieżąco z naszymi wiadomościami i ankietami. Ponieważ jesteśmy zdecentralizowaną, autonomiczną organizacją, możliwe będzie tutaj głosowanie nad przyszłymi funkcjami."
+      },
+      "profile": {
+        "title": "Profil",
+        "description": "Dostosuj szczegóły swojego profilu i zobacz wszystkie swoje osiągnięcia i odznaki, które zostały zdobyte. Skorzystaj z kalkulatora tutaj, aby oszacować swoje zarobki."
+      },
+      "earningicestart": {
+        "title": "Zarabianie Ice",
+        "description": "Możesz rozpocząć sesję meldunku [[:ice]] co 24 godziny, dotykając tego przycisku. Nie zapomnij wrócić każdego dnia i zacząć zarabiać!"
+      },
+      "earningiceseemore": {
+        "title": "Zarabianie Ice",
+        "description": "Dotknij ponownie, aby wyświetlić więcej szczegółów na temat bieżącej sesji meldunku."
+      },
+      "stats": {
+        "title": "Statystyki",
+        "description": "Na stronie statystyk można zobaczyć łączną liczbę aktywnych użytkowników, którzy zameldowali się każdego dnia, a także czołowe kraje i najlepszych użytkowników."
+      },
+      "help": {
+        "title": "Pomoc",
+        "description": "Czy masz jakieś pytania? Sprawdź naszą listę często zadawanych pytań. Jeśli nie możesz znaleźć tego, czego szukasz, nie wahaj się skontaktować z nami pod adresem hi@ice.io."
+      },
+      "preStaking": {
+        "title": "Pre-staking",
+        "description": "Zmaksymalizuj swoje zyski poprzez pre-staking zdobytych nagród. Wybierz swój przydział i okres stakingu, aby otrzymać premię dodatkowo do swoich zarobków."
+      },
+      "wallet": {
+        "title": "Karta portfelowa",
+        "description": "Tutaj można znaleźć aktualne saldo [[:ice]] wraz ze stawką zarobków. Im więcej poleconych z Twojego zespołu jest online, tym wyższa stawka zarobków."
+      },
+      "earning": {
+        "title": "Karta zarabiania",
+        "description": "Bądź na bieżąco ze swoimi zarobkami i bonusami! Tutaj możesz sprawdzić swoją aktualną stawkę, naszą stawkę podstawową i stawki bonusowe za różne aktywności w aplikacji."
+      },
+      "engagement": {
+        "title": "Karta zaangażowania",
+        "description": "Śledź swoje sesje meldunkowe i dni wolne! Zajrzyj do tej sekcji, aby uzyskać więcej informacji na temat kolejnych sesji meldunku i sprawdzić liczbę dostępnych dni wolnych."
+      },
+      "profilecard": {
+        "title": "Karta profilu",
+        "description": "Możesz śledzić status swojego profilu, monitorując tę kartę. Wyświetla ona aktualną globalną rangę wraz z rolą, poziomem i łączną liczbą poleconych."
+      },
+      "referralscard": {
+        "title": "Karta poleceń",
+        "description": "Zobacz ewolucję statystyk poleceń z ostatnich 5 dni dla poleceń poziomu 1 i 2, wybierając tę kartę."
+      },
+      "adoptioncard": {
+        "title": "Karta wrażania",
+        "description": "W oparciu o średnią z ostatniego tygodnia wszystkich aktywnych bałwanków, można zobaczyć aktualną stawkę zarobków [[:ice]]. Stawka zarobków jest zmniejszana o połowę po osiągnięciu kolejnego progu."
+      },
+      "nickname": {
+        "title": "Pseudonim",
+        "description": "Pseudonim nadaje Ci wyjątkowości. Twoi znajomi będą musieli go użyć, aby dołączyć do Twojego zespołu. Możesz również użyć tego skrótu, aby otworzyć swój profil."
+      },
+      "balancehistory": {
+        "title": "Historia salda",
+        "description": "Tutaj można znaleźć aktualne saldo [[:ice]] w lokalnym portfelu i blockchainie. Saldo lokalnego portfela jest aktualizowane co godzinę, podczas gdy saldo blockchain jest aktualizowane co 24 godziny."
+      },
+      "achievements": {
+        "title": "Osiągnięcia",
+        "description": "Wykonaj poniższe zadania i awansuj! Rozpocznij swoją pierwszą sesję meldunku już teraz!"
+      }
+    }
+  },
+  "ActiveSessionsScreen": {
+    "title": "Zerwij logowania",
+    "sessionName": "Zaloguj się przez{{providerName}}",
+    "buttons": {
+      "currentSession": "Bieżąca sesja",
+      "endSession": "Zakończ sesję",
+      "loginUnlinked": "Logowanie zerwane",
+      "sessionEnded": "Sesja zakończona",
+      "unlink": "Zerwij"
+    },
+    "dialogs": {
+      "unlinkLogin": {
+        "title": "Zerwać logowanie?",
+        "message": "Czy na pewno chcesz zerwać logowanie przez {{providerName}} od tego urządzenia?"
+      },
+      "endSession": {
+        "title": "Koniec sesji?",
+        "message": "Czy na pewno chcesz zakończyć sesję logowania {{providerName}} z tego urządzenia?"
+      }
+    }
   },
   "links": {
     "pre_staking": "https://ice.io/pre-staking/",
@@ -152,28 +934,464 @@
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
   },
-  "mainnet_landing": {
-    "header": "Działalność górnicza Ice została zakończona. W trakcie przygotowań do uruchomienia głównego łańcucha 7 października 2024 roku, zachowaj zainstalowaną aplikację, aby otrzymywać ekskluzywne aktualizacje i wczesny dostęp do aplikacji głównego łańcucha.",
-    "stats": {
-      "header": "Statystyki Ice",
-      "circulating_supply": "Cyrkulująca Podaż",
-      "total_supply": "Całkowita Podaż",
-      "price": "Cena",
-      "market_cap": "Kapitalizacja rynkowa",
-      "daily_trading_volume": "Wolumen obrotu 24h",
-      "dilluted_market_cap": "Rozcieńczona Kapitalizacja Rynkowa"
+  "extra_bonus": {
+    "claim_title": "Dzisiejszy bonus",
+    "claim_message": "Nadszedł czas na dzisiejszy bonus. Dotknij przycisku [[:bold]]„Odbierz bonus”[[/:bold]]poniżej.",
+    "link": "Dowiedz się więcej",
+    "extra_message": "Otrzymano dodatkową dzienną premię od stawki zarobków.",
+    "expired_title": "Bonus wygasł",
+    "expired_message": "Niestety, dzisiejszy bonus wygasł. Bądź na bieżąco z kolejnymi powiadomieniami!",
+    "result_title": "Gratulacje"
+  },
+  "qr_code": {
+    "description": "Zeskanuj kod QR, aby dołączyć do mojego zespołu."
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "Dołącz do nas na TikToku",
+      "description": "Chcemy tylko poinformować o naszej nowej, ekscytującej społeczności na platformie TikTok. Dzielimy się zabawnymi i edukacyjnymi treściami na temat naszej cyfrowej waluty Ice i chcielibyśmy Cię do niej zaprosić! "
     },
-    "countdown": {
-      "header": "Uruchomienie Głównego Łańcucha Ice"
+    "youtube": {
+      "title": "Dołącz do nas na YouTube",
+      "description": "Od samouczków na temat zarabiania Ice po aktualizacje dotyczące nowych funkcji, a nawet zabawne treści społecznościowe – nasz kanał YouTube to idealne miejsce, aby być na bieżąco."
     },
-    "roadmap": {
-      "header": "Nasza Wizja",
-      "title": "Whitepaper",
-      "subtitle": "Dowiedz się więcej o naszej wizji w Ice."
+    "linkedin": {
+      "title": "Dołącz do nas na LinkedIn",
+      "description": "Dołączenie do społeczności Ice na LinkedIn to świetny sposób, aby być na bieżąco z najnowszymi wydarzeniami oraz aby nawiązać kontakt z podobnie myślącymi osobami, które tak samo jak Ty pasjonują się przyszłością walut cyfrowych."
     },
-    "join_mainnet": {
-      "title": "Dołącz do Zdecentralizowanej Przyszłości",
-      "subtitle": "Otrzymaj zapowiedź naszej nadchodzącej aplikacji Głównego Łańcucha i jej unikalnych funkcji."
+    "facebook": {
+      "title": "Dołącz do nas na Facebooku",
+      "description_part1": "Gorąco polecamy obserwowanie naszej strony na Facebooku.",
+      "description_part2": "Nie tylko pomoże Ci ona być na bieżąco ze wszystkim, co dzieje się w ramach projektu Ice, ale jest to również świetny sposób na nawiązanie kontaktu z naszą społecznością i bycie częścią dyskusji."
+    },
+    "instagram": {
+      "title": "Dołącz do nas na Instagramie",
+      "description_part1": "Obserwowanie nas na Instagramie to świetny sposób, aby być na bieżąco i łączyć się z innymi użytkownikami, którzy również pasjonują się Ice",
+      "description_part2": "Ponadto jako pierwszy dowiesz się o wszelkich nowych funkcjach lub promocjach, które oferujemy."
+    },
+    "reddit": {
+      "title": "Dołącz do nas na Reddit",
+      "description": "Odkryj społeczność Ice na Reddit, gdzie osoby o podobnych poglądach spotykają się, aby dzielić się swoimi myślami.\n\nDołącz do rozmowy, zadawaj pytania i eksploruj interesujące dyskusje na temat wydobycia Ice, funkcji i wiele więcej."
+    },
+    "discord": {
+      "title": "Dołącz do nas na Discord",
+      "description": "Dołącz do naszej żywiołowej społeczności na Discordzie i zagłębiaj się w dyskusje i ekskluzywne spostrzeżenia na temat Ice.\n\nWeź udział w żywych rozmowach, bądź na bieżąco z wiadomościami związanymi z Ice i stań się częścią społeczności, która dzieli Twoją pasję."
+    },
+    "ice_founder_twitter": {
+      "title": "Śledź Zeusa na X",
+      "description": "Śledź Zeusa, naszego wizjonerskiego założyciela, na X, gdzie dzieli się spostrzeżeniami, aktualizacjami i myślami na temat naszej misji. Dołącz do rozmowy, zadawaj pytania i pozostań w kontakcie z naszym inspirującym liderem, gdy ruszamy w tę ekscytującą podróż razem.",
+      "button": "Śledź Zeusa"
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Proszę czekać, aż wyślemy ping do wszystkich Twoich znajomych · {{count}}"
+  },
+  "creative_library": {
+    "title": "Kreatywna Biblioteka Ice",
+    "share": "Zbuduj swój zespół marzeń na sieci Ice!",
+    "get_started": {
+      "header": "Zbuduj swój zespół marzeń",
+      "subtitle": "Zacznij na Ice i buduj swoją kwitnącą mikrospołeczność",
+      "description": "Dołącz do szybko rosnącej liczby użytkowników Ice, którzy budują swoje własne mikrospołeczności i zdobywają więcej nagród. Nasze narzędzia promocyjne, przewodniki i wskazówki ułatwiają rozpowszechnianie informacji i budowanie udanych społeczności.",
+      "get_started": "Rozpocznij",
+      "carousel": {
+        "01": {
+          "title": "Dołącz",
+          "description": "Pobierz naszą aplikację, wybierz swoją ksywkę i rozpocznij kopanie.\n\nDołączysz do globalnej społeczności użytkowników Ice, którzy są pasjonatami decentralizacji, autonomii i siły ludzi."
+        },
+        "02": {
+          "title": "Zaproś",
+          "description": "Zapros swoją widownię, aby dołączyła do Ice i razem pracowali nad odblokowaniem dodatkowych nagród.\n\nPonadto, pomagasz rozprzestrzenić informacje o korzyściach decentralizacji i przyszłości finansów."
+        },
+        "03": {
+          "title": "Zarób",
+          "description": "Zwiększ swoje nagrody, rozbudowując swoją sieć i zachęcając innych do dołączenia do społeczności Ice.\n\nDołącz do naszej misji rewolucjonizowania przyszłości finansów poprzez decentralizację i autonomię."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Filmy",
+        "description": "Skorzystaj z naszej kolekcji filmów, aby promować swój kod zaproszenia, krajobraz lub portret, z napisami lub bez, mamy to dla Ciebie.",
+        "action": "Zobacz filmy"
+      },
+      "02": {
+        "title": "Obrazy",
+        "description": "Obraz wart więcej niż tysiąc słów. Możesz wybrać spośród naszej kolekcji banerów, elementów mediów społecznościowych, szablonów i makiety aplikacji.",
+        "action": "Zobacz obrazy"
+      },
+      "03": {
+        "title": "Osadzony Baner",
+        "description": "Z naszym osadzonym banerem łatwo możesz promować Ice na swojej stronie internetowej i zachęcać odwiedzających do dołączenia do Twojej mikrospołeczności.",
+        "action": "Zainstaluj baner"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Podziel się swoją historią",
+        "description": "Podziel się swoją podróżą z siecią Ice i jej wieloma korzyściami, pisząc artykuł w swoim języku.\n\nPodziel się nimi na swoim blogu, Medium, Reddit, Quora, Blogger i nie tylko.\n\nMożesz znaleźć wszystko o Ice i jego unikalnych cechach na naszej [[/:link]]Bazie Wiedzy[[/:link]], [[/:link]]Stronie Głównej[[/:link]] i [[/:link]]FAQ[[/:link]]."
+      },
+      "spread": {
+        "title": "Rozpowszechnij Słowo",
+        "description": "Dołącz do rozmowy i przedstaw sieć Ice swoim ulubionym forum.\nRozpocznij nowe wątki i podziel się swoimi myślami na temat finansów zdecentralizowanych, przyszłości walut i siły budowania mikrospołeczności z Ice.\n\nBądź ☃️ Śnieżkiem i wywołaj dyskusję na temat potencjału tej globalnej waluty."
+      },
+      "bring": {
+        "title": "Zaproszenie Przyjaciół",
+        "description": "Skorzystaj z naszej łatwej w użyciu funkcji zapraszania i podziel się swoim osobistym kodem zaproszenia z przyjaciółmi na ulubionych platformach mediów społecznościowych."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Podłącz i Graj dla Właścicieli Stron",
+        "description": "Włącz sieć Ice bezpośrednio na swojej stronie internetowej za pomocą naszego prostego i elastycznego banera JS. To szybka i łatwa konfiguracja, którą można dostosować do marki Twojej strony internetowej. Jest tłumaczona na 50 języków i jest kompatybilna z każdą platformą internetową.\n\nSkopiuj i wklej kod na swojej stronie i zacznij promować sieć Ice dla odwiedzających już dziś.",
+        "action": "Zainstaluj baner"
+      },
+      "mobile": {
+        "title": "Biblioteka dla Aplikacji Mobilnych",
+        "description": "Zintegruj naszą łatwą w użyciu bibliotekę w swojej aplikacji mobilnej i zaproś użytkowników do dołączenia do Twojej mikrospołeczności i rozpoczęcia kopania.\n\nDzięki wsparciu dla tłumaczeń i elastycznym opcjom konfiguracji, możesz zapewnić, że wszyscy użytkownicy będą mieli dostęp do tego samego wspaniałego doświadczenia z Ice, niezależnie od tego, gdzie się znajdują na świecie.",
+        "action1": "Biblioteka Android",
+        "action2": "Biblioteka React Native"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Dobre Praktyki",
+        "rules": {
+          "01": {
+            "title": "Bądź Autentyczny",
+            "description": "Pisz na podstawie swojego osobistego doświadczenia i perspektywy. Dziel się swoimi szczerymi myślami i uczuciami na temat sieci Ice."
+          },
+          "02": {
+            "title": "Użyj Przyjaznego Tonu",
+            "description": "Pisz tak, jakbyś rozmawiał z przyjacielem, i unikaj używania zbyt technicznego żargonu lub języka, który może być trudny do zrozumienia dla czytelników."
+          },
+          "03": {
+            "title": "Bądź Kreatywny",
+            "description": "Nie bój się eksperymentować z różnymi rodzajami treści, takimi jak wpisy na blogu, filmy czy aktualizacje w mediach społecznościowych. Baw się i bądź innowacyjny w sposób, w jaki promujesz sieć Ice swojej publiczności."
+          }
+        }
+      },
+      "bad": {
+        "title": "Złe Praktyki",
+        "rules": {
+          "01": {
+            "title": "Unikaj Spamowania",
+            "description": "Unikaj wysyłania niechcianych wiadomości lub wielokrotnego publikowania tego samego treści na różnych platformach. Może to być postrzegane jako działanie natarczywe i denerwujące."
+          },
+          "02": {
+            "title": "Nie Myl Ludzi",
+            "description": "Projekt Ice nie płaci użytkownikom gotówką, nagradzamy tylko monetami Ice. Unikaj publikowania treści takich jak \"Zamień swoje Ice na gotówkę\" lub \"Jak zarobić 100 dolarów z Ice\" i podobne."
+          },
+          "03": {
+            "title": "Nie Bierz Udziału w Działaniach Oszukańczych",
+            "description": "Cenimy uczciwość i transparentność w naszej społeczności. Jakiekolwiek działania oszukańcze, takie jak tworzenie wielu kont lub próby manipulacji siecią Ice, nie będą tolerowane."
+          }
+        }
+      }
+    }
+  },
+  "face_auth": {
+    "header": "Autoryzacja twarzą",
+    "title": "KYC Krok #1",
+    "description": "Dla płynnego doświadczenia dodajemy autoryzację twarzą. Ten krok pełni funkcję [[:bold]]wczesnego Krok #1 KYC[[/:bold]], przygotowując cię do bardziej efektywnej weryfikacji w przyszłym Mainnet. \n\nPotwierdź dzisiaj swoją tożsamość, aby zapewnić płynną podróż w przyszłość!",
+    "consent": "Zgadzam się z [[:link]]Warunkami KYC Ice[[/:link]].",
+    "confirmation": "Potwierdzam, że tożsamość, którą używam do tej autoryzacji, będzie tą samą, która jest powiązana z tym kontem, i tego wyboru nie można później zmienić.",
+    "auth_status": {
+      "loading": {
+        "description": "Proszę czekać, aż autoryzujemy cię..."
+      },
+      "success": {
+        "title": "✅ Autoryzacja udana",
+        "description": "Dziękujemy za potwierdzenie tożsamości. Sesja zameldowania rozpocznie się teraz.",
+        "action": "Zakończ"
+      },
+      "failure": {
+        "title": "❌ Autoryzacja nieudana",
+        "description": "Nie mogliśmy zweryfikować twojej tożsamości. Upewnij się, że jest dobre oświetlenie i twarz jest w pełni widoczna, a następnie spróbuj ponownie.",
+        "action": "Spróbuj ponownie"
+      },
+      "try_later": {
+        "title": "❌ Autoryzacja nieudana",
+        "description": "Nie mogliśmy zweryfikować twojej tożsamości. Upewnij się, że jest dobre oświetlenie i twarz jest w pełni widoczna, a następnie spróbuj ponownie za 1 godzinę.",
+        "action": "Zamknij"
+      },
+      "continue": {
+        "title": "😁 Weryfikacja emocji KYC",
+        "description": "Świetna robota! Ukończyłeś pierwszy krok, robiąc sobie zdjęcie. Teraz kontynuujmy, kierując się wyświetlanymi emocjami, aby kontynuować proces KYC.",
+        "action": "Kontynuuj"
+      },
+      "banned": {
+        "title": "❌ Wyłączono kopanie",
+        "description": "Zidentyfikowaliśmy, że twoja tożsamość jest powiązana z innym kontem. Jeśli uważasz, że to błąd, prześlij e-mail na adres [[:bold]]feedback@ice.io[[/:bold]] ze swoim pseudonimem i wysokiej jakości zdjęciem selfie.",
+        "action": "Zamknij"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Rozpocznij",
+      "please_show_this": "Proszę pokaż tę emocję",
+      "emotions": {
+        "anger": "gniew",
+        "contempt": "pogarda",
+        "disgust": "niesmak",
+        "fear": "strach",
+        "happiness": "szczęście",
+        "neutral": "neutralny",
+        "sadness": "smutek",
+        "surprise": "niespodzianka"
+      }
+    },
+    "device_angle_warning": {
+      "title": "Ostrzeżenie",
+      "description": "Proszę trzymać telefon prosto podczas patrzenia w kamerę"
+    },
+    "camera_permission": {
+      "title": "Uprawnienia aparatu",
+      "description": "Aby kontynuować, proszę zezwolić na dostęp do aparatu.",
+      "action": "Zezwól na dostęp"
+    },
+    "selfie_guidelines": {
+      "title": "Wytyczne dotyczące Selfie",
+      "instruction": "Zanim przejdziesz dalej, proszę postępuj zgodnie z tymi wytycznymi, aby pomyślnie przeprowadzić autentykację KYC twarzy:",
+      "check_1": "✅ Upewnij się, że masz wysokiej jakości zdjęcie.",
+      "check_2": "✅ Upewnij się, że masz dobre oświetlenie.",
+      "check_3": "✅ Upewnij się, że masz czyste tło.",
+      "check_4": "✅ Brak ciemnych zdjęć.",
+      "check_5": "✅ Brak rozmazanych lub zamglonych zdjęć.",
+      "check_6": "✅ Wyczyść obiektyw kamery.",
+      "warning": "Jeśli nie będziesz przestrzegać powyższych wytycznych, możesz utracić dostęp do swojego konta.",
+      "confirmation": "Potwierdzam, że będę przestrzegać kryteriów.",
+      "popup_title": "Potwierdzenie",
+      "popup_body": "Czy potwierdzasz, że przestrzegłeś wszystkich wytycznych dotyczących selfie?"
+    }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Upewnij się, że wprowadziłeś poprawny pseudonim.",
+      "description": "Wprowadź ksywkę przyjaciela, który Cię zaprosił."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Śledź swój postęp i globalny status",
+        "referrals": "PRZYJACIELE"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Rozwijaj swoją drużynę i buduj społeczność"
+        }
+      },
+      "team": {
+        "title": "Przyjaciele",
+        "view_team": "zobacz przyjaciół"
+      },
+      "roadmap": {
+        "button_subtitle": "Dowiedz się więcej o naszej przyszłej wizji na Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Otrzymaj podgląd naszej przyszłej aplikacji Mainnet i jej unikalnych funkcji, które zostaną wydane pod koniec 2024 roku."
+      }
+    },
+    "settings": {
+      "invite_description": "Rozwijaj swoją drużynę o nowych członków"
+    },
+    "profile": {
+      "invite_friends_engage": "Rozpowszechniaj wieści i zapraszaj swoich przyjaciół do dołączenia do społeczności Ice Network!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Użyj tej funkcji, aby zaprosić swoich przyjaciół do dołączenia do społeczności Ice. Rozwijaj swoją sieć, dziel się doświadczeniami i buduj trwałe relacje razem."
+        },
+        "wallet": {
+          "description": "Tutaj znajdziesz swoje obecne saldo Ice razem z stopą zarobków."
+        },
+        "earning": {
+          "description": "Bądź na bieżąco z twoją stopą zarobków i bonusami! Tutaj możesz sprawdzić swoją obecną stopę, naszą podstawową stopę i stawki bonusowe."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "W tej sekcji zobaczysz łączną liczbę członków drużyny, których zaprosiłeś, co pozwoli ci śledzić wzrost i rozwój twojej społeczności."
+        },
+        "earnings": {
+          "description": "Twoje obecne saldo jest aktualizowane co godzinę i jest tutaj wyświetlane. Obejmuje to twoje bezpośrednie i zablokowane zarobki."
+        }
+      }
+    },
+    "claimUsername": {
+      "description": "Twoi przyjaciele muszą używać tej ksywki, gdy dołączają do [[:ice]]."
+    },
+    "users": {
+      "team": "Przyjaciele"
+    },
+    "team": {
+      "empty": {
+        "team": "Obecnie nie masz żadnych przyjaciół!"
+      },
+      "contacts": {
+        "empty_description": "Synchronizuj swoje kontakty i zobacz, kto jest już na [[:ice]]."
+      }
+    }
+  },
+  "bsc_address": {
+    "title": "Adres BNB Smart Chain",
+    "enter_address_title": "Wprowadź swój\nadres BNB Smart Chain",
+    "enter_address_description": "W trakcie Fazy Pierwszej tokeny ICE zostaną wydane na blockchainie BNB Smart Chain. Po uruchomieniu Mainnet tokeny będą można wymieniać z BNB Smart Chain na blockchain Ice Open Network (ION).",
+    "enter_address_confirmation": "Czy jesteś pewien, że Twój adres BNB Smart Chain jest poprawny?",
+    "validators_warning_title": "Potwierdź Adres",
+    "validators_warning_text": "Proszę zwrócić uwagę: Osoby, które dodały adres BNB Smart Chain do swojego konta, nie kwalifikują się do zostania jednym z najlepszych 300 walidatorów, zgodnie z naszym whitepaperem dotyczącym uruchomienia głównego łańcucha.",
+    "walletDescription": "Zalecamy korzystanie z portfela samodzielnie zarządzanego, takiego jak [[:bold]]Metamask[[/:bold]] lub [[:bold]]Trust Wallet[[/:bold]].\n\nProszę upewnij się, że dwukrotnie sprawdzisz swój adres portfela, aby mieć pewność, że otrzymasz dystrybucję."
+  },
+  "social_kyc": {
+    "header": "Weryfikacja",
+    "verify_with_title": "Weryfikacja za pomocą {{method}}",
+    "select_method_step": {
+      "title": "Krok KYC #2",
+      "description": "Zweryfikuj swoje konto łatwo, korzystając ze swojego istniejącego profilu X."
+    },
+    "instructions_step": {
+      "show_example": "Pokaż przykład",
+      "example_title": "Przykład repostu",
+      "x": {
+        "1": "Otwórz X i wyszukaj konto [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Znajdź przypięty post, który jest pierwszym postem na profilu.",
+        "3": "❤️ Polub & 🔄 Zarepostuj go z [[:bold]]cytat[[/:bold]] używając [[:bold]]DOKŁADNEGO[[/:bold]] tekstu poniżej.",
+        "pop_up": {
+          "title": "Potwierdzenie",
+          "description": "Czy polubiłeś przypięty post i zarepostowałeś go z cytatem, używając dokładnego tekstu podanego w przykładzie?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Kliknij, aby skopiować tekst",
+        "copied": "Skopiowano"
+      }
+    },
+    "verification_step": {
+      "title": "Potwierdzenie",
+      "description": "Aby ukończyć weryfikację, proszę wkleić link do postu, gdzie ukończyłeś poprzednie kroki. Upewnij się, że link jest prawidłowy.",
+      "placeholder": "Wklej link",
+      "instructions_step": {
+        "4": "Wklej link do swojego postu poniżej. 👇"
+      },
+      "action": {
+        "verify": "Zweryfikuj",
+        "wait": "Proszę czekać",
+        "countdown": "Pozostało {{countdown}} sekund"
+      },
+      "pop_up": {
+        "title": "Nieprawidłowe Łącze",
+        "description": "Upewnij się, że skopiowałeś właściwe łącze.\n\n[[:bold]]Przykład:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "Liczba pozostałych prób: {{count}}",
+      "success": {
+        "title": "Weryfikacja zakończona",
+        "description": "Gratulacje, pomyślnie ukończyłeś Krok KYC #2. Jesteś teraz zweryfikowany."
+      },
+      "error_try_again": {
+        "title": "Błąd weryfikacji",
+        "description": "Upewnij się, że zarepostowałeś prawidłowy post, używając podanego tekstu, i że post jest publicznie dostępny."
+      },
+      "error_try_later": {
+        "title": "Błąd weryfikacji",
+        "description": "Nie udało nam się zakończyć weryfikacji. Możesz spróbować ponownie za 7 dni."
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Dystrybucja BNB Smart Chain",
+      "description": "Odbierz swoje monety ICE BNB Smart Chain, weryfikując swoje konto łatwo za pomocą istniejącego profilu X."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Kliknij link [[:bold]]tutaj[[/:bold]], aby otworzyć naszą publikację X bezpośrednio.",
+        "pop_up": {
+          "description": "Postępuj zgodnie z instrukcjami i upewnij się, że w pierwszym kroku kliknąłeś link, aby otworzyć naszą publikację X bezpośrednio.",
+          "description2": "Czy polubiłeś właściwy post i ponownie opublikowałeś go z cytatem, używając dokładnego tekstu, jak w przykładzie?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Gratulacje, ukończyłeś pomyślnie weryfikację. Teraz jesteś uprawniony do otrzymywania dystrybucji BNB Smart Chain."
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "Potwierdzenie konta",
+    "description": "Aby zweryfikować tożsamość twojego konta i bezpiecznie połączyć swój adres e-mail, upewnij się, że pomyślnie przejdziesz test emocji podczas procesu uwierzytelniania.",
+    "description2": "Ten krok pomaga nam zapewnić bezpieczeństwo i autentyczność twojego konta. Dziękujemy za współpracę!"
+  },
+  "quiz": {
+    "title": "Quiz",
+    "intro": {
+      "description": "W Ice wierzymy w tworzenie społeczności aktywnych i dobrze poinformowanych członków. Nasza misja polega na zapewnieniu, że monety Ice trafiają do tych, którzy naprawdę zaangażowani są i współgrają z naszą wizją.",
+      "community_engagement": {
+        "title": "🙌 Aktywne zaangażowanie społeczności",
+        "description": "Twoje zaangażowanie w ekosystemie Ice ma bezpośredni wpływ na Twoje możliwości wydobywcze:",
+        "point1": "Bądź na bieżąco: Śledź nasze artykuły i filmy informacyjne.",
+        "point2": "Aktywny udział: Dołącz do naszego programu rozwoju osobistego i udziału w sesjach na żywo na YouTube lub Twitter Space.",
+        "point3": "Interakcje społeczne: Zwiększ swoją obecność, lubiąc, udostępniając, śledząc lub publikując treści o Ice.",
+        "bottom_description": "Im bardziej jesteś zaangażowany, tym wyższy jest Twój wynik pozytywnych interakcji, co umożliwia przejście procesu KYC."
+      },
+      "terms_privacy": "Rozumiem i zgadzam się z [[:link]]Regulaminem[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Sprawdzenie Wiedzy",
+        "point2": "Aby zdać quiz, musisz udzielić poprawnej odpowiedzi na co najmniej 18 pytań.",
+        "point3": "Nieudany quiz wskazuje na konieczność dalszego zaangażowania się w nasze materiały.",
+        "point4": "Istnieje limit czasowy na zaliczenie quizu. Możesz sprawdzić, ile dni zostało do daty wygaśnięcia na swojej stronie głównej w sekcji quizu.",
+        "point5": "Masz 3 próby dostępne przed datą wygaśnięcia. Jeśli nie zdasz quizu 3 razy lub data wygaśnięcia minie, nie będziesz mógł już wydobywać i Twoje konto zostanie ukarane.",
+        "point6": "📚 Wszystkie informacje dotyczące tego quizu można przeczytać [[:link]]tutaj[[/:link]].",
+        "description": "Aby upewnić się, że nasza społeczność jest dobrze poinformowana i zgadza się z naszą wizją:",
+        "point1": "Otrzymasz 21 pytań opartych na naszych obszernych zasobach."
+      },
+      "why_quiz": {
+        "title": "💡 Dlaczego Quiz?",
+        "description": "Nasze zaangażowanie w wiedzę i zrozumienie znajduje się na czele naszej społeczności. Poprzez nasz quiz chcemy zapewnić, że Ice trafia do właściwych rąk, tych, którzy naprawdę rozumieją i podzielają wizję naszego projektu."
+      }
+    },
+    "quiz_failure": {
+      "title": "Niezdany Quiz",
+      "description": "Nie odpowiedziałeś poprawnie na więcej niż 18 pytań lub czas minął, więc nie możesz zdać quizu.",
+      "check_faq": "Aby odpowiedzieć poprawnie następnym razem, zalecamy zapoznanie się z naszą bazą wiedzy i FAQ."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Pytanie {{current}} z {{total}}",
+      "time_over": "⌛️ Czas minął",
+      "correct_answers": "Poprawne Odpowiedzi",
+      "wrong_answers": "Błędne Odpowiedzi"
+    },
+    "confirmation_popup": {
+      "title": "Potwierdzenie",
+      "start_description": "Czy na pewno chcesz rozpocząć quiz?",
+      "cancel_description": "Pomijając quiz, zużyjesz jedną dostępną próbę. Czy na pewno chcesz teraz pominąć quiz?"
+    },
+    "quiz_success": {
+      "title": "Zakończono Weryfikację",
+      "description": "Gratulacje, zakończyłeś pomyślnie swoje KYC. Twoje ciągłe poprawne odpowiedzi potwierdziły Twoje zaangażowanie i wiedzę. Jesteś teraz zweryfikowany."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Wyłączona Wydobywanie",
+      "description": "Dostęp do wydobywania został wyłączony ze względu na trzy kolejne nieudane quizy lub wygaśnięcie przyznanej daty, zgodnie z naszym procesem KYC."
+    },
+    "action": "Ukończ quiz",
+    "reminder": "Proszę zauważyć, że musisz ukończyć quiz, aby być uprawnionym do kontynuacji wydobywania i uniknięcia kary.",
+    "days_left": "Pozostało dni: {{days}}",
+    "retries_left": "Pozostałe próby: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "Dystrybucja BNB Smart Chain",
+      "description": "Zachowaj swoją uprawnienie do miesięcznej dystrybucji monet ICE BNB Smart Chain, aktywnie wspierając najnowsze ogłoszenia giełd na X."
+    },
+    "results_step": {
+      "success": {
+        "description": "Gratulacje, pomyślnie ukończyłeś weryfikację. Teraz jesteś uprawniony do utrzymania swojego miesięcznego statusu dystrybucji BNB Smart Chain."
+      }
+    }
+  },
+  "buttons": {
+    "skip": "Pomiń"
   }
 }

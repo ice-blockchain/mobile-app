@@ -1,10 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
-export type IceCoinStats = {
-  circulatingSupply?: number;
-  totalSupply?: number;
-  price?: number;
-  marketCap?: number;
-  '24hTradingVolume'?: number;
-  fullyDilutedMarketCap?: number;
+import {BarGraphData} from '@components/BarGraph/types';
+import {STATS_PERIODS} from '@store/modules/Stats/constants';
+
+export type StatsPeriod = typeof STATS_PERIODS[number];
+
+export type UsersBarGraphData = {
+  activeUsersData: BarGraphData[];
+  totalUsersData: BarGraphData[];
 };

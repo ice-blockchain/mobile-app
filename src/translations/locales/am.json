@@ -1,4 +1,33 @@
 {
+  "welcome": {
+    "page1": {
+      "title": "እንኳን ወደ Ice በደህና መጡ",
+      "description": "[[:ice]] በስልክዎ ማትረፍ የሚችሉት ዲጂታል ምንዛሬ ነው። Ice በባለቤትነት የያዙት እና የሚያስተዳድሩት እንደ እርስዎ ያሉ የዕለት ከለት ተጠቃሚዎች ናቸው።"
+    },
+    "page2": {
+      "title": "ለዓለም ተስማሚ",
+      "description": "[[:ice]] በአፈጣጠሩ “የማወራረጃ ማረጋገጫ” የስምምንት ስልትን ስለሚጠቀም ከ BTC የበለጠ ሀይል ቆጣቢ ነው። በማወራረጃ ማረጋገጫ (POS) ክሪፕቶከረንሲ ባለቤቶች ብሎክ ግብይቶችን የሚያረጋግጡት አንድ አረጋጋጭ በአወራረዳቸው ሳንቲሞች ብዛት ላይ በመመስረት ነው።"
+    },
+    "page3": {
+      "title": "የህዝብ ሳንቲም",
+      "description_part1": "ሀይሉ በእጅዎ ነው።",
+      "description_part2": "በ [[:ice]] የምናበለጽገው ማንኛውም ነገር ክፍት ምንጭ እና በ Decentralized Autonomous Organization (DAO) ቁጥጥር የሚደረግበት ይሆናል።"
+    },
+    "page4": {
+      "title": "እንደተገናኙ ይቆዩ",
+      "description": "ለዕለታዊ ቅኝትዎ ባለ ቀላል ኃይል ነጻ የሞባይል መተግበሪያችንን [[:iceLogo]]መታ ያድርጉ። ዕለታዊ ምትዎ Ice በቦቶች ሳይሆን በእውነተኛ ሰዎች እጅ መሆኑን ያረጋግጣል።"
+    },
+    "page5": {
+      "title": "ይምሩ እና ያትርፉ",
+      "description": "ጓደኞችዎን ይጋብዙ እና ቡድንዎን ለሚቀላቀል እያንዳንዱ ጓደኛ በመነሻ ማትረፊያ ተመንዎ (ሁለታቹህም) እስከ 25% ጉርሻ አግኙ።"
+    },
+    "page6": {
+      "title": "ማሳወቂያዎች",
+      "description_part1": "[[:ice]] የቅኝት ክፍለ-ጊዜዎች የሚቆዩት ለ 24 ሰዓታት ብቻ ነው። የአሁን ክፍለ-ጊዜዎ ሲያልቅ ማሳወቂያ መቀበል ይፈልጋሉ?",
+      "description_part2": "አይጨነቁ አይፈለጌ መልዕክቶችን አንልክልዎም!",
+      "not_now": "አሁን አይደለም"
+    }
+  },
   "button": {
     "yes_btn": "አዎ፣ እባክህ",
     "next_btn": "ቀጣይ",
@@ -46,6 +75,81 @@
     "start": "ምረጥ",
     "faq": "ብቻ ጥያቄዎች",
     "knowledge_base": "ስማር ክፍል"
+  },
+  "team": {
+    "contacts_tab": "እውቂያዎች",
+    "tierOne_tab": "እርከን 1",
+    "tierTwo_tab": "እርከን 2",
+    "empty": {
+      "contacts": "በስልክ መዝገብዎ ላይ ምን እውቂያዎች የለዎትም።",
+      "button_title": "ጓደኞች ጋብዝ",
+      "t1": "በአሁኑ ጊዜ ምንም የቲ1 ሪፈራል የሎትም!",
+      "t2": "በአሁኑ ጊዜ ምንም አይነት የT2 ሪፈራሎች የሎትም!",
+      "team": "በአሁኑ ጊዜ ምንም የቡድን አባላት የሎትም!"
+    },
+    "contacts": {
+      "empty_title": "[[:ice]] ከጓደኞች ጋር የተሻለ ነው",
+      "empty_button_title": "እውቂያዎች እንዲደርሱ ፍቀድ",
+      "empty_description": "እውቂያዎችዎን ያቀናጁ እና [[:ice]] ላይ ማን ቀደም ብሎ እንዳለ ይመልከቱ። ለወደፊቱ ለማንኛውም እውቂያዎችዎ  Ice ለመላክ ያስችልዎታል።"
+    },
+    "header": {
+      "search_placeholder": "ተጠቃሚዎችን ፈልግ",
+      "referrals": "ምሪቶች",
+      "earnings": "ትርፎች"
+    },
+    "confirm_code": {
+      "title": "ኮድ አረጋግጥ",
+      "description": "እብክዎ ስልክዎ ላይ የተቀበሉትን የማረጋጫ ኮድ ያስገቡ።",
+      "placeholder": "ኮድ ያስገቡ",
+      "button": "ኮድዎን አሁን ያረጋግጡ"
+    },
+    "confirm_phone": {
+      "title": "ስልክ አረጋግጥ",
+      "description": "አባክዎ የሀገርዎን ኮድ ያረጋግጡ እና ስልክዎን ያስገቡ።"
+    },
+    "contacts_list": {
+      "ice_header": {
+        "friends": "ጓደኞች"
+      },
+      "all_contacts": "ሁሉም እውቂያዎች",
+      "invite": "ጋብዝ",
+      "invitation_text": "ሰላም {{name}}፣ Ice ን እንዲቀላቀሉ ልጋብዝዎ እወዳለሁ።"
+    },
+    "tier_one": {
+      "header_list": {
+        "title_earnings": "እርከን 1 ትርፎች"
+      }
+    },
+    "tier_two": {
+      "header_list": {
+        "title_earnings": "እርከን 2 ትርፎች"
+      }
+    }
+  },
+  "signIn": {
+    "logInSignUp": "ግባ / ተመዝገብ",
+    "phone": "ስልክ",
+    "or": "ወይም",
+    "reset_password": "የይለፍ ቃል እንደገና አስጀምር",
+    "welcome": "እንኳን ወደ Ice በደህና መጡ",
+    "email": "ኢሜይል",
+    "slogan": "ያልተማከለው የወደፊት",
+    "privacy": "በመቀጠል በእኛ [[:link]]የአገልግሎት ደንቦች[[/:link]] እና [[:link]]የግላዊነት ፖሊሲy[[/:link]] ተስማምተዋል"
+  },
+  "claimUsername": {
+    "title": "ቅጽል ስም ጠይቅ",
+    "description": "ጓደኞችዎ ቡድንዎን ለመቀላቀል ይህን ቅጽል ስም መጠቀም ያስፈልጋቸዋል።",
+    "inputPlaceholder": "ቅጽል ስምዎን ያስገቡ",
+    "note_part1": "ቅጽል ስም ሲፈጥሩ ፊደሎች፣ ቁጥሮች፣ እና ነጥቦችን ብቻ ይጠቀሙ።",
+    "note_part2": "ምሳሌ፦",
+    "note_example": "your.name01"
+  },
+  "whoInvitedYou": {
+    "title": "ማን ጋበዝዎ?",
+    "description": "የጋበዝዎን ሰው ቅጽል ስም ያስገቡ።",
+    "inputPlaceholder": "ቅጽል ስም ያስገቡ",
+    "dontHaveInvitationCode": "ይህን እርምጃ በማጠናቀቅ እርስዎ እና ጓደኛዎ በተመሳሳይ ጊዜ ተመዝግበው ሲቃኙ በመሰረታዊ ትርፍ ተመንዎ ላይ 25% ጉርሻ ያገኛሉ።",
+    "dontHaveCodeTip": "የግብዣ ኮድ ከሌለዎት የዘፈቀደ አባል እንደ ምሪትዎ እንመርጣለን!"
   },
   "errors": {
     "nicknameSize": "የቅጽ ስም መጠን፦ 4-20 ቁምፊዎች።",
@@ -99,6 +203,45 @@
     "same_phone_error": "ተመሳሳይ ቁጥር መጠቀም አይችሉም",
     "unable_to_validate_bsc_addr_eoa": "አይዛመው የኢትዮጵያ አካውንት ማውረድ እንዲችል አይችልም"
   },
+  "profile": {
+    "my_roles": {
+      "title": "የእኔ ሚና"
+    },
+    "mining_calculator": "የገቢ ማስያ",
+    "invite_friends": "ጓደኞች ጋብዝ",
+    "invite_friends_engage": "ቃሉን ያሰራጩ እና ጓደኞችዎን ይጋብዙ። ብዙ ምሪቶች ሲኖሩ የበለጠ ያገኛሉ!",
+    "global_rank": "አለምአቀፍ ደረጃ",
+    "view_all_roles": "ሁሉንም ሚናዎች ተመልከት",
+    "data_is_hidden": "ውሂቡ ተደብቋል",
+    "progress_text": "{{value}} ከ {{total}}",
+    "not_found": {
+      "title": "ተጠቃሚ አልተገኘም።",
+      "description": "ውይ፣ ይህን ተጠቃሚ ማግኘት አልቻልንም።"
+    },
+    "my_badges": {
+      "title": "የእኔ ባጆች"
+    },
+    "badges": {
+      "title": "ባጆች"
+    },
+    "roles": {
+      "title": "ሚናዎች"
+    },
+    "badge_types": {
+      "coin": {
+        "title": "ሳንቲሞች",
+        "description": "ሳንቲሞች"
+      },
+      "social": {
+        "title": "ማህበራዊ",
+        "description": "ጓደኞች"
+      },
+      "level": {
+        "title": "ደረጃ",
+        "description": "ደረጃ"
+      }
+    }
+  },
   "global": {
     "level": "ደረጃ",
     "referrals": "ምሪቶች",
@@ -117,6 +260,320 @@
       "today": "ዛሬ"
     }
   },
+  "mining_calculator": {
+    "result_label": "ገቢ ያገኛሉ",
+    "active_inviter": "ንቁ ጋባዥ",
+    "tier_1_ref": "እርከን 1 ምሪቶች",
+    "tier_2_ref": "እርከን 2 ምሪቶች",
+    "active_miners": "ንቁ ምሪቶች",
+    "team_members": "የቡድን አባላት",
+    "active_team_members": "ንቁ የቡድን አባላት"
+  },
+  "home": {
+    "wallet": {
+      "title": "ዋሌት",
+      "rate": "የገቢ ተመን",
+      "balance": "የአሁኑ ቀሪ ሒሳብ"
+    },
+    "pioneer": {
+      "rank": "አለምአቀፍ ደረጃ",
+      "referrals": "ምሪቶች",
+      "description": "ተጨማሪ ተጠቃሚዎች ይምሩ እና ተጨማሪ [[:ice]] ያግኙ።"
+    },
+    "referrals": {
+      "title": "ምሪቶች",
+      "description": "ባለፉት 5 ቀናት የምሪቶች ስታቲስቲክስ።",
+      "no_referrals_description": "አሁን ምንም  ምሪቶች የለዎትም!",
+      "users_tier_1": "የተጠቃሚዎች እርከን 1",
+      "users_tier_2": "የተጠቃሚዎች እርከን 2",
+      "title_team": "ሽም",
+      "description_team": "ባለፉት 5 ቀናት የቡድን ስታቲስቲክስ",
+      "no_referrals_description_team": "እስካሁን ምንም የቡድን አባላት የሎትም።",
+      "users": "ተጠቃሚዎች"
+    },
+    "adoption": {
+      "title": "ማላመጃ",
+      "level": "ደረጃ",
+      "users": "ተጠቃሚዎች"
+    },
+    "tasks": {
+      "achievements": "ስኬቶች",
+      "title": "የእርስዎ እድገት",
+      "description": "ከታች ያሉትን ስራዎች ያጠናቁ እና ደረጃዎን ከፍ ያድርጉ!",
+      "completed": {
+        "title": "እንኳን ደስ አለዎት",
+        "description": "ተጨማሪ ሽልማቶችን ለማግኘት በየቀኑ መግባትዎን ይቀጥሉ!"
+      },
+      "popup": {
+        "title": "የቴሌግራም ቻናላችንን ይቀላቀሉ",
+        "description": "በቴሌግራም ላይ ጥቅም ላይ የዋለውን ቅጽል ስምዎን ይግለጹ።",
+        "placeholder": "ቅጽል ስም"
+      },
+      "claim_username": {
+        "title": "ቅጽል ስም ጠይቅ",
+        "description": "ያቀናብሩ እና ለጓደኞችዎ ያጋሩ።"
+      },
+      "start_mining": {
+        "title": "ገቢ ማግኘት ጀምር",
+        "description": "የመጀመሪያው የመግቢያ ክፍለ ጊዜ።"
+      },
+      "upload_profile_picture": {
+        "title": "የመገለጫ ስዕል",
+        "description": "የመገለጫ ስዕልዎን ይስቀሉ።"
+      },
+      "join_telegram": {
+        "title": "ቴሌግራም ይቀላቀሉ",
+        "description": "የእኛ ማህበረሰብ አካል ይሁኑ እና አሁኑን ይቀላቀሉ።"
+      },
+      "follow_us_on_twitter": {
+        "title": "በትዊተር ላይ ይከተሉን",
+        "description": "እንገናኝ፣ በትዊተር ላይ ይከተሉን።"
+      },
+      "invite_friends": {
+        "title": "ጓደኞች ጋብዝ",
+        "description": "ቡድንዎን ያሳድጉ እና ገቢዎን ይጨምሩ።"
+      }
+    },
+    "overview": {
+      "title": "አጠቃላይ እይታ"
+    },
+    "menu": {
+      "notifications": "ማሳወቂያዎች",
+      "staking": "ማስያዝ",
+      "stats": "ስታቲስቲክስ",
+      "help": "እርዳታ",
+      "tips": "መመለሻዎች"
+    },
+    "team": {
+      "title": "ቡድን",
+      "view_team": "ቡድን ተመልከት"
+    },
+    "mining_rate": {
+      "title": "የገቢ ተመን",
+      "base": "መነሻ"
+    },
+    "engagement": {
+      "title": "ተሳትፎ",
+      "description_part1": "ዥረት ምን ያህል ተከታታይ ቀናት እንደገቡ ያመለክታል።",
+      "description_part2": "ለእያንዳንዱ 6 ተከታታይ ቀናት የአንድ ቀን እረፍት ያገኛሉ።",
+      "streak": "ዥረት",
+      "days_off": "የእረፍት ቀን"
+    },
+    "roadmap": {
+      "title": "የእኛ መግለጫ",
+      "button_title": "የእኛ መግለጫ",
+      "button_subtitle": "ከአይስ የእኛ መግለጫ ጥያቄዎችን ተጨማሪ ይፈልጋሉ።"
+    },
+    "join_mainnet": {
+      "title": "ያልተማከለ የወደፊትን ተቀላቀል",
+      "subtitle": "የእኛን መጪ የMainnet መተግበሪያ እና ልዩ ባህሪያቱን ያግኙ።"
+    },
+    "bsc_address": {
+      "title": "BNB Smart Chain አድራሻ",
+      "subtitle": "እባክዎን የህክም አድራሻዎን እዚህ ይህንን ይጎብኙ።"
+    },
+    "verified_tooltip": {
+      "title": "KYC የተረጋገጠ"
+    }
+  },
+  "settings": {
+    "title": "ቅንብሮች",
+    "profile": "መገለጫ",
+    "legal": "ህጋዊ",
+    "support": "ድጋፍ",
+    "personal_information_title": "የግል መረጃ",
+    "personal_information_description": "የመገለጫ ዝርዝሮችን ያስተዳድሩ።",
+    "notifications_title": "ማሳወቂያዎች",
+    "notifications_description": "ማሳወቂያዎችዎን እዚህ ያስተዳድሩ።",
+    "push_notifications_title": "ማሳወቂያዎች",
+    "push_notifications_description": "የተገፊ ማሳወቂያ ቅንብሮችዎን ያብጁ።",
+    "email_notifications_title": "ማሳወቂያዎች",
+    "email_notifications_description": "የኢሜይል ማሳወቂያ ቅንብሮችዎን ያብጁ።",
+    "terms_title": "የአገልግሎት ውል",
+    "terms_description": "የአገልግሎት ውላችንን ይገምግሙ።",
+    "privacy_title": "የግላዊነት ፖሊሲ",
+    "privacy_description": "ስለ ግላዊነት ፖሊሲያችን ይወቁ።",
+    "feedback_title": "ግብረመልስ ላክ",
+    "feedback_description": "ሀሳቦችዎን ለእኛ ያካፍሉን።",
+    "invite_title": "ጓደኞች ጋብዝ",
+    "invite_description": "ጓደኞችዎን በመጋበዝ ተጨማሪ Ice ያትርፉ።",
+    "delete_title": "መለያ ሰርዝ",
+    "delete_description": "መለያዎን ይደምስሱ።",
+    "delete_confirmation_title": "እርግጠኛ ነዎት መለያውን ማስወገድ ይፈልጋሉ?",
+    "delete_confirmation_yes": "አዎ፣ ደምስስ",
+    "logout_title": "ውጣ",
+    "logout_description": "ይውጡ እና እረፍት ይውሰዱ።",
+    "logout_confirmation_title": "እርግጠኛ ነዎት መውጣት ይፈልጋሉ?",
+    "logout_confirmation_yes": "አዎ፣ ውጣ",
+    "confirm_phone": {
+      "title": "ስልክ አረጋግጥ",
+      "description": "አባክዎ የሀገርዎን ኮድ ያረጋግጡ እና ስልክዎን ያስገቡ።",
+      "button": "አዲስ ስልክ ቁጥር አረጋግጥ"
+    },
+    "notifications": {
+      "enable_prompt": "ማሳወቂያዎች አይፈቀዱም። እነሱን ስራ ማስጀመር ይፈልጋሉ?",
+      "channel_achievements": "ስኬቶች",
+      "channel_news": "ዜና",
+      "channel_reminders": "አስታዋሾች",
+      "channel_team": "ቡድን",
+      "type_push": "ተገፊ",
+      "type_email": "ኢሜይል",
+      "disable_notifications": "ማሳወቂያዎችን ስራ አስቁም?",
+      "disable_notifications_description": "ማሳወቂያዎችን ስራ በማስዎም መግባት፣ ዜና ወይም የቡድን መረጃ መጀመር ሲችሉ ዝማኔዎችን መቀበል አይችሉም።",
+      "domain": {
+        "disable_all": {
+          "title": "",
+          "description": ""
+        },
+        "weekly_stats": {
+          "title": "ሳምንታዊ ስታቲስቲክስ",
+          "description": "ስለ እንቅስቃሴዎ ማሳወቂያዎችን ይቀበሉ።"
+        },
+        "weekly_report": {
+          "title": "ሳምንታዊ ሪፖርት",
+          "description": "ስለ እንቅስቃሴዎ ማሳወቂያዎችን ይቀበሉ።"
+        },
+        "achievements": {
+          "title": "ስኬቶች",
+          "description": "ስለ እድገትዎ ማሳወቂያዎችን ይቀበሉ።"
+        },
+        "promotions": {
+          "title": "ማስተዋወቂያዎች",
+          "description": "ቡድንዎን እንዴት እንደሚያሳድጉ እና የበለጠ እንደሚያገኙ ማሳወቂያዎችን ይቀበሉ።"
+        },
+        "news": {
+          "title": "ዜና",
+          "description": "ከቡድናችን ማሳወቂያዎችን ይቀበሉ።"
+        },
+        "micro_community": {
+          "title": "ንዑስ ማህበረሰብ",
+          "description": "ስለ እድገትዎ ማሳወቂያዎችን ይቀበሉ።"
+        },
+        "daily_bonus": {
+          "title": "ዕለታዊ ጉርሻ",
+          "description": "ዕለታዊ ጉርሻዎን ለመጠየቅ ማሳወቂያዎችን ይቀበሉ።"
+        },
+        "mining": {
+          "title": "የክፍለ ጊዜ ሁኔታ",
+          "description": "ስለ እንቅስቃሴዎ ማሳወቂያዎችን ይቀበሉ።"
+        },
+        "system": {
+          "title": "ስርዓት",
+          "description": "ስለ Ice መተግበሪያ ጠቃሚ ማሳወቂያዎችን ይቀበሉ።"
+        }
+      }
+    },
+    "language_settings": "የቋንቋ ቅንብሮች",
+    "change_lang_confirm": {
+      "title": "ቋንቋ ቀይር",
+      "prompt": "ይህን ቅንብር መተግበር መተግበሪያውን እንደገና ያስጀምረዋል።"
+    },
+    "profile_image": "የመገለጫ ምስል",
+    "inapp_privacy_title": "የግላዊነት ፖሊሲ",
+    "inapp_privacy_description": "መረጃዎን እዚህ ያስተዳድሩ።",
+    "developer": "ገንቢ",
+    "user_id": "የተጠቃሚ መለያ",
+    "user_token": "የተጠቃሚ ቶክን",
+    "profile_photo": {
+      "delete": "ፎቶ ሰርዝ",
+      "edit": "የመገለጫ ፎቶ አርትዕ",
+      "photo_gallery": "የፎቶ ጋለሪ",
+      "camera": "ካሜራ"
+    },
+    "confirm_email_confirmation_title": "ኢሜይል አረጋግጥ?",
+    "update_email_confirmation_title": "ኢሜይል አዘምን?",
+    "update_email_confirmation_subtitle": "የኢሜይል አድራሻዎን መቀየር እንደገና እንዲገቡ ይጠይቃል። እርግጠኛ ነዎት መቀጠል ይፈልጋሉ?",
+    "unlink_logins_title": "መግባቶችን አላቅቅ",
+    "unlink_logins_description": "መግባትዎን ከዚህ ማላቀቅ ይችላሉ።"
+  },
+  "invite_share": {
+    "title": "ጓደኞች ጋብዝ",
+    "telegram": "ቴሌግራም",
+    "twitter": "ትዊተር",
+    "whatsapp": "ዋትስአፕ",
+    "instagram": "ኢንስታግራም",
+    "email": "ኢሜይል",
+    "fb": "የዜና ምገባ",
+    "sms": "ኤስኤምኤስ",
+    "copy_link": "አገናኝ ቅዳ",
+    "more": "ተጨማሪ",
+    "copied": "የተገለበጠ",
+    "share_message": "ሰላም ☃️ ስንውማን! የእኔን ምሪት ኮድ ተጠቅመው ሲመዘገቡ በ Ice ላይ ቡድኔን ይቀላቀሉ እና 10 የ Ice ሳንቲሞችን ይቀበሉ፦",
+    "share_subject": "ቡድኔን በ Ice ላይ ተቀላቀል",
+    "description": "ቃሉን ያሰራጩ እና ጓደኞችዎን ይጋብዙ። ለእያንዳንዱ ለሚያመጡት አዲስ ምሪት [[:ice]] ያገኛሉ።",
+    "share": "አጋራ"
+  },
+  "users": {
+    "ping": "አጋራ",
+    "active": "ንቁ",
+    "inactive": "የቦዘነ",
+    "referralType": {
+      "T1": "እርከን 1",
+      "T2": "እርከን 2",
+      "team": "የቡድን አባላት"
+    },
+    "team": "ቡድን"
+  },
+  "personal_information": {
+    "first_name": "የመጀመሪያ ስም",
+    "last_name": "የአያት ስም",
+    "country": "ሀገር",
+    "city": "ከተማ",
+    "title": "የግል መረጃ",
+    "phone": "ስልክ",
+    "email": "ኢሜይል",
+    "username": "ቅጽል ስም"
+  },
+  "username": {
+    "error": {
+      "already_taken": "ቅጽል ስም አስቀድሞ ተወስዷል።",
+      "length": "የቅጽ ስም መጠን፦ 4-20 ቁምፊዎች።",
+      "invalid_characters": "ትክክል ያልሆኑ ቁምፊዎችን አስወግድ",
+      "not_found": "ቅጽል ስም አልተገኘም።",
+      "some_error": "ስህተት ተፈጥሯል።",
+      "refer_yourself": "ራስዎን መምራት አይችሉም።"
+    }
+  },
+  "staking": {
+    "time_left": "ቀሪ ጊዜ",
+    "mining_rate": "የገቢ ተመን",
+    "appeal": "የገቢዎን ተመን ያሳድጉ",
+    "benefits_description": "የ Ice ሽልማቶችዎን እስከ 5 ዓመታት ድረስ አስቀድመው ያስይዙ እና የገቢ መጠንዎን እስከ 250% ይጨምሩ።",
+    "bonus_label": "ቅድመ-ማስያዣ ጉርሻ",
+    "period_label": "የተያዘበት ጊዜ",
+    "title": "ቅድመ-ማስያዝ",
+    "current_rate": "የአሁኑ ተመን",
+    "allocation": "መመደብ",
+    "description": "ማስያዝ የብሎክቼን አውታረ መረብን ለመደገፍ እና ግብይቶችን ለማረጋገጥ የእርስዎን ክሪፕቶ ንብረቶች መገደብን የሚያካትት ሂደት ነው።",
+    "terms_agree": "እኔ በ [[:ice]] [[:link]]የማስያዣ ውሎች[[/:link]] ተስማምቻለሁ። የice ይዞታዎችዎ ለተመረጠው ጊዜ ይቆለፋሉ።",
+    "stake_now": "አህኑን ቅድመ-ማስያዝ!",
+    "balance_label": "የተያዘ ቀሪ ሒሳብ",
+    "confirm_title": "ቅድመ-ማያዝ አረጋግጥ",
+    "confirm_subtitle": "እርግጠኛ ነዎት ሳንቲሞችዎን አስቀድመው ማስያዝ ይፈልጋሉ? አንዴ ካረጋገጡ በኋላ ይህ ሊቀለበስ አይችልም።",
+    "remove_pre_staking": "ፕሪ-ስታኪንግ አጥፋ"
+  },
+  "stats": {
+    "header_title": "ስታቲስቲክስ",
+    "active": "ንቁ ተጠቃሚዎች",
+    "total": "ጠቅላላ ተጠቃሚዎች",
+    "user_growth": "የተጠቃሚ_እድገት",
+    "top_miners": "ከፍተኛ ተጠቃሚዎች",
+    "top_countries": "ከፍተኛ ሀገሮች",
+    "online_miners": "የመስመር ላይ ተጠቃሚዎች",
+    "detailed_information": "ዝርዝር መረጃ",
+    "total_coins": "አጠቃቀም ማእከላዊ",
+    "filter": {
+      "total": "ጠቅላላ",
+      "on_app": "በመተግበሪያ ውስጥ ያሉ",
+      "pre_staked": "ማረጋገጫ ቀረበ",
+      "on_blockchain": "በብሎኬድ ላይ"
+    }
+  },
+  "update_required": {
+    "title": "እባክዎ ያዘምኑ",
+    "description": "የድሮ መተግበሪያ ስሪት እየተጠቀሙ ነው እና የበለጠ ለመጠቀም እሱን ማዘመን አለብዎ።",
+    "button_title": "አሁን አዘምን"
+  },
   "general": {
     "good_morning": "ደህና አደሩ",
     "good_afternoon": "ደህና ዋሉ",
@@ -126,31 +583,463 @@
     "seconds_short": "ሴ",
     "minutes_short": "ደ",
     "hours_short": "ሰ",
-    "days_short": "ቀ",
-    "hour": {
-      "zero": "ሰዓቶች",
-      "one": "ሰዓት",
-      "two": "ሰዓቶች",
-      "few": "ሰዓቶች",
-      "many": "ሰዓቶች",
-      "other": "ሰዓቶች"
+    "days_short": "ቀ"
+  },
+  "news": {
+    "news_feed": "የዜና ምገባ",
+    "read_more": "ተጨማሪ አንብብ",
+    "no_more_news": "ይህ የዜና ምግብ የመጨረሻ ግቤት ነው።",
+    "views": "{{viewsCount}} እይታዎች"
+  },
+  "search": {
+    "empty": "እውቂያዎችን፣ የ Ice ጓደኞችዎን እና የንዑስ ማህበረሰብዎን አባላት ይፈልጉ።",
+    "nothing_is_found": "ለመጠይቅዎ ምንም አልተገኘም።",
+    "search_by_country": "በሀገር ፈልግ",
+    "search_for_users": "ተጠቃሚዎችን ፈልግ",
+    "loading": "በመፈለግ ላይ…"
+  },
+  "tabbar": {
+    "mining_inactive_tooltip": "የመጀመሪያውን የመግቢያ ክፍለ ጊዜ ለመጀመር እዚህ ይንኩ።",
+    "mining_reset_tooltip": "የመግቢያ ክፍለ ጊዜዎን ለማራዘም ለ 1 ሰከንድ ይጫኑ።",
+    "mining_holiday_reset_tooltip": "የእረፍት ቀንዎን እየተጠቀሙ ነው! የመግቢያ ክፍለ ጊዜዎን ለማራዘም ለ 1 ሰከንድ ይጫኑ።",
+    "mining_holiday_active": "የእረፍት ቀንዎን እየተጠቀሙ ነው!"
+  },
+  "invite_friend": {
+    "invite_button": "ጓደኞች ጋብዝ",
+    "button_title": "ጓደኛ ጋብዝ",
+    "description": "ጓደኛዎ ገና  [[:ice]]ላይ አይደለም። ግብዣ ይላኩለት!"
+  },
+  "balance_history": {
+    "title": "የቀሪ ሒሳብ ታሪክ",
+    "wallet": "ዋሌት",
+    "blockchain": "ብሎክቼይን",
+    "wallet_update_interval": "በየሰዓቱ ይዘምናል",
+    "blockchain_update_interval": "ቅዳሜ 28 ቀን ይጠቀምያል",
+    "list_end_label": "ይህ የሂሳብ ታሪክ የመጨረሻው ግቤት ነው።",
+    "no_data": "ለተገለጸው ጊዜ የሚታይ ምንም ውሂብ የለም።",
+    "you": "እሷ",
+    "contribution": "ምንቸሎች"
+  },
+  "pop_up": {
+    "update_now": "አሁን አዘምን",
+    "please_update": "እባክዎ ያዘምኑ",
+    "update_now_text": "የድሮ መተግበሪያ ስሪት እየተጠቀሙ ነው እና የበለጠ ለመጠቀም እሱን ማዘመን አለብዎ።",
+    "you_are_up_to_date": "ዘምኖልዎታል!",
+    "up_to_date_text": "አሁን የቅርብ ጊዜውን ስሪት እየተጠቀሙ ነው። ከዚህ በታች ያሉትን ሁሉንም ለውጦች ያረጋግጡ።",
+    "resurrection": "ማስነሳት",
+    "resurrection_message": "[[:amount]]ባለፈው ያጧቸው ሳንቲሞች[[:period]] እንደገና ለማስነሳት እና ለመቀበል የአንድ ጊዜ እድል አለዎት።",
+    "resurrection_warning": "አንድ ጊዜ ብቻ ነው ማስነሳት የሚችሉት!",
+    "please_confirm": "አባክዎ ያረጋግጡ",
+    "resurrection_no_confirm_message": "የእርስዎን [[:amount]] ሳንቲሞችን ለዘላለም ያጧቸዋል። እርግጠኛ ነዎት መቀጠል ይፈልጋሉ?",
+    "resurrection_yes_confirm_message": "አንድ ጊዜ ብቻ ነው ማስነሳት የሚችሉት! እርግጠኛ ነዎት መቀጠል ይፈልጋሉ? The [[:amount]] coins will return to your balance within the next hour.",
+    "delete_account_confirmation_title": "ስረዛውን አረጋግጥ",
+    "delete_account_confirmation_text": "የእርስዎን መለያ መሰረዝ የ Ice ቀሪ ሂሳብዎን ጨምሮ ሁሉንም ውሂብዎን እስከመጨረሻው ይሰርዛል። መቀጠል ይፈልጋሉ?",
+    "registration_update_title": "የመመዝገብ ዝርዝር አዘጋጅ",
+    "registration_update_text": "የተለያዩ አካዋቂዎች ለተከላከዉ የሞባይል ቁልፍ መዝገብን ማቀድ አለብን። ለተጠቃሚ ወይም ላሞች ይህን ምዝገባ በኢሜል አይነሳም ወይም ስለዚህ የሚጠቀሙት የሞባይል አካዋቂዎች ልጆች ይልማውን ያደርጋሉ።",
+    "link_email_title": "ኢሜልዎን አካውንሎ",
+    "link_email_text": "የሞባይል ቁልፍ ለተከላከዉ ማቀድ አዘጋጅህ አልቀረህም። እስካሁን ከኢሜል እንዳልነሳህ ቁልፍ አካውንሎዎችዎን አስታውሳለሁ።",
+    "account_error_title": "መለያ ስስተይር",
+    "account_error_text": "የተለያዩ ሞባይል ቁልፍን ለመቀድ ሳያቀርብ አካባቢህ ምርመራ አልተሳካም።",
+    "login_via_email_title": "ኢሜል ጋር አግባ",
+    "login_via_email_text": "የተለያዩ ሞባይል ቁልፍን ለመቀድ ሳያቀርብ እናውጣለን። ቁልፍዎን እናሳውቃለን።",
+    "email_in_use_title": "ኢሜል ከሆነ",
+    "email_in_use_text_part1": "የሚያዘጋጅባት ኢሜል አይደለም።",
+    "email_in_use_text_part2": "ይህ ኢሜል አይደለም። እዚህ ከሞባይል ቁልፍ ማቀድ ተጠቀሙ፤ እናሁን የሚወስድውን ሞባይል ቁልፍ እቀጣጠመር፣ እንዲሁም ይሄን ሞባይል ቁልፍ ለመቀድ ቀጥሎ አካውንሎዎችዎን መቀበል እንዳለበት ተመልክተዋል።",
+    "successfully_linked_title": "በማስተካከያ ተከራይ!",
+    "successfully_linked_text": "የሚያዘጋጅባት ኢሜል ወደ ሞባይልህ ተከራይታል"
+  },
+  "periods": {
+    "3_days": "3 ቀናት",
+    "7_days": "7 ቀናት",
+    "30_days": "30 ቀናት",
+    "1_day": "1 ቀን",
+    "1_week": "1 ሳምንት",
+    "1_month": "1 ወር",
+    "90_days": "90 ቀናት",
+    "14_days": "14 ቀናት"
+  },
+  "notifications": {
+    "joined": " ቡድንዎን ተቀላቅሏል።",
+    "multiply": " እና {{count}} ሌሎች ቡድንዎን ተቀላቅለዋል።",
+    "ping": " ፒንግ አድርገዎታል፣ ይንቁ!",
+    "delete": "ሰርዝ",
+    "add_notifications": "የፌዝ ማሳወቂያዎችን አክል",
+    "no_notifications": "ምንም የሚታዩ ማሳወቂያዎች የሉም።",
+    "add_announcements": "የፌዝ ማስታወቂያዎችን አክል",
+    "add_both": "የፌዝ ማሳወቂያዎችን እና ማስታወቂያዎችን አንድ ላይ አክል",
+    "clear_title": "ሁሉም ማሳወቂያዎች ይደምሰሱ?",
+    "title": "ማሳወቂያዎች"
+  },
+  "notification_feed_screen": {
+    "yesterday": "ትናንት",
+    "last_week": "ባለፈው ሳምንት",
+    "this_month": "በዚህ ወር",
+    "last_month": "ባለፈው ወር",
+    "this_week": "በዚህ ሳምንት"
+  },
+  "profile_privacy_edit": {
+    "step1": {
+      "title": "1. የእርስዎ የመገለጫ ስታቲስቲክስ",
+      "description": "ከሕዝብ አይን ለመደበቅ የሚፈልጉትን ብሎኮች ነካ ያድርጉ።"
     },
-    "day": {
-      "zero": "ቀንዶች",
-      "one": "ቀን",
-      "two": "ቀንዶች",
-      "few": "ቀንዶች",
-      "many": "ቀንዶች",
-      "other": "ቀንዶች"
+    "step2": {
+      "description": "ከህዝብ አይን ለመደበቅ ይህን ብሎክ ነካ ያድርጉት።",
+      "title": "2. የእርስዎ የአሁኑ ሚና"
     },
-    "minutes_abbr": "ደቂቃ",
-    "seconds_abbr": "ሰከንድ"
+    "step3": {
+      "title": "3. ያገኟቸው ባጆች",
+      "description": "ባጆችዎን ከህዝብ ዓይን ለመደበቅ እዚህ ነካ ያድርጉ።"
+    }
+  },
+  "confirm_email": {
+    "title": "ኢሜይል አረጋግጥ?",
+    "description": "እባክዎ የኢሜይል አድራሻዎን ያስገቡ እና ኮዱን እንልካለን።",
+    "note": "ኢሜይሉን በ 5 ደቂቃ ውስጥ ካልደረስክ፣ እባክዎ የአይፈለጌ መልእክት ማህደርዎን አረጋግጡ።",
+    "wrong_email": "የተሳሳተ ኢሜይል?",
+    "check_email": "ኢሜይልዎን ያረጋግጡ",
+    "emailed_link_to": "አስማት አገናኝ በኢሜይል ልከናል",
+    "emailed_steps_to": "እርምጃዎቹን በኢሜይል ልከናል",
+    "link_instruction": "ለመመዝገብ ወይም ለመግባት አገናኙን ጠቅ ያድርጉ።",
+    "reset_link_instruction": "የይለፍ ቃልዎን ዳግም ለማስጀመር አገናኙን ጠቅ ያድርጉ።",
+    "modify_title": "አዲስ ኢሜይል ያረጋግጡ",
+    "modify_description": "እባክዎ አዲሱን የኢሜይል አድራሻዎን ያስገቡ።"
+  },
+  "invalid_link": {
+    "title": "ልክ ያልሆነ አገናኝ",
+    "description": "እንደ አለመታደል ሆኖ ይህ ሊንክ ልክ ያልሆነ ነው፣እባክዎ ኢሜይልዎን እንደገና ያስገቡ እና አዲስ አገናኝ እንልክልዎታለን።"
+  },
+  "confirm_code": {
+    "title": "ኮድ አረጋግጥ",
+    "description": "እባክዎ የተላከውን ኮድ ያስገቡ",
+    "send_code_again": "እንደገና ኮድ ላክ",
+    "resend_time_label": "አዲስ ኮድ በ ውስጥ ይገኛል ",
+    "enter_code": "ኮድ ያስገቡ",
+    "wrong_number": "የተሳሳተ ቁጥር?"
+  },
+  "ice_bonus": {
+    "title": "የእንኳን ደህና መጣችሁ ሽልማት",
+    "description": "እንኳን ደስ አለዎ፣ [[:bold]]በእርስዎ[[/:bold]] [[:bold]] መታመንን[[/:bold]] የሚያረጋግጥ የመጀመሪያ [[:value]][[:ice]] ሳንቲሞችን ተቀብለዋል።",
+    "balance_label": "አሁን ያለዎ ቀሪ ሂሳብ"
+  },
+  "country_select": {
+    "title": "ሀገር ምረጥ"
+  },
+  "roles": {
+    "snowman": {
+      "title": "ስኖውማን",
+      "subtitle": "የስኖው ግዛት ይገንቡ",
+      "description": "ለ Ice አውታረ መረብ ያላችሁን ቁርጠኝነት ለማሳየት በየ 24 ሰዓቱ በመፈተሽ ገንዘብ ያግኙ እና ሰው እንጂ ሮቦት አለመሆኖን ያረጋግጡ።"
+    },
+    "ambassador": {
+      "title": "አምባሳደር",
+      "subtitle": "የስኖው ግዛት ገዢ",
+      "description": "ቢያንስ 100 ሰዎች ቡድንዎን ሲቀላቀሉ አምባሳደር ይሆናሉ። እያንዳንዱ አምባሳደር አዳዲስ ባህሪያትን አስቀድሞ ማግኘት ይችላል።"
+    }
+  },
+  "confirm_phone": {
+    "modify_title": "ስልክ አረጋግጥ",
+    "modify_description": "አባክዎ የሀገርዎን ኮድ ያረጋግጡ እና ስልክዎን ያስገቡ።",
+    "button": "ሀገር እና ስልክ አረጋግጥ"
+  },
+  "date_select": {
+    "title": "ቀን ምረጥ"
+  },
+  "walkthrough": {
+    "overrides": {
+      "home": {
+        "team": {
+          "description": "[[: ice]] ከጓደኞች ጋር የተሻለ ነው። በዚህ ገጽ ላይ የቡድንዎን አባላት ሁኔታ ማየት ይችላሉ። እንዲሁም ከዚህ ሆነው ፒንግ ማድረግ ይችላሉ።"
+        },
+        "referralscard": {
+          "title": "የቡድን ካርድ",
+          "description": "ይህን ካርድ በመንካት ያለፉት 5 ቀናት የቡድንዎ አባላት ስታቲስቲክስን ዝግመተ ለውጥ ይመልከቱ።"
+        }
+      },
+      "team": {
+        "segmented_control_tier_one": {
+          "title": "ቡድን",
+          "description": "ወደ አይስ አውታረመረብ እንዲቀላቀሉ የጋበዝካቸውን ሰዎች ዝርዝር እዚህ ማየት ትችላለህ። ሁኔታቸውን በቀላሉ ከዚህ መከታተል እና ላልነቃቁት ማሳወቂያዎችን መላክ ትችላለህ።"
+        },
+        "active_users": {
+          "description": "ይህ አሁን ያለው የቡድንዎ አባላት ተመዝግቦ መግባት እንቅስቃሴ ነው። ንቁ ሆነው የመግባት ክፍለ ጊዜ ሲኖራቸው እንደ ንቁ ሆነው ይቆጠራሉ።"
+        },
+        "ping": {
+          "description": "የእርስዎን ቡድን አባላት ተመዝግበው መግባት እንዲጀምሩ ያሳውቁ። በየ24 ሰዓቱ አንድ ማሳወቂያ ለእያንዳንዱ ሪፈራል መላክ ይችላሉ።"
+        }
+      }
+    },
+    "profile": {
+      "hidden_data": {
+        "title": "የተደበቀ ውሂብ",
+        "description": "ሌሎች ተጠቃሚዎች መገለጫዎን እንዴት እንደሚያዩ ለማየት የአይን አዶውን ይንኩ።"
+      }
+    },
+    "news": {
+      "readmore": {
+        "title": "ተጨማሪ አንብብ",
+        "description": "ከቡድናችን የቅርብ ጊዜ ዜናዎቻችንን እዚህ ማየት ይችላሉ። ሙሉውን ጽሑፍ ለማንበብ ይህን አዝራር ነካ ያድርጉ።"
+      },
+      "releasednews": {
+        "title": "የተለቀቀ ዜና",
+        "description": "በእያንዳንዱ የዜና ርዕስ ላይ መታ ያድርጉ እና ሙሉውን ስሪት ያንብቡ። በሁሉም ዜናዎቻችን እና ምርጫዎቻችን ላይ እንደተዘመኑ ይቆዩ።"
+      }
+    },
+    "team": {
+      "allow_contacts": {
+        "title": "እውቂያዎችን ፍቀድ",
+        "description": "እውቂያዎችዎን ያቀናጁ እና [[:ice]] ላይ ማን ቀደም ብሎ እንዳለ ይመልከቱ። ለወደፊቱ ለማንኛውም እውቂያዎችዎ  [[:ice]] ለመላክ ያስችልዎታል።"
+      },
+      "confirm_phone": {
+        "title": "ስልክ አረጋግጥ",
+        "description": "ማንነትዎን ያረጋግጡ እና እውቂያዎችዎን እርስዎም የ Ice አውታረ መረብ አባል መሆንዎን እንዲያውቁ ፍቀዱላቸው። ስልክ ቁጥርዎ ለሌሎች ሶስተኛ ወገኖች አይጋራም።"
+      },
+      "contacts_list": {
+        "title": "የእውቂያዎች ዝርዝር",
+        "description": "ይህ ከሁሉም እውቂያዎችዎ ጋር ያለው ዝርዝር ነው፣ ቀድሞውንም [[:ice]] አውታረ መረብን የተቀላቀሉ በዝርዝሩ አናት ላይ እየታዩ ነው"
+      },
+      "referrals": {
+        "title": "ምሪቶች",
+        "description": "በአጠቃላይ ምን ያህል ምሪቶች እንዳለዎ እዚህ ያያሉ። ብዙ ሰዎችን በጋበዙ ቁጥር የበለጠ ገቢ ያገኛሉ።"
+      },
+      "earnings": {
+        "title": "ገቢዎች",
+        "description": "የአሁኑ ቀሪ ሂሳብዎ በየሰዓቱ ዘምኖ እና እዚህ ይታያል። ከእርከን 1 እና እርከን 2 ገቢዎች ጋር የእርስዎን ቀጥተኛ እና የማስያዣ ገቢዎችን ያካትታል።"
+      },
+      "segmented_control_tier_one": {
+        "title": "እርከን 1",
+        "description": "እዚህ የእርከን 1 ምሪቶችዎን ዝርዝር ማየት ይችላሉይችላሉ። ከእርስዎ ጋር በተመሳሳይ ጊዜ ለሚመጣ እያንዳንዱ ጓደኛ፣ አሁን ባለው የተላመደ ገቢ መጠን ላይ ተጨማሪ 25% ያገኛሉ። [[:link]]ተጨማሪ አንብብ[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "segmented_control_tier_two": {
+        "title": "እርከን 2",
+        "description": "እዚህ የእርከን 2 ምሪቶችዎን ዝርዝር ማየት ይችላሉ። ከእርስዎ ጋር በተመሳሳይ ጊዜ ለሚመጣ እያንዳንዱ ጓደኛ፣ አሁን ባለው የተላመደ ገቢ መጠን ላይ ተጨማሪ 5% ያገኛሉ። [[:link]]ተጨማሪ አንብብ[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "active_users": {
+        "title": "ንቁ ተጠቃሚዎች",
+        "description": "ይህ አሁን ያለው የምሪቶች ተመዝግቦ መግባት እንቅስቃሴዎ ሁኔታ ነው። ንቁ የመግባት ክፍለ-ጊዜ ሲኖራቸው እንደ ንቁ ሆነው ይቆጠራሉ።"
+      },
+      "tier_one_earnings": {
+        "title": "እርከን 1 ገቢዎች",
+        "description": "እዚህ የእርከን 1 ምሪቶችዎን ዝርዝር ማየት ይችላሉ። ከእርስዎ ጋር በተመሳሳይ ጊዜ ለሚገቡ ለእያንዳንዱ አባል፣ ሁለታችሁም አሁን ባለው የማላመጃ ገቢ መጠን ላይ ተጨማሪ 25% ያገኛሉ።"
+      },
+      "ping": {
+        "title": "ፒንግ አዝራር",
+        "description": "የመግባት ክፍለ ጊዜዎቻቸውን ለመጀመር ምሪቶችዎን ያሳውቁ። በየ 24 ሰዓቱ አንድ ማሳወቂያ ለእያንዳንዱ ምሪት መላክ ይችላሉ።"
+      }
+    },
+    "home": {
+      "home": {
+        "title": "መነሻ",
+        "description": " እንኳን ወደ [[:ice]] በደህና መጡ። በመነሻ ማያ ላይ ስለ ቀሪ ሂሳብዎ፣ ስለአሁኑ የገቢ ተመን፣ ከቡድንዎ ጋር ስላሎት አለምአቀፍ ደረጃ ሁሉንም ስታቲስቲክስ ማግኘት ይችላሉ።"
+      },
+      "invite": {
+        "title": "ጋብዝ",
+        "description": "ለምትጋብዟቸው እያንዳንዱ ሰው፣ ሁለታችሁም በመነሻ ገቢዎ ተመን እስከ 25% ያገኛሉ። ብዙ ሰዎችን በጋበዙ ቁጥር የበለጠ ገቢ ያገኛሉ።"
+      },
+      "team": {
+        "title": "ቡድን",
+        "description": "[[:ice]] ከጓደኞች ጋር የተሻለ ነው። በዚህ ገጽ ላይ የቡድንዎ አባላትን ከእርከን 1 እና ከእርከን 2 ደረጃዎች ማየት ይችላሉ። እንዲሁም ከዚህ ሆነው እነሱን ፒንግ ማድረግ ይችላሉ"
+      },
+      "news": {
+        "title": "ዜና",
+        "description": "በሁሉም ዜናዎቻችን እና ምርጫዎቻችን ላይ እንደተዘመኑ ይቆዩ። እኛ ያልተማከለ ራስ ገዝ ድርጅት እንደመሆናችን መጠን ለወደፊት ባህሪያት እዚህ ድምጽ መስጠት ይችላሉ።"
+      },
+      "profile": {
+        "title": "መገለጫ",
+        "description": "የመገለጫ ዝርዝሮችን ያብጁ እና ያገኙትን ሁሉንም ስኬቶችዎን እና ባጆችዎን ይመልከቱ። ገቢዎችዎን ለመገመት እንዲያስችልዎ ከዚህ ማስያ ይጠቀሙ።"
+      },
+      "earningicestart": {
+        "title": "Ice ገቢ",
+        "description": "ይህንን አዝራር በመንካት በየ 24 ሰዓቱ የ [[:ice]] የመግቢያ ክፍለ ጊዜን መጀመር ይችላሉ። በየቀኑ ተመልሰው መምጣት እና ገቢ ማግኘትዎን አይርሱ!"
+      },
+      "earningiceseemore": {
+        "title": "Ice ገቢ",
+        "description": "እንደገና መታ ያድርጉ እና ስለአሁኑ የመግቢያ ክፍለ ጊዜዎ ተጨማሪ ዝርዝሮችን ይመልከቱ።"
+      },
+      "stats": {
+        "title": "ስታቲስቲክስ",
+        "description": "በስታቲስቲክስ ገጹ ላይ በየቀኑ ተመዝግበው የገቡ ጠቅላላ እና ንቁ ተጠቃሚዎችን ከታላላቅ ሀገራት እና ተጠቃሚዎች ጋር ማየት ይችላሉ።"
+      },
+      "help": {
+        "title": "እርዳታ",
+        "description": "ማናቸውም ጥያቄዎች አሉዎት? በተደጋጋሚ የሚጠየቁ ጥያቄዎች ዝርዝራችንን ይመልከቱ። የሚፈልጉትን ማግኘት ካልቻሉ፣ hi@ice.io ላይ እኛን ለማግኘት አያመንቱ።"
+      },
+      "preStaking": {
+        "title": "ቅድመ-ማስያዝ",
+        "description": "ሽልማቶችን ቅድሚያ በማስያዝ ተመላሾችዎን ያሳድጉ። ከገቢዎ በላይ ጉርሻ ለማግኘት የምደባ እና የማስያዣ ጊዜዎን ይምረጡ።"
+      },
+      "wallet": {
+        "title": "ዋሌት ካርድ",
+        "description": "የአሁኑን [[:ice]] ቀሪ ሂሳብዎን ከገቢ ተመን ጋር እዚህ ማግኘት ይችላሉ። ከቡድንዎ ብዙ ምሪቶች በመስመር ላይ ሲሆኑ፣ የገቢ ተመኑ ከፍ ያለ ይሆናል።"
+      },
+      "earning": {
+        "title": "የገቢ ካርድ",
+        "description": "በእርስዎ የገቢ ተመን እና ጉርሻዎች ላይ እንደተዘመኑ ይቆዩ! እዚህ በመተግበሪያው ውስጥ ላሉ የተለያዩ እንቅስቃሴዎች የአሁኑን መጠንዎን፣የእኛን መነሻ ተመን እና የጉርሻ ተመኖችን መመልከት ይችላሉ።"
+      },
+      "engagement": {
+        "title": "የተሳትፎ ካርድ",
+        "description": "የእርስዎን የመግቢያ ክፍለ ጊዜዎች ዥረትእና የእረፍት ጊዜዎን ይከታተሉ! ስለተከታታይ የመግባት ክፍለ ጊዜዎችዎ እና ምን ያህል የእረፍት ቀናት እንዳለዎት ለማየት ይህንን ክፍል ይመልከቱ።"
+      },
+      "profilecard": {
+        "title": "የመገለጫ ካርድ",
+        "description": "ይህን ካርድ በመከተል የመገለጫ ሁኔታዎን መከታተል ይችላሉ። አሁን ያለዎትን አለምአቀፍ ደረጃ ከእርስዎ ሚና፣ ደረጃ እና አጠቃላይ ምሪቶች ጋር ያሳያል።"
+      },
+      "referralscard": {
+        "title": "የምሪት ካርድ",
+        "description": "ይህን ካርድ በመንካት ላለፉት 5 ቀናት ለሁለቱም እርከን 1 እና ለእርከን 2 ምሪቶች የምሪቶች ስታቲስቲክስዎን እድገት ይመልከቱ።"
+      },
+      "adoptioncard": {
+        "title": "የማላመጃ ካርድ",
+        "description": "ባለፈው ሳምንት የነቁ የስንውሜን አማካኝ መሰረት፣ የአሁኑን [[:ice]]የ ገቢ ተመን ማየት ይችላሉ። ቀጣዩ ገደብ ላይ ሲደርስ የገቢው ተመን በግማሽ ይቀንሳል።"
+      },
+      "nickname": {
+        "title": "ቅጽል ስም",
+        "description": "ልዩ የሚያደርጋችሁ ቅጽል ስሙ ነው። ጓደኞችዎ ቡድንዎን ለመቀላቀል ይህን ቅጽል ስም መጠቀም ያስፈልጋቸዋል። መገለጫዎን ለመክፈትም ይህን አቋራጭ መጠቀም ይችላሉ።"
+      },
+      "balancehistory": {
+        "title": "የቀሪ ሒሳብ ታሪክ",
+        "description": "በአካባቢው ዋሌት እና በብሎክቼይን ላይ የአሁኑን [[:ice]] ቀሪ ሒሳብዎን እዚህ ማግኘት ይችላሉ። የአካባቢ ዋሌት ሒሳብ በየሰዓቱ ይዘምናል፣ የብሎክቼይን ቀሪ ሂሳብ ግን በየ 24 ሰዓቱ ይዘምናል።"
+      },
+      "achievements": {
+        "title": "ስኬቶች",
+        "description": "ከዚህ በታች ያሉትን ስራዎች ያጠናቅቁ እና ደረጃዎን ከፍ ያድርጉ! የመጀመሪያውን የመግቢያ ክፍለ ጊዜዎን አሁን ይጀምሩ!"
+      }
+    }
+  },
+  "ActiveSessionsScreen": {
+    "title": "መግቢያዎችን አላቅቅ",
+    "sessionName": "በ ብኩል ይግቡ {{providerName}}",
+    "buttons": {
+      "currentSession": "የአሁኑ ክፍለ ጊዜ",
+      "endSession": "የመጨረሻ ክፍለ ጊዜ",
+      "loginUnlinked": "መግቢያ ተላቋል",
+      "sessionEnded": "ክፍለ ጊዜው አልቋል",
+      "unlink": "አላቅቅ"
+    },
+    "dialogs": {
+      "unlinkLogin": {
+        "title": "መግቢያ አላቅቅ?",
+        "message": "እርግጠኛ ነዎት የመግቢያውን በ {{providerName}} በኩል ከዚህ መሳሪያ ማላቀቅ ይፈልጋሉ?"
+      },
+      "endSession": {
+        "title": "የመጨረሻ ክፍለ ጊዜ?",
+        "message": "እርግጠኛ ነዎት የመግቢያውን በ {{providerName}} በኩል ከዚህ መሳሪያ ማላቀቅ ይፈልጋሉ?"
+      }
+    }
   },
   "links": {
     "pre_staking": "https://ice.io/pre-staking/",
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "extra_bonus": {
+    "claim_title": "የዛሬው ጉርሻ",
+    "claim_message": "የእርስዎ የዛሬ ጉርሻ የሚያገኙበት ጊዜ ነው፣ እባክዎን ከታች ያለውን [[:bold]]“ጉርሻ ጠይቅ”[[/:bold]] ይንኩ።",
+    "link": "ተጨማሪ ለማወቅ",
+    "extra_message": "በገቢዎ ተመን ዕለታዊ ተጨማሪ ጉርሻዎን ተቀብለዋል።",
+    "expired_title": "ጉርሻ ጊዜው አልፎበታል",
+    "expired_message": "እንደ አለመታደል ሆኖ የዛሬው ጉርሻ ጊዜው አልፎበታል። ለቀጣዩ ማሳወቂያ ይጠብቁ!",
+    "result_title": "እንኳን ደስ አለዎት"
+  },
+  "qr_code": {
+    "description": "ቡድኔን ለመቀላቀል የQR ኮድ ይቃኙ።"
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "ቲክቶክ ላይ ይቀላቀሉን",
+      "description": "እኛ ማግኘት የፈለግነው በቲኪቶክ ላይ ስላለው አዲሱ ማህበረሰባችን ለእርስዎ ለማሳወቅ ነው። ስለ እኛ ዲጂታል ምንዛሪ፣ Ice አስደሳች እና መረጃ ሰጭ ይዘት እያጋራን ነው፣ እና እርስዎ እንዲቀላቀሉን እንወዳለን!"
+    },
+    "youtube": {
+      "title": "በዩቲዩብ ይቀላቀሉን",
+      "description": "iceን እንዴት ማግኘት እንደሚቻል ከሚሰጡ ትምህርቶች፣ ስለ አዳዲስ ባህሪያት እና አዝናኝ የማህበረሰብ ይዘቶች፣ የዩቲዩብ ቻናላችን ወቅታዊ መረጃዎችን ለማግኘት ትክክለኛው ቦታ ነው።"
+    },
+    "linkedin": {
+      "title": "ሊንክድኢን ላይ ይቀላቀሉን",
+      "description": "በሊንክድኢን ላይ የ iceን ማህበረሰብ መቀላቀል ስለ አዳዲስ እድገቶች መረጃን ለማግኘት እና ልክ እንደ እርስዎ ለወደፊቱ የዲጂታል ምንዛሪዎች የበለጠ ፍላጎት ከሚያሳዩ ተመሳሳይ አስተሳሰብ ካላቸው ግለሰቦች ጋር ለመገናኘት ጥሩ መንገድ ነው።"
+    },
+    "facebook": {
+      "title": "በፌስቡክ ላይ ይቀላቀሉን",
+      "description_part1": "የፌስቡክ ገፃችንን እንዲከታተል አበክረን እንመክራለን።",
+      "description_part2": "በ Ice ፕሮጄክቱ ላይ ስለሚከሰቱት ነገሮች ሁሉ ወቅታዊ መረጃ እንዲኖርዎት ብቻ ሳይሆን ከማህበረሰባችን ጋር ለመገናኘት እና የውይይቱ አካል ለመሆንም ጥሩ መንገድ ነው።"
+    },
+    "instagram": {
+      "title": "በኢንስታግራም ላይ ይቀላቀሉን",
+      "description_part1": "በኢንስታግራም ላይ እኛን መከተል በሂደቱ ውስጥ ለመቆየት እና በice ላይ የበለጠ ፍላጎት ከሚያሳዩ ሌሎች ተጠቃሚዎች ጋር ለመገናኘት ጥሩ መንገድ ነው",
+      "description_part2": "በተጨማሪ እኛ ስለምንከፍታቸው አዳዲስ ባህሪያት ወይም ማስተዋወቂያዎች ለማወቅ የመጀመሪያው ይሆናሉ።"
+    },
+    "reddit": {
+      "title": "ምርጫ ለምንም በ Reddit ያሉትን ተስፋ ይገልጻሉ",
+      "description": "አካል በ Reddit ለድጋፍ ተስፋ ያሉት Ice የቤተሰብ የተስፋ የሚነካት ስራዎችን ወደተስፋ አግኝቶ ያጋሩ።\n\nየድምጽ በስፋ ለአገር ይጠብቅልናል፣ ጥያቄዎች ጋር ጥያቄዎች ግንባርና ተጨባጭ ስለ Ice መጽሃፍ፣ እና ብቁዕ ለወደድ የተስፋ የሚያደርጉ አድማዎችን አድርግዎታል።"
+    },
+    "discord": {
+      "title": "እርስዎን Discord ለመገናኘት",
+      "description": "እርስዎን የሚቀጥለውን Discord የተስፋ የሚነካት ድምጽ እና የተከበሩ መረጃዎች ይገባዋል።\n\nየድምጽዎን የተስፋ የሚቀጥለውን ድምጽ እቀላለሁ፣ ice-የተጠቀሙ አድራጎቶችን መጠበቅ እና የስራዎን ዝርዝር የመዘጋጀት ምርጫ ይዘገባል።"
+    },
+    "ice_founder_twitter": {
+      "title": "ዘዉስን በ X ከማውረድ",
+      "description": "ዘዉስ፣ እኛን በ እንኳን አንድ ሰው እንዳለው፣ በ X ውስጥ እንዲኖር እናድርጉ፡፡ እንዴት ማንቀሳቀስን እንዳይችሉ፣ ግን፣ ጥያቄዎች እና ምርጫዎችን ስለማጥፋት ፡፡ በዚህ እባብ እስካሁን በእኛ እርምጃ ላይ ያደረጉትን እንስማማር ፣ ጥያቄዎችን ግንዛቤ ማግኘት እና ምርጫዎችን ስማማር። ይህን አገልግሎት በእኛ ተከትሎ እናውርዳለን።",
+      "button": "ዘዉስን በማውረድ"
+    }
+  },
+  "ping_referrals_pop_up": {
+    "title": "እባክዎን በርግጥ ጠብቁ እየፓንግ ለማድረግ ሳንደገፍ · {{count}}"
+  },
+  "creative_library": {
+    "title": "የፈጠራ Ice ቤተ መፃህፍት",
+    "share": "የህልም ቡድንዎን በ Ice አውታረ መረብ ላይ ይገንቡ!",
+    "get_started": {
+      "header": "የእርስዎ ሕልም ቡድን ይገንቡ",
+      "subtitle": "ጀምር Ice እና የበለፀገውን ጥቃቅን-ማህበረሰብህን መገንባት",
+      "description": "በፍጥነት እያደገ ያለውን ቁጥር ይቀላቀሉ Ice የራሳቸውን ጥቃቅን ማህበረሰብ እየገነቡ ና ተጨማሪ ሽልማቶችን እያገኙ ያሉ ተጠቃሚዎች። የእኛ ማስተዋወቂያ መሳሪያዎች, መመሪያዎች, እና ጠቃሚ ምክሮች ቃሉን ለማሰራጨት እና ስኬታማ ማህበረሰብ ለመገንባት ቀላል ያደርገዋል.",
+      "get_started": "ጀምር",
+      "carousel": {
+        "01": {
+          "title": "ይቀላቀሉ",
+          "description": "የእኛን መተግበሪያ ያውርዱ, ቅጽል ስምዎን ይውሰዱ, እና የማዕድን ማውጫ ጀምር.\n\nየህዝብ የበላይነትን፣ የራስ አስተዳደርን፣ እና የህዝብ ሃይል ከፍተኛ ፍላጎት ያላቸው የተጠቃሚዎች ዓለም አቀፍ ማህበረሰብ አባል ትሆናላችሁ።"
+        },
+        "02": {
+          "title": "ጋበዝ",
+          "description": "አድማጮችህ እንዲተባበሩ ጋብዝ Ice እንዲሁም ተጨማሪ በረከቶችን ለመክፈት አብረው ይሠራሉ ።\n\nበተጨማሪም, እርስዎ ስለ decentralization ጥቅሞች እና የፋይናንስ የወደፊት ተስፋ ቃሉን ለማሰራጨት እየበረከቱ ነው."
+        },
+        "03": {
+          "title": "ያግኙ",
+          "description": "ድረ ገጽዎን በማስፋት እና ሌሎች ምክኒያት እንዲቀላቀሉ በማበረታታት ሽልማትዎን ያሳድጉ Ice ማህበረሰብ።\n\nየፋይናንስ የወደፊት እጣፈንታን በማዕቀፍ እና በራስ ምህዳራዊነት እንዲለውጥ በሚስዮናችን ተባበሩን።"
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "ቪዲዮዎች",
+        "description": "የመጋበዣ ኮድዎን ለማስተዋወቅ የእኛን ቪዲዮዎች ስብስብ ይጠቀሙ. የመሬት አቀማመጥ ወይም ስዕል, ንዑስ ርዕሶች ጋር ወይም ያለ, እኛ ተሸፍኖዎታል.",
+        "action": "ቪዲዮዎችን ይመልከቱ"
+      },
+      "02": {
+        "title": "ምስሎች",
+        "description": "አንድ ሥዕል አንድ ሺህ ቃላት የሚያስቆጭ ነው ። እርስዎ ከእኛ ባህሪያት, ማህበራዊ ሚዲያ ሀብቶች, ቴምፕሌቶች, እና የመተግበሪያ መሳለቂያዎች ስብስብ መምረጥ ይችላሉ.",
+        "action": "ምስሎችን ይመልከቱ"
+      },
+      "03": {
+        "title": "ኤምቤድድ ባነር",
+        "description": "የእኛ የተጠለፈ መቃኛ ጋር, በቀላሉ ማስተዋወቅ ይችላሉ Ice ወደ ድረ ገጽዎ ጎብኚዎች እና በጥቃቅን ማህበረሰብዎ እንዲቀላቀሉ ይጋብዟቸው.",
+        "action": "አርማውን ይጫኑ"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "ታሪክህን አካፍል",
+        "description": "ጉዞህን አካፍል Ice በእርስዎ ቋንቋ አንድ ርዕስ በመጻፍ የበይነመረብ እና ብዙ ጥቅሞች.\n\nበእርስዎ ብሎግ, መካከለኛ, ሬዲት, Quora, Blogger እና ተጨማሪ ላይ ያጋሩ.\n\nሁሉንም ነገር ማግኘት ትችላለህ Ice እና በእውቀታችን መሰረት፣ በሆምፔጅ እና በFAQ ገጽ ላይ ልዩ ልዩ ገጽታዎቹ።"
+      },
+      "spread": {
+        "title": "ቃሉን ዘርጋ",
+        "description": "ውይይቱን ይቀላቀሉ እና የ Ice አውታረ መረብን ከሚወዷቸው መድረኮች ጋር ያስተዋውቁ።\nአዲስ ክሮች ይጀምሩ እና ስለ ያልተማከለ ፋይናንስ፣ ስለ ምንዛሪ የወደፊት ሁኔታ እና ከ Ice ጋር የማይክሮ ማህበረሰብ የመገንባት ሃይል ያለዎትን ሀሳብ ያካፍሉ።\n\nየበረዶ ሰው ☃️ ሁን እና ስለዚህ አለምአቀፋዊ ምንዛሪ አቅም ላይ ውይይት ፍጠር።"
+      }
+    },
+    "bring": {
+      "title": "ጓደኞችህን ወደ ጀልባ አምጣ",
+      "description": "የእኛን ቀላል የግብዣ ገጽ ይጠቀሙ እና የእርስዎን የግል የግብዣ ኮድ ለጓደኞችዎ በማህበራዊ ሚዲያ ዎች ላይ ያጋሩ."
+    }
   },
   "promo_section": {
     "web": {
@@ -201,28 +1090,307 @@
       }
     }
   },
-  "mainnet_landing": {
-    "header": "የአይስ ተራብያ ሙያ መሰረታዊ አስተካክለት ነበር። የ2024ዓምሪ 7ት በመስመር ዋሻ አዲስ አስተካክለትን በተጠቀሙት አፕ ወደምታይን ይሰጣል።",
-    "stats": {
-      "header": "የአይስ መረጃዎች",
-      "circulating_supply": "አንድነት የምርት መንገድ",
-      "total_supply": "አጠቃላይ የምርት መንገድ",
-      "price": "ዋጋ",
-      "market_cap": "የገንዘብ ጭምር",
-      "daily_trading_volume": "24 ሰዓት የምረት ብር መጠን",
-      "dilluted_market_cap": "አጥቂያ የገንዘብ ጭምር"
+  "face_auth": {
+    "header": "የፊት ማረጋገጫ",
+    "title": "KYC ደረጃ #1",
+    "description": "እንከን የለሽ ተሞክሮ ለማግኘት፣ የፊት ማረጋገጥን እየጨመርን ነው። ይህ እርምጃ እንደ የእርስዎ [[:bold]]የመጀመሪያ ደረጃ #1 KYC[/:bold]] ሆኖ ያገለግላል፣ ይህም ለወደፊቱ Mainnet ለተሳለጠ ማረጋገጫ ያዘጋጀዎታል። \n\nለቀጣይ ሰላማዊ ጉዞ ለማረጋገጥ ማንነትህን ዛሬ አረጋግጥ!",
+    "consent": "በበረዶው [[:link]] የKYC ውሎች እና ሁኔታዎች[[/:link]] እስማማለሁ።",
+    "confirmation": "ለዚህ ማረጋገጫ እየተጠቀምኩበት ያለሁት ማንነት ከዚህ መለያ ጋር አንድ አይነት እንደሚሆን አረጋግጣለሁ፣ እና ይህ ምርጫ በኋላ ሊቀየር አይችልም።",
+    "auth_status": {
+      "loading": {
+        "description": "እባክህ እስክናረጋግጥህ ድረስ ጠብቅ..."
+      },
+      "success": {
+        "title": "✅ ማረጋገጥ ተሳክቷል።",
+        "description": "ማንነትዎን ስላረጋገጡ እናመሰግናለን። የመግቢያ ክፍለ ጊዜዎ አሁን ይጀምራል።",
+        "action": "ተከናውኗል"
+      },
+      "failure": {
+        "title": "❌ ማረጋገጥ አልተሳካም።",
+        "description": "ማንነትህን ማረጋገጥ አልቻልንም። እባክዎ ጥሩ ብርሃን እና ፊትዎ ሙሉ በሙሉ የሚታይ መሆኑን ያረጋግጡ፣ ከዚያ እንደገና ይሞክሩ።",
+        "action": "እንደገና ይሞክሩ"
+      },
+      "try_later": {
+        "title": "❌ ማረጋገጥ አልተሳካም።",
+        "description": "ማንነትህን ማረጋገጥ አልቻልንም። እባኮትን ጥሩ ብርሃን እና ፊትዎ ሙሉ በሙሉ የሚታይ መሆኑን ያረጋግጡ፣ ከዚያ በ1 ሰአት ውስጥ እንደገና ይሞክሩ።",
+        "action": "ገጠመ"
+      },
+      "continue": {
+        "title": "😁 የKYC ስሜት ማረጋገጫ",
+        "description": "ታላቅ ስራ! የራስ ፎቶ በማንሳት የመጀመሪያውን እርምጃ ጨርሰሃል። አሁን፣ የእርስዎን የKYC ሂደት ለመቀጠል የታዩትን ስሜቶች በመከተል እንቀጥል።",
+        "action": "ቀጥል"
+      },
+      "banned": {
+        "title": "❌ ማዕድን ማውጣት ተሰናክሏል።",
+        "description": "ማንነትህ ከሌላ መለያ ጋር የተቆራኘ መሆኑን ለይተናል። ይህ ስህተት ነው ብለው ካሰቡ፣ እባክዎን ወደ [[:bold]]feedback@ice.io[/:bold]] ቅጽል ስምዎ እና ከፍተኛ ጥራት ባለው የራስ ፎቶ ይላኩ።",
+        "action": "ገጠመ"
+      }
     },
-    "countdown": {
-      "header": "የአይስ ዋና ላይክ"
+    "emotions_recognition": {
+      "start": "ጀምር",
+      "please_show_this": "እባኮትን ይህን ስሜት ያሳዩ",
+      "emotions": {
+        "anger": "ቁጣ",
+        "contempt": "ንቀት",
+        "disgust": "አስጸያፊ",
+        "fear": "ፍርሃት",
+        "happiness": "ደስታ",
+        "neutral": "ገለልተኛ",
+        "sadness": "ሀዘን",
+        "surprise": "መደነቅ"
+      }
     },
-    "roadmap": {
-      "header": "የእኛ አስተካክል",
-      "title": "Whitepaper",
-      "subtitle": "የእኛ አስተካክል ስለኛ ዝርዝር በአይስ ተናጋሪዎች."
+    "device_angle_warning": {
+      "title": "ማስጠንቀቂያ",
+      "description": "እባኮትን ወደ ካሜራ እየተመለከቱ ስልኩን ቀጥ አድርገው ይያዙት።"
     },
-    "join_mainnet": {
-      "title": "በተመለከተ የተሰራ መረጃ",
-      "subtitle": "የተመለከተውን የአይስ ዋና አፕ እና በመከፋፈል የኛ መረጃን ይቀንስል።"
+    "camera_permission": {
+      "title": "የካሜራ ፍቃድ",
+      "description": "ለመቀጠል እባክዎን የካሜራ መዳረሻ ይፍቀዱ።",
+      "action": "መዳረሻ ፍቀድ"
+    },
+    "selfie_guidelines": {
+      "title": "ስልፊ መመልከቻ",
+      "instruction": "ማብራሪያውን ለመለየት, እባክዎን ይህን መልከት ለምሳሌ KYC ስልፊ መመልከቻ የሚሆን መታወቅዎትን ይጠቀሙ:",
+      "check_1": "✅ ከፍተኛ ምስል እንዳይሆን ከተቀላቅሮት ይመረጣል።",
+      "check_2": "✅ ከመሳሪያ ብርቱ ነው።",
+      "check_3": "✅ የምርት ገፅ ይሞላል።",
+      "check_4": "✅ የጭንቀት ምስል አይኖርም።",
+      "check_5": "✅ የስልን ጭንቀት አይጠቁም።",
+      "check_6": "✅ የካሜራ ላዕሊን አይቆጣም።",
+      "warning": "እባክዎን ከዚህ ምሳሌ ይህን መልከት ያልቻሉትን ማብራሪያ መመልከቻ ለመጠቀም ወደ መለየት እንዳልሆንሁት ይረዳል።",
+      "confirmation": "እርምጃ በመረጡ ድጋሚን መልከት ይጠቀሙ ይህንን ማብራሪያ ለመመልከት እርዳታ ነውን?",
+      "popup_title": "እርዳታ",
+      "popup_body": "እርምጃ በመረጡ ድጋሚን መልከት ይጠቀሙ ነውን?"
     }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "እባክዎ ትክክለኛውን ቅጽል ስም ማስገባትዎን ያረጋግጡ።",
+      "description": "ልጋውን ያስተዳዳሉ የሚፈልጉትን የጥቅም ስም ያስገቡ።"
+    },
+    "home": {
+      "pioneer": {
+        "description": "የእርስዎን እድገት እና ዓለም አቀፋዊ ሁኔታ ይከታተሉ",
+        "referrals": "ልጋውያን"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "ቡድንዎን ያሳድጉ እና ማህበረሰብ ይገንቡ"
+        }
+      },
+      "team": {
+        "title": "ልጋውያን",
+        "view_team": "ልጋውያን ይመልከቱ"
+      },
+      "roadmap": {
+        "button_subtitle": "በአይስ የእኛ የማህበራዊ መግለጫውን በተጨማሪ ይቀረቡ."
+      },
+      "join_mainnet": {
+        "subtitle": "የኛው የቀጥታ መግቢያ አፕስንን እና የቀጥታ ስራውን በ2024 እስከ ማዕከል አደረጋችሁ።"
+      }
+    },
+    "settings": {
+      "invite_description": "ቡድንዎን በአዲስ አባላት ያሳድጉ"
+    },
+    "profile": {
+      "invite_friends_engage": "ቃሉን ያሰራጩ እና ጓደኞችዎን ወደ አይስ ኔትወርክ ማህበረሰብ እንዲቀላቀሉ ይጋብዙ!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "ጓደኞችዎ የበረዶውን ማህበረሰብ እንዲቀላቀሉ ለመጋበዝ ይህንን ባህሪ ይጠቀሙ። አውታረ መረብዎን ያስፋፉ፣ ልምዶችን ያካፍሉ እና ዘላቂ ግንኙነቶችን በጋራ ይፍጠሩ።"
+        },
+        "wallet": {
+          "description": "የአሁኑ የበረዶ ሒሳብዎን ከገቢው መጠን ጋር እዚህ ማግኘት ይችላሉ።"
+        },
+        "earning": {
+          "description": "በገቢዎ መጠን እና በጉርሻዎች ላይ እንደተዘመኑ ይቆዩ! እዚህ የእርስዎን የአሁኑን ተመን፣ የመሠረታዊ ታሪኮቻችንን እና የጉርሻ ተመኖችን መመልከት ይችላሉ።"
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "በዚህ ክፍል የጋበዟቸውን የቡድን አባላት አጠቃላይ ቁጥር ያያሉ፣ ይህም የማህበረሰብዎን እድገት እና ዝግመተ ለውጥ ለመከታተል ያስችልዎታል።"
+        },
+        "earnings": {
+          "description": "የአሁኑ ቀሪ ሒሳብዎ በየሰዓቱ ዘምኗል እና እዚህ ይታያል። የእርስዎን ቀጥተኛ እና የተያዙ ገቢዎችን ያካትታል።"
+        }
+      }
+    },
+    "claimUsername": {
+      "description": "ልጋውያንን በ[[:ice]] ይዘገቡ፣ በዚህ ጥቅም ስም እንዴት ባዶ ይሆናል."
+    },
+    "users": {
+      "team": "ልጋውያን"
+    },
+    "team": {
+      "empty": {
+        "team": "ማእከል አለባቸው!"
+      },
+      "contacts": {
+        "empty_description": "የሙከራውን ስምንት ተይምንቶችን እናቀርባለን እና የሚገቡትን ሰዎችን ያግባሉ በ[[:ice]] ውስጥ."
+      }
+    }
+  },
+  "bsc_address": {
+    "title": "BNB Smart Chain አድራሻ",
+    "enter_address_title": "የህክም አድራሻዎን ይምረጡ",
+    "enter_address_description": "በየክፍል አንድ ኢስ ICE ቶኪን በ BNB Smart Chain ባህሪ ለመቆጣጠር ማለት ነው። በቅደም ጐንደር እቆጠታለሁ ከህክም አድራሻዎን የምትጎበኙት ቦታ በ BNB Smart Chain ይደሰቱበታል (ION) ባህሪዎን በቀጥታ ይከፍታል።",
+    "enter_address_confirmation": "እርስዎ የ BNB Smart Chain አድራሻ ነው የሚያመለክተው ነውም፣ በማለት ይጎብኛልን?",
+    "validators_warning_title": "አድራሻ አረጋግጥ",
+    "validators_warning_text": "እባክዎን ባንዳርነት በህክም አድራሻ አድርገዋል ከእኛው አይምሰልሽም፣ ብኛው የምርምርን ቅርጸ ከከባድ የተመለከተውን አግባብ በማድረግ ልክ ልንሄድ ትችላላችሁ።",
+    "walletDescription": "እኛንኳ ምርት-ሜርሳክ ወይም ትሪስት ዋልት እንዲሁም ለራስ-ቡቦውን የሚሰጥ ወደ [[:bold]]Metamask[[/:bold]] ወይም [[:bold]]Trust Wallet[[/:bold]] መግባት ይፈልጋሉ።\n\nእባክዎት ትንሽት አስተያየታችሁን ደፍና ስልኩን ማስቀመጥ አይፈልጉም።"
+  },
+  "social_kyc": {
+    "header": "ማረጋገጫ",
+    "verify_with_title": "በ {{method}} አረጋግጥ",
+    "select_method_step": {
+      "title": "KYC ፕለት #2",
+      "description": "ያለውን የX መገለጫ በመጠቀም መለያህን በቀላሉ አረጋግጥ።"
+    },
+    "instructions_step": {
+      "show_example": "ምሳሌ አሳይ",
+      "example_title": "የድጋሚ ልጥፍ ምሳሌ",
+      "x": {
+        "1": "ያገላውን X ከፍተኛ ይፈልጉ እና [[:bold]]@ice_blockchain[[/:bold]] አካዎችን ይፈልጉ።",
+        "2": "የተሰካውን ፖስት አግኝ፣ እሱም በመገለጫው ላይ የመጀመሪያው ልጥፍ ነው።",
+        "3": "❤️ ይጠብቁና 🔄 ያገላውን በ[[:bold]]ብርሀን[[/:bold]] ይፈጥና ይመጣል። በቀጣይ [[:bold]]የተያዙትን[[/:bold]] ጽሑፍ በተለያየ ጽሑፍ በመጻፍ ይጠብቃል።",
+        "pop_up": {
+          "title": "መረጃ",
+          "description": "የተሰካውን ልጥፍ ወደውታል እና በምሳሌው ላይ እንደተገለጸው የቀረበውን ትክክለኛ ጽሑፍ ተጠቅመህ በጥቅስ ድጋሚ ለጠፍከው?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "ጽሑፍ ለመቅዳት መታ ያድርጉ",
+        "copied": "የተገለበጠ"
+      }
+    },
+    "verification_step": {
+      "title": "መረጃ",
+      "description": "ማረጋገጫዎን ለማጠናቀቅ፣እባክዎ ያለፉትን እርምጃዎች ያጠናቀቁበትን ልጥፍ አገናኝ ይለጥፉ። አገናኙ ትክክል መሆኑን ያረጋግጡ።",
+      "placeholder": "አገናኙን አስገባ",
+      "instructions_step": {
+        "4": "የልጥፍህን ሊንክ ከታች ለጥፍ። 👇"
+      },
+      "action": {
+        "verify": "አረጋግጥ",
+        "wait": "እባክዎ ይጠብቁ",
+        "countdown": "{{countdown}} ይቀራል"
+      },
+      "pop_up": {
+        "title": "አጋጣሚ ስህተት",
+        "description": "እባክዎን ከፈተናው አጋጣሚ ስህተት አይደለም።\n\n[[:bold]]ምሳሌ:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "የተቀሩት ሙከራዎች ብዛት: {{count}}",
+      "success": {
+        "title": "ማረጋገጫ ተጠናቅቋል",
+        "description": "እንኳን ደስ አለህ፣ የ KYC ደረጃ #2ህን በተሳካ ሁኔታ አጠናቅቀሃል። አሁን ተረጋግጠሃል።"
+      },
+      "error_try_again": {
+        "title": "ማረጋገጥ ስህተት",
+        "description": "እባክዎ የቀረበውን ጽሑፍ ተጠቅመው ትክክለኛውን ልጥፍ እንደገና መለጠፍዎን እና ልጥፉ በይፋ የሚገኝ መሆኑን ያረጋግጡ።"
+      },
+      "error_try_later": {
+        "title": "ማረጋገጥ ስህተት",
+        "description": "ማረጋገጡን ማጠናቀቅ አልቻልንም። በ7 ቀናት ውስጥ እንደገና መሞከር ትችላለህ።"
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "BNB Smart Chain ከፍተኛ አገልግሎት",
+      "description": "በቅርጸ አድራሻ የሚገኝ የህክም አድራሻ ICE ቶኪንን በቀጥታ በህክም አድራሻዎን ማረጋገጥ ማቅረብ ተቀብላለሁ።"
+    },
+    "instructions_step": {
+      "x": {
+        "1": "ያሳውቃል [[:bold]]ድረስ ይጎብኛል[[/:bold]] እንዲሁም የእኛን X ፕዞር፣ እኛን አገልግሎት ያለበት እህልን በቀጥታ ይጫኑ።",
+        "pop_up": {
+          "description": "እባክዎን የመጨረሻውን መረጃ ለመነሻ እና ከአገልግሎቱ ቀጥታ ላይ ያገኙን የመረጃዎች አስተካክል እና። ራሳችንን በመቀየር በመጀመሪያ እርስዎን ድረስ ያለማሳወቂያውን ስኳርጁ.",
+          "description2": "እንዴት ነሽ እና አጽዕማት አብረርጅን አቀማመድ እናብቃት ከማስታወቂያ በታሪክ ተጠቅሞሉን መልሰህ?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "እንኳን እንዴት ታላቅ እርምስ እንዳለህ፣ እንዴት ታስቦህ ትልቅ ህክም አድራሻ በተመሰገነ የሚሆን ነገር ስለሚገኝ፣ እባክዎ ይህን ነገር ተቀብላል።"
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "መለያ አማራጭ",
+    "description": "እባክዎ እንዲህ የሚያስተዳድር እችንት፣ ቁልፍዎን በተላከዉ እንዴት ሊተግባት ይችላል።",
+    "description2": "ይህ ማሳወቅ እኛን የሞባይል መለያንና የእርስዎን ኢሜል በተላከዉ እንዴት ሊሳቅ ይችላል። እኛን የተሳሳተ እና የአትታውሰዉ እችንት። እኛን የሚያማርክ እንችላላለን!"
+  },
+  "quiz": {
+    "title": "ፈቃድ",
+    "intro": {
+      "description": "በIce ለእኛ ብዛት በማድረግ ሳልነበር እና በእኛን መገደብ ሳልነበር እኛ ከእኛን በማድረግ ከማይገኝ ወደ ማን በማይገኝ ይወሰናል። ስለዚህ ምንም ባህር የለም ከዚያም በIce ክፍት ቦታዎች ማያምን ሳልነበር እና በእኛን መልሰው የIce ግባኝን ይበርታል ወይም የቅዳሜውን ሰዓት ልብስ ያስመልሳል።",
+      "community_engagement": {
+        "title": "🙌 የአስተናጋጅ ዕድገት መቁጠሪያ",
+        "description": "የIce የአገልግሎት በደረት እና ስለዚህ ሳልነበር የሚታዘዝ የቅዳሜውን ሰዓት ልብስ ያስመልሳል።",
+        "point1": "ከንቲባችን ተወዳዳሪ ስለኛው ዜና ስለኛው ቪድዮ ለመማር ይጠቀሙበታል።",
+        "point2": "ከንቲባችን ብዙዎችን እንዲተማመኑ ለኛው የሰርክ አፕልክሽን እና የYouTube ወይም Twitter Space የሚቆጣጠሩ ላንስ ባለውን በዚያ ይቀርባሉ።",
+        "point3": "የቅዳሜውን ሰዓት ልብስ ያስመልሳል።",
+        "bottom_description": "ማንኛውም የዕድገትዎን ሰው በከፋ በመተላለፉ ማሳወቅዎችዎን አስተማሪዎች ያጣሩ ይሆናሉ።"
+      },
+      "terms_privacy": "እኛንኛውም እኛንኛውም [[:link]]ተጠምቀው[[/:link]] እና [[:link]]ግምገማ ግምገማ[[/:link]] ስማር ክፍል በማድረግ እንዲጠቀሙ ነው።",
+      "knowledge_check": {
+        "title": "🧠 ፈቃድ ማረግ",
+        "point2": "ፈቃድን በጣም ለመቀየር ምንም የሚሆኑ ጥያቄዎችን ተመልክታችኋል.",
+        "point3": "ፈቃድ ማረጋገጫ የእርስዎ ማስተማርያ ስለሆነ ይመስላል።",
+        "point4": "ፈቃድን ለመቀየር በጣም ቀጣይ የተያያዘ ቀን ባለው በእርስዎ ታገኛ ቲቪ ጊዜ አለዎት። ቀጣይ ቀንን በየቀኑ በየተለያየ ቀጣይ ይደርስበታል።",
+        "point5": "ቀጣይ ቀንው የሚቀጥል 3 ኮሌን እናድርጋለን ፣ ወይም ቀጣይ ቀን ሙሉ የግፍ ምንቸቂል ይወስዳል። እንደግፍ ፣ እንዲተጋባበት ወይም ኮሌን አቆጣጠር ቀጥሎ ባለው ቀን የሚተወምድ ነው።",
+        "point6": "📚 ይህን ፈቃድ የሚከተሉ መረጃዎች እንዳትከተሉ ይረዳ [[:link]]ይህን[[/:link]] ይጠቀሙ.",
+        "description": "ስማር ቢሮዎችን ከዚያ በማሰልፍ ይህን ምላሽ ይጠቀምያል።",
+        "point1": "እባክዎች ከእኛ የመሳሰሉት 21 ጥያቄ አዘል ያለብሳሉ።"
+      },
+      "why_quiz": {
+        "title": "💡 ቦታዎች",
+        "description": "ለእርስዎ መረጃዎችና ብሔር የሚያቋቋመው በእርስዎ ቤት ውስጥ የሚጠቀሙ ወንድሞች እና ያገኙት ውሳኔ የእርስዎ መንገድ በታላቅ አየር ይታዘዝ ይሆናል። በእርስዎ ፈቃድ እንዳትጠቀሙ የእርስዎ አስተዳደር እና ገንዘብ የሚያስተዳድር በሆነው ብሔር የሚጠቀሙ ወንድሞችን ብታዋቁ መንገዶችን ማሻሻያ ስጠብቃቸዋል።"
+      }
+    },
+    "quiz_failure": {
+      "title": "አስተዳደረ ፈቃደኛ",
+      "description": "እንዴት ከሰአት 18 ግራም ተገኝተሽ ከሆነሽ ወደፊት ተገኝቷል ወይም ያለ ጊዜ ተገኝቷል። በዚህም ከፍተኛ አይነት እንዳይቀረው ምንድን ነው የሚያሳየው።"
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "ጥያቄ {{current}} ከ {{total}}",
+      "time_over": "⌛️ የጊዜ የቆይታ",
+      "correct_answers": "ታዳጊ ጥያቄዎች",
+      "wrong_answers": "ትክክለኛ ጥያቄዎች"
+    },
+    "confirmation_popup": {
+      "title": "እርምጃ",
+      "start_description": "ይህን ፈቃድ ይጀምራል ይሄዱ።",
+      "cancel_description": "በፍጥነት የተሞሉትን የፈቃድ እቃዎች እትም የሚፈልጉት ቀጣይ ምስል ተመልከት። እርስዎ በፈቃድ መደወል ይፈልጋልም።"
+    },
+    "quiz_success": {
+      "title": "መመሪያ ውሎት አስተዳደር",
+      "description": "እንኳን በKYC እባክዎ ተስቀድናቸዋል። እባክዎች በምንም ነገር የሚደርጉ የታወቀውና የሚሰጡ ምላሽ ከእኛ ተተማመን ስለተሳስባችሁ ሚኒኬር አፈፃን ያበረታሉ።"
+    },
+    "mining_disabled_popup": {
+      "title": "❌ የተጠየቀ ማዕቀፍ",
+      "description": "ከዌብሳይን ባለ የሚውስጡ ፈቃዶች በየቀኑ 3 ሰክታዎች በተጨማሪም ፈቃዶች እና እንዲተጋባበት ወይም የውል ጊዜ ተጠየቁ። የፈቃዱ ፈቃዶችን ተቀባይ የሚያቀርቡበት ቀን ቀጣይ ቀን ይተወምዳል።"
+    },
+    "action": "ፈቃድዎን አስተምረን",
+    "reminder": "በቅርቡ ማዘጋጀት ይለፋል እና አስፈላጊ ምዝገባውን ያላቸውን መጋቢት ያላችኋል።",
+    "days_left": "የቀን ቦታዎች: {{days}}",
+    "retries_left": "በዚህ ሞባይን ያስቀመጡ: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "BNB Smart Chain የህብረት ህብረት",
+      "description": "የተማሪ በX የታለፉ የቀጣይ ቢሮክስ አይስ መካከልን በመስጠት ቀጥታ የቀጣይ ቢሮክስ አይስ መካከል አሁን ለመቀጣጠል መጠበቅን።"
+    },
+    "results_step": {
+      "success": {
+        "description": "እንኳን እርስዎን ምርጫ በማስጠበቅ ሳይሆን፣ እርስዎ ማስታወቂያዎችን ምርጫዎችን ለማድረግ ሰሚት ሀዘንን ተከትሎአል። እርስዎን እርስዎ ቀጣይ ቢሮክስ ህብረት ማስታወቂያዎችን ለማድረግ ሰሚት ያዘጋጃል።"
+      }
+    }
+  },
+  "buttons": {
+    "skip": "በፍጥነት ምግብ"
   }
 }

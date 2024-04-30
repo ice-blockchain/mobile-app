@@ -1,0 +1,44 @@
+https://github.com/wix/react-native-calendars/pull/2119
+
+diff --git a/node_modules/react-native-calendars/src/calendar/day/marking/index.d.ts b/node_modules/react-native-calendars/src/calendar/day/marking/index.d.ts
+index 97aa383..1e818b6 100644
+--- a/node_modules/react-native-calendars/src/calendar/day/marking/index.d.ts
++++ b/node_modules/react-native-calendars/src/calendar/day/marking/index.d.ts
+@@ -45,6 +45,7 @@ export interface MarkingProps extends DotProps {
+     endingDay?: boolean;
+     accessibilityLabel?: string;
+     customStyles?: CustomStyle;
++    fillerColor?: string;
+ }
+ declare const Marking: {
+     (props: MarkingProps): JSX.Element;
+diff --git a/node_modules/react-native-calendars/src/calendar/day/period/index.js b/node_modules/react-native-calendars/src/calendar/day/period/index.js
+index f27db0e..69dc3e3 100644
+--- a/node_modules/react-native-calendars/src/calendar/day/period/index.js
++++ b/node_modules/react-native-calendars/src/calendar/day/period/index.js
+@@ -93,10 +93,10 @@ const PeriodDay = (props) => {
+         const start = markingStyle.startingDay;
+         const end = markingStyle.endingDay;
+         if (start && !end) {
+-            rightFillerStyle.backgroundColor = markingStyle.startingDay?.backgroundColor;
++            rightFillerStyle.backgroundColor = marking.fillerColor ?? markingStyle.startingDay?.backgroundColor;
+         }
+         else if (end && !start) {
+-            leftFillerStyle.backgroundColor = markingStyle.endingDay?.backgroundColor;
++            leftFillerStyle.backgroundColor = marking.fillerColor ?? markingStyle.endingDay?.backgroundColor;
+         }
+         else if (markingStyle.day) {
+             leftFillerStyle.backgroundColor = markingStyle.day?.backgroundColor;
+diff --git a/node_modules/react-native-calendars/src/day-state-manager.js b/node_modules/react-native-calendars/src/day-state-manager.js
+index 514e854..e3c0a4d 100644
+--- a/node_modules/react-native-calendars/src/day-state-manager.js
++++ b/node_modules/react-native-calendars/src/day-state-manager.js
+@@ -15,8 +15,5 @@ export function getState(day, current, props, disableDaySelection) {
+     else if (isDateNotInRange(day, minDate, maxDate)) {
+         state = 'disabled';
+     }
+-    else if (!sameMonth(day, current)) {
+-        state = 'disabled';
+-    }
+     return state;
+ }

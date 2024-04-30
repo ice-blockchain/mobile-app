@@ -2,6 +2,7 @@
 
 #import "NotificationService.h"
 #import "FirebaseMessaging.h"
+@import MoEngageRichNotification;
 
 @interface NotificationService ()
 
@@ -15,7 +16,12 @@
 - (void)didReceiveNotificationRequest:(UNNotificationRequest *)request withContentHandler:(void (^)(UNNotificationContent * _Nonnull))contentHandler {
     self.contentHandler = contentHandler;
     self.bestAttemptContent = [request.content mutableCopy];
-    [[FIRMessaging extensionHelper] populateNotificationContent:self.bestAttemptContent withContentHandler:contentHandler];
+    if ([request.content.userInfo objectForKey:@"moengage"]) {
+      [MoEngageSDKRichNotification setAppGroupID: @"group.io.ice"];
+      [MoEngageSDKRichNotification handleWithRichNotificationRequest:request withContentHandler:contentHandler];
+    } else {
+      [[FIRMessaging extensionHelper] populateNotificationContent:self.bestAttemptContent withContentHandler:contentHandler];
+    }
 }
 
 - (void)serviceExtensionTimeWillExpire {

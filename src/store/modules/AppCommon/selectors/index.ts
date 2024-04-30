@@ -26,6 +26,5 @@ export const failedInitializeActionSelector = (state: RootState) => {
 export const initSuccessSelector = (state: RootState) => {
   return !INITIALIZE_ACTIONS.find(action => !isSuccessSelector(action, state));
 };
-
 export const isSplashHiddenSelector = (state: RootState) =>
   state.appCommon.isSplashHidden;

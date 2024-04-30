@@ -58,5 +58,4 @@ export const LINKS = {
   X_REPOST_LINK_EXAMPLE:
     'https://twitter.com/ice_z3us/status/1732445405806477625?t=HgtbOUEVIxMENcUuRKIsQQ&s=19',
   BSCSCAN: 'https://bscscan.com/address',
-  ICE_COIN_STATS: 'https://data.ice.io/stats',
 };

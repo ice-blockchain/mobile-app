@@ -1,0 +1,140 @@
+https://github.com/react-native-share/react-native-share/issues/1427
+
+diff --git a/node_modules/react-native-share/ios/GooglePlusShare.m b/node_modules/react-native-share/ios/GooglePlusShare.m
+index ec72ddd..ce01254 100644
+--- a/node_modules/react-native-share/ios/GooglePlusShare.m
++++ b/node_modules/react-native-share/ios/GooglePlusShare.m
+@@ -7,6 +7,7 @@
+ //
+ 
+ #import "GooglePlusShare.h"
++#import "RNShareUtils.h"
+ 
+ @implementation GooglePlusShare
+     RCT_EXPORT_MODULE();
+@@ -21,8 +22,7 @@ - (void)shareSingle:(NSDictionary *)options
+         NSURL *gplusURL = [NSURL URLWithString:[url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+ 
+         if ([[UIApplication sharedApplication] canOpenURL: gplusURL]) {
+-            [[UIApplication sharedApplication] openURL:gplusURL];
+-            successCallback(@[@true, @""]);
++            [RNShareUtils openUrl:gplusURL successCallback:successCallback failureCallback:failureCallback];
+         } else {
+             // Cannot open gplus
+             NSString *errorMessage = @"Not installed";
+diff --git a/node_modules/react-native-share/ios/InstagramShare.m b/node_modules/react-native-share/ios/InstagramShare.m
+index 3c2c1a3..d9e52a5 100644
+--- a/node_modules/react-native-share/ios/InstagramShare.m
++++ b/node_modules/react-native-share/ios/InstagramShare.m
+@@ -6,6 +6,7 @@
+ //
+ 
+ #import "InstagramShare.h"
++#import "RNShareUtils.h"
+ #import <AVFoundation/AVFoundation.h>
+ @import Photos;
+ 
+@@ -44,8 +45,7 @@ - (void)shareSingle:(NSDictionary *)options
+     }
+     
+     if ([[UIApplication sharedApplication] canOpenURL: shareURL]) {
+-        [[UIApplication sharedApplication] openURL: shareURL];
+-        successCallback(@[@true, @""]);
++        [RNShareUtils openUrl:shareURL successCallback:successCallback failureCallback:failureCallback];
+     } else {
+         // Cannot open instagram
+         NSString *stringURL = @"https://itunes.apple.com/app/instagram/id389801252";
+@@ -84,8 +84,7 @@ - (void)shareSingleImage:(NSDictionary *)options
+                               successCallback: successCallback];
+         }
+     } else {
+-        [[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"instagram://camera"]];
+-        successCallback(@[@true, @""]);
++        [RNShareUtils openUrl:[NSURL URLWithString:@"instagram://camera"] successCallback:successCallback failureCallback:failureCallback];
+     }
+ }
+ 
+diff --git a/node_modules/react-native-share/ios/RNShareUtils.h b/node_modules/react-native-share/ios/RNShareUtils.h
+index 6475423..025950a 100644
+--- a/node_modules/react-native-share/ios/RNShareUtils.h
++++ b/node_modules/react-native-share/ios/RNShareUtils.h
+@@ -1,6 +1,10 @@
+ #import <Foundation/Foundation.h>
++#import <React/RCTBridge.h>
+ 
+ @interface RNShareUtils : NSObject
+ +(NSString*)getExtensionFromBase64:(NSString*)base64String;
+ +(NSURL*)getPathFromBase64:(NSString*)base64String with:(NSData*)data;
+++(void)openUrl:(NSURL*)url
++successCallback:(RCTResponseSenderBlock)successCallback
++failureCallback:(RCTResponseErrorBlock)failureCallback;
+ @end
+diff --git a/node_modules/react-native-share/ios/RNShareUtils.m b/node_modules/react-native-share/ios/RNShareUtils.m
+index 9a79416..56a2f4d 100644
+--- a/node_modules/react-native-share/ios/RNShareUtils.m
++++ b/node_modules/react-native-share/ios/RNShareUtils.m
+@@ -47,4 +47,20 @@ +(NSURL*)getPathFromBase64:(NSString*)base64String with:(NSData*)data {
+     return NULL;
+ }
+ 
++/**
++ Open a given url and handles a result
++ */
+++(void)openUrl:(NSURL*)url
++successCallback:(RCTResponseSenderBlock)successCallback
++failureCallback:(RCTResponseErrorBlock)failureCallback {
++    [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
++        if (success) {
++            successCallback(@[@true, @""]);
++        } else {
++            NSError *error = [NSError errorWithDomain:@"com.rnshare" code:4 userInfo:@{ NSLocalizedDescriptionKey:[NSString stringWithFormat:@"Unable to open URL: %@", url]}];
++            failureCallback(error);
++        }
++    }];
++}
++
+ @end
+diff --git a/node_modules/react-native-share/ios/TelegramShare.m b/node_modules/react-native-share/ios/TelegramShare.m
+index 0bb0640..913d25b 100644
+--- a/node_modules/react-native-share/ios/TelegramShare.m
++++ b/node_modules/react-native-share/ios/TelegramShare.m
+@@ -6,6 +6,7 @@
+ //
+ 
+ #import "TelegramShare.h"
++#import "RNShareUtils.h"
+ #import <AVFoundation/AVFoundation.h>
+ @import Photos;
+ 
+@@ -27,8 +28,7 @@ - (void)shareSingle:(NSDictionary *)options
+     NSURL * shareURL = [NSURL URLWithString:urlTelegram];
+     
+     if ([[UIApplication sharedApplication] canOpenURL: shareURL]) {
+-        [[UIApplication sharedApplication] openURL: shareURL];
+-        successCallback(@[@true, @""]);
++        [RNShareUtils openUrl:shareURL successCallback:successCallback failureCallback:failureCallback];
+     } else {
+         // Cannot open telegram
+         NSString *stringURL = @"https://itunes.apple.com/app/telegram-messenger/id686449807";
+diff --git a/node_modules/react-native-share/ios/WhatsAppShare.m b/node_modules/react-native-share/ios/WhatsAppShare.m
+index afd4e60..96a8b59 100644
+--- a/node_modules/react-native-share/ios/WhatsAppShare.m
++++ b/node_modules/react-native-share/ios/WhatsAppShare.m
+@@ -7,6 +7,7 @@
+ //
+ 
+ #import "WhatsAppShare.h"
++#import "RNShareUtils.h"
+ 
+ @implementation WhatsAppShare
+ static UIDocumentInteractionController *documentInteractionController;
+@@ -84,8 +85,7 @@ - (void)shareSingle:(NSDictionary *)options
+             NSURL * whatsappURL = [NSURL URLWithString:urlWhats];
+             
+             if ([[UIApplication sharedApplication] canOpenURL: whatsappURL]) {
+-                [[UIApplication sharedApplication] openURL: whatsappURL];
+-                successCallback(@[@true, @""]);
++                [RNShareUtils openUrl:whatsappURL successCallback:successCallback failureCallback:failureCallback];
+             }
+         }
+     }

@@ -1,4 +1,33 @@
 {
+  "welcome": {
+    "page1": {
+      "title": "Vitaj v Ice",
+      "description": "[[:ice]] je digitálna mena, ktorú môžeš zarábať prostredníctvom telefónu. Ice vlastnia a spravujú každodenný používatelia ako ty."
+    },
+    "page2": {
+      "title": "Šetrný k planéte",
+      "description": "[[:ice]] je vo svojej podstate efektívnejší ako BTC, pretože používa konsenzuálny mechanizmus Proof of Stake. Pri Proof of Stake (POS) vlastníci kryptomien overujú blokové transakcie na základe počtu mincí, ktoré validátor stavil."
+    },
+    "page3": {
+      "title": "Minca ľudu",
+      "description_part1": "Sila je v tvojich rukách.",
+      "description_part2": "Všetko, čo vyvíjame v [[:ice]], bude mať otvorený zdrojový kód a bude kontrolované Decentralizovanou autonómnou organizáciou (DAO)."
+    },
+    "page4": {
+      "title": "Zostaň v spojení",
+      "description": "Ťukni na [[:iceLogo]] , prejdi našu bezplatnú, energeticky úspornú mobilnú aplikáciu a vykonávaj denné kontroly. Tvoje každodenné ťuknutie zabezpečí, že Ice skončí v rukách skutočných ľudí, nie robotov."
+    },
+    "page5": {
+      "title": "Odporúčaj a zarábaj",
+      "description": "Pozvi svojich priateľov a získajte (obaja) až 25 % bonus k základnému zárobku za každého priateľa, ktorý sa pripojí k tvojom tímu."
+    },
+    "page6": {
+      "title": "Upozornenia",
+      "description_part1": "[[:ice]] Denné kontroly [[:ice]] trvajú iba 24 hodín. Chceš dostávať upozornenia po vypršaní času tvojho prihlásenia?",
+      "description_part2": "Neboj sa, neposielame spam.",
+      "not_now": "Teraz nie"
+    }
+  },
   "button": {
     "yes_btn": "Áno, prosím",
     "next_btn": "Ďalej",
@@ -46,6 +75,81 @@
     "start": "Začať",
     "faq": "Často kladené otázky",
     "knowledge_base": "Základná znalosť"
+  },
+  "team": {
+    "contacts_tab": "Kontakty",
+    "tierOne_tab": "Úroveň 1",
+    "tierTwo_tab": "Úroveň 2",
+    "empty": {
+      "contacts": "V súčasnosti nemáš v telefónnom zozname žiadne kontakty.",
+      "button_title": "Pozvať priateľov",
+      "t1": "Momentálne nemáte žiadne odporúčania T1!",
+      "t2": "Momentálne nemáte žiadne odporúčania T2!",
+      "team": "Momentálne nemáte žiadnych členov tímu!"
+    },
+    "contacts": {
+      "empty_title": "[[:ice]] je s priateľmi lepší",
+      "empty_button_title": "Povoliť prístup ku kontaktom",
+      "empty_description": "Synchronizuj svoje kontakty a zisti, kto už je na [[:ice]]. V budúcnosti budeš môcť posielať Ice ľubovoľnému zo svojich kontaktov."
+    },
+    "header": {
+      "search_placeholder": "Hľadať používateľov",
+      "referrals": "Odporúčania",
+      "earnings": "Zárobky"
+    },
+    "confirm_code": {
+      "title": "Potvrdiť kód",
+      "description": "Zadaj potvrdzovací kód, ktorý ti prišiel do telefónu.",
+      "placeholder": "Zadať kód",
+      "button": "Potvrď svoj kód teraz"
+    },
+    "confirm_phone": {
+      "title": "Potvrdiť telefón",
+      "description": "Potvrď kód krajiny a zadaj svoje telefónne číslo."
+    },
+    "contacts_list": {
+      "ice_header": {
+        "friends": "priatelia"
+      },
+      "all_contacts": "Všetky kontakty",
+      "invite": "pozvať",
+      "invitation_text": "Ahoj {{name}}, rád by som ťa pozval na pripojenie sa k Ice."
+    },
+    "tier_one": {
+      "header_list": {
+        "title_earnings": "Zárobky Úrovne 1"
+      }
+    },
+    "tier_two": {
+      "header_list": {
+        "title_earnings": "Zárobky Úrovne 2"
+      }
+    }
+  },
+  "signIn": {
+    "logInSignUp": "Prihlásiť sa/Registrovať",
+    "phone": "Telefón",
+    "or": "alebo",
+    "reset_password": "Obnoviť heslo",
+    "welcome": "Vitaj v Ice",
+    "email": "Email",
+    "slogan": "Decentralizovaná budúcnosť",
+    "privacy": "Pokračovaním súhlasíš s našimi [[:link]]Podmienkami poskytovania služby[[/:link]] a [[:link]]Zásadami ochrany osobných údajov[[/:link]]"
+  },
+  "claimUsername": {
+    "title": "Uplatniť prezývku",
+    "description": "Tvoji priatelia budú musieť použiť túto prezývku, aby sa mohli pripojiť k tvojmu tímu.",
+    "inputPlaceholder": "Zadať prezývku",
+    "note_part1": "Pri vytváraní prezývky používaj len písmená, čísla a bodky.",
+    "note_part2": "Príklad:",
+    "note_example": "tvoje.meno01"
+  },
+  "whoInvitedYou": {
+    "title": "Kto ťa pozval?",
+    "description": "Zadaj prezývku osoby, ktorá ťa pozvala.",
+    "inputPlaceholder": "Zadať prezývku",
+    "dontHaveInvitationCode": "Po vykonaní tohto kroku získaš ty a tvoj priateľ 25 % bonus k základnej sadzbe, ak sa obaja prihlásite v rovnakom čase.",
+    "dontHaveCodeTip": "Ak nemáš pozývací kód, vyberieme náhodného člena ako tvojho odporúčateľa!"
   },
   "errors": {
     "nicknameSize": "Dĺžka prezývky: 4 – 20 znakov.",
@@ -99,6 +203,45 @@
     "same_phone_error": "Nemôžeš použiť to isté číslo",
     "unable_to_validate_bsc_addr_eoa": "Nedá sa overiť adresa EOA"
   },
+  "profile": {
+    "my_roles": {
+      "title": "Moja rola"
+    },
+    "mining_calculator": "kalkulačka zárobkov",
+    "invite_friends": "Pozvať priateľov",
+    "invite_friends_engage": "Povedz ďalej a pozvi svojich priateľov.  Viac odporučíš, viac zarobíš!",
+    "global_rank": "globálne postavenie",
+    "view_all_roles": "zobraziť všetky roly",
+    "data_is_hidden": "údaje sú skryté",
+    "progress_text": "{{value}} z {{total}}",
+    "not_found": {
+      "title": "Používateľ nenájdený",
+      "description": "Používateľa sme nenašli."
+    },
+    "my_badges": {
+      "title": "Moje odznaky"
+    },
+    "badges": {
+      "title": "Odznaky"
+    },
+    "roles": {
+      "title": "Roly"
+    },
+    "badge_types": {
+      "coin": {
+        "title": "Mince",
+        "description": "mince"
+      },
+      "social": {
+        "title": "Sociálne",
+        "description": "priatelia"
+      },
+      "level": {
+        "title": "Úroveň",
+        "description": "Úroveň"
+      }
+    }
+  },
   "global": {
     "level": "úroveň",
     "referrals": "odporúčania",
@@ -117,6 +260,320 @@
       "today": "Dnes"
     }
   },
+  "mining_calculator": {
+    "result_label": "Zarobíš",
+    "active_inviter": "Aktívny pozývateľ",
+    "tier_1_ref": "Odporúčania Úrovne 1",
+    "tier_2_ref": "Odporúčania Úrovne 2",
+    "active_miners": "Aktívne odporúčania",
+    "team_members": "Členovia tímu",
+    "active_team_members": "Aktívni členovia tímu"
+  },
+  "home": {
+    "wallet": {
+      "title": "PEŇAŽENKA",
+      "rate": "VÝNOSOVÁ SADZBA",
+      "balance": "AKTUÁLNY STAV"
+    },
+    "pioneer": {
+      "rank": "GLOBÁLNE POSTAVENIE",
+      "referrals": "ODPORÚČANIA",
+      "description": "Odporuč viac používateľov a získaj viac [[:ice]]."
+    },
+    "referrals": {
+      "title": "ODPORÚČANIA",
+      "description": "Štatistiky odporúčaní za predchádzajúcich 5 dní.",
+      "no_referrals_description": "Aktuálne nemáš žiadne odporúčania!",
+      "users_tier_1": "Používatelia úrovne 1",
+      "users_tier_2": "Používatelia úrovne 2",
+      "title_team": "TÍM",
+      "description_team": "Štatistiky tímu za posledných 5 dní",
+      "no_referrals_description_team": "Momentálne nemáte žiadnych členov tímu.",
+      "users": "Používatelia"
+    },
+    "adoption": {
+      "title": "PRIJATIE",
+      "level": "úroveň",
+      "users": "používatelia"
+    },
+    "tasks": {
+      "achievements": "ÚSPECHY",
+      "title": "Tvoj postup",
+      "description": "Splň nasledujúce úlohy a zvýš svoju úroveň!",
+      "completed": {
+        "title": "Gratulujeme",
+        "description": "Prihlasuj sa denne a získaj ďalšie odmeny!"
+      },
+      "popup": {
+        "title": "Pripoj sa k nášmu kanálu na Telegrame",
+        "description": "Zadaj svoju prezývku na Telegrame.",
+        "placeholder": "Prezývka"
+      },
+      "claim_username": {
+        "title": "Uplatniť prezývku",
+        "description": "Nastav ju a zdieľaj s priateľmi."
+      },
+      "start_mining": {
+        "title": "Začni zarábať",
+        "description": "Tvoje prvé prihlásenie."
+      },
+      "upload_profile_picture": {
+        "title": "Profilová fotka",
+        "description": "Nahraj svoju profilovú fotku."
+      },
+      "join_telegram": {
+        "title": "Pripoj sa k Telegramu",
+        "description": "Staň sa súčasťou našej komunity a pridaj sa teraz."
+      },
+      "follow_us_on_twitter": {
+        "title": "Sleduj nás na Twitteri",
+        "description": "Buďme v kontakte, sleduj nás na Twitteri."
+      },
+      "invite_friends": {
+        "title": "Pozvať 5 priateľov",
+        "description": "Rozširuj svoj tím a zvyšuj svoje príjmy."
+      }
+    },
+    "overview": {
+      "title": "Prehľad"
+    },
+    "menu": {
+      "notifications": "Upozornenia",
+      "staking": "Stakovanie",
+      "stats": "Štatistiky",
+      "help": "Pomoc",
+      "tips": "Tipy"
+    },
+    "team": {
+      "title": "Tím",
+      "view_team": "Zobraziť tím"
+    },
+    "mining_rate": {
+      "title": "VÝNOSOVÁ SADZBA",
+      "base": "Základ"
+    },
+    "engagement": {
+      "title": "ZÁVÄZOK",
+      "description_part1": "Séria vyjadruje počet po sebe nasledujúcich dní s evidovaným prihlásením.",
+      "description_part2": "Za každých 6 po sebe nasledujúcich dní dostaneš jeden deň voľna.",
+      "streak": "SÉRIA",
+      "days_off": "DEŇ VOĽNA"
+    },
+    "roadmap": {
+      "title": "NAŠA VÍZIA",
+      "button_title": "Biela kniha",
+      "button_subtitle": "Dozviete sa viac o našej vízii na Ice."
+    },
+    "join_mainnet": {
+      "title": "Pripojte sa k Decentralizovanej Budúcnosti",
+      "subtitle": "Získajte náhľad na našu nadchádzajúcu aplikáciu Mainnet a jej jedinečné funkcie."
+    },
+    "bsc_address": {
+      "title": "Adresa BNB Smart Chain",
+      "subtitle": "Prosím, zadajte svoju adresu BSC sem."
+    },
+    "verified_tooltip": {
+      "title": "KYC Overené"
+    }
+  },
+  "settings": {
+    "title": "Nastavenia",
+    "profile": "Profil",
+    "legal": "Obchodné podmienky",
+    "support": "Podpora",
+    "personal_information_title": "Osobné informácie",
+    "personal_information_description": "Uprav svoj profil",
+    "notifications_title": "Upozornenia",
+    "notifications_description": "Spravuj uporoznenia tu.",
+    "push_notifications_title": "Push upozornenia",
+    "push_notifications_description": "Prispôsob si nastavenia push upozornení.",
+    "email_notifications_title": "Emailové upozornenia",
+    "email_notifications_description": "Prispôsob si nastavenia emailových upozornení.",
+    "terms_title": "Podmienky poskytovania služieb",
+    "terms_description": "Prečítaj si naše podmienky poskytovania služieb.",
+    "privacy_title": "Zásady ochrany osobných údajov",
+    "privacy_description": "Prečítaj si naše zásady ochrany osobných údajov.",
+    "feedback_title": "Odoslať spätnú väzbu",
+    "feedback_description": "Podeľ sa s nami o svoje názory.",
+    "invite_title": "Pozvať priateľa",
+    "invite_description": "Zarob extra Ice za pozvanie priateľov.",
+    "delete_title": "Odstrániť konto.",
+    "delete_description": "Vymazať konto.",
+    "delete_confirmation_title": "Určite chceš odstrániť účet?",
+    "delete_confirmation_yes": "Áno, vymazať",
+    "logout_title": "Odhlásiť",
+    "logout_description": "Ukončiť a urobiť si prestávku.",
+    "logout_confirmation_title": "Určite chceš ukončiť?",
+    "logout_confirmation_yes": "Áno, odhlásiť",
+    "confirm_phone": {
+      "title": "Potvrdiť nový telefón",
+      "description": "Potvrď kód krajiny a zadaj svoje nové telefónne číslo.",
+      "button": "Potvrdiť nové telefónne číslo"
+    },
+    "notifications": {
+      "enable_prompt": "Upozornenie nie sú povolené. Chceš ich povoliť?",
+      "channel_achievements": "Úspechy",
+      "channel_news": "Novinky",
+      "channel_reminders": "Pripomienky",
+      "channel_team": "Tím",
+      "type_push": "PUSH",
+      "type_email": "EMAIL",
+      "disable_notifications": "Vypnúť upozornenia?",
+      "disable_notifications_description": "Vypnutím upozornení nebude môcť dostávať aktualizácie, kedy sa môžeš začať prihlasovať, novinky alebo informácie o tíme.",
+      "domain": {
+        "disable_all": {
+          "title": "",
+          "description": ""
+        },
+        "weekly_stats": {
+          "title": "Týždenné štatistiky",
+          "description": "Dostávaj upozornenia o svojej aktivite."
+        },
+        "weekly_report": {
+          "title": "Týždenná správa",
+          "description": "Dostávaj upozornenia o svojej aktivite."
+        },
+        "achievements": {
+          "title": "Úspechy",
+          "description": "Dostávaj upozornenia o svojej aktivite."
+        },
+        "promotions": {
+          "title": "Akcie",
+          "description": "Dostávaj oznámenia o tom, ako rozvíjať svoj tím a zarábať viac."
+        },
+        "news": {
+          "title": "Novinky",
+          "description": "Dostávaj upozornenia od nášho tímu."
+        },
+        "micro_community": {
+          "title": "Mikrokomunita",
+          "description": "Dostávaj upozornenia o svojom tíme."
+        },
+        "daily_bonus": {
+          "title": "Denný bonus",
+          "description": "Dostávaj upozornenia na uplatnenie denného bonusu."
+        },
+        "mining": {
+          "title": "Stav relácie",
+          "description": "Dostávaj upozornenia o svojich prihláseniach."
+        },
+        "system": {
+          "title": "Systém",
+          "description": "Dostávaj dôležité upozornenia o aplikácii Ice."
+        }
+      }
+    },
+    "language_settings": "Nastavenia jazyka",
+    "change_lang_confirm": {
+      "title": "Zmeniť jazyk",
+      "prompt": "Zmena tohto nastavenia reštartuje aplikáciu."
+    },
+    "profile_image": "Profilová fotka",
+    "inapp_privacy_title": "Súkromie",
+    "inapp_privacy_description": "Tu spravuj svoje informácie.",
+    "developer": "Vývojár",
+    "user_id": "Používateľské ID",
+    "user_token": "Používateľský token",
+    "profile_photo": {
+      "delete": "Vymazať fotku",
+      "edit": "Upraviť profilovú fotku",
+      "photo_gallery": "Galéria",
+      "camera": "Fotoaparát"
+    },
+    "confirm_email_confirmation_title": "Potvrdiť email?",
+    "update_email_confirmation_title": "Aktualizovať email?",
+    "update_email_confirmation_subtitle": "Pri zmene emailovej adresy je potrebné opätovné prihlásenie. Chceš pokračovať?",
+    "unlink_logins_title": "Zrušenie prepojenia prihlásení",
+    "unlink_logins_description": "Tu môžeš zrušiť prepojenia prihlásení"
+  },
+  "invite_share": {
+    "title": "Pozvať priateľa",
+    "telegram": "Telegram",
+    "twitter": "Twitter",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email": "Email",
+    "fb": "Informačný kanál",
+    "sms": "SMS",
+    "copy_link": "Kopírovať odkaz",
+    "more": "Viac",
+    "copied": "SKOPÍROVANÉ",
+    "share_message": "Ahoj ☃️ Snehuliak! Pridaj sa k môjmu tímu na Ice a pri použití môjho kódu získaš 10 mincí Ice:",
+    "share_subject": "Pridaj sa k môjmu tímu na Ice",
+    "description": "Povedz ďalej a pozvi svojich priateľov.  Získaš [[:ice]] za každé odporúčanie.",
+    "share": "Zdieľať"
+  },
+  "users": {
+    "ping": "ŠŤUCHNUTIE",
+    "active": "Aktívne",
+    "inactive": "Neaktívne",
+    "referralType": {
+      "T1": "Úroveň 1",
+      "T2": "Úroveň 2",
+      "team": "Členovia tímu"
+    },
+    "team": "Tím"
+  },
+  "personal_information": {
+    "first_name": "Meno",
+    "last_name": "Priezvisko",
+    "country": "Krajina",
+    "city": "Mesto",
+    "title": "Osobné informácie",
+    "phone": "Telefón",
+    "email": "Email",
+    "username": "Prezývka"
+  },
+  "username": {
+    "error": {
+      "already_taken": "Táto prezývka sa už používa.",
+      "length": "Dĺžka prezývky: 4 – 20 znakov.",
+      "invalid_characters": "Odstráň neplatné znaky.",
+      "not_found": "Prezývka sa nenašla.",
+      "some_error": "Nastala chyba.",
+      "refer_yourself": "Seba nemôžeš odporučiť."
+    }
+  },
+  "staking": {
+    "time_left": "Zostávajúci čas",
+    "mining_rate": "Výnosová sadzba",
+    "appeal": "Zvýš svoju výnosovú sadzbu",
+    "benefits_description": "Pre-stakuj svoje Ice až na 5 rokov a zvýš svojú výnosovú sadzbu až o 250 %.",
+    "bonus_label": "Bonus za pre-stakovanie",
+    "period_label": "Stakované obdobie",
+    "title": "Pre-stakovanie",
+    "current_rate": "Aktuálna sadzba",
+    "allocation": "Priradenie",
+    "description": "Stakovanie je proces, ktorý zahŕňa odovzdanie tvojich kryptoaktív na podporu blockchainovej siete a potvrdenie transakcií.",
+    "terms_agree": "Súhlasím s [[:link]]Podmienkami stakovania[[/:link]] [[:ice]]. Tvoje Ice podiely budú na zvolené obdobie uzamknuté.",
+    "stake_now": "Pre-stakuj teraz!",
+    "balance_label": "Stav stakovania",
+    "confirm_title": "Potrvdiť pre-stake",
+    "confirm_subtitle": "Určite chceš pre-stakovať mince? Po potvrdení nie je možné sa vrátiť.",
+    "remove_pre_staking": "Odstráňte predstavenie stávok"
+  },
+  "stats": {
+    "header_title": "Štatistiky",
+    "active": "Aktívni používatelia",
+    "total": "Všetci používatelia",
+    "user_growth": "Rast počtu používateľov",
+    "top_miners": "Top používatelia",
+    "top_countries": "Top krajiny",
+    "online_miners": "Online používatelia",
+    "detailed_information": "Podrobné informácie",
+    "total_coins": "Celkový počet mincí",
+    "filter": {
+      "total": "Celkovo",
+      "on_app": "Dostupné v aplikácii",
+      "pre_staked": "Predstavené",
+      "on_blockchain": "Na blockchaine"
+    }
+  },
+  "update_required": {
+    "title": "Prosím, aktualizuj",
+    "description": "Používaš starú verziu aplikácie. Na ďalšie používanie je potrebná jej aktualizácia.",
+    "button_title": "Aktualizovať teraz"
+  },
   "general": {
     "good_morning": "Dobré ráno",
     "good_afternoon": "Dobrý deň",
@@ -126,25 +583,350 @@
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
-    "days_short": "d",
-    "hour": {
-      "zero": "hodín",
-      "one": "hodina",
-      "two": "hodiny",
-      "few": "hodiny",
-      "many": "hodín",
-      "other": "hodín"
+    "days_short": "d"
+  },
+  "news": {
+    "news_feed": "Spravodajský kanál",
+    "read_more": "Čítať viac",
+    "no_more_news": "toto je posledný záznam v spravodajskom kanáli.",
+    "views": "{{viewsCount}} zobrazení"
+  },
+  "search": {
+    "empty": "Vyhľadaj kontakty, priateľov a členov svojej mikrokomunity.",
+    "nothing_is_found": "Tvojmu hľadaniu nezodpovedajú žiadne výsledky.",
+    "search_by_country": "Hľadať krajinu",
+    "search_for_users": "Hľadať používateľov",
+    "loading": "Hľadanie…"
+  },
+  "tabbar": {
+    "mining_inactive_tooltip": "Kliknutím sem začneš svoje prvé prihlásenie.",
+    "mining_reset_tooltip": "Podržaním počas 1 sekundy predĺžiš svoje prihlásenie.",
+    "mining_holiday_reset_tooltip": "Dnes je tvoj deň voľna. Podržaním počas 1 sekundy predĺžiš svoje prihlásenie.",
+    "mining_holiday_active": "Dnes je tvoj deň voľna."
+  },
+  "invite_friend": {
+    "invite_button": "Pozvať priateľa",
+    "button_title": "Pozvať priateľa",
+    "description": "Tvoj priateľ ešte nie je v [[:ice]]. Pošli mu pozvánku!"
+  },
+  "balance_history": {
+    "title": "História zostatku",
+    "wallet": "Peňaženka",
+    "blockchain": "Blockchain",
+    "wallet_update_interval": "aktualizované každú hodinu",
+    "blockchain_update_interval": "aktualizované každých 28 dní",
+    "list_end_label": "toto je posledný záznam histórie zostatkov",
+    "no_data": "V zadanom období neexistujú žiadne údaje.",
+    "you": "ty",
+    "contribution": "príspevok"
+  },
+  "pop_up": {
+    "update_now": "Aktualizovať teraz",
+    "please_update": "Prosím, aktualizuj",
+    "update_now_text": "Používaš starú verziu aplikácie. Na ďalšie používanie je potrebná jej aktualizácia.",
+    "you_are_up_to_date": "Aktualizované!",
+    "up_to_date_text": "Teraz používaš najnovšiu verziu. Nižšie si môžeš prezrieť zmeny.",
+    "resurrection": "Obnovenie",
+    "resurrection_message": "Máš jedinečnú šancu na obnovenie a opätovné získanie [[:amount]] mincí stratených za posledných [[:period]].",
+    "resurrection_warning": "Obnoviť môžeš iba raz!",
+    "please_confirm": "Prosím potvrď",
+    "resurrection_no_confirm_message": "Navždy stratíš svojich [[:amount]] mincí. Určite chceš pokračovať?",
+    "resurrection_yes_confirm_message": "Obnoviť môžeš iba raz! Určite chceš pokračovať? Tvojich [[:amount]] mincí sa ti vráti počas nasledujúcej hodiny.",
+    "delete_account_confirmation_title": "Potvrdiť vymazanie",
+    "delete_account_confirmation_text": "Vymazaním konta sa navždy stratia tvoje údaje, vrátane zostatkov Ice. Chceš pokračovať?",
+    "registration_update_title": "Aktualizácia registrácie",
+    "registration_update_text": "Dočasne sme pozastavili vytváranie nových účtov pomocou telefónneho čísla. Na pokračovanie budete musieť vybrať buď e-mailovú adresu, alebo prihlásiť sa cez sociálne siete.",
+    "link_email_title": "Prepojte svoj e-mail",
+    "link_email_text": "Dočasne sme pozastavili prihlásenie pomocou telefónneho čísla. Prosím, prepojte svoju e-mailovú adresu a potvrďte ju, aby ste sa mohli prihlásiť.",
+    "account_error_title": "Chyba účtu",
+    "account_error_text": "Dočasne sme pozastavili prihlásenie pomocou telefónneho čísla. Ľutujeme, váš účet neprešiel procesom KYC a nie je oprávnený k obnoveniu.",
+    "login_via_email_title": "Prosím, prihláste sa cez e-mail",
+    "login_via_email_text": "Dočasne sme pozastavili prihlásenie pomocou telefónneho čísla. Použite prosím e-mailovú adresu spojenú s vaším účtom na prihlásenie.",
+    "email_in_use_title": "E-mailová adresa je už používaná",
+    "email_in_use_text_part1": "E-mailová adresa, ktorú sa pokúšate prepojiť, je už používaná.",
+    "email_in_use_text_part2": "Ak je to vaša e-mailová adresa, prihláste sa s ňou najskôr, dokončite proces registrácie a vymažte tento účet, aby ste uvoľnili e-mailovú adresu, a potom sa vráťte k prihláseniu cez telefónne číslo a dokončite proces prepojenia.",
+    "successfully_linked_title": "Úspešne prepojené!",
+    "successfully_linked_text": "E-mailová adresa bola úspešne prepojená s vaším účtom."
+  },
+  "periods": {
+    "3_days": "3 dni",
+    "7_days": "7 dní",
+    "30_days": "30 dní",
+    "1_day": "1 deň",
+    "1_week": "1 týždeň",
+    "1_month": "1 mesiac",
+    "90_days": "90 dní",
+    "14_days": "14 dní"
+  },
+  "notifications": {
+    "joined": " sa pripojil/-a k tímu.",
+    "multiply": " a {{count}} ďalších sa pripojili k tímu.",
+    "ping": " ťa volá, vstávaj!",
+    "delete": "Vymazať",
+    "add_notifications": "Add mocked notifications",
+    "no_notifications": "Žiadne upozornenia na zobrazenie.",
+    "add_announcements": "",
+    "add_both": "Add mocked notifications and announcements together",
+    "clear_title": "Vymazať všetky upozornenia?",
+    "title": "Upozornenia"
+  },
+  "notification_feed_screen": {
+    "yesterday": "Včera",
+    "last_week": "Minulý týždeň",
+    "this_month": "Tento mesiac",
+    "last_month": "Minulý mesiac",
+    "this_week": "Tento týždeň"
+  },
+  "profile_privacy_edit": {
+    "step1": {
+      "title": "1. Štatistiky tvojho profilu",
+      "description": "Ťukni na bloky, ktoré chceš skryť pred verejnosťou."
     },
-    "day": {
-      "zero": "dní",
-      "one": "deň",
-      "two": "dni",
-      "few": "dni",
-      "many": "dní",
-      "other": "dní"
+    "step2": {
+      "description": "Ťuknutím na tento blok ho skryješ pred očami verejnosti.",
+      "title": "2. Tvoja aktuálna rola"
     },
-    "minutes_abbr": "min",
-    "seconds_abbr": "s"
+    "step3": {
+      "title": "3. Tvoje získané odznaky",
+      "description": "Ťuknutím sem skryješ svoje odznaky pred očami verejnosti."
+    }
+  },
+  "confirm_email": {
+    "title": "Potvrď svoj email",
+    "description": "Zadaj svoju emailovú adresu a my ti pošleme kód.",
+    "note": "Ak ti email neprišiel do 5 minút, skontroluj priečinok so spamom.",
+    "wrong_email": "Nesprávny email?",
+    "check_email": "Skontroluj svoj email",
+    "emailed_link_to": "Poslali sme odkaz na ",
+    "emailed_steps_to": "Poslali sme postup na",
+    "link_instruction": "Kliknutím na odkaz sa prihlásiš alebo zaregistruješ.",
+    "reset_link_instruction": "Kliknutím na link obnovíš svoje heslo.",
+    "modify_title": "Potvrdiť nový email",
+    "modify_description": "Zadaj svoju novú emailovú adresu"
+  },
+  "invalid_link": {
+    "title": "Neplatný odkaz",
+    "description": "Žiaľ, tento odkaz je neplatný, zadaj prosím svoj email znova a my ti pošleme nový odkaz."
+  },
+  "confirm_code": {
+    "title": "Potvrdiť kód",
+    "description": "Zadaj kód zaslaný na",
+    "send_code_again": "Poslať kód znova",
+    "resend_time_label": "Nový kód dostupný na ",
+    "enter_code": "Zadať kód",
+    "wrong_number": "Nesprávne číslo?"
+  },
+  "ice_bonus": {
+    "title": "Uvítacia cena",
+    "description": "Gratulujeme ti k prvým [[:value]] minciam [[:ice]], ktoré dokazujú našu [[:bold]]dôveru[[/:bold]] v [[:bold]]teba[[/:bold]].",
+    "balance_label": "Tvoj aktuálny stav"
+  },
+  "country_select": {
+    "title": "Vybrať krajinu"
+  },
+  "roles": {
+    "snowman": {
+      "title": "Snehuliak",
+      "subtitle": "Buduj snehovú ríšu",
+      "description": "Zarábaj tak, že sa každých 24 hodín prihlásiš, a tým preukážeš svoj záväzok voči sieti Ice a dokážeš, že si človek, a nie robot."
+    },
+    "ambassador": {
+      "title": "Ambasádor",
+      "subtitle": "Vládca snehovej ríše",
+      "description": "Ambasádorom sa staneš, keď sa k tvojmu tímu pripojí aspoň 100 ľudí. Každý ambasádor získa skorý prístup k novým funkciám."
+    }
+  },
+  "confirm_phone": {
+    "modify_title": "Potvrdiť telefón",
+    "modify_description": "Potvrď kód krajiny a zadaj svoje telefónne číslo.",
+    "button": "Potvrď krajinu a telefón"
+  },
+  "date_select": {
+    "title": "Vyber dátum"
+  },
+  "walkthrough": {
+    "overrides": {
+      "home": {
+        "team": {
+          "description": "[[:ice]] je lepšie s priateľmi. Na tejto stránke môžete vidieť stav členov vášho tímu. Môžete im aj odtiaľto posielať správy."
+        },
+        "referralscard": {
+          "title": "Karta tímu",
+          "description": "Kliknutím na túto kartu uvidíte vývoj štatistík členov vášho tímu za posledných 5 dní."
+        }
+      },
+      "team": {
+        "segmented_control_tier_one": {
+          "title": "Tím",
+          "description": "Tu môžete vidieť zoznam ľudí, ktorých ste pozvali, aby sa pripojili k sieti Ice. Ľahko môžete sledovať ich stav odtiaľto a posielať oznámenia neaktívnym."
+        },
+        "active_users": {
+          "description": "Ide o aktuálny stav aktivity členov vášho tímu počas relácie kontroly. Sú považovaní za aktívnych, keď majú aktívnu reláciu kontroly."
+        },
+        "ping": {
+          "description": "Oznámte členom vášho tímu, aby začali svoju reláciu kontroly. Každému odporúčaniu môžete posielať jedno oznámenie každých 24 hodín."
+        }
+      }
+    },
+    "profile": {
+      "hidden_data": {
+        "title": "Skryté údaje",
+        "description": "Kliknutím na ikonu oka zobrazíte, ako iní používatelia vidia váš profil."
+      }
+    },
+    "news": {
+      "readmore": {
+        "title": "Čítať viac",
+        "description": "Tu uvidíš najnovšie správy od nášho tímu. Kliknutím na toto tlačidlo zobrazíš celý článok."
+      },
+      "releasednews": {
+        "title": "Vydané novinky",
+        "description": "Ťukni na jednotlivé názvy správ a prečítaj si ich celú verziu. Sleduj všetky naše novinky a ankety."
+      }
+    },
+    "team": {
+      "allow_contacts": {
+        "title": "Povoliť prístup ku kontaktom",
+        "description": "Synchronizuj svoje kontakty a zisti, kto už je na [[:ice]]. V budúcnosti budeš môcť posielať [[:ice]] ľubovoľnému zo svojich kontaktov."
+      },
+      "confirm_phone": {
+        "title": "Potvrdiť telefón",
+        "description": "Potvrď svoju totožnosť a umožni svojim kontaktom zistiť, že si tiež členom siete Ice. Tvoje telefónne číslo nebude poskytnuté tretím stranám."
+      },
+      "contacts_list": {
+        "title": "Zoznam kontaktov",
+        "description": "Toto je zoznam všetkých tvojich kontaktov, pričom tí, ktorí sa už pripojili k sieti [[:ice]], sa zobrazujú v hornej časti zoznamu."
+      },
+      "referrals": {
+        "title": "Odporúčania",
+        "description": "Tu uvidíš, koľko máš celkovo odporúčaní. Čím viac ľudí pozveš, tým viac zarobíš."
+      },
+      "earnings": {
+        "title": "Zárobky",
+        "description": "Aktuálny zostatok sa aktualizuje každú hodinu a zobrazuje sa tu. Zahŕňa tvoje priame a stakované príjmy spolu s príjmami Úrovne 1 a Úrovne 2."
+      },
+      "segmented_control_tier_one": {
+        "title": "Úroveň 1",
+        "description": "Tu si môžeš pozrieť zoznam svojich odporúčaní Úrovne 1. Za každého priateľa, ktorý sa prihlási v rovnakom čase ako ty, získaš navyše 25 % k základnej aktuálnej sadzbe za prijatie. [[:link]]Čítať viac[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "segmented_control_tier_two": {
+        "title": "Úroveň 2",
+        "description": "Tu si môžeš pozrieť zoznam svojich odporúčaní Úrovne 2. Za každého priateľa, ktorý sa prihlási v rovnakom čase ako ty, získaš navyše 5 % k základnej aktuálnej sadzbe za prijatie. [[:link]]Čítať viac[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "active_users": {
+        "title": "Aktívni používatelia",
+        "description": "Toto je aktuálny stav aktivity prihlasovania tvojich odporúčaní. Za aktívne sa považujú vtedy, keď majú aktívnu reláciu prihlásenia."
+      },
+      "tier_one_earnings": {
+        "title": "Zárobky Úrovne 1",
+        "description": "Tu si môžeš pozrieť zoznam svojich odporúčaní Úrovne 1. Za každého priateľa, ktorý sa prihlási v rovnakom čase ako ty, získate obaja navyše 25 % k základnej aktuálnej sadzbe za prijatie."
+      },
+      "ping": {
+        "title": "Tlačidlo šťuchnutia",
+        "description": "Pripomeň svojim odporúčaným osobám, aby sa prihlásili. Každej odporúčanej osobe môžeš poslať jedno oznámenie každých 24 hodín."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "Domov",
+        "description": "Vitaj v [[:ice]]. Na domovskej obrazovke nájdeš všetky štatistiky o svojom zostatku, aktuálnej miere zárobku, svojej globálnej pozícii a svojom tíme."
+      },
+      "invite": {
+        "title": "Pozvať",
+        "description": "Za každú osobu, ktorú pozveš, získate obaja až 25 % zo základného zárobku. Čím viac ľudí pozveš, tým viac zarobíš."
+      },
+      "team": {
+        "title": "Tím",
+        "description": "[[:ice]] je s priateľmi lepší. Na tejto stránke môžeš vidieť stav členov svojho tímu z úrovne 1 aj 2. Môžeš ich odtiaľto aj šťuchnúť."
+      },
+      "news": {
+        "title": "Novinky",
+        "description": "Sleduj všetky naše novinky a ankety. Keďže sme decentralizovaná autonómna organizácia, budeš tu môcť hlasovať o budúcich funkciách."
+      },
+      "profile": {
+        "title": "Profil",
+        "description": "Prispôsob si detaily svojho profilu a pozri si všetky svoje úspechy a odznaky. Pomocou kalkulačky, ktorú tu nájdeš, môžeš odhadnúť svoje príjmy."
+      },
+      "earningicestart": {
+        "title": "Zarábanie Ice",
+        "description": "Ťuknutím na toto tlačidlo môžeš spustiť svoju 24-hodinovú reláciu prihlásenia do [[:ice]]. Nezabudni sa každý deň vrátiť a začať zarábať!"
+      },
+      "earningiceseemore": {
+        "title": "Zarábanie Ice",
+        "description": "Ťukni na položku znova a zobrazia sa ďalšie podrobnosti o tvojej aktuálnej relácii prihlásenia."
+      },
+      "stats": {
+        "title": "Štatistiky",
+        "description": "Na stránke so štatistikami môžeš vidieť celkový počet a počet aktívnych používateľov, ktorí sa každý deň prihlásili, spolu s najlepšími krajinami a používateľmi."
+      },
+      "help": {
+        "title": "Pomoc",
+        "description": "Máš nejaké otázky? Pozri si náš zoznam často kladených otázok. Ak nenájdeš, čo hľadáš, neváhaj nás kontaktovať na adrese hi@ice.io."
+      },
+      "preStaking": {
+        "title": "Pre-stakovanie",
+        "description": "Maximalizuj svoje výnosy pre-stakovaním odmien za zárobok. Vyber si priradenie a obdobie stakovania a získaj bonus k svojim zárobkom."
+      },
+      "wallet": {
+        "title": "Karta peňaženky",
+        "description": "Tu nájdeš svoj aktuálny [[:ice]] zostatok spolu s úrokovou sadzbou. Čím viac odporúčaných osôb z tvojho tímu je online, tým vyššia je miera zárobku."
+      },
+      "earning": {
+        "title": "Karta výnosov",
+        "description": "Sleduj aktuálne informácie o svojich príjmoch a bonusoch! Tu si môžeš skontrolovať svoju aktuálnu sadzbu, našu základnú sadzbu a bonusové sadzby za rôzne aktivity v aplikácii."
+      },
+      "engagement": {
+        "title": "Karty záväzkov",
+        "description": "Sleduj série svojich relácií prihlásenia a voľné dni! V tejto časti nájdeš podrobnejšie informácie o sériách prihlásení a zistíš, koľko voľných dní máš k dispozícii."
+      },
+      "profilecard": {
+        "title": "Karta profilu",
+        "description": "Na tejto karte môžeš sledovať stav svojho profilu. Zobrazuje tvoju aktuálnu globálnu pozíciu spolu s tvoju rolou, úrovňou a celkovým počtom odporúčaní."
+      },
+      "referralscard": {
+        "title": "Karta odporúčaní",
+        "description": "Ťuknutím na túto kartu si pozri vývoj štatistík tvojich odporúčaní za predchádzajúcich 5 dní pre odporúčania úrovne 1 aj úrovne 2."
+      },
+      "adoptioncard": {
+        "title": "Karta prijatia",
+        "description": "Na základe priemeru celkového počtu aktívnych snehuliakov za posledný týždeň môžeš vidieť aktuálnu mieru zárobku [[:ice]]. Výnosová sadzba sa po dosiahnutí ďalšej hranice zníži na polovicu."
+      },
+      "nickname": {
+        "title": "Prezývka",
+        "description": "Z prezývky vyplýva jedinečnosť. Tvoji priatelia ju budú musieť použiť, aby sa mohli pripojiť k tvojmu tímu. Túto skratku môžeš použiť aj na otvorenie svojho profilu."
+      },
+      "balancehistory": {
+        "title": "História zostatku",
+        "description": "Tu nájdeš svoj aktuálny [[:ice]] zostatok v miestnej peňaženke a blockchaine. Zostatok v lokálnej peňaženke sa aktualizuje každú hodinu, zatiaľ čo zostatok na blockchaine sa aktualizuje každých 24 hodín."
+      },
+      "achievements": {
+        "title": "Úspechy",
+        "description": "Splň nasledujúce úlohy a zvýš svoju úroveň! Začni svoje prvé prihlásenie teraz!"
+      }
+    }
+  },
+  "ActiveSessionsScreen": {
+    "title": "Zrušenie prepojenia prihlásení",
+    "sessionName": "Prihlásiť sa cez {{providerName}}",
+    "buttons": {
+      "currentSession": "Aktuálna relácia",
+      "endSession": "Ukončiť reláciu",
+      "loginUnlinked": "Prepojenie prihlásení je zrušené",
+      "sessionEnded": "Relácia ukončená",
+      "unlink": "Zrušiť prepojenie"
+    },
+    "dialogs": {
+      "unlinkLogin": {
+        "title": "Zrušiť prepojenia prihlásení?",
+        "message": "Určite chceš zrušiť prepojenie prihlásenia cez {{providerName}} na tomto zariadení?"
+      },
+      "endSession": {
+        "title": "Ukončiť reláciu?",
+        "message": "Určite chceš ukončiť reláciu prihlásenia {{providerName}} na tomto zariadení?"
+      }
+    }
   },
   "links": {
     "pre_staking": "https://ice.io/pre-staking/",
@@ -152,28 +934,464 @@
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
   },
-  "mainnet_landing": {
-    "header": "Těžební činnost Ice skončila. Zatímco se připravujeme na spuštění hlavní sítě 7. října 2024, udržujte si nainstalovanou aplikaci pro exkluzivní aktualizace a časný přístup k aplikaci hlavní sítě.",
-    "stats": {
-      "header": "Statistiky Ice",
-      "circulating_supply": "Cirkulující Nabídka",
-      "total_supply": "Celková Nabídka",
-      "price": "Cena",
-      "market_cap": "Tržní Kapitalizace",
-      "daily_trading_volume": "Obchodní Objem 24h",
-      "dilluted_market_cap": "Zředěná Tržní Kapitalizace"
+  "extra_bonus": {
+    "claim_title": "Dnešný bonus",
+    "claim_message": "Je čas na tvoj dnešný bonus. Klikni na tlačidlo [[:bold]]Uplatniť bonus[[/:bold]].",
+    "link": "Zistiť viac",
+    "extra_message": "Denný extra bonus sa pripočítal k tvojmu zárobku.",
+    "expired_title": "Bonus vypršal",
+    "expired_message": "Žiaľ, dnešný bonus vypršal. Priprav sa na nasledujúce uporoznenie!",
+    "result_title": "Gratulujeme"
+  },
+  "qr_code": {
+    "description": "Naskenuj QR kód a pripoj sa k môjmu tímu."
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "Pridaj sa k nám na TikToku",
+      "description": "Chceli sme ťa len osloviť a informovať o našej novej vzrušujúcej komunite na TikToku. Zdieľame zábavný a informatívny obsah o našej digitálnej mene Ice a budeme radi, ak sa k nám pridáš!"
     },
-    "countdown": {
-      "header": "Spuštění Hlavní Sítě Ice"
+    "youtube": {
+      "title": "Pridaj sa k nám na YouTube",
+      "description": "Náš kanál YouTube je ideálnym miestom na sledovanie aktuálnych informácií – od návodov, ako získať Ice, cez aktualizácie nových funkcií až po zábavný komunitný obsah."
     },
-    "roadmap": {
-      "header": "Naše Vize",
-      "title": "Whitepaper",
-      "subtitle": "Dozvíte se více o naší vizi v Ice."
+    "linkedin": {
+      "title": "Pridaj sa k nám na LinkedIne",
+      "description": "Pripojenie sa ku komunite Ice na sieti LinkedIn je skvelý spôsob, ako zostať informovaný o najnovšom vývoji a spojiť sa s podobne zmýšľajúcimi ľuďmi, ktorí sú rovnako nadšení pre budúcnosť digitálnych mien ako ty."
     },
-    "join_mainnet": {
-      "title": "Přidejte se k Decentralizované Budoucnosti",
-      "subtitle": "Získejte náhled na naši nadcházející aplikaci Mainnet a její jedinečné funkce."
+    "facebook": {
+      "title": "Pridaj sa k nám na Facebooku",
+      "description_part1": "Odporúčame sledovať našu stránku na Facebooku.",
+      "description_part2": "Nielenže ti to pomôže získať aktuálne informácie o všetkom, čo sa deje s projektom Ice, ale je to aj skvelý spôsob, ako sa spojiť s našou komunitou a zapojiť sa do diskusie."
+    },
+    "instagram": {
+      "title": "Pridaj sa k nám na Instagrame",
+      "description_part1": "Sledovať nás na Instagrame je skvelý spôsob, ako zostať v obraze a spojiť sa s ďalšími používateľmi, ktorí sa tiež zaujímajú o Ice.",
+      "description_part2": "Okrem toho sa medzi prvými dozvieš o všetkých nových funkciách alebo akciách, ktoré práve spúšťame."
+    },
+    "reddit": {
+      "title": "Pripojte sa k nám na Reddit",
+      "description": "Objavte komunitu Ice na Reddit, kde sa jednotlivci s podobnými názormi stretávajú, aby zdieľali svoje myšlienky.\n\nPripojte sa k diskusii, položte otázky a preskúmajte zaujímavé diskusie o ťažbe Ice, funkciách a omnoho viac."
+    },
+    "discord": {
+      "title": "Pripojte sa k nám na Discord",
+      "description": "Pripojte sa k našej aktívnej komunite na Discord a ponorte sa do diskusií a exkluzívnych pohľadov na Ice.\n\nZúčastnite sa živých rozhovorov, udržujte sa informovaní o novinkách týkajúcich sa Ice a stanete sa súčasťou komunity, ktorá zdieľa vašu vášeň."
+    },
+    "ice_founder_twitter": {
+      "title": "Sledujte Zeusa na X",
+      "description": "Sledujte Zeusa, našeho výkonného zakladatele, na X, kde zdieľa svoje pohľady, aktualizácie a myšlienky na našu misiu. Pripojte sa k rozhovoru, položte otázky a zostante v kontakte s našim inšpirujúcim lídrom, keď sa spoločne vyberieme na túto vzrušujúcu cestu.",
+      "button": "Sledujte Zeusa"
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Prosím počkajte, kým pingujeme všetkých vašich priateľov · {{count}}"
+  },
+  "creative_library": {
+    "title": "Kreatívna knižnica Ice",
+    "share": "Vytvorte svoj vysnívaný tím na sieti Ice!",
+    "get_started": {
+      "header": "Vytvorte svoj vysnívaný tím",
+      "subtitle": "Začnite na Ice a budujte svoje úspešné mikrokomunitu",
+      "description": "Pripojte sa k rýchlo sa zvyšujúcemu počtu používateľov Ice, ktorí budujú vlastné mikrokomunity a získavajú viac odmien. Naše promočné nástroje, sprievodcovia a tipy uľahčujú šírenie správ a budovanie úspešnej komunity.",
+      "get_started": "Začať",
+      "carousel": {
+        "01": {
+          "title": "Pripojiť sa",
+          "description": "Stiahnite si našu aplikáciu, získajte si prezývku a začnite ťažiť.\n\nPripojíte sa k celosvetovej komunite používateľov Ice, ktorí sú nadšení decentralizáciou, autonómiou a silou ľudí."
+        },
+        "02": {
+          "title": "Pozvať",
+          "description": "Pozvite svoje publikum, aby sa pripojilo k Ice a spoločne pracovalo na odomknutí dodatočných odmien.\n\nOkrem toho pomôžete šíriť slovo o výhodách decentralizácie a budúcnosti financií."
+        },
+        "03": {
+          "title": "Zarábať",
+          "description": "Rastite vo svojich odmenách tým, že budujete svoju sieť a povzbudzujete iných, aby sa pridali k Ice komunite.\n\nPripojte sa k nášmu úsiliu zmeniť budúcnosť financií prostredníctvom decentralizácie a autonómie."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Videá",
+        "description": "Použite našu zbierku videí na propagovanie vášho pozvania, v režime na šírku alebo na výšku, so subtitulmi alebo bez, máme vás pokrytých.",
+        "action": "Zobraziť videá"
+      },
+      "02": {
+        "title": "Obrázky",
+        "description": "Obrázok hovorí viac než tisíc slov. Môžete si vybrať zo zbierky bannery, aktíva pre sociálne siete, šablóny a makety aplikácií.",
+        "action": "Zobraziť obrázky"
+      },
+      "03": {
+        "title": "Vložený banner",
+        "description": "S naším vloženým bannerom môžete ľahko propagovať Ice pre návštevníkov vášho webu a pozvať ich, aby sa pridali k vašej mikrokomunite.",
+        "action": "Inštalovať banner"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Zdieľajte svoj príbeh",
+        "description": "Zdieľajte svoju cestu so sieťou Ice a jej mnohými výhodami napísaním článku vo vašom jazyku.\n\nZdieľajte ich na vašom blogu, v službe Medium, na Reddite, Quore, Bloggeri a ďalších platformách.\n\nVšetko o Ice a jeho jedinečných vlastnostiach nájdete na našej [[/:link]]Báze znalostí[[/:link]], [[/:link]]Domovskej stránke[[/:link]] a [[/:link]]FAQ[[/:link]]."
+      },
+      "spread": {
+        "title": "Šírenie slova",
+        "description": "Zapojte sa do konverzácie a predstavte sieť Ice svojim obľúbeným fóram.\nZaložte nové témy a zdieľajte svoje myšlienky o decentralizovaných financiách, budúcnosti meny a sile budovania mikrokomunity s Ice.\n\nBuďte ☃️ Snehuliakom a rozprúdite diskusiu o potenciáli tejto globálnej meny."
+      },
+      "bring": {
+        "title": "Pozvite svojich priateľov",
+        "description": "Použite našu jednoduchú funkciu pozvánky a zdieľajte svoj osobný kód pozvánky so svojimi priateľmi na svojich obľúbených sociálnych sieťach."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Plug & Play pre majiteľov webových stránok",
+        "description": "Vložte sieť Ice priamo na svoju webovú stránku pomocou nášho jednoduchého a flexibilného banneru JS. Je to rýchla a jednoduchá inštalácia, ktorú môžete prispôsobiť podľa vizuálnej identity vašej webovej stránky. Je preložený do 50 jazykov a je kompatibilný s akoukoľvek webovou platformou.\n\nSkopírujte a vložte kód na svoju webovú stránku a začnite propagovať sieť Ice svojim návštevníkom už dnes.",
+        "action": "Inštalovať banner"
+      },
+      "mobile": {
+        "title": "Knižnica pre mobilné aplikácie",
+        "description": "Integrujte našu jednoducho použiteľnú knižnicu do svojej mobilnej aplikácie a pozvite svojich používateľov, aby sa pridali k vašej mikrokomunite a začali ťažiť.\n\nS podporou prekladov a flexibilnými nastaveniami môžete zabezpečiť, aby všetci vaši používatelia mali prístup k rovnakému skvelému zážitku s Ice, bez ohľadu na to, kde sa nachádzajú na svete.",
+        "action1": "Knižnica pre Android",
+        "action2": "Knižnica pre React Native"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Dobré praktiky",
+        "rules": {
+          "01": {
+            "title": "Buďte autentickí",
+            "description": "Píšte zo svojich osobných skúseností a pohľadu. Zdieľajte svoje úprimné myšlienky a pocity o sieti Ice."
+          },
+          "02": {
+            "title": "Používajte priateľský tón",
+            "description": "Píšte, akoby ste hovorili s priateľom, a vyhnite sa používaniu príliš technického žargónu alebo jazyka, ktorý by mohol byť pre čitateľov ťažko zrozumiteľný."
+          },
+          "03": {
+            "title": "Buďte kreatívni",
+            "description": "Nebojte sa experimentovať s rôznymi typmi obsahu, ako sú blogové príspevky, videá alebo aktualizácie na sociálnych sieťach. Zábava a inovácia v spôsobe, akým propagujete sieť Ice svojej cieľovej skupine."
+          }
+        }
+      },
+      "bad": {
+        "title": "Zlé praktiky",
+        "rules": {
+          "01": {
+            "title": "Neposielajte spam",
+            "description": "Vyhnite sa odosielaniu nevyžiadaných správ alebo opakovanej publikácii rovnakého obsahu na rôznych platformách. To môže byť vnímané ako rušivé a otravné."
+          },
+          "02": {
+            "title": "Nevádzajte ľudí klamstvom",
+            "description": "Projekt Ice nepláca používateľom hotovosťou, len odmeňuje mincami Ice. Vyhnite sa publikácii obsahu typu \"Preveďte svoje Ice na hotovosť\" alebo \"Ako zarábať 100 dolárov s Ice\" a podobné."
+          },
+          "03": {
+            "title": "Nepodieľajte sa na podvode",
+            "description": "Ceníme si transparentnosť a čestnosť v našej komunite. Akékoľvek podvodné činnosti, ako je vytváranie viacerých účtov alebo pokusy manipulovať so sieťou Ice, nebudú tolerované."
+          }
+        }
+      }
+    }
+  },
+  "face_auth": {
+    "header": "Rozpoznávanie tváre",
+    "title": "KYC Krok #1",
+    "description": "Pre bezproblémový zážitok pridávame rozpoznávanie tváre. Tento krok slúži ako váš [[:bold]]Prvý krok KYC[[/:bold]], pripravujúci vás na jednoduchšiu overovaciu procedúru v budúcej Mainnet sieti. \n\nPotvrďte dnes svoju totožnosť, aby ste zabezpečili hladkú cestu vpred!",
+    "consent": "Súhlasím s [[:link]]Podmienkami a ustanoveniami KYC Ice[[/:link]].",
+    "confirmation": "Potvrdzujem, že totožnosť, ktorú používam pre túto autentifikáciu, bude tá istá, ktorá je spojená s touto účtom, a tento výber nemožno neskôr zmeniť.",
+    "auth_status": {
+      "loading": {
+        "description": "Čakajte prosím, kým vás autentifikujeme..."
+      },
+      "success": {
+        "title": "✅ Úspešná autentifikácia",
+        "description": "Ďakujeme za potvrdenie vašej totožnosti. Vaša relácia prihlásenia sa teraz spustí.",
+        "action": "Dokončiť"
+      },
+      "failure": {
+        "title": "❌ Autentifikácia zlyhala",
+        "description": "Nepodarilo sa nám overiť vašu totožnosť. Prosím, uistite sa, že je dostatočné osvetlenie a vaša tvár je plne viditeľná, a skúste to znova.",
+        "action": "Skúsiť znova"
+      },
+      "try_later": {
+        "title": "❌ Autentifikácia zlyhala",
+        "description": "Nepodarilo sa nám overiť vašu totožnosť. Prosím, uistite sa, že je dostatočné osvetlenie a vaša tvár je plne viditeľná, a potom to skúste znova o 1 hodinu.",
+        "action": "Zavrieť"
+      },
+      "continue": {
+        "title": "😁 KYC Overenie emócií",
+        "description": "Skvelá práca! Dokončili ste prvý krok fotením selfíčka. Teraz pokračujme tým, že budeme nasledovať zobrazované emócie, aby sme pokračovali v procese KYC.",
+        "action": "Pokračovať"
+      },
+      "banned": {
+        "title": "❌ Ťažba zakázaná",
+        "description": "Zistili sme, že vaša totožnosť je spojená s iným účtom. Ak si myslíte, že ide o chybu, pošlite e-mail na adresu [[:bold]]feedback@ice.io[[/:bold]] so svojím prezývkou a selfie vo vysokom rozlíšení.",
+        "action": "Zavrieť"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Začať",
+      "please_show_this": "Prosím, ukážte túto emóciu",
+      "emotions": {
+        "anger": "hnev",
+        "contempt": "pohŕdanie",
+        "disgust": "odpor",
+        "fear": "strach",
+        "happiness": "šťastie",
+        "neutral": "neutrálne",
+        "sadness": "smútok",
+        "surprise": "prekvapenie"
+      }
+    },
+    "device_angle_warning": {
+      "title": "Upozornenie",
+      "description": "Prosím, držte telefón pri pohľade do kamery rovno"
+    },
+    "camera_permission": {
+      "title": "Povolenie kamery",
+      "description": "Pre pokračovanie povolte prístup ku kamere.",
+      "action": "Povoliť prístup"
+    },
+    "selfie_guidelines": {
+      "title": "Pokyny pre Selfie",
+      "instruction": "Predtým, než budete pokračovať, dodržiavajte tieto pokyny pre úspešnú autentifikáciu tváre KYC:",
+      "check_1": "✅ Uistite sa, že máte fotografiu vysokého kvality.",
+      "check_2": "✅ Majte dobré osvetlenie.",
+      "check_3": "✅ Majte čisté pozadie.",
+      "check_4": "✅ Žiadne tmavé fotografie.",
+      "check_5": "✅ Žiadne rozmazané alebo zamračené fotografie.",
+      "check_6": "✅ Vyčistite objektív kamery.",
+      "warning": "Ak nebudete dodržiavať uvedené pokyny, môžete prísť o prístup k svojmu účtu.",
+      "confirmation": "Potvrdzujem, že budem dodržiavať kritériá.",
+      "popup_title": "Potvrdenie",
+      "popup_body": "Potvrdzujete, že ste dodržali všetky pokyny pre selfie?"
+    }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Prosím, uistite sa, že ste zadali správny prezývku.",
+      "description": "Zadajte prezývku priateľa, ktorý vás pozval."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Sledujte svoj pokrok a globálny stav",
+        "referrals": "PRIATELIA"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Rozširujte svoj tím a budujte komunitu"
+        }
+      },
+      "team": {
+        "title": "Priatelia",
+        "view_team": "zobraziť priateľov"
+      },
+      "roadmap": {
+        "button_subtitle": "Získajte viac informácií o našom vízii budúcnosti na Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Získajte náhľad na našu nadchádzajúcu aplikáciu Mainnet a jej jedinečné funkcie, ktoré budú uvedené na trh koncom roku 2024."
+      }
+    },
+    "settings": {
+      "invite_description": "Rozširujte svoj tím novými členmi"
+    },
+    "profile": {
+      "invite_friends_engage": "Rozširujte slovo a pozvite svojich priateľov, aby sa pridali k komunite Ice Network!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Použite túto funkciu na pozvanie svojich priateľov, aby sa pridali k komunite Ice. Rozširujte svoju sieť, zdieľajte skúsenosti a budujte trvalé vzťahy spolu."
+        },
+        "wallet": {
+          "description": "Tu nájdete vašu aktuálnu zostavu Ice spolu s mierou získavania."
+        },
+        "earning": {
+          "description": "Buďte v obraze s vašou mierou získavania a bonusmi! Tu môžete skontrolovať svoju aktuálnu mieru, našu základnú mieru a bonusové sadzby."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "V tejto sekcii uvidíte celkový počet členov tímu, ktorých ste pozvali, čo vám umožní sledovať rast a rozvoj vašej komunity."
+        },
+        "earnings": {
+          "description": "Vaša aktuálna zostava sa aktualizuje každú hodinu a zobrazuje sa tu. Obsahuje vaše priame a uzamknuté zárobky."
+        }
+      }
+    },
+    "claimUsername": {
+      "description": "Vaši priatelia musia použiť túto prezývku pri pripojení k [[:ice]]."
+    },
+    "users": {
+      "team": "Priatelia"
+    },
+    "team": {
+      "empty": {
+        "team": "Momentálne nemáte žiadnych priateľov!"
+      },
+      "contacts": {
+        "empty_description": "Synchronizujte svoje kontakty a pozrite, kto už je na [[:ice]]."
+      }
+    }
+  },
+  "bsc_address": {
+    "title": "Adresa BNB Smart Chain",
+    "enter_address_title": "Zadajte svoju\nadresu BNB Smart Chain",
+    "enter_address_description": "Počas Fázy Jedna budú tokeny ICE vydané na blockchaine BNB Smart Chain. Po spustení Mainnetu budú môcť byť tokeny vymenené z BNB Smart Chain na blockchaine Ice Open Network (ION).",
+    "enter_address_confirmation": "Ste si istí, že vaša adresa BNB Smart Chain je správna?",
+    "validators_warning_title": "Potvrdenie Adresy",
+    "validators_warning_text": "Všimnite si, že osoby, ktoré pridali adresu BNB Smart Chain do svojho účtu, nie sú oprávnené stať sa jedným z 300 hlavných validátorov, ako je uvedené v našom whitepaper pre spustenie hlavnej siete.",
+    "walletDescription": "Odporúčame používať samostatný peňaženku, ako je [[:bold]]Metamask[[/:bold]] alebo [[:bold]]Trust Wallet[[/:bold]].\n\nProsím, uistite sa, že dvakrát skontrolujete svoju peňaženku, aby ste mali istotu, že dostanete distribúciu."
+  },
+  "social_kyc": {
+    "header": "Overenie",
+    "verify_with_title": "Overiť pomocou {{method}}",
+    "select_method_step": {
+      "title": "Krok KYC #2",
+      "description": "Overte svoj účet jednoducho pomocou vášho existujúceho profilu X."
+    },
+    "instructions_step": {
+      "show_example": "Zobraziť príklad",
+      "example_title": "Príklad preposielania",
+      "x": {
+        "1": "Otvorte X a vyhľadajte účet [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Nájdite pripevnený príspevok, ktorý je prvým príspevkom na profile.",
+        "3": "❤️ Pridajte Like & 🔄 Prepošlite ho s [[:bold]]Citátom[[/:bold]] použitím [[:bold]]presného[[/:bold]] textu nižšie.",
+        "pop_up": {
+          "title": "Potvrdenie",
+          "description": "Pridali ste Like k pripevnenému príspevku a preposlali ste ho s citátom, používajúc presný text uvedený v príklade?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Kliknite na kopírovanie textu",
+        "copied": "Skopírované"
+      }
+    },
+    "verification_step": {
+      "title": "Potvrdenie",
+      "description": "Pre dokončenie overenia vložte odkaz na príspevok, kde ste dokončili predchádzajúce kroky. Uistite sa, že odkaz je správny.",
+      "placeholder": "Vložte odkaz",
+      "instructions_step": {
+        "4": "Vložte odkaz na váš príspevok nižšie. 👇"
+      },
+      "action": {
+        "verify": "Overiť",
+        "wait": "Prosím, počkajte",
+        "countdown": "Zostáva {{countdown}} sekúnd"
+      },
+      "pop_up": {
+        "title": "Neplatný odkaz",
+        "description": "Uistite sa, že ste skopírovali správny odkaz.\n\n[[:bold]]Príklad:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "Počet zostávajúcich pokusov: {{count}}",
+      "success": {
+        "title": "Overenie dokončené",
+        "description": "Gratulujeme, úspešne ste dokončili Krok KYC #2. Teraz ste overení."
+      },
+      "error_try_again": {
+        "title": "Chyba overenia",
+        "description": "Uistite sa, že ste správne preposlali príspevok s použitím uvedeného textu a že príspevok je verejne dostupný."
+      },
+      "error_try_later": {
+        "title": "Chyba overenia",
+        "description": "Nepodarilo sa nám dokončiť overenie. Môžete to skúsiť znova o 7 dní."
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Distribúcia BNB Smart Chain",
+      "description": "Získajte svoje mince ICE BNB Smart Chain jednoducho overením svojho účtu pomocou existujúceho profilu X."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Kliknite na odkaz [[:bold]]tu[[/:bold]], aby ste priamo otvorili našu X publikáciu.",
+        "pop_up": {
+          "description": "Dodržiavajte pokyny a uistite sa, že ste na prvom kroku klikli na odkaz, aby ste priamo otvorili našu X publikáciu.",
+          "description2": "Označili ste správnu publikáciu a zdieľali ste ju s citáciou pomocou presného textu uvedeného v príklade?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Gratulujeme, úspešne ste dokončili overenie. Teraz máte nárok na distribúciu BNB Smart Chain."
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "Potvrdenie účtu",
+    "description": "Na overenie identity vášho účtu a bezpečné prepojenie e-mailovej adresy sa uistite, že úspešne prejdete testom emócií počas autentifikácie.",
+    "description2": "Tento krok nám pomáha zabezpečiť bezpečnosť a autenticitu vášho účtu. Ďakujeme za spoluprácu!"
+  },
+  "quiz": {
+    "title": "Kvíz",
+    "intro": {
+      "description": "V Ice veríme v podporu aktívnych a informovaných členov komunity. Naša misia je zabezpečiť distribúciu Ice mincí tým, ktorí sú skutočne angažovaní a zdieľajú našu víziu.",
+      "community_engagement": {
+        "title": "🙌 Aktívne angažovanie v komunite",
+        "description": "Vaše angažovanie v ekosystéme Ice priamo ovplyvňuje vaše ťažobné schopnosti:",
+        "point1": "Buďte v obraze: Zaoberajte sa našimi správami a videami.",
+        "point2": "Aktívne sa zapojte: Zapojte sa do nášho programu osobného rozvoja a online relácií na YouTube alebo Twitter Space.",
+        "point3": "Sociálne interakcie: Zvýšte svoju prítomnosť likovaním, zdieľaním, sledovaním alebo prispievaním o Ice.",
+        "bottom_description": "Čím viac budete angažovaní, tým vyšší bude váš pozitívny bodový zisk, čo vám umožní prejsť procesom KYC."
+      },
+      "terms_privacy": "Rozumiem a súhlasím s [[:link]]Podmienkami a ochranou osobných údajov[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Overenie Vedomostí",
+        "point2": "Pre úspešné absolvovanie kvízu musíte správne zodpovedať aspoň 18 otázok.",
+        "point3": "Neúspešný kvíz naznačuje potrebu ďalšieho záujmu o naše materiály.",
+        "point4": "Pre absolvovanie kvízu existuje časový limit. Môžete vidieť, koľko dní zostáva do dátumu vypršania platnosti na vašej domovskej stránke v sekcii kvízu.",
+        "point5": "Máte k dispozícii 3 pokusy pred dátumom vypršania platnosti. Ak neuspíte kvíz 3-krát alebo dátum vypršania platnosti uplynie, nebudete môcť ťažiť a váš účet bude potrestaný.",
+        "point6": "📚 Všetky informácie o tomto kvíze môžete prečítať [[:link]]tu[[/:link]].",
+        "description": "Pre zabezpečenie toho, aby naša komunita bola dobre informovaná a zdieľala našu víziu:",
+        "point1": "Budete vystavení 21 otázkam odvodeným z našich komplexných zdrojov."
+      },
+      "why_quiz": {
+        "title": "💡 Prečo Kvíz?",
+        "description": "Naše záväzky voči poznaniu a porozumeniu sú na čele našej komunity. S naším kvízom sa snažíme zabezpečiť, aby sa Ice dostalo do správnych rúk, tých, ktorí naozaj rozumejú a stotožňujú sa s víziou nášho projektu."
+      }
+    },
+    "quiz_failure": {
+      "title": "Neúspešný kvíz",
+      "description": "Nedokázali ste odpovedať správne na viac ako 18 otázok alebo vypršal čas, takže test neprejdete.",
+      "check_faq": "Ak chcete správne odpovedať nabudúce, odporúčame sa oboznámiť s našou základnou znalosťou a často kladenými otázkami."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Otázka {{current}} z {{total}}",
+      "time_over": "⌛️ Čas vypršal",
+      "correct_answers": "Správne odpovede",
+      "wrong_answers": "Nesprávne odpovede"
+    },
+    "confirmation_popup": {
+      "title": "Potvrdenie",
+      "start_description": "Ste si istí, že chcete začať kvíz?",
+      "cancel_description": "Preskočením kvízu využijete jedno zo 3 dostupných pokusov. Ste si istí, že chcete kvíz preskočiť teraz?"
+    },
+    "quiz_success": {
+      "title": "Overenie dokončené",
+      "description": "Gratulujeme, úspešne ste dokončili svoje KYC. Vaše konzistentné správne odpovede potvrdili vašu oddanosť a znalosti. Teraz ste overení."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Ťažba zakázaná",
+      "description": "Váš prístup k ťažbe bol zakázaný z dôvodu troch po sebe nasledujúcich neúspešných kvízov alebo uplynutia prideleného času, ako to vyžaduje náš KYC proces."
+    },
+    "action": "Dokončiť kvíz",
+    "reminder": "Upozorňujeme, že musíte dokončit kvíz, abyste byli oprávnění pokračovat v těžbě a vyhnuli se snižování.",
+    "days_left": "Dni do konca: {{days}}",
+    "retries_left": "Zostávajúce pokusy: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "Distribúcia BNB Smart Chain",
+      "description": "Aktívnou podporou najnovších oznámení o Exchange na X udržiavajte svoju oprávnenosť k mesačnej distribúcii mincí BNB Smart Chain ICE."
+    },
+    "results_step": {
+      "success": {
+        "description": "Gratulujeme, úspešne ste dokončili overenie. Teraz máte nárok udržiavať svoj mesačný status distribúcie BNB Smart Chain."
+      }
+    }
+  },
+  "buttons": {
+    "skip": "Preskočiť"
   }
 }
