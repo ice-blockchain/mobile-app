@@ -2,6 +2,7 @@
 
 import {FaceAuthKycNumber} from '@api/tokenomics/types';
 import {COLORS} from '@constants/colors';
+import {LINKS} from '@constants/links';
 import {commonStyles} from '@constants/styles';
 import {AuthStackParamList} from '@navigation/Auth';
 import {Header} from '@navigation/components/Header';
@@ -73,7 +74,9 @@ export function FaceRecognition() {
           />
           <StatusOverlay
             onLightBackground
-            description={t('face_auth.auth_status.banned.description')}
+            description={t('face_auth.auth_status.banned.description', {
+              email: LINKS.FEEDBACK_EMAIL,
+            })}
             title={t('face_auth.auth_status.banned.title')}
             actionText={t('face_auth.auth_status.banned.action')}
             actionColor={COLORS.attention}

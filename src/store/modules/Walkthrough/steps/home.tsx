@@ -2,6 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {isLiteTeam} from '@constants/featureFlags';
+import {LINKS} from '@constants/links';
 import {navigate} from '@navigation/utils';
 import {WalkthroughStepStaticData} from '@store/modules/Walkthrough/types';
 import {ChatBubblesIcon} from '@svg/ChatBubblesIcon';
@@ -155,7 +156,9 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
         />
       ),
       title: t('walkthrough.home.help.title'),
-      description: t('walkthrough.home.help.description'),
+      description: t('walkthrough.home.help.description', {
+        email: LINKS.HI_EMAIL,
+      }),
     },
     {
       key: 'preStaking',

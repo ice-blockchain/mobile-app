@@ -8,7 +8,7 @@ function deletePropertyPath(obj, propPath) {
     return;
   }
 
-  const props = propPath.split('.');
+  const props = propPath.split('/');
   for (let i = 0; i < props.length - 1; i++) {
     obj = obj[props[i]];
     if (typeof obj === 'undefined') {
@@ -41,15 +41,16 @@ function deleteFromJsonFiles(propPath, jsonFilesDirectory) {
   console.log('JSON files updated successfully.');
 }
 
-// Example usage: node deleteLocalizations.js 'bsc_address.walletAction' <path_to_json_files_directory>
+// Example usage: node deleteLocalizations.js 'bsc_address/walletAction'
 const args = process.argv.slice(2);
 
-if (args.length !== 2) {
-  console.log(
-    'Usage: node deleteLocalizations.js <path_to_delete> <path_to_json_files_directory>',
-  );
+if (args.length !== 1) {
+  console.log('Usage: node deleteLocalizations.js <path_to_delete>');
 } else {
   const propPath = args[0];
-  const jsonFilesDirectory = args[1];
+  const jsonFilesDirectory = path.join(
+    __dirname,
+    '../src/translations/locales',
+  );
   deleteFromJsonFiles(propPath, jsonFilesDirectory);
 }

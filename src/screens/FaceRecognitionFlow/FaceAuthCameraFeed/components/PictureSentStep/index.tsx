@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {LINKS} from '@constants/links';
 import {commonStyles} from '@constants/styles';
 import {useNavigation} from '@react-navigation/native';
 import {cameraStyles} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
@@ -110,7 +111,9 @@ export function PictureSentStep({
       ) : null}
       {faceAuthStatus === 'BANNED' ? (
         <StatusOverlay
-          description={t('face_auth.auth_status.banned.description')}
+          description={t('face_auth.auth_status.banned.description', {
+            email: LINKS.FEEDBACK_EMAIL,
+          })}
           title={t('face_auth.auth_status.banned.title')}
           actionText={t('face_auth.auth_status.banned.action')}
           actionColor={COLORS.attention}

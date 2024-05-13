@@ -1,21 +1,21 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welcome to Ice",
-      "description": "[[:ice]] is a digital currency that you can earn with your phone. Ice is owned and operated by every day users like yourself."
+      "title": "Welcome to [[:project]]",
+      "description": "[[:coin]] is a digital currency that you can earn with your phone. [[:coin]] is owned and operated by every day users like yourself."
     },
     "page2": {
       "title": "Planet Friendly",
-      "description": "[[:ice]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
+      "description": "[[:coin]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
     },
     "page3": {
       "title": "People’s Coin",
       "description_part1": "The power is in your hands.",
-      "description_part2": "Everything that we develop at [[:ice]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
+      "description_part2": "Everything that we develop at [[:project]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
     },
     "page4": {
       "title": "Stay Connected",
-      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that Ice ends up in the hands of real humans, not bots."
+      "description": "Tap [[:logo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that [[:coin]] ends up in the hands of real humans, not bots."
     },
     "page5": {
       "title": "Refer & Earn",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "Notifications",
-      "description_part1": "[[:ice]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
+      "description_part1": "[[:project]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
       "description_part2": "Don’t worry, we will not spam you!",
       "not_now": "Not now"
     }
@@ -84,9 +84,9 @@
       "team": "Saiki sampeyan ora duwe anggota tim maneh!"
     },
     "contacts": {
-      "empty_title": "[[:ice]] is better with friends",
+      "empty_title": "[[:project]] is better with friends",
       "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send Ice to any of your contacts."
+      "empty_description": "Sync your contacts and see who is already on [[:project]]. In the future, you will be able to send [[:coin]] to any of your contacts."
     },
     "header": {
       "search_placeholder": "Search for users",
@@ -109,7 +109,7 @@
       },
       "all_contacts": "All contacts",
       "invite": "invite",
-      "invitation_text": "Hi {{name}}, I would like to invite you to join Ice."
+      "invitation_text": "Hi {{name}}, I would like to invite you to join [[:project]]."
     },
     "tier_one": {
       "header_list": {
@@ -126,7 +126,7 @@
     "logInSignUp": "Log in / Sign up",
     "phone": "Phone",
     "or": "or",
-    "welcome": "Welcome to Ice",
+    "welcome": "Welcome to [[:project]]",
     "email": "Email",
     "slogan": "Masa Depan Decentralized",
     "privacy": {
@@ -351,7 +351,7 @@
     "roadmap": {
       "title": "VISI KITA",
       "button_title": "Kertas putih",
-      "button_subtitle": "Uwuh mithil tentang visi kita ing Ice."
+      "button_subtitle": "Uwuh mithil tentang visi kita ing [[:project]]."
     },
     "join_mainnet": {
       "title": "Gabung Karo Masa Depan Desentralisasi",
@@ -385,7 +385,7 @@
     "feedback_title": "Send Feedback",
     "feedback_description": "Share your thoughts with us",
     "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra Ice by inviting your friends",
+    "invite_description": "Earn extra [[:coin]] by inviting your friends",
     "delete_title": "Delete Account",
     "delete_description": "Erase your account",
     "delete_confirmation_title": "Are you sure you want to remove the account?",
@@ -448,7 +448,7 @@
         },
         "system": {
           "title": "System",
-          "description": "Receive important notifications about the Ice app"
+          "description": "Receive important notifications about the [[:project]] app"
         }
       }
     },
@@ -487,7 +487,7 @@
     "copy_link": "Copy link",
     "more": "More",
     "copied": "COPIED",
-    "share_message": "Hi! Join my team on Ice Network and receive 10 Ice coins when you create an account using my referral code. Download the app:",
+    "share_message": "Hi! Join my team on [[:project]] Network and receive 10 [[:coin]] coins when you create an account using my referral code. Download the app:",
     "description_part1": "Spread the word and invite your friends. You earn ",
     "description_part2": " for each new referral you bring."
   },
@@ -526,14 +526,14 @@
     "time_left": "Time Left",
     "mining_rate": "Earning Rate",
     "appeal": "Boost your earning rate",
-    "benefits_description": "Pre-stake your Ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
+    "benefits_description": "Pre-stake your [[:coin]] rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
     "bonus_label": "Pre-Staking Bonus",
     "period_label": "Staked Period",
     "title": "Pre-Staking",
     "current_rate": "Current Rate",
     "allocation": "Allocation",
     "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
-    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your Ice holdings will be locked for the selected period",
+    "terms_agree": "I agree to the [[:coin]] [[:link]]. Your [[:coin]] holdings will be locked for the selected period",
     "staking_terms": "Staking Terms",
     "stake_now": "Pre-Stake Now!",
     "balance_label": "Staked balance",
@@ -567,8 +567,8 @@
     "good_morning": "Good morning",
     "good_afternoon": "Good afternoon",
     "good_evening": "Good evening",
-    "ice": "Ice",
-    "ice_per_hour": "Ice/h",
+    "ice": "[[:coin]]",
+    "ice_per_hour": "[[:coin]]/h",
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
@@ -580,7 +580,7 @@
     "views": "{{viewsCount}} views"
   },
   "search": {
-    "empty": "Search for contacts, Ice friends and members of your micro-community",
+    "empty": "Search for contacts, [[:project]] friends and members of your micro-community",
     "nothing_is_found": "Nothing was found for your query",
     "search_by_country": "Search by country",
     "search_for_users": "Search for users"
@@ -594,7 +594,7 @@
   "invite_friend": {
     "invite_button": "Invite Friend",
     "button_title": "Invite Friend",
-    "description": "Your friend is not yet on [[:ice]]. Send him an invitation!"
+    "description": "Your friend is not yet on [[:project]]. Send him an invitation!"
   },
   "balance_history": {
     "title": "Balance History",
@@ -702,17 +702,17 @@
   },
   "ice_bonus": {
     "title": "Welcome reward",
-    "description": "Congratulations, you have received your first [[:value]] [[:ice]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
+    "description": "Congratulations, you have received your first [[:value]] [[:coin]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
     "balance_label": "Your current balance"
   },
   "country_select": {
     "title": "Select country"
   },
-  "role": {
+  "roles": {
     "snowman": {
       "title": "Snowman",
       "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the Ice network and prove that you're a human, not a bot"
+      "description": "Earn by checking in every 24 hours to show your commitment to the [[:project]] network and prove that you're a human, not a bot"
     },
     "ambassador": {
       "title": "Ambassador",
@@ -738,7 +738,7 @@
     "overrides": {
       "home": {
         "team": {
-          "description": "[[:ice]] luwih apik karo sahabat-sahabat. Ing kaca iki, sampeyan bisa nampa status anggota tim sampeyan. Sampeyan uga bisa ngirimi kanthi pesan saka ing kene."
+          "description": "[[:project]] luwih apik karo sahabat-sahabat. Ing kaca iki, sampeyan bisa nampa status anggota tim sampeyan. Sampeyan uga bisa ngirimi kanthi pesan saka ing kene."
         },
         "referralscard": {
           "title": "Kartu Tim",
@@ -748,7 +748,7 @@
       "team": {
         "segmented_control_tier_one": {
           "title": "Tim",
-          "description": "Ing kene sampeyan bisa nampa daftar wong sing sampeyan undang kanggo gabung karo Jaringan Ice. Sampeyan bisa gampang nguntungake statusipun saka ing kene lan ngirimi notifikasi kanggo anggota sing ora aktif."
+          "description": "Ing kene sampeyan bisa nampa daftar wong sing sampeyan undang kanggo gabung karo Jaringan [[:project]]. Sampeyan bisa gampang nguntungake statusipun saka ing kene lan ngirimi notifikasi kanggo anggota sing ora aktif."
         },
         "active_users": {
           "description": "Iki manggonake status aktifitas check-in anggota tim sampeyan saiki. Sampeyan dianggo aktif nalika ana sesi check-in aktif."
@@ -768,82 +768,124 @@
         "title": "Released news"
       }
     },
-    "teams": {
-      "step_1": {
+    "team": {
+      "allow_contacts": {
         "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+        "description": "Sync your contacts and see who is already on [[:project]]. In the future you will be able to send [[:project]] to any of your contacts."
       },
-      "step_2": {
+      "confirm_phone": {
+        "title": "Confirm phone",
+        "description": "Confirm your identity and allow your contacts to know that you are also a member of the [[:project]] network. Your phone number will not be shared with other third parties."
+      },
+      "contacts_list": {
+        "title": "List of contacts",
+        "description": "This is the list with all your contacts, those who already joined the [[:project]] network being displayed on top of the list."
+      },
+      "referrals": {
         "title": "Referrals",
         "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
       },
-      "step_3": {
+      "earnings": {
         "title": "Earnings",
         "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
       },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
-      },
-      "step_5": {
+      "segmented_control_tier_one": {
         "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate."
+        "description": "Here you can see the list of your Tier 1 referrals. For each friend checking-in at the same time with you, you will get extra 25% on your base current adoption earning rate. [[:link]]Read more[[/:link]]"
       },
-      "step_6": {
+      "segmented_control_tier_two": {
         "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate."
+        "description": "Here you can see the list of your Tier 2 referrals. For each friend checking-in at the same time with you, you will get extra 5% on your base current adoption earning rate. [[:link]]Read more[[/:link]]"
       },
-      "step_7": {
+      "active_users": {
         "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+        "description": "This is the current status of your referrals check-in activity. They count as active when they have an active check-in session."
       },
-      "step_8": {
+      "tier_one_earnings": {
         "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+        "description": "Here you can see the list of your Tier 1 referrals. For each member checking-in at the same time with you, you will both get extra 25% on your base current adoption earning rate."
       },
-      "step_9": {
+      "ping": {
         "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+        "description": "Notify your referrals to start their check-in sessions. You can send one notification to each referral every 24h."
       }
     },
-    "team": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+    "home": {
+      "home": {
+        "title": "Home",
+        "description": "Welcome to [[:project]]. On the home screen you can find all the statistics about your balance, the current earning rate, your global rank along with your team."
       },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+      "invite": {
+        "title": "Invite",
+        "description": "For every person that you invite, you will both earn up to 25% on your base earning rate. The more people you invite, the more you will earn."
       },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
+      "team": {
+        "title": "Team",
+        "description": "[[:project]] is better with friends. On this page you can see the status of your team members from both Tier 1 and Tier 2 levels. You can also ping them from here."
       },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
+      "news": {
+        "title": "News",
+        "description": "Stay up to date on all our news and polls. As we are a Decentralized Autonomous Organization, you will be able to vote here for the future features."
       },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "profile": {
+        "title": "Profile",
+        "description": "Customize your profile details and see all your achievements and badges that you have earned. Use the calculator from here, so you can estimate your earnings."
       },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "earningicestart": {
+        "title": "Earning [[:coin]]",
+        "description": "You can start the [[:project]] check-in session every 24 hours by tapping this button. Don’t forget to come back each day and start earning!"
       },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+      "earningiceseemore": {
+        "title": "Earning [[:coin]]",
+        "description": "Tap again and see more details about your current check-in session."
       },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+      "stats": {
+        "title": "Stats",
+        "description": "On the stats page you can see Total and Active users that checked-in each day along with Top countries and users."
       },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "help": {
+        "title": "Help",
+        "description": "Do you have any questions? Check out our list of frequently asked questions. If you can't find what you're looking for, don't hesitate to reach out to us at {{email}}."
+      },
+      "preStaking": {
+        "title": "Pre-Staking",
+        "description": "Maximize your returns by pre-staking your earning rewards. Select your allocation and staking period to receive a bonus on top of your earnings."
+      },
+      "wallet": {
+        "title": "Wallet Card",
+        "description": "You can find here your current [[:coin]] balance, together with the earning rate. The more referrals from your team are online, the higher the earning rate."
+      },
+      "earning": {
+        "title": "Earning Card",
+        "description": "Stay up to date on your earning rate and bonuses! Here you can check out your current rate, our base rate, and bonus rates for various activities in the app."
+      },
+      "engagement": {
+        "title": "Engagement Card",
+        "description": "Keep track of your check-in sessions streak and days off! Check this section for more details about your consecutive check-in sessions and to see how many available days off you have."
+      },
+      "profilecard": {
+        "title": "Profile Card",
+        "description": "You can keep track of your profile status by following this card. It displays your current global rank, together with your role, level and total referrals."
+      },
+      "referralscard": {
+        "title": "Referral Card",
+        "description": "See the evolution of your referral stats for the previous 5 days for both Tier 1 and Tier 2 referrals by tapping this card."
+      },
+      "adoptioncard": {
+        "title": "Adoption Card",
+        "description": "Based on the average of the last week total of active Snowmen, you can see the current [[:coin]] earning rate. The earning rate is halved when reached the next threshold."
+      },
+      "nickname": {
+        "title": "Nickname",
+        "description": "The nickname is what makes you unique. Your friends will need to use it in order to join your team. You can also use this shortcut to open your profile."
+      },
+      "balancehistory": {
+        "title": "Balance History",
+        "description": "You can find here your current [[:coin]] balance on local wallet and blockchain. The local wallet balance is updated every hour, while the blockchain balance is updated every 24 hours."
+      },
+      "achievements": {
+        "title": "Achievements",
+        "description": "Complete the tasks below and level up! Start your first check-in session now!"
       }
     }
   },
@@ -868,12 +910,6 @@
       }
     }
   },
-  "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
-  },
   "extra_bonus": {
     "claim_title": "Today’s Bonus",
     "claim_message": "It’s time for your today’s bonus, please tap on the [[:bold]]“Claim Bonus”[[/:bold]] button bellow",
@@ -887,12 +923,12 @@
     "title": "Mangga nunggu nalika kita ping kabeh konco sampeyan · {{count}}"
   },
   "creative_library": {
-    "title": "Koleksi Kreatif Ice",
-    "share": "Bangun tim impian Anda di jaringan Ice!",
+    "title": "Koleksi Kreatif [[:project]]",
+    "share": "Bangun tim impian Anda di jaringan [[:project]]!",
     "get_started": {
       "header": "Bangun tim impian Anda",
-      "subtitle": "Mulai di Ice dan bangun mikro-komunitas berkembang Anda sendiri",
-      "description": "Bergabunglah dengan jumlah pengguna Ice yang semakin bertambah pesat yang sedang membangun komunitas mikro mereka sendiri dan mendapatkan lebih banyak hadiah. Alat promosi, panduan, dan tips kami memudahkan untuk menyebarkan informasi dan membangun komunitas sukses.",
+      "subtitle": "Mulai di [[:project]] dan bangun mikro-komunitas berkembang Anda sendiri",
+      "description": "Bergabunglah dengan jumlah pengguna [[:project]] yang semakin bertambah pesat yang sedang membangun komunitas mikro mereka sendiri dan mendapatkan lebih banyak hadiah. Alat promosi, panduan, dan tips kami memudahkan untuk menyebarkan informasi dan membangun komunitas sukses.",
       "get_started": "Mulai",
       "carousel": {
         "01": {
@@ -901,11 +937,11 @@
         },
         "02": {
           "title": "Undang",
-          "description": "Undang audiens Anda untuk bergabung dengan Ice dan bekerja sama untuk membuka hadiah tambahan.\n\nSelain itu, Anda akan membantu menyebarkan informasi tentang manfaat desentralisasi dan masa depan keuangan."
+          "description": "Undang audiens Anda untuk bergabung dengan [[:project]] dan bekerja sama untuk membuka hadiah tambahan.\n\nSelain itu, Anda akan membantu menyebarkan informasi tentang manfaat desentralisasi dan masa depan keuangan."
         },
         "03": {
           "title": "Dapatkan",
-          "description": "Tingkatkan hadiah Anda dengan memperluas jaringan Anda dan mendorong orang lain untuk bergabung dengan komunitas Ice.\n\nBergabunglah dengan misi kami untuk merevolusi masa depan keuangan melalui desentralisasi dan otonomi."
+          "description": "Tingkatkan hadiah Anda dengan memperluas jaringan Anda dan mendorong orang lain untuk bergabung dengan komunitas [[:project]].\n\nBergabunglah dengan misi kami untuk merevolusi masa depan keuangan melalui desentralisasi dan otonomi."
         }
       }
     },
@@ -922,14 +958,14 @@
       },
       "03": {
         "title": "Banner Tersemat",
-        "description": "Dengan banner tersemat kami, Anda dapat dengan mudah mempromosikan Ice kepada pengunjung situs web Anda dan mengundang mereka untuk bergabung dengan mikro-komunitas Anda.",
+        "description": "Dengan banner tersemat kami, Anda dapat dengan mudah mempromosikan [[:project]] kepada pengunjung situs web Anda dan mengundang mereka untuk bergabung dengan mikro-komunitas Anda.",
         "action": "Pasang banner"
       }
     },
     "social_section": {
       "share": {
         "title": "Bagikan Kisah Anda",
-        "description": "Bagikan perjalanan Anda dengan jaringan Ice dan manfaatnya dengan menulis artikel dalam bahasa Anda.\n\nBagikan di Blog, Medium, Reddit, Quora, Blogger, dan lainnya.\n\nAnda dapat menemukan semua informasi tentang Ice dan fitur uniknya di [[/:link]] Knowledge Base [[/:link]] kami, [[/:link]] Homepage [[/:link]] kami, dan halaman [[/:link]] FAQ [[/:link]]."
+        "description": "Bagikan perjalanan Anda dengan jaringan [[:project]] dan manfaatnya dengan menulis artikel dalam bahasa Anda.\n\nBagikan di Blog, Medium, Reddit, Quora, Blogger, dan lainnya.\n\nAnda dapat menemukan semua informasi tentang [[:project]] dan fitur uniknya di [[/:link]] Knowledge Base [[/:link]] kami, [[/:link]] Homepage [[/:link]] kami, dan halaman [[/:link]] FAQ [[/:link]]."
       },
       "spread": {
         "title": "Sebarkan Informasi",
@@ -943,12 +979,12 @@
     "promo_section": {
       "web": {
         "title": "Plug & Play untuk Pemilik Situs Web",
-        "description": "Sematkan jaringan Ice langsung ke situs web Anda dengan banner JS sederhana dan fleksibel kami. Ini adalah pengaturan cepat dan mudah yang dapat disesuaikan untuk mencocokkan branding situs web Anda. Ini diterjemahkan ke dalam 50 bahasa dan kompatibel dengan platform situs web apa pun.\n\nSalin dan tempel kode ke situs web Anda, dan mulailah mempromosikan Ice kepada pengunjung Anda hari ini.",
+        "description": "Sematkan jaringan [[:project]] langsung ke situs web Anda dengan banner JS sederhana dan fleksibel kami. Ini adalah pengaturan cepat dan mudah yang dapat disesuaikan untuk mencocokkan branding situs web Anda. Ini diterjemahkan ke dalam 50 bahasa dan kompatibel dengan platform situs web apa pun.\n\nSalin dan tempel kode ke situs web Anda, dan mulailah mempromosikan [[:project]] kepada pengunjung Anda hari ini.",
         "action": "Pasang banner"
       },
       "mobile": {
         "title": "Perpustakaan untuk Aplikasi Seluler",
-        "description": "Integrasikan perpustakaan kami yang mudah digunakan ke dalam aplikasi seluler Anda dan ajak pengguna Anda bergabung dengan mikro-komunitas Anda dan mulai menambang.\n\nDengan dukungan terjemahan dan opsi pengaturan yang fleksibel, Anda dapat memastikan bahwa semua pengguna Anda memiliki akses ke pengalaman Ice yang hebat yang sama, di mana pun mereka berada di dunia.",
+        "description": "Integrasikan perpustakaan kami yang mudah digunakan ke dalam aplikasi seluler Anda dan ajak pengguna Anda bergabung dengan mikro-komunitas Anda dan mulai menambang.\n\nDengan dukungan terjemahan dan opsi pengaturan yang fleksibel, Anda dapat memastikan bahwa semua pengguna Anda memiliki akses ke pengalaman [[:project]] yang hebat yang sama, di mana pun mereka berada di dunia.",
         "action1": "Perpustakaan Android",
         "action2": "Perpustakaan React Native"
       }
@@ -959,7 +995,7 @@
         "rules": {
           "01": {
             "title": "Jadilah Autentik",
-            "description": "Tulis dari pengalaman dan perspektif pribadi Anda. Bagikan pemikiran dan perasaan jujur Anda tentang jaringan Ice."
+            "description": "Tulis dari pengalaman dan perspektif pribadi Anda. Bagikan pemikiran dan perasaan jujur Anda tentang jaringan [[:project]]."
           },
           "02": {
             "title": "Gunakan Bahasa Ramah",
@@ -967,7 +1003,7 @@
           },
           "03": {
             "title": "Berkreativitas",
-            "description": "Jangan takut untuk bereksperimen dengan berbagai jenis konten, seperti tulisan blog, video, atau pembaruan media sosial. Bersenang-senanglah dan berinovasilah dalam cara Anda mempromosikan Ice kepada audiens Anda."
+            "description": "Jangan takut untuk bereksperimen dengan berbagai jenis konten, seperti tulisan blog, video, atau pembaruan media sosial. Bersenang-senanglah dan berinovasilah dalam cara Anda mempromosikan [[:project]] kepada audiens Anda."
           }
         }
       },
@@ -980,11 +1016,11 @@
           },
           "02": {
             "title": "Jangan Menyesatkan Orang",
-            "description": "Proyek Ice tidak membayar pengguna dengan uang tunai, kami hanya memberi hadiah dengan koin Ice. Harap hindari memposting konten seperti \"Ubah Ice Anda menjadi uang tunai\". \"Bagaimana cara menghasilkan $100 dengan Ice\" dan sejenisnya."
+            "description": "Proyek [[:project]] tidak membayar pengguna dengan uang tunai, kami hanya memberi hadiah dengan koin [[:project]]. Harap hindari memposting konten seperti \"Ubah [[:project]] Anda menjadi uang tunai\". \"Bagaimana cara menghasilkan $100 dengan [[:project]]\" dan sejenisnya."
           },
           "03": {
             "title": "Jangan Terlibat dalam Kegiatan Penipuan",
-            "description": "Kami menghargai transparansi dan kejujuran dalam komunitas kami. Kegiatan penipuan seperti membuat banyak akun atau mencoba memanipulasi jaringan Ice tidak akan ditoleransi."
+            "description": "Kami menghargai transparansi dan kejujuran dalam komunitas kami. Kegiatan penipuan seperti membuat banyak akun atau mencoba memanipulasi jaringan [[:project]] tidak akan ditoleransi."
           }
         }
       }
@@ -994,7 +1030,7 @@
     "header": "Pangenal Wajah",
     "title": "Langkah KYC #1",
     "description": "Kanggo pengalaman sing lancar, kita nambahake pangenal wajah. Langkah iki dadi [[:bold]]Langkah #1 KYC awal[[/:bold]], njalari sampeyan kanggo verifikasi sing mudhah ing Mainnet ing masa depan. \n\nKonfirmasi jati diri sampeyan saiki kanggo njamin perjalanan sing lancar menyang depan!",
-    "consent": "Aku setuju karo [[:link]]Syarat lan Ketentuan KYC Ice[[/:link]].",
+    "consent": "Aku setuju karo [[:link]]Syarat lan Ketentuan KYC [[:project]][[/:link]].",
     "confirmation": "Aku konfirmasi yen jati diri sing aku gunakake kanggo pangenal iki bakal ana ing akun iki, lan pilihan iki ora bisa diganti nanti.",
     "auth_status": {
       "loading": {
@@ -1022,7 +1058,7 @@
       },
       "banned": {
         "title": "❌ Mining Ditilak",
-        "description": "Kita ngerti yen jati diri sampeyan kaitake karo akun liyane. Yen sampeyan mikir iki sing salah, monggo kirim email menyang [[:bold]]feedback@ice.io[[/:bold]] karo jeneng panggilan lan swa potret sing apik.",
+        "description": "Kita ngerti yen jati diri sampeyan kaitake karo akun liyane. Yen sampeyan mikir iki sing salah, monggo kirim email menyang [[:bold]]{{email}}[[/:bold]] karo jeneng panggilan lan swa potret sing apik.",
         "action": "Tutup"
       }
     },
@@ -1084,7 +1120,7 @@
         "view_team": "tampilke teman"
       },
       "roadmap": {
-        "button_subtitle": "Leren luwih lanjut tentang wawasan ing depan nang Ice."
+        "button_subtitle": "Leren luwih lanjut tentang wawasan ing depan nang [[:project]]."
       },
       "join_mainnet": {
         "subtitle": "Daptarake pitulung menyang aplikasi Mainnet ing depan lan fitur-fitur uniké, sing bakal dirilis ing akhir taun 2024."
@@ -1094,12 +1130,12 @@
       "invite_description": "Miturutake tim sampeyan karo anggota anyar"
     },
     "profile": {
-      "invite_friends_engage": "Keben dening ora manteb lan undang teman sampeyan kanggo bergabung karo komunitas Ice Network!"
+      "invite_friends_engage": "Keben dening ora manteb lan undang teman sampeyan kanggo bergabung karo komunitas [[:project]] Network!"
     },
     "walkthrough": {
       "home": {
         "invite": {
-          "description": "Gunaake fitur iki kanggo undang teman sampeyan kanggo bergabung karo komunitas Ice. Mlebuaké jaringan sampeyan, duwe pangalaman, lan mbangun konéksi kang bakal awet."
+          "description": "Gunaake fitur iki kanggo undang teman sampeyan kanggo bergabung karo komunitas [[:project]]. Mlebuaké jaringan sampeyan, duwe pangalaman, lan mbangun konéksi kang bakal awet."
         },
         "wallet": {
           "description": "Sampeyan bisa nemokaké saldo Ice saiki, kanthi tingkat panjenengan."
@@ -1118,7 +1154,7 @@
       }
     },
     "claimUsername": {
-      "description": "Teman-teman sampeyan kudu nggunakake jeneng sing ana saiki nalika mlebu [[:ice]]."
+      "description": "Teman-teman sampeyan kudu nggunakake jeneng sing ana saiki nalika mlebu [[:project]]."
     },
     "users": {
       "team": "Teman"
@@ -1128,14 +1164,14 @@
         "team": "Saiki sampeyan ora duwe teman!"
       },
       "contacts": {
-        "empty_description": "Synchronize kontak sampeyan lan delok sapeyan sing wis ana ing [[:ice]]."
+        "empty_description": "Synchronize kontak sampeyan lan delok sapeyan sing wis ana ing [[:project]]."
       }
     }
   },
   "bsc_address": {
     "title": "Alamat BNB Smart Chain",
     "enter_address_title": "Masukkan alamat\nBNB Smart Chain Anda",
-    "enter_address_description": "Selama Fase Satu, token ICE akan dirilis di blockchain BNB Smart Chain. Begitu Mainnet diluncurkan, token akan dapat ditukar dari BNB Smart Chain ke blockchain Ice Open Network (ION).",
+    "enter_address_description": "Selama Fase Satu, token [[:coin]] akan dirilis di blockchain BNB Smart Chain. Begitu Mainnet diluncurkan, token akan dapat ditukar dari BNB Smart Chain ke blockchain Ice Open Network (ION).",
     "enter_address_confirmation": "Apakah Anda yakin bahwa alamat BNB Smart Chain ini benar?",
     "validators_warning_title": "Konfirmasi Alamat",
     "validators_warning_text": "Harap dicatat bahwa individu yang telah menambahkan alamat BNB Smart Chain ke akun mereka tidak memenuhi syarat untuk menjadi salah satu validator teratas sesuai dengan whitepaper kami untuk peluncuran mainnet.",
@@ -1152,7 +1188,7 @@
       "show_example": "Tampilake conto",
       "example_title": "Conto repost",
       "x": {
-        "1": "Buka X lan nyuwun akun [[:bold]]@ice_blockchain[[/:bold]].",
+        "1": "Buka X lan nyuwun akun [[:bold]]{{account}}[[/:bold]].",
         "2": "Goleki pos sing dipentokake, sing yaiku pos paling pisanan ing profil.",
         "3": "❤️ Keno & 🔄 Repost karo [[:bold]]Kutip[[/:bold]] nganggo teks [[:bold]]TEPATE[[/:bold]] ing ngisor iki.",
         "pop_up": {
@@ -1201,7 +1237,7 @@
   "distribution_kyc": {
     "select_method_step": {
       "title": "Distribusi BNB Smart Chain",
-      "description": "Terima koin ICE BNB Smart Chain Anda dengan memverifikasi akun Anda dengan mudah menggunakan profil X yang sudah ada."
+      "description": "Terima koin [[:coin]] BNB Smart Chain Anda dengan memverifikasi akun Anda dengan mudah menggunakan profil X yang sudah ada."
     },
     "instructions_step": {
       "x": {
@@ -1219,6 +1255,36 @@
     }
   },
   "social_media": {
+    "tiktok": {
+      "title": "Join us on TikTok",
+      "description": "We just wanted to reach out and let you know about our exciting new community on TikTok. We're sharing fun and informative content about our digital currency, [[:coin]], and we would love for you to join us!"
+    },
+    "youtube": {
+      "title": "Join us on YouTube",
+      "description": "From tutorials on how to earn [[:coin]], to updates about new features, and even fun community content, our YouTube channel is the perfect place to stay up-to-date."
+    },
+    "linkedin": {
+      "title": "Join us on LinkedIn",
+      "description": "Joining the [[:project]] community on LinkedIn is a great way to stay informed about the latest developments and to connect with like-minded individuals who are just as passionate about the future of digital currencies as you are."
+    },
+    "facebook": {
+      "title": "Join us on Facebook",
+      "description_part1": "We highly recommend giving our Facebook page a follow.",
+      "description_part2": "Not only will it help you stay up to date on everything that’s happening with the [[:project]] project, but it’s also a great way to connect with our community and be a part of the conversation."
+    },
+    "instagram": {
+      "title": "Join us on Instagram",
+      "description_part1": "Following us on Instagram is a great way to stay in the loop and connect with other users who are also passionate about [[:project]]",
+      "description_part2": "Plus, you'll be the first to know about any new features or promotions that we're launching."
+    },
+    "reddit": {
+      "title": "Join us on Reddit",
+      "description": "Discover the [[:project]] community on Reddit, where like-minded individuals come together to share their thoughts.\n\nJoin the conversation, ask questions, and explore engaging discussions about [[:coin]] mining, features, and more."
+    },
+    "discord": {
+      "title": "Join us on Discord",
+      "description": "Join our vibrant Discord community and dive into discussions and exclusive insights about [[:project]].\n\nDive into lively chats, stay informed about [[:project]]-related news, and be part of a community that shares your passion."
+    },
     "ice_founder_twitter": {
       "title": "Ikuti Zeus ing X",
       "description": "Ikuti Zeus, pendiri visioner kita, ing X, ngendi dheweke duwe wawasan, kabar anyar, lan pemikiran tentang misi kita. Gabung ana percakapan, tanya pitakonan, lan tetep terhubung karo pemimpin inspiratif kita nalika kita mulai perjalanan sing seru iki bareng.",
@@ -1233,13 +1299,13 @@
   "quiz": {
     "title": "Kuis",
     "intro": {
-      "description": "Ing Ice, kita percaya ing ngembangake komunitas anggota sing aktif lan informasi. Misi kita yaiku ngasupake koin Ice menyang wong-wong sing beneran terlibat lan nganggo pandangan kita.",
+      "description": "Ing [[:project]], kita percaya ing ngembangake komunitas anggota sing aktif lan informasi. Misi kita yaiku ngasupake koin [[:coin]] menyang wong-wong sing beneran terlibat lan nganggo pandangan kita.",
       "community_engagement": {
         "title": "🙌 Pangeling-eling Komunitas Aktif",
-        "description": "Kemungkinan sampeyan ing Ecosistem Ice saééng langsung ngaransang kemampuan pertambangan sampeyan:",
+        "description": "Kemungkinan sampeyan ing Ecosistem [[:project]] saééng langsung ngaransang kemampuan pertambangan sampeyan:",
         "point1": "Tetep Anyar: Nalika terus terkini karo artikel berita lan video kita.",
         "point2": "Nyumangati aktif: Gabung karo Program Pengembangan Pribadi kita lan sesi langsung ing YouTube utawa Twitter Space.",
-        "point3": "Interaksi Sosial: Ora bebarengan karo carane nyukuri, ngliputi, nggandeng utawa nemtokake babagan Ice.",
+        "point3": "Interaksi Sosial: Ora bebarengan karo carane nyukuri, ngliputi, nggandeng utawa nemtokake babagan [[:project]].",
         "bottom_description": "Semakin aktif sampeyan, semakin dhuwur skor interaksi positif sampeyan, nglampahi proses KYC."
       },
       "terms_privacy": "Aku ngerti lan aku setuju karo [[:link]]Syarat lan Ketentuan[[/:link]].",
@@ -1255,7 +1321,7 @@
       },
       "why_quiz": {
         "title": "💡 Kok Kuis iki?",
-        "description": "Komitmèn kita nganggo kanthi pangertèn lan kawruh ana ing pangrungguming kita. Karo kuis kita, kita tujon kanggo pastiake sing Ice bakal dadi ing tangan sing cocog, wong-wong sing bener-bener ngerti lan nampa karo visi proyèk kita."
+        "description": "Komitmèn kita nganggo kanthi pangertèn lan kawruh ana ing pangrungguming kita. Karo kuis kita, kita tujon kanggo pastiake sing [[:coin]] bakal dadi ing tangan sing cocog, wong-wong sing bener-bener ngerti lan nampa karo visi proyèk kita."
       }
     },
     "quiz_failure": {
@@ -1290,7 +1356,7 @@
   "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "Pamirsaan BNB Smart Chain",
-      "description": "Ciptakake kahanan pangiriman koin ICE BNB Smart Chain bulanan dening dukungan aktif terhadap pengumuman Exchange paling anyar ing X."
+      "description": "Ciptakake kahanan pangiriman koin [[:coin]] BNB Smart Chain bulanan dening dukungan aktif terhadap pengumuman Exchange paling anyar ing X."
     },
     "results_step": {
       "success": {
