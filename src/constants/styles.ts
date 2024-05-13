@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+// eslint-disable-next-line no-restricted-imports
+import {FONTS} from '@constants/fonts';
 import {Dimensions, StyleSheet} from 'react-native';
 import {isIOS, rem, screenHeight} from 'rn-units';
 
@@ -27,6 +29,9 @@ export const commonStyles = StyleSheet.create({
     : {elevation: 4},
   flexOne: {flex: 1},
   darkText: {color: COLORS.primaryDark},
+  bold: {
+    fontFamily: FONTS.primary.bold,
+  },
 });
 
 export const SMALL_BUTTON_HIT_SLOP = {top: 4, left: 4, bottom: 4, right: 4};

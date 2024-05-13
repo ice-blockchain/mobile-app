@@ -92,6 +92,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    ...font(14, 20, 'black', 'gulfBlue', 'center'),
+    ...font(14, 20, 'black', 'cornflowerBlue', 'center'),
   },
 });

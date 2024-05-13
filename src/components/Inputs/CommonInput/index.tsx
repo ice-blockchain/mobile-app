@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row-reverse',
   },
   container_focused: {
-    borderColor: COLORS.congressBlue,
+    borderColor: COLORS.primary,
   },
   body: {
     flex: 1,

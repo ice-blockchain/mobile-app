@@ -1,33 +1,29 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {ReferralType} from '@api/user/types';
-import {useIsEnglishLocale} from '@hooks/useIsEnglishLocale';
-import {referralsSelector} from '@store/modules/Referrals/selectors';
-import {ActiveUsersIcon} from '@svg/ActiveUsersIcon';
-import {t} from '@translations/i18n';
+import {IceLabel} from '@components/Labels/IceLabel';
+import {COLORS} from '@constants/colors';
+import {commonStyles} from '@constants/styles';
+import {replaceString, t, tagRegex} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {useSelector} from 'react-redux';
-import {isIOS, rem} from 'rn-units';
+import {StyleSheet, Text} from 'react-native';
+import {isAndroid, rem} from 'rn-units';
 
-type Props = {referralType: ReferralType};
-
-export const ActiveUsers = ({referralType}: Props) => {
-  const {total = 0, active = 0} = useSelector(
-    referralsSelector({referralType}),
-  );
-  const isEnglishLocale = useIsEnglishLocale();
-  return isEnglishLocale ? (
+export const ActiveUsers = () => {
+  return (
     <Text style={styles.title}>
-      <Text style={styles.label}>{`${t('users.active')}:`}</Text>
-      {` ${active}/${total}`}
+      <Text style={styles.label}>
+        {replaceString(t('users.friends'), tagRegex('logo'), (match, index) => (
+          <IceLabel
+            key={match + index}
+            iconSize={rem(14)}
+            color={COLORS.secondary}
+            textStyle={commonStyles.bold}
+            iconOffsetY={isAndroid ? 4 : -1}
+          />
+        ))}
+      </Text>
     </Text>
-  ) : (
-    <View style={styles.container}>
-      <ActiveUsersIcon width={rem(16)} style={styles.icon} />
-      <Text style={styles.titleNonEnglish}>{`  ${active}/${total}`}</Text>
-    </View>
   );
 };
 
@@ -37,15 +33,5 @@ const styles = StyleSheet.create({
   },
   title: {
     ...font(14, null, 'regular', 'primaryDark'),
-  },
-  titleNonEnglish: {
-    ...font(14, 20, 'regular', 'primaryDark'),
-  },
-  container: {
-    flexDirection: 'row',
-    alignItems: 'flex-end',
-  },
-  icon: {
-    bottom: isIOS ? rem(4) : rem(3),
   },
 });

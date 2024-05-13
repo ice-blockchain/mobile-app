@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     borderRadius: LOCK_ICON_SIZE / 2,
     borderColor: COLORS.white,
     borderWidth: 1,
-    backgroundColor: COLORS.primaryLight,
+    backgroundColor: COLORS.primaryDark,
     justifyContent: 'center',
     alignItems: 'center',
   },

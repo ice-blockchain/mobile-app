@@ -2,11 +2,8 @@
 
 import {ReferralType} from '@api/user/types';
 import {stopPropagation} from '@components/KeyboardDismiss';
-import {isLiteTeam} from '@constants/featureFlags';
 import {ActiveUsers} from '@screens/Team/components/TierList/components/Header/components/ActiveUsers';
-import {Earnings} from '@screens/Team/components/TierList/components/Header/components/Earnings';
 import {useActiveUsersWalkthrough} from '@screens/Team/components/TierList/components/Header/hooks/useActiveUsersWalkthrough';
-import {useEarningsWalkthrough} from '@screens/Team/components/TierList/components/Header/hooks/useEarningsWalkthrough';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
@@ -24,25 +21,13 @@ export const ListHeader = ({referralType, focused}: Props) => {
     referralType,
     focused,
   });
-  const {
-    elementRef: earningsElementRef,
-    onElementLayout: onEarningsElementLayout,
-  } = useEarningsWalkthrough({
-    referralType,
-    focused,
-  });
 
   return (
     <View {...stopPropagation}>
       <View style={styles.header}>
         <View ref={activeUsersElementRef} onLayout={onActiveUsersElementLayout}>
-          <ActiveUsers referralType={referralType} />
+          <ActiveUsers />
         </View>
-        {!isLiteTeam && (
-          <View ref={earningsElementRef} onLayout={onEarningsElementLayout}>
-            <Earnings />
-          </View>
-        )}
       </View>
     </View>
   );

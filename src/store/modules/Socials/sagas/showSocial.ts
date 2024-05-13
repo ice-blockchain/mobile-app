@@ -33,6 +33,7 @@ export function* showSocialSaga() {
     pullSocialToShare,
   );
 
+  console.log({socialToShare});
   if (!socialToShare) {
     return;
   }
@@ -82,6 +83,8 @@ function* pullSocialToShare() {
   const socialsQueue: SagaReturnType<
     ReturnType<typeof socialsByUserIdSelector>
   > = yield select(socialsByUserIdSelector(userId));
+
+  console.log({socialsQueue});
 
   const socialToShare = socialsQueue.find(social => !social.shared);
 

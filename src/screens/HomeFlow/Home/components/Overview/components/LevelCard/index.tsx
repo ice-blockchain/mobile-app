@@ -143,7 +143,7 @@ export const LevelCard = forwardRef(
                 isLiteTeam
                   ? t('override.home.pioneer.description')
                   : t('home.pioneer.description'),
-                tagRegex('ice'),
+                tagRegex('logo'),
                 (match, index) => (
                   <IceLabel key={match + index} iconSize={12} />
                 ),

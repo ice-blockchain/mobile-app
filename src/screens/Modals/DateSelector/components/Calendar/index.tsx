@@ -55,6 +55,7 @@ export const Calendar = memo(
         textDayHeaderFontWeight: FONT_WEIGHTS.semibold,
         textDayHeaderFontFamily: FONTS.primary.semibold,
         textSectionTitleColor: COLORS.secondary,
+        selectedDayBackgroundColor: COLORS.primaryDark,
       }),
       [],
     );

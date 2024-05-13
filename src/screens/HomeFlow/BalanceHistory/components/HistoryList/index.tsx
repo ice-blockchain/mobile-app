@@ -98,5 +98,6 @@ const styles = StyleSheet.create({
   },
   listContent: {
     paddingTop: rem(52),
+    flexGrow: 1,
   },
 });

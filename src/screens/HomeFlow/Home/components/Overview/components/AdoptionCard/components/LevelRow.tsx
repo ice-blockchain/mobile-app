@@ -172,11 +172,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   stepValueText: {
-    ...font(15, 20, 'black', 'deepKoamaru'),
+    ...font(15, 20, 'black', 'downriver'),
   },
   stepLabelText: {
     opacity: 0.8,
-    ...font(13, 17, 'regular', 'deepKoamaru'),
+    ...font(13, 17, 'regular', 'downriver'),
   },
   iconContainer: {
     position: 'absolute',

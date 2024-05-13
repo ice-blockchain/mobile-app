@@ -35,6 +35,6 @@ export const QRCodeShare = memo(() => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.primaryLight,
+    backgroundColor: COLORS.primaryDark,
   },
 });

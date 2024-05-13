@@ -11,7 +11,6 @@ import {ContactsIcon} from '@svg/ContactsIcon';
 import {PingIcon} from '@svg/PingIcon';
 import {SonarIcon} from '@svg/SonarIcon';
 import {TeamIcon} from '@svg/TeamIcon';
-import {TierOneIcon} from '@svg/TierOneIcon';
 import {TierTwoIcon} from '@svg/TierTwoIcon';
 import {WalletIcon} from '@svg/WalletIcon';
 import {t} from '@translations/i18n';
@@ -27,7 +26,6 @@ export type TeamWalkthroughStepKey =
   | 'earnings'
   | 'segmentedControlTeam'
   | 'activeUsers'
-  | 'tierOneEarnings'
   | 'ping';
 
 export const TEAM_WALKTHROUGH_SCREEN_NAME = 'Team';
@@ -106,13 +104,6 @@ export const TEAM_WALKTHROUGH_STEPS: WalkthroughStepStaticData<TeamWalkthroughSt
           ? 'walkthrough.overrides.team.active_users.description'
           : 'walkthrough.team.active_users.description',
       ),
-    },
-    {
-      key: 'tierOneEarnings',
-      version: 1,
-      Icon: <TierOneIcon width={rem(32)} height={rem(32)} />,
-      title: t('walkthrough.team.tier_one_earnings.title'),
-      description: t('walkthrough.team.tier_one_earnings.description'),
     },
     {
       key: 'ping',

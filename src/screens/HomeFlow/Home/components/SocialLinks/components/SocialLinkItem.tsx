@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     width: CONTAINER_SIZE,
     height: CONTAINER_SIZE,
     borderRadius: rem(12),
-    backgroundColor: COLORS.dodgerBlue,
+    backgroundColor: COLORS.catalinaBlue,
   },
   icon: {
     width: ICON_SIZE,

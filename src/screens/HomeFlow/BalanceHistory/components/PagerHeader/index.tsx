@@ -81,7 +81,7 @@ export const PagerHeader = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: COLORS.primaryDark,
+    backgroundColor: COLORS.downriver,
     borderRadius: rem(20),
     position: 'absolute',
     top: -PAGER_HEADER_HEIGHT / 2,

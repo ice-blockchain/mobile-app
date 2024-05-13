@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {COLORS} from '@constants/colors';
 import {windowWidth} from '@constants/styles';
 import {Images} from '@images';
 import React from 'react';
@@ -26,5 +27,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: windowWidth,
     height: windowWidth * RATIO,
+    backgroundColor: COLORS.primaryDark,
   },
 });

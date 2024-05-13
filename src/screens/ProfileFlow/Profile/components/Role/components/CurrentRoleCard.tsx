@@ -97,7 +97,7 @@ export const CurrentRoleCard = ({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: COLORS.primaryLight,
+    backgroundColor: COLORS.primaryDark,
     borderRadius: rem(20),
     height: rem(69),
     flexDirection: 'row',

@@ -79,7 +79,6 @@ export type Translations = {
   'team.contacts_list.all_contacts': null;
   'team.contacts_list.invite': null;
   'team.contacts_list.invitation_text': {name: number | string};
-  'team.tier_one.header_list.title_earnings': null;
   'signIn.logInSignUp': null;
   'signIn.welcome': null;
   'signIn.slogan': null;
@@ -176,9 +175,6 @@ export type Translations = {
   'global.comingSoon': null;
   'global.date.today': null;
   'mining_calculator.result_label': null;
-  'mining_calculator.active_inviter': null;
-  'mining_calculator.tier_1_ref': null;
-  'mining_calculator.active_miners': null;
   'mining_calculator.team_members': null;
   'mining_calculator.active_team_members': null;
   'home.wallet.title': null;
@@ -339,6 +335,7 @@ export type Translations = {
   'users.ping': null;
   'users.active': null;
   'users.inactive': null;
+  'users.friends': null;
   'users.team': null;
   'users.referralType.team': null;
   'personal_information.first_name': null;
@@ -384,9 +381,6 @@ export type Translations = {
   'stats.filter.on_app': null;
   'stats.filter.pre_staked': null;
   'stats.filter.on_blockchain': null;
-  'update_required.title': null;
-  'update_required.description': null;
-  'update_required.button_title': null;
   'general.good_morning': null;
   'general.good_afternoon': null;
   'general.good_evening': null;
@@ -532,8 +526,6 @@ export type Translations = {
   'walkthrough.team.segmented_control_tier_one.description': null;
   'walkthrough.team.active_users.title': null;
   'walkthrough.team.active_users.description': null;
-  'walkthrough.team.tier_one_earnings.title': null;
-  'walkthrough.team.tier_one_earnings.description': null;
   'walkthrough.team.ping.title': null;
   'walkthrough.team.ping.description': null;
   'walkthrough.home.home.title': null;

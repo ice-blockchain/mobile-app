@@ -40,6 +40,6 @@ const styles = StyleSheet.create({
     borderColor: COLORS.secondary,
   },
   imageBorderFocused: {
-    borderColor: COLORS.primaryLight,
+    borderColor: COLORS.primaryDark,
   },
 });

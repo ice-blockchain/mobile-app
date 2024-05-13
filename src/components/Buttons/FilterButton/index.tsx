@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   containerDarkInactive: {
-    backgroundColor: COLORS.primaryDark,
+    backgroundColor: COLORS.primaryLight,
   },
   containerDarkActive: {
     backgroundColor: COLORS.shamrock,

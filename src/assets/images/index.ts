@@ -197,4 +197,7 @@ export const Images = {
     quiz: require('./quiz/quiz.png'),
     quiz_small: require('./quiz/quiz_small.png'),
   },
+  invite: {
+    starIcon: require('./invite/staricon.png'),
+  },
 } as const;

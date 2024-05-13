@@ -7,7 +7,7 @@ import {isLightDesign} from '@constants/featureFlags';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {AllowContactsButton} from '@screens/Team/components/Contacts/components/ContactsPermissions/components/AllowContactsButton';
 import {useAllowContactsWalkthrough} from '@screens/Team/components/Contacts/components/ContactsPermissions/hooks/useAllowContactsWalkthrough';
-import {isRTL, replaceString, t, tagRegex} from '@translations/i18n';
+import {replaceString, t, tagRegex} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
@@ -24,21 +24,7 @@ export const ContactsPermissions = () => {
     <View style={[styles.container, tabbarOffset.current]}>
       <Image source={icon} resizeMode="contain" style={styles.image} />
       <Text style={styles.title}>
-        <TagWrapper>
-          {replaceString(
-            t('team.contacts.empty_title'),
-            tagRegex('ice'),
-            (match, index) => (
-              <IceLabel
-                key={match + index}
-                iconSize={28}
-                color={COLORS.primaryDark}
-                iconOffsetY={isAndroid ? 5 : 2}
-                reversed={isRTL}
-              />
-            ),
-          )}
-        </TagWrapper>
+        <TagWrapper>{t('team.contacts.empty_title')}</TagWrapper>
       </Text>
       <View style={styles.descriptionContainer}>
         <Text style={styles.description}>
@@ -46,7 +32,7 @@ export const ContactsPermissions = () => {
             isLightDesign
               ? t('override.team.contacts.empty_description')
               : t('team.contacts.empty_description'),
-            tagRegex('ice'),
+            tagRegex('logo'),
             (match, index) => (
               <IceLabel
                 key={match + index}

@@ -47,7 +47,7 @@ export const TeamMember = memo(({userId}: Props) => {
         />
         {!!phoneNumber && (
           <View style={styles.friendIcon}>
-            <LogoIcon width={rem(15)} height={rem(15)} />
+            <LogoIcon width={DEFAULT_ICON_SIZE} height={DEFAULT_ICON_SIZE} />
           </View>
         )}
       </View>
@@ -79,9 +79,7 @@ export const styles = StyleSheet.create({
     width: DEFAULT_ICON_SIZE,
     height: DEFAULT_ICON_SIZE,
     borderRadius: DEFAULT_ICON_SIZE / 2,
-    borderWidth: 1,
-    borderColor: COLORS.white,
-    backgroundColor: COLORS.primaryLight,
+    backgroundColor: COLORS.primaryDark,
   },
   skeleton: {
     width: TEAM_MEMBER_SIZE,

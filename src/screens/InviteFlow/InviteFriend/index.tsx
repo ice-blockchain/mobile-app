@@ -72,7 +72,7 @@ export const InviteFriend = () => {
                 <Text style={styles.description}>
                   {replaceString(
                     t('invite_friend.description'),
-                    tagRegex('ice'),
+                    tagRegex('icon'),
                     (match, index) => (
                       <IceLabel
                         key={match + index}

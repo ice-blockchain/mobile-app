@@ -14,7 +14,7 @@ const STATS_ICON_SIZE = rem(27);
 export const StatsTabIcon = ({focused}: Props) => {
   return focused ? (
     <StatsIcon
-      color={COLORS.primaryLight}
+      color={COLORS.primaryDark}
       width={STATS_ICON_SIZE}
       height={STATS_ICON_SIZE}
     />

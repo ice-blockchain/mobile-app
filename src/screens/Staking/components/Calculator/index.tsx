@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
     marginHorizontal: SCREEN_SIDE_OFFSET,
     paddingHorizontal: rem(16),
     borderRadius: rem(20),
-    backgroundColor: COLORS.madison,
+    backgroundColor: COLORS.toreaBay,
     paddingBottom: rem(30),
   },
   resultLabelText: {

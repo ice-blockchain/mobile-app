@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: rem(12),
-    backgroundColor: COLORS.primaryLight,
+    backgroundColor: COLORS.primaryDark,
   },
   content: {
     marginLeft: rem(12),
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
   },
   subtitleText: {
     marginTop: rem(4),
-    ...font(12, 14.4, 'medium', 'toreaBay'),
+    ...font(12, 14.4, 'medium', 'primaryDark'),
   },
   trailingIconContainer: {
     marginLeft: rem(8),

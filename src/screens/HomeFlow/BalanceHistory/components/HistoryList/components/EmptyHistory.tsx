@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {MAIN_TAB_BAR_HEIGHT} from '@navigation/components/MainTabBar';
 import {font} from '@utils/styles';
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
@@ -22,10 +23,11 @@ export const EmptyHistory = ({label}: Props) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: rem(40),
+    marginBottom: MAIN_TAB_BAR_HEIGHT,
     justifyContent: 'center',
     alignItems: 'center',
     marginHorizontal: rem(30),
+    flex: 1,
   },
   labelText: {
     ...font(14, 20, 'medium', 'secondary', 'center'),

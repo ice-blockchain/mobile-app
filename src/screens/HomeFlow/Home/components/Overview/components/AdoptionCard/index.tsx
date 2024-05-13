@@ -6,7 +6,6 @@ import {Images} from '@images';
 import {
   LEVEL_ROW_HEIGHT,
   LevelRow,
-  STEP_WIDTH,
 } from '@screens/HomeFlow/Home/components/Overview/components/AdoptionCard/components/LevelRow';
 import {
   CARD_WIDTH,
@@ -33,25 +32,17 @@ import {
   ViewabilityConfigCallbackPairs,
   ViewToken,
 } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
 import Animated, {
   interpolate,
+  SharedValue,
   useAnimatedStyle,
   useSharedValue,
 } from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-const GRADIENT_START = {x: 0, y: 0.6};
-const GRADIENT_END = {x: 0, y: 1};
-const GRADIENT_COLORS = [
-  COLORS.adoptionGradient,
-  COLORS.adoptionGradient07,
-  COLORS.adoptionGradient001,
-];
-
 type AdoptionCardProps = {
-  sharedIsCollapsed: Animated.SharedValue<number>;
+  sharedIsCollapsed: SharedValue<number>;
   onPress?: () => void;
 };
 
@@ -201,20 +192,6 @@ export const AdoptionCard = ({
           onLayout={() => setIsRendered(true)}
         />
       </View>
-      <LinearGradient
-        colors={GRADIENT_COLORS}
-        start={GRADIENT_START}
-        end={GRADIENT_END}
-        style={[styles.gradient, styles.leftGradient]}
-        pointerEvents={'none'}
-      />
-      <LinearGradient
-        colors={GRADIENT_COLORS}
-        start={GRADIENT_START}
-        end={GRADIENT_END}
-        style={[styles.gradient, styles.rightGradient]}
-        pointerEvents={'none'}
-      />
       <View style={styles.header} pointerEvents={'none'}>
         <View style={styles.title}>
           <GraphIcon fill={COLORS.white} />
@@ -238,18 +215,6 @@ const styles = StyleSheet.create({
     width: CARD_WIDTH,
     paddingTop: VERTICAL_ITEM_PADDING - rem(7),
     paddingBottom: rem(16),
-  },
-  gradient: {
-    width: CARD_WIDTH / 2 - STEP_WIDTH / 2,
-    height: rem(40),
-    position: 'absolute',
-    top: 0,
-  },
-  leftGradient: {
-    left: 0,
-  },
-  rightGradient: {
-    right: 0,
   },
   scrollAbsoluteContainer: {
     position: 'absolute',

@@ -26,7 +26,7 @@ export const CancelButton = ({style}: Props) => {
 const styles = StyleSheet.create({
   container: {
     borderRadius: rem(16),
-    backgroundColor: COLORS.primaryLight,
+    backgroundColor: COLORS.primaryDark,
     alignSelf: 'center',
     paddingVertical: rem(12),
     paddingHorizontal: rem(26),

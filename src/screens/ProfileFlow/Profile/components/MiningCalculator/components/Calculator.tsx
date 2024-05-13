@@ -91,7 +91,7 @@ export const Calculator = memo(
         <View style={[styles.sliderInfo, styles.sliderInfo__first]}>
           <TierOneIcon />
           <Text style={styles.sliderLabelText}>
-            {t('mining_calculator.tier_1_ref')}
+            {t('mining_calculator.team_members')}
           </Text>
           <TextInput
             style={styles.sliderValueText}
@@ -115,7 +115,7 @@ export const Calculator = memo(
         <View style={styles.sliderInfo}>
           <MiningIcon />
           <Text style={styles.sliderLabelText}>
-            {t('mining_calculator.active_miners')}
+            {t('mining_calculator.active_team_members')}
           </Text>
           <TextInput
             style={styles.sliderValueText}

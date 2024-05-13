@@ -6,7 +6,6 @@ import {isLightDesign} from '@constants/featureFlags';
 import {commonStyles} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {BscAddress} from '@screens/HomeFlow/Home/components/BscAddress';
 import {HomeHeader} from '@screens/HomeFlow/Home/components/Header';
 import {JoinMainnet} from '@screens/HomeFlow/Home/components/JoinMainnet';
 import {Overview} from '@screens/HomeFlow/Home/components/Overview';
@@ -59,7 +58,7 @@ export const Home = memo(() => {
               <Team />
             </View>
             <Quiz />
-            <BscAddress />
+            {/*<BscAddress />*/}
             <Roadmap />
             <JoinMainnet />
             <View ref={elementRef} onLayout={onElementLayout}>

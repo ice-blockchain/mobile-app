@@ -13,8 +13,8 @@ export const Indicator = (props: SvgProps) => (
       x2="90.7059"
       y2="65.277"
       gradientUnits="userSpaceOnUse">
-      <Stop stopColor="#11359C" />
-      <Stop offset="1" stopColor="#1B47C3" />
+      <Stop stopColor="#017563" />
+      <Stop offset="1" stopColor="#0B3D35" />
     </LinearGradient>
   </Svg>
 );

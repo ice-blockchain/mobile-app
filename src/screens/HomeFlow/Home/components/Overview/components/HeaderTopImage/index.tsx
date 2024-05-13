@@ -22,7 +22,7 @@ export const HeaderTopImage = memo(() => {
 export const styles = StyleSheet.create({
   headerTopImage: {
     width: windowWidth,
-    backgroundColor: COLORS.primaryLight,
+    backgroundColor: COLORS.primaryDark,
     marginTop: -DISTANCE_TO_OVERLAP,
   },
 });

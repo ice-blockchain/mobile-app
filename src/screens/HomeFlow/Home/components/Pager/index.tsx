@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     height: PAGE_HEIGHT + DISTANCE_TO_OVERLAP,
-    backgroundColor: COLORS.primaryLight,
+    backgroundColor: COLORS.primaryDark,
     paddingBottom: DISTANCE_TO_OVERLAP,
   },
   pager: {

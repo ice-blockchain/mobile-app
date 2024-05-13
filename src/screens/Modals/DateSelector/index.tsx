@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
   },
   resetButtonText: {
-    ...font(14, 19, 'semibold', 'primaryLight'),
+    ...font(14, 19, 'semibold', 'primaryDark'),
   },
   footer: {
     flexDirection: 'row',

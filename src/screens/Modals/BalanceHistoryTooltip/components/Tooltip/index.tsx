@@ -65,7 +65,7 @@ export const Tooltip = memo(({coordinates}: Props) => {
         },
       ]}>
       <RoundedTriangle
-        fill={COLORS.gulfBlue}
+        fill={COLORS.cornflowerBlue}
         width={ROUNDED_TRIANGLE_SIZE}
         height={ROUNDED_TRIANGLE_SIZE}
         style={[
@@ -111,7 +111,7 @@ export const Tooltip = memo(({coordinates}: Props) => {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    backgroundColor: COLORS.midnightSapphire,
+    backgroundColor: COLORS.cornflowerBlue,
     position: 'absolute',
     borderRadius: rem(12),
     flexDirection: 'row',

@@ -19,12 +19,12 @@ import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import Animated from 'react-native-reanimated';
+import {SharedValue} from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 interface Props {
-  sharedIsCollapsed: Animated.SharedValue<number>;
+  sharedIsCollapsed: SharedValue<number>;
 }
 
 export const ReferralsCard = ({sharedIsCollapsed}: Props) => {

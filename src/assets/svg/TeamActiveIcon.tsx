@@ -5,7 +5,7 @@ import * as React from 'react';
 import Svg, {Path, SvgProps} from 'react-native-svg';
 
 export const TeamActiveIcon = ({
-  color = COLORS.primaryLight,
+  color = COLORS.primaryDark,
   ...props
 }: SvgProps) => (
   <Svg width={40} height={40} viewBox={'0 0 40 40'} fill="none" {...props}>

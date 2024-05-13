@@ -47,7 +47,7 @@ export const useActiveUsersWalkthrough = ({
               <WalkthroughElementContainer
                 outerStyle={[styles.outerContainer, {left}]}
                 innerStyle={styles.innerContainer}>
-                <ActiveUsers referralType={referralType} />
+                <ActiveUsers />
               </WalkthroughElementContainer>
             );
           },

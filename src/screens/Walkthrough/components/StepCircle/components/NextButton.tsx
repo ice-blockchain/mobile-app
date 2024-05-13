@@ -37,7 +37,7 @@ export const NextButton = ({totalSteps, stepIndex, onPress}: Props) => {
           <ProgressCircleSvg
             progress={((stepIndex + 1) * 100) / totalSteps}
             strokeWidth={PROGRESS_WIDTH}
-            color={COLORS.shamrock}
+            color={COLORS.blazeOrange}
             radius={CIRCLE_RADIUS - PROGRESS_WIDTH / 2}
             style={styles.progressCircle}
           />

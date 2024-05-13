@@ -35,7 +35,7 @@
     "view_all": "view all",
     "invite_friend": {
       "title": "Invite Friends",
-      "description": "Earn extra [[:coin]] by inviting your friends."
+      "description": "Earn extra [[:icon]] by inviting your friends."
     },
     "see_all": "see all",
     "no": "No",
@@ -87,7 +87,7 @@
     "contacts": {
       "empty_title": "[[:project]] is better with friends",
       "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:project]]. In the future, you will be able to send [[:coin]] to any of your contacts."
+      "empty_description": "Sync your contacts and see who is already on [[:project]]. In the future, you will be able to send [[:logo]] to any of your contacts."
     },
     "header": {
       "search_placeholder": "Search for users",
@@ -111,11 +111,6 @@
       "all_contacts": "All contacts",
       "invite": "invite",
       "invitation_text": "Hi {{name}}, I would like to invite you to join [[:project]]."
-    },
-    "tier_one": {
-      "header_list": {
-        "title_earnings": "Tier 1 Earnings"
-      }
     }
   },
   "signIn": {
@@ -247,9 +242,6 @@
   },
   "mining_calculator": {
     "result_label": "You will earn",
-    "active_inviter": "Active inviter",
-    "tier_1_ref": "Tier 1 referrals",
-    "active_miners": "Active referrals",
     "team_members": "Team members",
     "active_team_members": "Active team members"
   },
@@ -262,7 +254,7 @@
     "pioneer": {
       "rank": "GLOBAL RANK",
       "referrals": "REFERRALS",
-      "description": "Refer more users and earn more [[:coin]]."
+      "description": "The more users you refer, the more [[:logo]] you earn"
     },
     "referrals": {
       "title": "REFERRALS",
@@ -349,7 +341,7 @@
     "roadmap": {
       "title": "ROADMAP",
       "button_title": "Whitepaper",
-      "button_subtitle": "Learn more about our vision at [[:project]]."
+      "button_subtitle": "Learn more about our vision at Ice."
     },
     "join_mainnet": {
       "title": "Join The Decentralized Future",
@@ -494,6 +486,7 @@
     "ping": "PING",
     "active": "Active",
     "inactive": "Inactive",
+    "friends": "[[:logo]] friends",
     "team": "Team",
     "referralType": {
       "team": "Team members"
@@ -553,11 +546,6 @@
       "pre_staked": "Pre-Staked",
       "on_blockchain": "On Blockchain"
     }
-  },
-  "update_required": {
-    "title": "Please Update",
-    "description": "You are using an old app version and need to update it in order to use it further.",
-    "button_title": "Update Now"
   },
   "general": {
     "good_morning": "Good morning",
@@ -791,10 +779,6 @@
       "active_users": {
         "title": "Active Users",
         "description": "This is the current status of your referrals check-in activity. They count as active when they have an active check-in session."
-      },
-      "tier_one_earnings": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member checking-in at the same time with you, you will both get extra 25% on your base current adoption earning rate."
       },
       "ping": {
         "title": "Ping Button",
@@ -1165,7 +1149,7 @@
     },
     "team": {
       "empty": {
-        "team": "You currently don't have any friends!"
+        "team": "You currently don't have any team members!"
       },
       "contacts": {
         "empty_description": "Sync your contacts and see who is already on [[:project]]."

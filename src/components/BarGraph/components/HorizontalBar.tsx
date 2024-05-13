@@ -22,6 +22,9 @@ type Props = {
   type: StatsType;
 };
 
+const COLORS_NUMBER = 14;
+const COLOR_STEP = 100 / COLORS_NUMBER;
+
 export const HorizontalBar = ({
   maxValue,
   maxWidth,
@@ -46,13 +49,18 @@ export const HorizontalBar = ({
     };
   });
   const backgroundColor = useMemo(() => {
+    if (!value) {
+      return StyleSheet.create({
+        current: {},
+      });
+    }
     const valuePercentage = Math.floor((value / maxValue) * 100);
-    const red = 100 - Math.round((60 * valuePercentage) / 100);
-    const green = 200 - Math.round((90 * valuePercentage) / 100);
+    const colorNumber = Math.ceil((100 - valuePercentage) / COLOR_STEP) || 1;
     return StyleSheet.create({
       // eslint-disable-next-line react-native/no-unused-styles
       current: {
-        backgroundColor: `rgba(${red},${green},255,1)`,
+        // @ts-ignore
+        backgroundColor: COLORS[`stats${colorNumber}`],
       },
     });
   }, [value, maxValue]);

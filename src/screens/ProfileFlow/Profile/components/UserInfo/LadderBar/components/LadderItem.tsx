@@ -78,7 +78,13 @@ export const LadderItem = memo(
             isProfilePrivacyEditMode && styles.editModeContainer,
           ]}>
           <View style={styles.ladderLabelTextContainer}>
-            <Text style={styles.ladderLabelText}>{title}</Text>
+            <Text
+              style={[
+                styles.ladderLabelText,
+                isProfilePrivacyEditMode && styles.ladderLabelTextEdit,
+              ]}>
+              {title}
+            </Text>
             {onShowInfo && !hidden ? (
               <Touchable
                 ref={refInfoButton}
@@ -149,7 +155,7 @@ const styles = StyleSheet.create({
     width: rem(60),
     height: rem(24),
     borderRadius: rem(16),
-    backgroundColor: COLORS.dodgerBlue,
+    backgroundColor: COLORS.catalinaBlue,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -168,6 +174,9 @@ const styles = StyleSheet.create({
   ladderLabelText: {
     marginHorizontal: rem(4),
     ...font(10, 14, 'regular', 'periwinkleGray', 'center'),
+  },
+  ladderLabelTextEdit: {
+    ...font(10, 14, 'regular', 'primaryDark', 'center'),
   },
   infoButtonContainer: {
     marginLeft: rem(1),
